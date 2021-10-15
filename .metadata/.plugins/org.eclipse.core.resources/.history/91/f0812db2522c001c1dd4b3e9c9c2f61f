@@ -1,0 +1,11 @@
+
+public class Ejemplo11 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Hay siete tipos de datos "
+				+ "primitivos \nen Java.");
+		
+	}
+
+}

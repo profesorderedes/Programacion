@@ -1,0 +1,13 @@
+
+// Programa que lee un precio, lo muestra después en pantalla
+// y le hace un 10% de descuento.
+
+public class Ejemplo13 {
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

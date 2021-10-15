@@ -1,0 +1,26 @@
+
+public class Ejemplo09 {
+	
+	public static void main(String[] args) {
+		
+		int asistentes = 5000;
+		
+		// Conversión implícita
+		long personas = asistentes;
+		
+		System.out.println(personas);
+		
+		// Conversión implícita
+		float gente = personas;
+		
+		System.out.println(gente);
+		
+		long jugadores = 1000;
+		
+		int players = (int) jugadores; 
+		
+		System.out.println(players);
+		
+	}
+
+}

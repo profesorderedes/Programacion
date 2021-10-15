@@ -1,0 +1,14 @@
+
+public class Ejemplo09 {
+	
+	public static void main(String[] args) {
+		
+		int asistentes = 5000;
+		
+		long personas = asistentes;
+		
+		
+		
+	}
+
+}
