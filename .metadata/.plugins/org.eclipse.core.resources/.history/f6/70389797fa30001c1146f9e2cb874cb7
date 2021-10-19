@@ -10,8 +10,8 @@ public class Ejemplo15 {
 
 		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Escribe un precio y te haré "
-				+ "un descuento:");
+		System.out.println("Escribe un precio y te haré el " 
+		+ "10% de descuento:");
 		float precio = entrada.nextFloat();
 
 		System.out.println("Escribe el descuento a aplicar:");
