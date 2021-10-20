@@ -14,7 +14,9 @@ public class Ejemplo06 {
 		float temperatura = entrada.nextFloat();
 
 		if (temperatura < 20) {
-			System.out.println("Hace fresquito");
+			System.out.println("Hace fresquito.");
+		}else {
+			System.out.println("Hace buena temperatura.");
 		}
 
 	}
