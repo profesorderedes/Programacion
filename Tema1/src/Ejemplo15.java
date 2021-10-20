@@ -10,16 +10,14 @@ public class Ejemplo15 {
 
 		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Escribe un precio y te haré "
-				+ "un descuento:");
+		System.out.println("Escribe un precio y te haré " + "un descuento:");
 		float precio = entrada.nextFloat();
 
 		System.out.println("Escribe el descuento a aplicar:");
 		float porcentajeDescuento = entrada.nextFloat();
 
 		System.out.println("El precio es: " + precio + " €.");
-		System.out.println("El descuento es: " 
-				+ porcentajeDescuento + "%.");
+		System.out.println("El descuento es: " + porcentajeDescuento + "%.");
 
 		float descuento = precio * porcentajeDescuento / 100;
 
@@ -27,10 +25,8 @@ public class Ejemplo15 {
 
 		// Don't Repeat Yourself
 
-		System.out.println("El precio rebajado es: " 
-		+ precioRebajado + " €.");
-		System.out.println("Se te han descontado " 
-		+ descuento + " euros.");
+		System.out.println("El precio rebajado es: " + precioRebajado + " €.");
+		System.out.println("Se te han descontado " + descuento + " euros.");
 
 	}
 

@@ -17,12 +17,10 @@ public class Ejemplo07 {
 
 		System.out.println("NOT a: " + (!a));
 		System.out.println("NOT c: " + (!c));
-		
-		System.out.println("a == b: " + (a==b));
-		System.out.println("a != b: " + (a!=b));
-		
-		
-		
+
+		System.out.println("a == b: " + (a == b));
+		System.out.println("a != b: " + (a != b));
+
 	}
 
 }

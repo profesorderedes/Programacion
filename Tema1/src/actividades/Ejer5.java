@@ -23,8 +23,7 @@ public class Ejer5 {
 		float precioFinal = precio - precio * porcentaje / 100;
 
 		System.out.println("Producto seleccionado: " + producto + "\nPrecio del producto: " + precio + " €\nDescuento: "
-				+ porcentaje + " %\nPrecio final: " + precioFinal
-				+ " €.");
+				+ porcentaje + " %\nPrecio final: " + precioFinal + " €.");
 
 	}
 

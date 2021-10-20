@@ -4,7 +4,7 @@ public class Ejemplo04 {
 	public static void main(String[] args) {
 
 		// Operaciones aritméticas con números enteros.
-		
+
 		int a, b;
 
 		a = 20;
