@@ -15,7 +15,7 @@ public class Ejemplo06 {
 
 		if (temperatura < 20) {
 			System.out.println("Hace fresquito.");
-		}else {
+		} else {
 			System.out.println("Hace buena temperatura.");
 		}
 

@@ -18,7 +18,7 @@ public class Ejemplo05 {
 		// en tal caso, indicamos que tendrá descuento.
 		if (precio > 50) {
 			System.out.println("¡Tiene derecho a descuento!");
-		}else {
+		} else {
 			System.out.println("No tiene derecho a descuento.");
 		}
 

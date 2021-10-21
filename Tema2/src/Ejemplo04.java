@@ -15,13 +15,13 @@ public class Ejemplo04 {
 		int edad = entrada.nextInt();
 
 		// Si la edad es mayor o igual a 18, se puede pasar.
-		if(edad >= 18) {
+		if (edad >= 18) {
 			System.out.println("Puedes pasar a la discoteca.");
 		} else {
 			System.out.println("Vete a casa.");
 		}
-		
+
 		System.out.println("Gracias por venir a nuestro local.");
-		
+
 	}
 }
