@@ -20,9 +20,17 @@ public class Ejemplo08 {
 		float precio = entrada.nextFloat();
 		
 		// En función del precio, indicaremos el descuento.
+		if(precio < 50) {
+			System.out.println("Descuento = 0");
+		}else if(precio <= 100) {
+			System.out.println("Descuento = 5%");
+		}else if(precio <= 200) {
+			System.out.println("Descuento = 10%");
+		}else {
+			System.out.println("Descuento = 15%");
+		}
 		
-		
-		
+		System.out.println("Fin");
 		
 	}
 
