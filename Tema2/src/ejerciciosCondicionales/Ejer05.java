@@ -6,8 +6,6 @@ public class Ejer05 {
 
 	public static void main(String[] args) {
 
-		// if(mes >=1 && mes <=12)
-
 		Scanner entrada = new Scanner(System.in);
 
 		System.out.println("Escribe un mes del año: ");
