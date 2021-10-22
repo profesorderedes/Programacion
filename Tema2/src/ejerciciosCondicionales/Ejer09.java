@@ -11,40 +11,33 @@ public class Ejer09 {
 		// Preguntamos el precio y cuántas unidades del producto.
 
 		System.out.print("Dime el precio del producto: ");
-
 		float precio = entrada.nextFloat();
 
 		System.out.print("Dime cuántas unidades son: ");
-
 		int unidades = entrada.nextInt();
 
 		// Empezamos el bucle con descuentos.
 
-		float precioIntermedio = precio * unidades;
+		float coste = precio * unidades;
+		float precioFinal = coste;
+		if (coste < 100) {
 
-		if (precioIntermedio < 100) {
+			System.out.println("No tiene derecho a descuento. ");
 
-			System.out.println("No tiene derecho a descuento. Precio final es de "
+		} else if (coste < 200) {
 
-					+ precioIntermedio + " euros.");
-
-		} else if (precioIntermedio < 200) {
-
-			float precioFinal1 = precioIntermedio * 0.90F;
-
-			System.out.println("Tiene un descuento de un 10%. Precio final es de "
-
-					+ precioFinal1 + " euros.");
-
+			precioFinal = coste * 0.90F;
+			System.out.println("Tiene un descuento de un 10%.");
+			
 		} else {
 
-			float precioFinal2 = precioIntermedio * 0.85F;
-
-			System.out.println("Tiene un descuento de un 20%. Precio final es de "
-
-					+ precioFinal2 + " euros.");
+			precioFinal = coste * 0.85F;
+			System.out.println("Tiene un descuento de un 15%.");
 
 		}
+		
+		System.out.println("El precio final es " + precioFinal 
+				+ " €.");
 
 		System.out.println("Gracias a por venir.");
 
