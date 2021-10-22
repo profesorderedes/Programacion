@@ -24,7 +24,7 @@ public class Ejer09 {
 
 			System.out.println("No tiene derecho a descuento. ");
 
-		} else if (coste < 200) {
+		} else if (coste <= 200) {
 
 			precioFinal = coste * 0.90F;
 			System.out.println("Tiene un descuento de un 10%.");
