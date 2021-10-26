@@ -11,7 +11,7 @@ public class Ejer10 {
 		Scanner entrada = new Scanner(System.in);
 		
 		System.out.println("Qué nota tienes?");
-		float nota = entrada.nextFloat();
+		int nota = entrada.nextInt();
 		
 		if(nota >= 0 && nota <= 4) {
 			System.out.println("Insuficiente");
@@ -24,10 +24,11 @@ public class Ejer10 {
 		}else if (nota ==9) {
 			System.out.println("Sobresaliente");
 		}else if (nota ==10) {
-			System.out.println("Matricula de honor");
+			System.out.println("Matrícula de honor");
 		}else {
 			System.out.println("La nota introducida debe ser entre 1 y 10.");
 		}	
+		
 	}
 		
 
