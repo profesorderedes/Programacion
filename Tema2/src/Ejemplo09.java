@@ -15,19 +15,39 @@ public class Ejemplo09 {
 		// aula 3 -> Primero de grado medio
 		// aula 4 -> Segundo de grado medio
 
-		if (aula == 1) {
+		// Versión usando if-else if:
+
+//		if (aula == 1) {
+//			System.out.println("Primero de grado superior");
+//		} else if (aula == 2) {
+//			System.out.println("Segundo de grado superior");
+//		} else if (aula == 3) {
+//			System.out.println("Primero de grado medio");
+//		} else if (aula == 4) {
+//			System.out.println("Segundo de grado medio");
+//		} else {
+//			System.out.println("Esa aula no existe.");
+//		}
+
+		// Versión usando switch:
+
+		switch (aula) {
+
+		case 1:
 			System.out.println("Primero de grado superior");
-		} else if (aula == 2) {
+			break;
+		case 2:
 			System.out.println("Segundo de grado superior");
-		} else if (aula == 3) {
+			break;
+		case 3:
 			System.out.println("Primero de grado medio");
-		} else if (aula == 4) {
+			break;
+		case 4:
 			System.out.println("Segundo de grado medio");
-		} else {
+			break;
+		default:
 			System.out.println("Esa aula no existe.");
 		}
-		
-		
 
 	}
 

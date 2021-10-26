@@ -28,16 +28,15 @@ public class Ejer09 {
 
 			precioFinal = coste * 0.90F;
 			System.out.println("Tiene un descuento de un 10%.");
-			
+
 		} else {
 
 			precioFinal = coste * 0.85F;
 			System.out.println("Tiene un descuento de un 15%.");
 
 		}
-		
-		System.out.println("El precio final es " + precioFinal 
-				+ " €.");
+
+		System.out.println("El precio final es " + precioFinal + " €.");
 
 		System.out.println("Gracias a por venir.");
 

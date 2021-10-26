@@ -16,18 +16,15 @@ public class Ejer06 {
 
 		float total = precio * unidades;
 		float descuento;
-		
+
 		if (total > 75) {
 			descuento = 15;
 		} else {
 			descuento = 5;
 		}
-		
+
 		total = total - total * descuento / 100;
-		System.out.println("Tiene un descuento del " 
-				+ descuento + "%. "
-				+ "Precio final: " + total + " €.");
-		
-		
+		System.out.println("Tiene un descuento del " + descuento + "%. " + "Precio final: " + total + " €.");
+
 	}
 }
