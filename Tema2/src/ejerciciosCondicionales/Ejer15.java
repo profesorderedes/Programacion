@@ -2,7 +2,7 @@ package ejerciciosCondicionales;
 
 import java.util.Scanner;
 
-public class Actividad15 {
+public class Ejer15 {
 
 	public static void main(String[] args) {
 		// Crea un programa que pida un número de mes entre 1 y 12. A continuación
