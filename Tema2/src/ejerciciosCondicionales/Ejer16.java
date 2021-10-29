@@ -11,11 +11,11 @@ public class Ejer16 {
 
 		Scanner entrada = new Scanner(System.in);
 
+		System.out.println("Introduce el año.");
+		int anyo = entrada.nextInt();
+
 		System.out.println("Introduce un número del 1 al 12 \ny recibirás el número de días del mes correspondiente.");
 		int numeroMes = entrada.nextInt();
-
-		System.out.println("Introduce el año.");
-		String anyo = entrada.nextLine();
 
 		switch (numeroMes) {
 
@@ -38,10 +38,11 @@ public class Ejer16 {
 			// Año bisiesto: una de las siguientes condiciones:
 			// Divisible entre 4 pero no entre 100
 			// Divisible entre 400
-			if()
-			
-			
-			
+			if ((anyo % 4 == 0 && anyo % 100 != 0) || anyo % 400 == 0) {
+				System.out.println("29 días.");
+			} else {
+				System.out.println("28 días.");
+			}
 			break;
 		default:
 			System.out.println("El número introducido debe estar entre 1 y 12.");
