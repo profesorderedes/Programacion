@@ -1,8 +1,8 @@
-package ejerciciosCondicionales;
+
 
 import java.util.Scanner;
 
-public class Ejer02 {
+public class Ejemplo12 {
 
 	public static void main(String[] args) {
 
@@ -12,12 +12,9 @@ public class Ejer02 {
 		float precio = entrada.nextFloat();
 
 		float precioFinal = precio;
-		
 		if (precio > 80) {
 			precioFinal = precio - precio * 10 / 100;
 		}
-		
-		// Operador ternario equivalente al if de arriba.
 
 		System.out.println("Precio final: " + precioFinal);
 
