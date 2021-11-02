@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Ejemplo11{
+public class Ejemplo11 {
 
 	public static void main(String[] args) {
 
@@ -21,20 +21,12 @@ public class Ejemplo11{
 //		} else {
 //			descuento = 5;
 //		}
-		
+
 		// Operador ternario equivalente al if de arriba.
 		descuento = total > 75 ? 15 : 5;
 
 		total = total - total * descuento / 100;
-		System.out.println("Tiene un descuento del " + descuento 
-				+ "%. " + "\nPrecio final: " + total + " €.");
+		System.out.println("Tiene un descuento del " + descuento + "%. " + "\nPrecio final: " + total + " €.");
 
 	}
 }
-
-
-
-
-
-
-

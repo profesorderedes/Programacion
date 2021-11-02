@@ -1,5 +1,4 @@
 
-
 import java.util.Scanner;
 
 public class Ejemplo12 {
@@ -12,24 +11,15 @@ public class Ejemplo12 {
 		float precio = entrada.nextFloat();
 
 		float precioFinal = precio;
-		
+
 //		if (precio > 80) {
 //			precioFinal = precio - precio * 10 / 100;
 //		}
-		
+
 		// Operador ternario equivalente al if de arriba.
-		precioFinal = precio > 80 ? (precio - precio * 10 / 100) : 
-			precio;
-		
+		precioFinal = precio > 80 ? (precio - precio * 10 / 100) : precio;
+
 		System.out.println("Precio final: " + precioFinal);
 
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }

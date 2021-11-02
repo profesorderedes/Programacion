@@ -29,8 +29,8 @@ public class Ejer13 {
 
 				System.out.println("Abril.");
 
-			} 
-			
+			}
+
 		} else {
 			System.out.println("Mes incorrecto.");
 		}
