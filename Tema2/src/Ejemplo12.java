@@ -15,8 +15,22 @@ public class Ejemplo12 {
 		if (precio > 80) {
 			precioFinal = precio - precio * 10 / 100;
 		}
+		
+		// Operador ternario equivalente al if de arriba.
+		
+		
+		
+		
 
 		System.out.println("Precio final: " + precioFinal);
 
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
