@@ -2,7 +2,7 @@ package ejerciciosCondicionales;
 
 import java.util.Scanner;
 
-public class Ejercicio13 {
+public class Ejer13 {
 
 	public static void main(String[] args) {
 
