@@ -1,11 +1,13 @@
 /*
-	Programa que muestre los números del 1 al 100.
+ 	Programa que escribe en la terminal los números
+ 	entre 50 y 100.
  */
-public class Ejemplo16 {
-	
+
+public class Ejemplo17 {
+
 	public static void main(String[] args) {
 		
-		int contador = 1;
+		int contador = 50;
 		
 		while(contador <= 100) {
 			
