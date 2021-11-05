@@ -14,7 +14,11 @@ public class Ejer5 {
 		
 		int contador = 1;
 		
-		while() {
+		while(contador <= 10) {
+			
+			System.out.println(num + " x " + contador + " = " 
+					+ num * contador);
+			contador++;
 			
 		}
 		
