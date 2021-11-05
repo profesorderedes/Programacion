@@ -8,7 +8,7 @@ y 5. Si el número no está entre 1 y 5 se le informará.
 Si responde "3", se le felicitará por haber acertado. 
 Si no, se le seguirán pidiendo más números.
 */
-public class Ejer4b {
+public class Ejer04b {
 
 	public static void main(String[] args) {
 		

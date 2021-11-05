@@ -2,7 +2,7 @@ package ejerciciosBucles;
 
 import java.util.Scanner;
 
-public class Ejer2 {
+public class Ejer01 {
 
 	public static void main(String[] args) {
 
@@ -11,12 +11,9 @@ public class Ejer2 {
 		System.out.println("Escribe un carácter: ");
 		String caracter = entrada.nextLine();
 
-		System.out.println("¿Cuántas veces quieres que se repita?");
-		int repeticiones = entrada.nextInt();
-
 		int contador = 1;
 
-		while (contador <= repeticiones) {
+		while (contador <= 100) {
 
 			System.out.println(contador + " " + caracter);
 			contador = contador + 1;

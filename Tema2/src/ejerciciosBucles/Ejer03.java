@@ -2,7 +2,7 @@ package ejerciciosBucles;
 
 import java.util.Scanner;
 
-public class Ejer3 {
+public class Ejer03 {
 
 	public static void main(String[] args) {
 
