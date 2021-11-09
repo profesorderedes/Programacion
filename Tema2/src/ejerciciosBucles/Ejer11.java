@@ -8,8 +8,14 @@ public class Ejer11 {
 
 		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Escribe un número entre 1 y 20:");
-		int num = entrada.nextInt();
+		int num;
+
+		do {
+			System.out.println("Escribe un número entre 1 y 20:");
+			num = entrada.nextInt();
+		} while (num < 1 || num > 20);
+
+		System.out.println("Por fin lo has escrito bien.");
 
 	}
 
