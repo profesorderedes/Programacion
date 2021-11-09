@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Ejer10 {
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
-		
+
 		boolean preguntar = true;
 
 		while (preguntar) {
@@ -24,7 +24,7 @@ public class Ejer10 {
 				System.out.println("\nHas fallado.\n");
 				preguntar = false;
 			}
-			
+
 		}
 
 	}

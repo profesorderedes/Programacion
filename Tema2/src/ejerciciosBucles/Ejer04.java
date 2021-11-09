@@ -15,10 +15,9 @@ public class Ejer04 {
 			if (numero < 1 || numero > 5) {
 				System.out.println("Número fuera de rango.");
 			} else if (numero > 1 || numero < 5) {
-				System.out.println("Número incorrecto. "
-						+ "Inténtalo de nuevo.");
+				System.out.println("Número incorrecto. " + "Inténtalo de nuevo.");
 			}
-			
+
 			System.out.println("Adivina el número entre 1 y 5.");
 			numero = entrada.nextInt();
 		}

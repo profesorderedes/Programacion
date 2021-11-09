@@ -19,7 +19,7 @@ public class Ejer09b {
 		if (resto < divisor) {
 			System.out.println("El dividendo debe ser mayor o " + "igual que el divisor.");
 		} else {
-			
+
 			while (restar) {
 
 				System.out.println(resto + " - " + divisor + " = " + (resto - divisor));
@@ -30,11 +30,9 @@ public class Ejer09b {
 				}
 
 			}
-			
+
 			System.out.println("\nEl resto vale " + resto);
 		}
-
-		
 
 	}
 

@@ -8,15 +8,12 @@ public class Ejemplo14 {
 		Scanner entrada = new Scanner(System.in);
 
 		System.out.println("Introduce año: ");
-		
 
 		if (entrada.hasNextInt() == true) {
 			int anyo = entrada.nextInt();
-			System.out.println("El año que has escrito es " 
-					+ anyo);
+			System.out.println("El año que has escrito es " + anyo);
 		} else {
-			System.out.println("No has introducido un año "
-					+ "correcto.");
+			System.out.println("No has introducido un año " + "correcto.");
 		}
 
 	}
