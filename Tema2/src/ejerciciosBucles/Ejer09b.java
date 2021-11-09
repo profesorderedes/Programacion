@@ -12,19 +12,29 @@ public class Ejer09b {
 		int resto = entrada.nextInt();
 
 		System.out.println("Dame otro número:");
-		int num2 = entrada.nextInt();
+		int divisor = entrada.nextInt();
 
 		boolean restar = true;
-		
-		while(restar == true) {
-			
-			
-			
-		}
-		
-		
 
-		System.out.println("\nEl resto vale " + resto);
+		if (resto < divisor) {
+			System.out.println("El dividendo debe ser mayor o " + "igual que el divisor.");
+		} else {
+			
+			while (restar) {
+
+				System.out.println(resto + " - " + divisor + " = " + (resto - divisor));
+				resto = resto - divisor;
+
+				if (resto < divisor) {
+					restar = false;
+				}
+
+			}
+			
+			System.out.println("\nEl resto vale " + resto);
+		}
+
+		
 
 	}
 
