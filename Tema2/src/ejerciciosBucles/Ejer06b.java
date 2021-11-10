@@ -10,7 +10,6 @@ public class Ejer06b {
 		do {
 			System.out.println( contador);
 			contador = contador + 2;
-
 		} while (contador < 200);
 		
 	}
