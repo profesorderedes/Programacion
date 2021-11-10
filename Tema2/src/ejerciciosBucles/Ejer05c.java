@@ -22,8 +22,13 @@ public class Ejer05c {
 //
 //		}
 		
-		for()
-
+		for(int contador = 1; contador <= 10; contador++) {
+			
+			System.out.println(num + " x " + contador + " = " 
+					+ num * contador);
+			
+		}
+		
 	}
 
 }
