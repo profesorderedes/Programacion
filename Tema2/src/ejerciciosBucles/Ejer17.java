@@ -4,6 +4,8 @@ public class Ejer17 {
 
 	public static void main(String[] args) {
 
+		// La variable i indica la tabla de multiplicar que
+		// se va a generar.
 		for (int i = 1; i <= 10; i++) {
 
 			// Hacer un bucle de 1 a 10 que muestre la tabla
