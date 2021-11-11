@@ -4,10 +4,6 @@ import java.util.Scanner;
 
 public class Ejer04 {
 
-	public static final String ANSI_RED = "\u001B[31m";
-	public static final String ANSI_GREEN = "\u001B[32m";
-	public static final String ANSI_BLUE = "\u001B[34m";
-
 	public static void main(String[] args) {
 
 		Scanner entrada = new Scanner(System.in);
@@ -16,11 +12,11 @@ public class Ejer04 {
 		float nota = entrada.nextFloat();
 
 		if (nota < 4) {
-			System.out.println(nota + ANSI_RED);
+			System.out.println("Rojo");
 		} else if (nota < 5) {
-			System.out.println(nota + ANSI_GREEN);
-		} else if (nota >= 5) {
-			System.out.println(nota + ANSI_BLUE);
+			System.out.println("Verde");
+		} else {
+			System.out.println("Azul");
 		}
 
 	}

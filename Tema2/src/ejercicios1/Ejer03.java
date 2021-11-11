@@ -11,8 +11,8 @@ public class Ejer03 {
 		System.out.println("Escribe un numero");
 		int numero = entrada.nextInt();
 
-		String compara;
-		compara = numero % 2 == 0 ? "Par" : "Impar";
+		
+		String compara = numero % 2 == 0 ? "Par" : "Impar";
 
 		System.out.println(compara);
 
