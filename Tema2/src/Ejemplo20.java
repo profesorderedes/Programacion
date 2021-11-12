@@ -14,18 +14,13 @@ public class Ejemplo20 {
 
 			System.out.print("Nota " + i + ": ");
 			nota = entrada.nextInt();
-			
-			if(nota <0 || nota >10) {
-				System.out.println("Error en los datos. El programa"
-						+ " terminará.");
-				continue;
+
+			if (nota < 0 || nota > 10) {
+				System.out.println("Error en los datos. El programa" + " terminará.");
+				break;
 			}
-			
-			
-			
+
 		}
-		
-		
 
 	}
 
