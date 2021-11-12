@@ -3,7 +3,6 @@
 // multiplicar. Si el usuario escribe un nº que no esté entre 1
 // y 10, le mostrará un aviso y le volverá a preguntar.
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Ejemplo23 {
