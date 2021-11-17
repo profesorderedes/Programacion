@@ -5,10 +5,12 @@ import java.util.Scanner;
 public class Ejer03 {
 
 	public static void main(String[] args) {
+		
 		Scanner entrada = new Scanner(System.in);
 
 		int numAleatorio1 = (int) (Math.random() * 100 + 1);
 		int numAleatorio2 = (int) (Math.random() * 100 + 1);
+		
 		int suma = (numAleatorio1 + numAleatorio2);
 		int sumaUser;
 

@@ -10,44 +10,40 @@ public class Ejer02 {
 
 		Scanner entrada = new Scanner(System.in);
 
-		// System.out.println(aleatorio);
+		System.out.println(aleatorio);
 
 		System.out.println("Adivina el número entre 1 y 10.");
 		int numero = 0;
 		int i = 0;
 
 		while (i < 3) {
+			
 			System.out.println("Escribe el número:");
 			numero = entrada.nextInt();
+			
 			i++;
 			if (numero == aleatorio) {
 				System.out.println("¡Has acertado!");
 				break;
-			}
-
-			else if (numero != aleatorio && i < 3) {
+			}else if (numero != aleatorio && i < 3) {
 				System.out.println("No, vuelve a intentarlo:");
 			}
+			
 		}
 
-		System.out.println("Has hecho " + i + " intentos. El número era " + aleatorio + ".");
+		System.out.println("Has hecho " + i + " intentos. "
+				+ "El número era " + aleatorio + ".");
 
 		System.out.println("Puntuación obtenida:");
 
 		if (i == 1) {
 			System.out.println("10 puntos.");
-		}
-
-		else if (i == 2) {
+		} else if (i == 2) {
 
 			System.out.println("5 puntos.");
-		}
-
-		else if (i == 3 && numero == aleatorio) {
+		} else if (i == 3 && numero == aleatorio) {
 			System.out.println("2 puntos.");
-		}
-
-		else {
+		} else {
 			System.out.println("0 puntos.");
 		}
 	}
