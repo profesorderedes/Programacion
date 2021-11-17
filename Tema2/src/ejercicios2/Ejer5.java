@@ -31,7 +31,7 @@ public class Ejer5 {
 			i++;
 
 		} while (i <= 3);
-		
+
 		System.out.println("\nGracias por jugar.");
 
 	}

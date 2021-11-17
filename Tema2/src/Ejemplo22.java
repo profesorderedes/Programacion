@@ -22,7 +22,7 @@ public class Ejemplo22 {
 				System.out.println("Error en los datos. El programa" + " terminará.");
 				preguntar = false;
 			}
-			
+
 			i++;
 
 		}

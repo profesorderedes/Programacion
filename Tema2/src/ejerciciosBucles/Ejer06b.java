@@ -8,10 +8,10 @@ public class Ejer06b {
 		int contador = 2;
 
 		do {
-			System.out.println( contador);
+			System.out.println(contador);
 			contador = contador + 2;
 		} while (contador < 200);
-		
+
 	}
 
 }

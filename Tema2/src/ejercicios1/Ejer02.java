@@ -17,8 +17,7 @@ public class Ejer02 {
 		System.out.println("Escriba la contraseña: ");
 		String clave = entrada.nextLine();
 
-		if (usuario.equals(NOMBRE_REQUERIDO) 
-				&& clave.equals(PASSWORD_REQUERIDO)) {
+		if (usuario.equals(NOMBRE_REQUERIDO) && clave.equals(PASSWORD_REQUERIDO)) {
 
 			System.out.println("Acceso permitido.");
 

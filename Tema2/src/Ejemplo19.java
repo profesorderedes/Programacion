@@ -21,9 +21,6 @@ public class Ejemplo19 {
 			System.out.println(i);
 
 		}
-		
-		
-		
 
 	}
 

@@ -21,25 +21,13 @@ public class Ejer05c {
 //			contador++;
 //
 //		}
-		
-		for(int contador = 1; contador <= 10; contador++) {
-			
-			System.out.println(num + " x " + contador + " = " 
-					+ num * contador);
-			
+
+		for (int contador = 1; contador <= 10; contador++) {
+
+			System.out.println(num + " x " + contador + " = " + num * contador);
+
 		}
-		
+
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-

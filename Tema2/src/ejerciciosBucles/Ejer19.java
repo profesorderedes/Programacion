@@ -7,7 +7,7 @@ public class Ejer19 {
 	public static void main(String[] args) {
 
 		Scanner entrada = new Scanner(System.in);
-		
+
 		final int NUM_NOTAS = 5;
 
 		// Leemos 5 notas.

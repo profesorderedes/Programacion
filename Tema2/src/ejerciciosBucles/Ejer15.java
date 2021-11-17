@@ -19,9 +19,8 @@ public class Ejer15 {
 			total = total + precio;
 
 		}
-		
-		System.out.println("\nTotal de la compra: " + total 
-				+ " €.");
+
+		System.out.println("\nTotal de la compra: " + total + " €.");
 
 	}
 

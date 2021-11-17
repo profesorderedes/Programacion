@@ -25,9 +25,9 @@ public class Ejer20 {
 				secreto = entrada.nextInt();
 
 			} else {
-				
+
 				System.out.println("Has perdido");
-				
+
 			}
 
 		}

@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Ejer12 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
 		int respuesta;
 
@@ -23,13 +23,12 @@ public class Ejer12 {
 					+ "\n2) Isaac Asimov" + "\n3) Ernest Cline" + "\n4) Ray Bradbury");
 			respuesta = entrada.nextInt();
 		} while (respuesta < 1 || respuesta > 4);
-		
-		if(respuesta == 3) {
+
+		if (respuesta == 3) {
 			System.out.println("¡Respuesta correcta!");
-		}else {
+		} else {
 			System.out.println("Has fallado.");
 		}
-		
 
 	}
 

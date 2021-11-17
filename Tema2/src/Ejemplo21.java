@@ -16,8 +16,8 @@ public class Ejemplo21 {
 			nota = entrada.nextInt();
 
 		}
-		
-		if(nota <0 || nota > 10) {
+
+		if (nota < 0 || nota > 10) {
 			System.out.println("Error en los datos.");
 		}
 
