@@ -6,18 +6,20 @@ public class Ejer04 {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
-        int random1;
-        int random2;
+        
+        int numAleatorio1;
+        int numAleatorio2;
         int resultado;
         int respuesta;
         char continuar = 's';
 
         while (continuar == 's' || continuar == 'S') {
-            random1 = (int) (Math.random() * 100 + 1);
-            random2 = (int) (Math.random() * 100 + 1);
-            resultado = random1 + random2;
+        	
+            numAleatorio1 = (int) (Math.random() * 100 + 1);
+            numAleatorio2 = (int) (Math.random() * 100 + 1);
+            resultado = numAleatorio1 + numAleatorio2;
 
-            System.out.print("Veamos si sabes sumar:\n" + random1 + " + " + random2 + " = ");
+            System.out.print("Veamos si sabes sumar:\n" + numAleatorio1 + " + " + numAleatorio2 + " = ");
             respuesta = entrada.nextInt();
 
             if (respuesta == resultado) {
