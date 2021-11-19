@@ -5,10 +5,12 @@ import java.util.Scanner;
 public class Ejer06 {
 
 	public static void main(String[] args) {
+		
 		Scanner entrada = new Scanner(System.in);
 
 		int num;
 		do {
+			System.out.print("Número: ");
 			num = entrada.nextInt();
 
 			if (num == 1) {
@@ -23,6 +25,7 @@ public class Ejer06 {
 			if (num == 0) {
 				break;
 			}
+			
 		} while (true);
 	}
 }
