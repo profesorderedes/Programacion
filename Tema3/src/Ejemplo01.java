@@ -1,9 +1,13 @@
 
+/*
+ * Crear un array y dar valor a las celdas individualmente.
+ */
 public class Ejemplo01 {
 
 	public static void main(String[] args) {
 
 		float precios[] = new float[5];
+		
 		// También se puede:
 		// float[] precios = new float[5];
 
