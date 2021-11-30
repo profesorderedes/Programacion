@@ -15,15 +15,16 @@ public class Ejer09 {
 
 		String test[] = new String[5];
 
-		for (int i = 0; i < test.length; i++) {
-			if (i == 0) {
-				System.out.println("Introduce un enunciado");
-				test[i] = entrada.nextLine();
-			} else {
-				System.out.println("Introduce una respuesta.");
-				test[i] = entrada.nextLine();
-			}
+		System.out.println("Introduce un enunciado");
+		test[0] = entrada.nextLine();
+
+		for (int i = 1; i < test.length; i++) {
+
+			System.out.println("Introduce una respuesta.");
+			test[i] = entrada.nextLine();
+
 		}
+
 		System.out.println(test[0]);
 		System.out.println("a) " + test[1]);
 		System.out.println("b) " + test[2]);
