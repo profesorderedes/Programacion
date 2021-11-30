@@ -10,8 +10,10 @@ public class Ejer11 {
 
 		String instrucciones[] = new String[1000];
 
-		System.out.println("Introduce las instrucciones que debe realizar el robot.");
-		for (int i = 0; i < instrucciones.length; i++) {
+		System.out.println("Introduce las instrucciones que " + "debe realizar el robot.");
+		int i = 0;
+
+		while (i < instrucciones.length) {
 
 			System.out.print("Instrucción " + (i + 1) + ": ");
 			instrucciones[i] = entrada.nextLine();
@@ -19,10 +21,13 @@ public class Ejer11 {
 			if (instrucciones[i].equals("ejecutar")) {
 				break;
 			}
+
+			i++;
 		}
 
 		System.out.println("\nProcesos a realizar.\n=====================\n");
-		for (int i = 0; i < instrucciones.length; i++) {
+		i = 0;
+		while (i < instrucciones.length) {
 
 			if (instrucciones[i].equals("ejecutar")) {
 				System.out.println("\nProceso realizado.");
@@ -30,6 +35,8 @@ public class Ejer11 {
 			} else {
 				System.out.println("Instrucción " + (i + 1) + ": " + instrucciones[i] + ".");
 			}
+
+			i++;
 
 		}
 	}
