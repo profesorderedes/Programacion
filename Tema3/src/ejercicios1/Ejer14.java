@@ -1,7 +1,9 @@
 package ejercicios1;
 
 /*
- * Programa que va obteniendo los 100 primeros números primos.
+ * 
+ * Programa que va obteniendo los 100 primeros números primos
+ * y guardándolos en un array.
  */
 public class Ejer14 {
 
