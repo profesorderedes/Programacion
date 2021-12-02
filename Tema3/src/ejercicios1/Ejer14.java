@@ -3,7 +3,7 @@ package ejercicios1;
 /*
  * Programa que va obteniendo los 100 primeros números primos.
  */
-public class Ejer14d {
+public class Ejer14 {
 
 	public static void main(String[] args) {
 
