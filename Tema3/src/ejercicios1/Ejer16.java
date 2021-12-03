@@ -1,6 +1,6 @@
 package ejercicios1;
 
-public class Ejer15 {
+public class Ejer16 {
 
 	public static void main(String[] args) {
 
@@ -19,6 +19,18 @@ public class Ejer15 {
 		
 		System.out.println("La media de las temperaturas es de "
 				+ media + "ºC.");
+		
+		int temperaturasAltas = 0;
+		for(int i = 0; i < temperaturas.length; i++) {
+			
+			if(temperaturas[i] > 12) {
+				temperaturasAltas++;
+			}
+			
+		}
+		
+		System.out.println("\nHa habido " + temperaturasAltas 
+				+ " temperaturas de más de 12ºC.");
 		
 		
 
