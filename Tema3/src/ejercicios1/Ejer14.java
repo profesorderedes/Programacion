@@ -9,6 +9,8 @@ public class Ejer14 {
 
 	public static void main(String[] args) {
 
+		int primos[] = new int[100];
+		
 		boolean esPrimo = true;
 		int numPrimos = 0; // Número de primos encontrados
 
@@ -16,7 +18,6 @@ public class Ejer14 {
 		System.out.println("=======================");
 
 		// candidato es el número que vamos a comprobar si es primo.
-
 		int candidato = 2;
 
 		while (numPrimos < 100) {
@@ -36,7 +37,7 @@ public class Ejer14 {
 			}
 
 			if (esPrimo) {
-				System.out.println(numPrimos + ") " + candidato);
+				primos[numPrimos] = candidato;
 				numPrimos++;
 			}
 
