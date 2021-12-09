@@ -8,8 +8,7 @@ public class Ejemplo02 {
 
 		float precios[] = { 25, 23.5F, 24.3F, 26, 0 };
 
-		String meses[] = { "Enero", "Febrero", "Marzo", "Abril", 
-				"Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+		String meses[] = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
 				"Octubre", "Noviembre" };
 
 		System.out.println("\nLos doce meses del año son:");

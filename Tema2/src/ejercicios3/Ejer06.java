@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejer06 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
 
 		int num;
@@ -25,7 +25,7 @@ public class Ejer06 {
 			if (num == 0) {
 				break;
 			}
-			
+
 		} while (true);
 	}
 }

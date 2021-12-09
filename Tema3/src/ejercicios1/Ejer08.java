@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejer08 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
 		double notas[] = new double[10];
 		int i = 0;
@@ -19,7 +19,7 @@ public class Ejer08 {
 			}
 			i++;
 		}
-		
+
 		System.out.println("Las notas son: ");
 		i = 0;
 		while (i < notas.length) {

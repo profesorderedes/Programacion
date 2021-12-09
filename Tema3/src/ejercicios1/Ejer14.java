@@ -10,7 +10,7 @@ public class Ejer14 {
 	public static void main(String[] args) {
 
 		int primos[] = new int[100];
-		
+
 		boolean esPrimo = true;
 		int numPrimos = 0; // Número de primos encontrados
 

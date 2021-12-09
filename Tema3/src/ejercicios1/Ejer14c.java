@@ -12,14 +12,14 @@ public class Ejer14c {
 
 		System.out.println("Lista de números primos");
 		System.out.println("=======================");
-		
+
 		// candidato es el número que vamos a comprobar si es primo.
 		for (int candidato = 2; candidato <= 100; candidato++) {
 
 			// Para cada número candidato a ser primo, empezamos
 			// suponiendo que lo es.
 			esPrimo = true;
-			
+
 			// Si candidato es primo, lo mostramos.
 			for (int i = 2; i < candidato; i++) {
 

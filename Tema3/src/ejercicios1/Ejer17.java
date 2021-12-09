@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Ejer17 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
 
 		double precios[] = new double[10];
@@ -29,12 +29,10 @@ public class Ejer17 {
 
 		}
 
-		System.out.println("En total, debes pagar: " 
-				+ total + " €");
+		System.out.println("En total, debes pagar: " + total + " €");
 
 		if (mayor10 >= 1) {
-			System.out.println("Has comprado " + mayor10 
-					+ " productos por encima de 10€.");
+			System.out.println("Has comprado " + mayor10 + " productos por encima de 10€.");
 		}
 
 	}

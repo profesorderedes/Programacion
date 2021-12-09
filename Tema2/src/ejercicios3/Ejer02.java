@@ -17,22 +17,21 @@ public class Ejer02 {
 		int i = 0;
 
 		while (i < 3) {
-			
+
 			System.out.println("Escribe el número:");
 			numero = entrada.nextInt();
-			
+
 			i++;
 			if (numero == aleatorio) {
 				System.out.println("¡Has acertado!");
 				break;
-			}else if (numero != aleatorio && i < 3) {
+			} else if (numero != aleatorio && i < 3) {
 				System.out.println("No, vuelve a intentarlo:");
 			}
-			
+
 		}
 
-		System.out.println("Has hecho " + i + " intentos. "
-				+ "El número era " + aleatorio + ".");
+		System.out.println("Has hecho " + i + " intentos. " + "El número era " + aleatorio + ".");
 
 		System.out.println("Puntuación obtenida:");
 

@@ -7,7 +7,7 @@ public class Ejemplo01 {
 	public static void main(String[] args) {
 
 		float precios[] = new float[5];
-		
+
 		// También se puede:
 		// float[] precios = new float[5];
 
@@ -19,12 +19,10 @@ public class Ejemplo01 {
 		System.out.println("En la posición 0 se encuentra " + precios[0]);
 		System.out.println("En la posición 1 se encuentra " + precios[1]);
 
-		System.out.println("La suma de los dos primeros " 
-				+ "precios es " + (precios[0] + precios[1]));
+		System.out.println("La suma de los dos primeros " + "precios es " + (precios[0] + precios[1]));
 
-		System.out.println("\nSi no introducimos un valor en "
-				+ "una posición, valdrá " + precios[4]);
-		
+		System.out.println("\nSi no introducimos un valor en " + "una posición, valdrá " + precios[4]);
+
 	}
 
 }
