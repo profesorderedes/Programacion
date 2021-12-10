@@ -21,8 +21,7 @@ public class Ejemplo05 {
 			// guardamos ese valor como nuevo mínimo.
 			if(edades[i] < min) {
 				min = edades[i];
-			}
-			if(edades[i] > max) {
+			} else if(edades[i] > max) {
 				max = edades[i];
 			}
 			
