@@ -19,9 +19,8 @@ public class Ejer06 {
 
 		int posMin = 0;
 		int posMax = 0;
-		
 
-		for (int i = 0; i < votos.length; i++) {
+		for (int i = 1; i < votos.length; i++) {
 
 			if (votos[i] > votos[posMax]) {
 				posMax = i;
@@ -33,14 +32,10 @@ public class Ejer06 {
 
 		}
 
-		System.out
-				.println("El partido con más votos ha sido el " 
-				+ (posMax + 1) + " con un total de " 
-				+ votos[posMax] + " votos");
 		System.out.println(
-				"El partido con menos votos ha sido el " 
-				+ (posMin + 1) + " con un total de " 
-				+ votos[posMin] + " votos");
+				"El partido con más votos ha sido el " + (posMax + 1) + " con un total de " + votos[posMax] + " votos");
+		System.out.println("El partido con menos votos ha sido el " + (posMin + 1) + " con un total de " + votos[posMin]
+				+ " votos");
 
 	}
 
