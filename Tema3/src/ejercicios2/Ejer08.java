@@ -8,9 +8,8 @@ public class Ejer08 {
 
 		Scanner entrada = new Scanner(System.in);
 
-		int humedad[] = { 45, 40, 40, 40, 37, 35, 39, 39, 45, 50, 
-				55, 60, 65, 70, 70, 75, 75, 72, 65, 60, 55, 50, 
-				50, 45 };
+		int humedad[] = { 45, 40, 40, 40, 37, 35, 39, 39, 45, 50, 55, 60, 65, 70, 70, 75, 75, 72, 65, 60, 55, 50, 50,
+				45 };
 
 		int posMin = 0;
 		int posMax = 0;
@@ -29,12 +28,8 @@ public class Ejer08 {
 
 		}
 
-		System.out.println("La humedad menor es de " 
-		+ humedad[posMin] + "% y se ha encontrado a las " 
-				+ posMin + "h");
-		System.out.println("La humedad mayor es de " 
-				+ humedad[posMax] + "% y se ha encontrado a las " 
-				+ posMax + "h");
+		System.out.println("La humedad menor es de " + humedad[posMin] + "% y se ha encontrado a las " + posMin + "h");
+		System.out.println("La humedad mayor es de " + humedad[posMax] + "% y se ha encontrado a las " + posMax + "h");
 
 	}
 }
