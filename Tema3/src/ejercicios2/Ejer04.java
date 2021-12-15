@@ -14,8 +14,7 @@ public class Ejer04 {
 
 		for (int i = 0; i < productos.length; i++) {
 
-			System.out.println((i + 1) 
-					+ " - Escribe el precio del producto :");
+			System.out.println((i + 1) + " - Escribe el precio del producto :");
 
 			productos[i] = entrada.nextFloat();
 
@@ -29,8 +28,7 @@ public class Ejer04 {
 
 			if (productos[i] < 0) {
 
-				System.out.println("Se ha encontrado un valor "
-						+ "no válido en la posición " + i);
+				System.out.println("Se ha encontrado un valor " + "no válido en la posición " + i);
 
 				preciosCorrectos = false;
 
