@@ -40,7 +40,7 @@ public class Ejemplo07 {
 			valores[i] = aux;
 
 		}
-		
+
 		for (int i = 0; i < valores.length; i++) {
 			System.out.print(valores[i] + " ");
 		}
