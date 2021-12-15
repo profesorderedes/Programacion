@@ -10,7 +10,7 @@ public class Ejemplo07 {
 		int posMin;
 		int aux;
 
-		for (int i = 0; i < valores.length; i++) {
+		for (int i = 0; i < valores.length - 1; i++) {
 
 			// El array sin ordenar empieza en la posición i.
 
@@ -18,7 +18,7 @@ public class Ejemplo07 {
 			// Buscamos el mínimo desde la posición i hasta el
 			// final del array.
 			posMin = i;
-			for (int j = i; j < valores.length; j++) {
+			for (int j = i + 1; j < valores.length; j++) {
 
 				// Si encontramos un valor más pequeño que
 				// el de posMin, actualizamos posMin a esa
