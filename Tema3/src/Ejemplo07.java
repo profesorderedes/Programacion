@@ -18,7 +18,7 @@ public class Ejemplo07 {
 			// Buscamos el mínimo desde la posición i hasta el
 			// final del array.
 			posMin = i;
-			for (int j = i + 1; j < valores.length; j++) {
+			for (int j =  1; j < valores.length; j++) {
 
 				// Si encontramos un valor más pequeño que
 				// el de posMin, actualizamos posMin a esa
