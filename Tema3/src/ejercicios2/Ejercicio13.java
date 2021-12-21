@@ -11,6 +11,35 @@ public class Ejercicio13 {
 				{ 7,    1023, 50 } 
 		};
 
+		// Obtener el número de filas y columnas.
+		System.out.println("Tamaño de la tabla:");
+		System.out.println("Filas: " + medidas.length);
+		System.out.println("Columnas: " + medidas[0].length);
+
+		// Mostrar el array.
+		System.out.println("\nContenido de la tabla:");
+		for(int fila = 0; fila < medidas.length; fila++) {
+			
+			System.out.println(medidas[fila][0] + "\t" 
+							+  medidas[fila][1] + "\t"
+							+  medidas[fila][2]);
+			
+		}
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
