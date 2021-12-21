@@ -1,6 +1,6 @@
 package ejercicios2;
 
-public class Ejercicio13 {
+public class Ejer13 {
 
 	public static void main(String[] args) {
 
@@ -30,8 +30,10 @@ public class Ejercicio13 {
 		for (int fila = 0; fila < medidas.length; fila++) {
 
 			for(int col = 0; col < medidas[0].length; col++) {
-				System.out.println(medidas[fila][col]);
+				System.out.print(medidas[fila][col] + "\t");
 			}
+			
+			System.out.println();
 
 		}
 
