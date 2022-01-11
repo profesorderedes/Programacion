@@ -9,19 +9,29 @@ public class Ejemplo08 {
 
 		// Buscar el mínimo y el máximo sueldo.
 		int posMin = 0;
+		int posMax = 0;
 
-		for (int fila = 0; fila < empleados.length; fila++) {
+		for (int fila = 1; fila < empleados.length; fila++) {
 
-			if (Float.parseFloat(empleados[fila][2]) < Float.parseFloat(empleados[posMin][2])) {
+			if (Float.parseFloat(empleados[fila][2]) < 
+					Float.parseFloat(empleados[posMin][2])) {
 				posMin = fila;
+			} else if (Float.parseFloat(empleados[fila][2]) > 
+					Float.parseFloat(empleados[posMax][2])) {
+				posMax = fila;
 			}
 
 		}
 
 		System.out.println("El empleado que menos "
-				+ "gana es: " + empleados[posMin][1] 
+				+ "gana es: \n" + empleados[posMin][1] 
 				+ " " + empleados[posMin][0] + " ("
 				+ empleados[posMin][2] + " euros)");
+		
+		System.out.println("El empleado que más "
+				+ "gana es: \n" + empleados[posMax][1] 
+				+ " " + empleados[posMax][0] + " ("
+				+ empleados[posMax][2] + " euros)");
 
 	}
 
