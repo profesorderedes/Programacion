@@ -11,7 +11,8 @@ public class Ejer16 {
 		for (int fila = 0; fila 
 				< calificaciones.length; fila++) {
 
-			total = total + Float.parseFloat(calificaciones[fila][1]);
+			total = total 
+				+ Float.parseFloat(calificaciones[fila][1]);
 
 			System.out.println();
 
