@@ -36,6 +36,8 @@ public class Ejemplos {
 		System.out.println("El texto \"hola\" aparece en la "
 				+ "posición " + frase.indexOf("hola"));
 		
+		// Método lastIndexOf(String textoABuscar)
+		
 		
 		
 		
