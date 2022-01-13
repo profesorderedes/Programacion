@@ -31,8 +31,10 @@ public class Ejemplos {
 		
 		// Método indexOf(String textoABuscar)
 		
-		
-		
+		System.out.println("El texto \"hay\" aparece en la "
+				+ "posición " + frase.indexOf("hay"));
+		System.out.println("El texto \"hola\" aparece en la "
+				+ "posición " + frase.indexOf("hola"));
 		
 		
 		
