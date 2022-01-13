@@ -20,7 +20,26 @@ public class Ejemplos {
 		// Método replace(char 'caracter_antiguo', char 'caracter_nuevo')
 		
 		System.out.println("La frase anterior, cambiando "
-				+ "las a por i queda:\n" + frase.replace('a', 'i'));
+				+ "las a por i queda:\n" 
+				+ frase.replace('a', 'i'));
+		
+		// Método replace(CharSequence cadena_antigua, CharSequence cadena_nueva)
+		
+		System.out.println("\nLa frase anterior cambiando "
+				+ "\"hay\" por \"haiga\" queda:\n"
+				+frase.replace("hay", "haiga"));
+		
+		// Método indexOf(String textoABuscar)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
