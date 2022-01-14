@@ -34,21 +34,27 @@ public class Ejemplos {
 				+ frase.lastIndexOf("a") + "\n");
 
 		// Método int compareTo(String textoPorComparar)
-		
+
 		String palabra1 = "gato";
 		String palabra2 = "gato";
 		String palabra3 = "perro";
 		String palabra4 = "delfín";
-		
+
 		System.out.println("Comparando gato con gato:");
 		System.out.println(palabra1.compareTo(palabra2));
-		
+
 		System.out.println("Comparando gato con perro:");
 		System.out.println(palabra1.compareTo(palabra3));
-		
+
 		System.out.println("Comparando gato con delfín:");
 		System.out.println(palabra1.compareTo(palabra4));
-		
+
+		System.out.println((int) (Math.random() * 26 + 1));
+
+		System.out.println("La segunda letra y las dos "
+				+ "siguientes de "
+				+ "la palabra " + palabra1 + " son: " 
+				+ palabra1.substring(1, 4));
 	}
 
 }
