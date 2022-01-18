@@ -1,5 +1,5 @@
 package ejercicios3;
-public class Ejercicio04 {
+public class Ejer4Error {
 
     public static void main(String[] args) {
        
@@ -24,6 +24,8 @@ public class Ejercicio04 {
            
            
         }
+        
+        
 
     }
 
