@@ -26,17 +26,14 @@ public class Ejer12 {
 
 		}
 
-		System.out.println(
-				"Los números atómicos ordenados de menor "
-				+ "a mayor:\n==================================="
+		System.out.println("Los números atómicos ordenados de menor " + "a mayor:\n==================================="
 				+ "=============");
 
 		for (int i = 0; i < numeros.length; i++) {
 			System.out.print(numeros[i] + " ");
 		}
 
-		System.out.println("\nEl número atómico mas pequeño es " 
-				+ numeros[0] + " y el más grande es "
+		System.out.println("\nEl número atómico mas pequeño es " + numeros[0] + " y el más grande es "
 				+ numeros[numeros.length - 1]);
 
 	}

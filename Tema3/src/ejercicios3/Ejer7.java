@@ -32,8 +32,8 @@ public class Ejer7 {
 
 		}
 
-		System.out.println("Han fallado " + pedidoTarde + " pedidos, un " +
-				((pedidoTarde * 100) / tiempos.length) + "%");
+		System.out
+				.println("Han fallado " + pedidoTarde + " pedidos, un " + ((pedidoTarde * 100) / tiempos.length) + "%");
 
 	}
 

@@ -20,9 +20,8 @@ public class Ejer03 {
 		}
 
 		for (int i = 0; i < nombres.length; i++) {
-			
-			if (nombres[i] != null && 
-					nombres[i].equals("Calderón")) {
+
+			if (nombres[i] != null && nombres[i].equals("Calderón")) {
 				nombreEncontrado = true;
 				break;
 			}

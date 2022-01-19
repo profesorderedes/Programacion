@@ -23,14 +23,12 @@ public class Ejer02 {
 
 		}
 
-		if(estaturaEncontrada) {
-			System.out.println("Hay al menos una estatura "
-					+ "mayor de 1,90m.");
-		}else {
-			System.out.println("Todas las estaturas son "
-					+ "menores de 1,90m.");
+		if (estaturaEncontrada) {
+			System.out.println("Hay al menos una estatura " + "mayor de 1,90m.");
+		} else {
+			System.out.println("Todas las estaturas son " + "menores de 1,90m.");
 		}
-		
+
 	}
 
 }

@@ -8,9 +8,8 @@ public class Ejer07 {
 
 		Scanner entrada = new Scanner(System.in);
 
-		int espectadores[] = {2_000_000, 2500000,  3100000,
-				3000000, 1200000, 1800000, 2050000};
-		
+		int espectadores[] = { 2_000_000, 2500000, 3100000, 3000000, 1200000, 1800000, 2050000 };
+
 		int posMax = 0;
 		int posMin = 0;
 
@@ -30,12 +29,10 @@ public class Ejer07 {
 
 		}
 
-		System.out.println("El día con más espectadores es el " 
-				+ (posMax + 1) + " de la semana con : "
+		System.out.println("El día con más espectadores es el " + (posMax + 1) + " de la semana con : "
 				+ espectadores[posMax] + " visitas.");
 
-		System.out.println("El día con menos espectadores es " 
-		+ (posMin + 1) + " de la semana con : "
+		System.out.println("El día con menos espectadores es " + (posMin + 1) + " de la semana con : "
 				+ espectadores[posMin] + " visitas.");
 
 	}

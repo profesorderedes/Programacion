@@ -37,14 +37,10 @@ public class Ejer6 {
 
 		}
 
-		System.out.println("El salario más alto ha sido " 
-				+ salarios[posMax] 
-				+ " €. Y el salario más bajo ha sido "
+		System.out.println("El salario más alto ha sido " + salarios[posMax] + " €. Y el salario más bajo ha sido "
 				+ salarios[posMin] + " €.");
-		System.out.println("\nLa media es: " 
-				+ total / salarios.length);
-		System.out.println("Hay " + salariosAltos 
-				+ " empleados cobrando más de 1500 euros.");
+		System.out.println("\nLa media es: " + total / salarios.length);
+		System.out.println("Hay " + salariosAltos + " empleados cobrando más de 1500 euros.");
 
 	}
 

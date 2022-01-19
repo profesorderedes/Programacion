@@ -52,46 +52,31 @@ public class Ejemplos {
 		System.out.println(palabra1.compareTo(palabra4));
 
 		// Método String substring(int inicio, int fin)
-		
-		System.out.println("La segunda letra y las dos "
-				+ "siguientes de "
-				+ "la palabra " + palabra1 + " son: " 
+
+		System.out.println("La segunda letra y las dos " + "siguientes de " + "la palabra " + palabra1 + " son: "
 				+ palabra1.substring(1, 4));
-		
+
 		// Méotodo String[ ] split(String separador)
 		String palabrasSueltas[] = frase.split(" ");
-		System.out.println("Las palabras sueltas de la " 
-				+ "primera frase son:");
+		System.out.println("Las palabras sueltas de la " + "primera frase son:");
 		System.out.println(Arrays.toString(palabrasSueltas));
-		
-		String contacto = "Castillo López, Adrián, "
-				+ "acastillo@iessonferrer.net";
+
+		String contacto = "Castillo López, Adrián, " + "acastillo@iessonferrer.net";
 		String campos[] = contacto.split(",");
-		
+
 		for (int i = 0; i < campos.length; i++) {
 			System.out.println(campos[i]);
 		}
-		
+
 		// Método String String.valueOf(número)
-		
+
 		float estatura = 1.7F;
-		
+
 		String estaturaComoString = String.valueOf(estatura);
-		
+
 		// Equivalente a:
 		// String estaturaComoString = "" + estatura;
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
 }

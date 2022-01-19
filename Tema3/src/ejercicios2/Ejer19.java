@@ -48,9 +48,7 @@ public class Ejer19 {
 
 		for (int fila = 0; fila < nominas.length; fila++) {
 
-			System.out.printf("%-10s %-15s %5s",
-					nominas[fila][0],nominas[fila][1],
-					nominas[fila][2]);
+			System.out.printf("%-10s %-15s %5s", nominas[fila][0], nominas[fila][1], nominas[fila][2]);
 
 			System.out.println();
 

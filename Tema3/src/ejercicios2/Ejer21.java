@@ -36,28 +36,24 @@ public class Ejer21 {
 
 		float total = 0;
 		int posMin = 0;
-		
+
 		for (int fila = 0; fila < nominas.length; fila++) {
 
-			System.out.printf("%-10s %-15s %5s", nominas[fila][0], 
-					nominas[fila][1], nominas[fila][2]);
+			System.out.printf("%-10s %-15s %5s", nominas[fila][0], nominas[fila][1], nominas[fila][2]);
 
 			System.out.println();
-			
+
 			total = total + Float.parseFloat(nominas[fila][2]);
 
-			if (Float.parseFloat(nominas[fila][2]) < 
-					Float.parseFloat(nominas[posMin][2])) {
+			if (Float.parseFloat(nominas[fila][2]) < Float.parseFloat(nominas[posMin][2])) {
 				posMin = fila;
 			}
 
 		}
 
-		System.out.println("\nEn total la empresa paga " + total 
-				+ " euros en sueldos cada mes.");
+		System.out.println("\nEn total la empresa paga " + total + " euros en sueldos cada mes.");
 
-		System.out.println("\nEl salario más bajo corresponde " 
-				+ "a " + nominas[posMin][0] + " " + nominas[posMin][1]
+		System.out.println("\nEl salario más bajo corresponde " + "a " + nominas[posMin][0] + " " + nominas[posMin][1]
 				+ ", que cobra " + nominas[posMin][2] + " euros.");
 
 	}

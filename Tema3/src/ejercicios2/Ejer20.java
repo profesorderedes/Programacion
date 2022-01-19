@@ -36,9 +36,7 @@ public class Ejer20 {
 
 		for (int fila = 0; fila < nominas.length; fila++) {
 
-			System.out.printf("%-10s %-15s %5s",
-					nominas[fila][0],nominas[fila][1],
-					nominas[fila][2]);
+			System.out.printf("%-10s %-15s %5s", nominas[fila][0], nominas[fila][1], nominas[fila][2]);
 
 			System.out.println();
 
@@ -57,22 +55,19 @@ public class Ejer20 {
 		System.out.println("En total la empresa paga " + total + " euros en sueldos cada mes.");
 
 		// Buscamos el salario más bajo.
-		
+
 		int posMin = 0;
-		for(int fila = 0; fila < nominas.length; fila++) {
-			
-			if(Float.parseFloat(nominas[fila][2]) 
-					< Float.parseFloat(nominas[posMin][2])) {
+		for (int fila = 0; fila < nominas.length; fila++) {
+
+			if (Float.parseFloat(nominas[fila][2]) < Float.parseFloat(nominas[posMin][2])) {
 				posMin = fila;
 			}
-			
+
 		}
-		
-		System.out.println("El salario más bajo corresponde "
-				+ "a " + nominas[posMin][0] + " " 
-				+ nominas[posMin][1] + ", que cobra " 
-				+ nominas[posMin][2] + " euros.");
-		
+
+		System.out.println("El salario más bajo corresponde " + "a " + nominas[posMin][0] + " " + nominas[posMin][1]
+				+ ", que cobra " + nominas[posMin][2] + " euros.");
+
 	}
 
 }

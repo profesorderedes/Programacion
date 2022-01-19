@@ -13,13 +13,13 @@ public class Ejer09 {
 			// Buscamos el mínimo entre i y el final del array.
 			posMin = i;
 			for (int j = i + 1; j < precios.length; j++) {
-				
-				if(precios[j] < precios[posMin]) {
+
+				if (precios[j] < precios[posMin]) {
 					posMin = j;
 				}
-				
+
 			}
-			
+
 			// Intercambios las posiciones i y posMin.
 			aux = precios[posMin];
 			precios[posMin] = precios[i];
@@ -28,9 +28,9 @@ public class Ejer09 {
 		}
 
 		for (int i = 0; i < precios.length; i++) {
-			
+
 			System.out.print(precios[i] + " ");
-			
+
 		}
 	}
 

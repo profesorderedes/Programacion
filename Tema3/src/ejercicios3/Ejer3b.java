@@ -6,8 +6,7 @@ public class Ejer3b {
 
 	public static void main(String[] args) {
 
-		double cotizaciones[] = { 47.5, 47.8, 48, 48.1, 
-				47.7, 47.3, 46, 47.9, 48.05, 48.7 };
+		double cotizaciones[] = { 47.5, 47.8, 48, 48.1, 47.7, 47.3, 46, 47.9, 48.05, 48.7 };
 
 		int posMin = 0;
 		int posMax = 0;
@@ -28,17 +27,14 @@ public class Ejer3b {
 
 		}
 
-		System.out.println("El valor máximo es de: " 
-				+ cotizaciones[posMax]);
+		System.out.println("El valor máximo es de: " + cotizaciones[posMax]);
 
-		System.out.println("El valor mínimo es de: " 
-				+ cotizaciones[posMin]);
+		System.out.println("El valor mínimo es de: " + cotizaciones[posMin]);
 
-		System.out.println("\nA continuación se ordenarán "
-				+ "de menor a mayor.");
+		System.out.println("\nA continuación se ordenarán " + "de menor a mayor.");
 
 		// Usamos el método de la burbuja para ordenar.
-		
+
 		double aux = 0;
 
 		for (int i = 0; i < cotizaciones.length - 1; i++) {
@@ -52,8 +48,6 @@ public class Ejer3b {
 					cotizaciones[j] = aux;
 
 				}
-				
-				
 
 			}
 		}

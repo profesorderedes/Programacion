@@ -4,10 +4,7 @@ public class Ejer14 {
 
 	public static void main(String[] args) {
 
-		String precios[][] = { 
-				{ "Tablet Samsung", "120" }, 
-				{ "Móvil Sony", "115" }, 
-				{ "Ipad Mini", "290" },
+		String precios[][] = { { "Tablet Samsung", "120" }, { "Móvil Sony", "115" }, { "Ipad Mini", "290" },
 				{ "Móvil HTC", "95" } };
 
 		System.out.println("La tabla tiene:");

@@ -34,10 +34,8 @@ public class Ejer22 {
 
 		for (int i = 0; i < alumnos.length; i++) {
 			float total = 0;
-			total = (50 * Float.parseFloat(alumnos[i][1]) 
-					+ 40 * Float.parseFloat(alumnos[i][2])
-					+ 10 * Float.parseFloat(alumnos[i][3])) 
-						/ 100;
+			total = (50 * Float.parseFloat(alumnos[i][1]) + 40 * Float.parseFloat(alumnos[i][2])
+					+ 10 * Float.parseFloat(alumnos[i][3])) / 100;
 
 			System.out.println(alumnos[i][0] + ": " + total);
 		}

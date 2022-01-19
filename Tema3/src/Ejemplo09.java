@@ -10,12 +10,9 @@ public class Ejemplo09 {
 		String apellidos = "Sánchez";
 		int edad = 20;
 
-		System.out.println(nombre + " " + apellidos 
-				+ " tiene " + edad + " años.");
+		System.out.println(nombre + " " + apellidos + " tiene " + edad + " años.");
 
-		System.out.printf("%-10s %-15s tiene %5d años.", 
-				nombre, apellidos, edad);
-		
+		System.out.printf("%-10s %-15s tiene %5d años.", nombre, apellidos, edad);
 
 	}
 }

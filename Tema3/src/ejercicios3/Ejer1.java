@@ -27,14 +27,10 @@ public class Ejer1 {
 		System.out.println("\nInformación de los libros: ");
 		System.out.println("--------------------------");
 
-		System.out.printf("%-14s %-30s %-25s %-15s\n",
-				"ISBN","Título","Autor","Editorial");
-	
+		System.out.printf("%-14s %-30s %-25s %-15s\n", "ISBN", "Título", "Autor", "Editorial");
 
 		for (int fila = 0; fila < libros.length; fila++) {
-			System.out.printf("%-14s %-30s %-25s %-15s\n",
-					libros[fila][0], 
-					libros[fila][1], libros[fila][2],
+			System.out.printf("%-14s %-30s %-25s %-15s\n", libros[fila][0], libros[fila][1], libros[fila][2],
 					libros[fila][3]);
 		}
 

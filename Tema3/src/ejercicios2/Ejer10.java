@@ -18,57 +18,42 @@ public class Ejer10 {
 			System.out.print("Temperatura: ");
 			temperaturas[i] = entrada.nextFloat();
 		}
-		
+
 		System.out.println(Arrays.toString(temperaturas));
 
 		// Ordenamos el array.
-		
-		for(int i = 0; i<temperaturas.length - 1; i++) {
-			
+
+		for (int i = 0; i < temperaturas.length - 1; i++) {
+
 			posMin = i;
 			for (int j = i + 1; j < temperaturas.length; j++) {
-				
-				if(temperaturas[j] < temperaturas[posMin]) {
-					
+
+				if (temperaturas[j] < temperaturas[posMin]) {
+
 					posMin = j;
-					
+
 				}
-				
+
 			}
-			
+
 			aux = temperaturas[posMin];
 			temperaturas[posMin] = temperaturas[i];
 			temperaturas[i] = aux;
-			
+
 			// Para ver cómo va quedando el array.
 			System.out.println(Arrays.toString(temperaturas));
-			
+
 		}
-		
+
 		// Mostramos el contenido del array usando la clase
 		// Arrays.
 		System.out.println("\nLas temperaturas, de menor a mayor, son:");
 		System.out.println(Arrays.toString(temperaturas));
-		
+
 		// Indicamos la mínima y máxima temperatura.
-		System.out.print("\nTemperatura mínima: " 
-				+ temperaturas[0]);
-		System.out.print("\nTemperatura máxima: " 
-				+ temperaturas[temperaturas.length - 1]);
+		System.out.print("\nTemperatura mínima: " + temperaturas[0]);
+		System.out.print("\nTemperatura máxima: " + temperaturas[temperaturas.length - 1]);
 
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
