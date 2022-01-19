@@ -21,7 +21,6 @@ public class Ejer22 {
 			alumnos[i][2] = entrada.nextLine();
 			System.out.println("Actitud:");
 			alumnos[i][3] = entrada.nextLine();
-
 		}
 		System.out.println("Notas de evaluación");
 		System.out.println("=============================");
