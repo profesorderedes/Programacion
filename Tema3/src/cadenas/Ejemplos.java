@@ -39,9 +39,14 @@ public class Ejemplos {
 
 		String palabra1 = "gato";
 		String palabra2 = "gato";
-		String palabra3 = "perro";
+		String palabra3 = "Perro";
 		String palabra4 = "delfín";
 
+		palabra1 = palabra1.toUpperCase();
+		palabra2 = palabra2.toUpperCase();
+		palabra3 = palabra3.toUpperCase();
+		palabra4 = palabra4.toUpperCase();
+		
 		System.out.println("Comparando gato con gato:");
 		System.out.println(palabra1.compareTo(palabra2));
 
@@ -56,7 +61,7 @@ public class Ejemplos {
 		System.out.println("La segunda letra y las dos " + "siguientes de " + "la palabra " + palabra1 + " son: "
 				+ palabra1.substring(1, 4));
 
-		// Méotodo String[ ] split(String separador)
+		// Método String[ ] split(String separador)
 		String palabrasSueltas[] = frase.split(" ");
 		System.out.println("Las palabras sueltas de la " + "primera frase son:");
 		System.out.println(Arrays.toString(palabrasSueltas));
