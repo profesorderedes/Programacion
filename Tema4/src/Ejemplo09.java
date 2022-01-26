@@ -19,9 +19,9 @@ public class Ejemplo09 {
 				+ "aljibe es la " + inicial("aljibe"));
 		
 		System.out.println("\nSi un producto cuesta 100 euros, "
-				+ "le hacemos un descuento del 10% "
-				+ "y le aplicamos un IVA del 21%, su precio "
-				+ "final será " + precioVenta(100,10,21));
+				+ "\nle hacemos un descuento del 10% "
+				+ "\ny le aplicamos un IVA del 21%, su precio "
+				+ "\nfinal será " + precioVenta(100,10,21));
 		
 	}
 
