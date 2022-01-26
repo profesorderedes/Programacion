@@ -18,7 +18,7 @@ public class Ejemplo04 {
 	
 	static void mostrar(String palabra) {
 		
-		System.out.println();
+		System.out.println(palabra);
 		
 	}
 	

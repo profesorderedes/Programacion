@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Ejemplo02 {
 
+	// Variable global.
 	static float precios[] = new float[5];
 
 	public static void main(String[] args) {

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejemplo06 {
+public class Ejemplo07 {
 
 	public static void main(String[] args) {
 
@@ -13,16 +13,18 @@ public class Ejemplo06 {
 		System.out.println("Segundo número: ");
 		float num2 = entrada.nextFloat();
 
-		sumar(num1, num2);
+		float suma = sumar(num1, num2);
+		System.out.println("suma = " + suma);
 
 	}
 
 	// Método que recibe dos números decimales
-	// y muestra el valor de su suma.
-	static void sumar(float numero1, float numero2) {
+	// y devuelve el valor de su suma.
+	static float sumar(float numero1, float numero2) {
 
-		System.out.println("La suma vale " 
-		+ (numero1 + numero2));
+		float resultado = numero1 + numero2;
+		
+		return resultado;
 
 	}
 

@@ -33,8 +33,6 @@ public class Ejemplo03 {
 		// Probamos a cambiar el valor de num.
 		num = 20;
 		
-		
-		
 	}
 	
 }
