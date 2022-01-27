@@ -1,33 +1,22 @@
 package ejercicios;
-import java.util.Scanner;
 
+import java.util.Scanner;
 
 public class Ejer03 {
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
 
-	Scanner entrada = new Scanner(System.in);
+		System.out.println("Tu nombre es: " + name());
 
-	String nombre = entrada.nextLine(); 
+	}
 
-	System.out.println(name(nombre));
+	static String name() {
+		
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("¿Cuál es tu nombre?");
+		String nombre = entrada.nextLine();
+		return nombre;
 
-}
-
-
-static String name(String nombre) {
-
-	
-
-	
-
-	
-
-	
-
-	return nombre;
-
-}
-
+	}
 
 }
