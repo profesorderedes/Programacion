@@ -4,20 +4,17 @@ import java.util.Arrays;
 
 public class Ejer05 {
 
-	
-
 	public static void main(String[] args) {
 
-		int numeros[] = {10, 4, 2, 7, 7, 8};
-		
+		int numeros[] = { 10, 4, 2, 7, 7, 8 };
+
 		int resultado[] = ordenarArray(numeros);
-		
+
 		for (int i = 0; i < resultado.length; i++) {
 			System.out.println(resultado[i]);
 		}
-		
+
 		System.out.println(Arrays.toString(numeros));
-		
 
 	}
 
@@ -47,7 +44,7 @@ public class Ejer05 {
 		}
 
 		// El array ya está ordenado.
-		
+
 		return numeros;
 
 	}

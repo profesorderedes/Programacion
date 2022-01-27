@@ -15,13 +15,13 @@ public class Ejemplo10 {
 					posMin = j;
 				}
 			}
-			
+
 			aux = nombres[i];
 			nombres[i] = nombres[posMin];
 			nombres[posMin] = aux;
 
 		}
-		
+
 		System.out.println("Listado ordenado de nombres:");
 		for (int i = 0; i < nombres.length; i++) {
 			System.out.println(nombres[i]);

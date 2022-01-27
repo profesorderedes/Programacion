@@ -46,7 +46,7 @@ public class Ejemplos {
 		palabra2 = palabra2.toUpperCase();
 		palabra3 = palabra3.toUpperCase();
 		palabra4 = palabra4.toUpperCase();
-		
+
 		System.out.println("Comparando gato con gato:");
 		System.out.println(palabra1.compareTo(palabra2));
 

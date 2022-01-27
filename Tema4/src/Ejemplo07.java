@@ -23,7 +23,7 @@ public class Ejemplo07 {
 	static float sumar(float numero1, float numero2) {
 
 		float resultado = numero1 + numero2;
-		
+
 		return resultado;
 
 	}

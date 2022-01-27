@@ -38,7 +38,7 @@ public class Ejer11 {
 			edades[posMin] = aux;
 
 		}
-		
+
 		for (int i = 0; i < edades.length; i++) {
 
 			System.out.println(edades[i]);

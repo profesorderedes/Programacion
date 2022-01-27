@@ -9,8 +9,7 @@ public class Ejemplo08 {
 		System.out.println("Escribe un número entero:");
 		int num = entrada.nextInt();
 
-		System.out.println("El doble de " + num + " es " 
-				+ duplicar(num));
+		System.out.println("El doble de " + num + " es " + duplicar(num));
 
 	}
 

@@ -9,7 +9,7 @@ public class Ejer04 {
 		int array[] = { 10, 20, 5, 12, 3, 2, 1 };
 
 		colocarArray(array);
-		
+
 		System.out.println("De nada.");
 
 	}

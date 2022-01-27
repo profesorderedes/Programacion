@@ -54,7 +54,7 @@ public class Ejemplo02 {
 	}
 
 	static void mostrarPrecios() {
-		
+
 		System.out.println("Precios almacenados:");
 		for (int i = 0; i < precios.length; i++) {
 			System.out.print(precios[i] + "  ");

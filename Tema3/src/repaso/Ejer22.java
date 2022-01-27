@@ -11,7 +11,7 @@ public class Ejer22 {
 		String alumnos[][] = new String[3][4];
 		System.out.println("Introducción de notas");
 		System.out.println("===========================");
-		
+
 		for (int i = 0; i < alumnos.length; i++) {
 			System.out.println("Nombre:");
 			alumnos[i][0] = entrada.nextLine();
@@ -26,12 +26,8 @@ public class Ejer22 {
 		System.out.println("=============================");
 
 		for (int i = 0; i < alumnos.length; i++) {
-			System.out.println(alumnos[i][0] 
-					+ ": " 
-					+ (50 * Float.parseFloat(alumnos[i][1])
-					+ 40 * Float.parseFloat(alumnos[i][2]) 
-					+ 10 * Float.parseFloat(alumnos[i][3])) 
-					/ 100);
+			System.out.println(alumnos[i][0] + ": " + (50 * Float.parseFloat(alumnos[i][1])
+					+ 40 * Float.parseFloat(alumnos[i][2]) + 10 * Float.parseFloat(alumnos[i][3])) / 100);
 		}
 
 	}

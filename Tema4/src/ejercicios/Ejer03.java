@@ -11,7 +11,7 @@ public class Ejer03 {
 	}
 
 	static String name() {
-		
+
 		Scanner entrada = new Scanner(System.in);
 		System.out.println("¿Cuál es tu nombre?");
 		String nombre = entrada.nextLine();

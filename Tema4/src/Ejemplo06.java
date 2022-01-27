@@ -21,8 +21,7 @@ public class Ejemplo06 {
 	// y muestra el valor de su suma.
 	static void sumar(float numero1, float numero2) {
 
-		System.out.println("La suma vale " 
-		+ (numero1 + numero2));
+		System.out.println("La suma vale " + (numero1 + numero2));
 
 	}
 
