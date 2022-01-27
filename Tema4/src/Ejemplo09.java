@@ -27,33 +27,38 @@ public class Ejemplo09 {
 
 	// Método triple(num)
 	static int triple(int num) {
-		return 0;
+		return num * 3;
 	}
 
 	// Método areaCirculo(r)
-	static float areaCirculo(float r) {
-		return 0;
+	static double areaCirculo(float r) {
+		return Math.PI * r * r;
 	}
 
 	// Método volumenEsfera(r)
-	static float volumenEsfera(float r) {
-		return 0;
+	static double volumenEsfera(float r) {
+		return 4*Math.PI*Math.pow(r, 3)/3;
 	}
 	
 	// Método areaTriangulo(base, altura)
 	static float areaTriangulo(float base, float altura) {
-		return 0;
+		return base * altura / 2;
 	}
 
 	// Método inicial(palabra)
 	static char inicial(String palabra) {
-		return 0;
+		return palabra.charAt(0);
 	}
 
 	// Método precioVenta(precio, descuento, iva)
 	static float precioVenta(float precio, float descuento, 
 			float iva) {
-		return 0;
+		
+		float precioFinal = precio - precio*descuento/100;
+		precioFinal = precioFinal + precioFinal*iva/100;
+		
+		return precioFinal;
+		
 	}
 
 }
