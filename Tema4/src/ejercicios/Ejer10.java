@@ -12,10 +12,16 @@ public class Ejer10 {
 		int mes = entrada.nextInt();
 
 		meses(mes);
+		
+		System.out.println("Gracias.");
 
 	}
 
 	static void meses(int mes) {
+
+		if (mes < 1 || mes > 12) {
+			return;
+		}
 
 		switch (mes) {
 
@@ -67,10 +73,8 @@ public class Ejer10 {
 			System.out.println("Diciembre");
 			break;
 		}
-		default:
-			break;
-		}
 
+		}
 	}
 
 }
