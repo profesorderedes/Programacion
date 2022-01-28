@@ -12,9 +12,9 @@ public class Ejer09 {
 
 		int anyo = entrada.nextInt();
 
-		calcularBisiesto(anyo);
+		boolean resultado = esBisiesto(anyo);
 
-		if (calcularBisiesto(anyo)) {
+		if (resultado) {
 
 			System.out.println("Es bisiesto.");
 
@@ -26,20 +26,16 @@ public class Ejer09 {
 
 	}
 
-	static boolean calcularBisiesto(int numero) {
-
-		boolean bisiesto = true;
-
+	static boolean esBisiesto(int numero) {
+		
 		if ((numero % 4 == 0) && ((numero % 100 != 0) 
 				|| (numero % 400 == 0))) {
 
-			return bisiesto;
+			return true;
 
 		} else {
 
-			bisiesto = false;
-
-			return bisiesto;
+			return false;
 
 		}
 
