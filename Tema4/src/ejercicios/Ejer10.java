@@ -12,7 +12,7 @@ public class Ejer10 {
 		int mes = entrada.nextInt();
 
 		meses(mes);
-		
+
 		System.out.println("Gracias.");
 
 	}
