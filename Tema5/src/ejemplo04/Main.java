@@ -10,12 +10,23 @@ public class Main {
 		p1.y = 5;
 		p1.color = "Rojo";
 
-		System.out.println("x: " + p1.x);
-		System.out.println("y: " + p1.y);
-		System.out.println("Color: " + p1.color);
+		p1.mostrar();
+		
+		Punto p2= new Punto();
+		Punto p3= new Punto();
+		
+		p2.color = "amarillo";
+		p2.x = 1;
+		p2.y = 1;
+		
+		p3.color = "naranja";
+		p3.x = 3;
+		p3.y = 3;
 		
 		
 
 	}
+	
+	
 
 }
