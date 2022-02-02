@@ -21,12 +21,9 @@ public class Main {
 		persona1.edad = entrada.nextInt();
 		
 		// Los mostramos.
-		System.out.println("Datos de " + persona1.nombre);
-		System.out.println("===============================");
+		persona1.mostrar();
 		
-		System.out.println("Nombre: " + persona1.nombre);
-		System.out.println("Apellidos: " + persona1.apellidos);
-		System.out.println("Edad: " + persona1.edad);
+		entrada.close();
 		
 	}
 	
