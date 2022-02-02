@@ -10,20 +10,22 @@ public class Main {
 		p1.y = 5;
 		p1.color = "Rojo";
 
-		p1.mostrar();
+//		p1.mostrar();
 		
 		Punto p2= new Punto();
 		Punto p3= new Punto();
 		
 		p2.color = "amarillo";
-		p2.x = 1;
-		p2.y = 1;
+		p2.x = 2;
+		p2.y = 5;
 		
 		p3.color = "naranja";
 		p3.x = 3;
 		p3.y = 3;
 		
-		
+		// Desplazamos el punto 2, 10 píxeles a la derecha.
+		p2.desplazar(10);
+		p2.mostrar();
 
 	}
 	
