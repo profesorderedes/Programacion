@@ -35,14 +35,16 @@ public class Rectangulo {
 	
 	// Desplaza el rectángulo dx píxeles a la derecha y 
 	// dy píxeles hacia arriba.
-	
+	void desplazar(int dx, int dy) {
+		
+	}
 	
 	
 	
 	// Devuelve true si el punto (a,b) está dentro del 
 	// rectángulo, y false si no lo está.
 	boolean estaDentro(int a, int b) {
-		
+		return false;
 	}
 	
 
