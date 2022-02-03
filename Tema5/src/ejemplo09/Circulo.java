@@ -7,9 +7,17 @@ public class Circulo {
 	int y;
 	int radio;
 	String color;
-	
+
 	// Constructor
-	
+
+	Circulo(int x, int y, int radio, String color) {
+
+		this.x = x;
+		this.y = y;
+		this.radio = radio;
+		this.color = color;
+		
+	}
 
 	// Métodos
 	void mostrar() {
@@ -22,17 +30,15 @@ public class Circulo {
 	}
 
 	double area() {
-		
+
 		return Math.PI * radio * radio;
 
 	}
-	
+
 	double perimetro() {
-		
+
 		return 2 * Math.PI * radio;
-		
+
 	}
-	
-	
 
 }
