@@ -6,6 +6,15 @@ public class Persona {
 	String nombre;
 	String apellidos;
 	int edad;
+	
+	// Método constructor
+	Persona(){
+		
+		nombre = "Desconocido";
+		apellidos = "Desconocido";
+		edad = 18;
+		
+	}
 
 	// Métodos
 	void mostrar() {

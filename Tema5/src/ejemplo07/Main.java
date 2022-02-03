@@ -10,6 +10,8 @@ public class Main {
 	
 		Persona persona1 = new Persona();
 		
+		persona1.mostrar();
+		
 		// Leemos los datos de persona1 desde la terminal.
 		System.out.println("Nombre: ");
 		persona1.nombre = entrada.nextLine();
