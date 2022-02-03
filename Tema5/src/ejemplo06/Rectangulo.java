@@ -13,10 +13,10 @@ public class Rectangulo {
 	// Métodos
 	void mostrar() {
 
-		System.out.println("X :" + x);
-		System.out.println("Y :" + y);
-		System.out.println("Base :" + base);
-		System.out.println("Altura :" + altura);
+		System.out.println("X: " + x);
+		System.out.println("Y: " + y);
+		System.out.println("Base: " + base);
+		System.out.println("Altura: " + altura);
 		System.out.println("Color: " + color);
 
 	}
@@ -30,34 +30,27 @@ public class Rectangulo {
 	int perimetro() {
 
 		return base * 2 + altura * 2;
-		
+
 	}
-	
-	// Desplaza el rectángulo dx píxeles a la derecha y 
+
+	// Desplaza el rectángulo dx píxeles a la derecha y
 	// dy píxeles hacia arriba.
 	void desplazar(int dx, int dy) {
 		x = x + dx;
 		y = y + dy;
 	}
-	
-	// Devuelve true si el punto (a,b) está dentro del 
+
+	// Devuelve true si el punto (a,b) está dentro del
 	// rectángulo, y false si no lo está.
 	boolean estaDentro(int a, int b) {
-		
-		if(a >= x && a <= x + base 
-				&& b >= y && b <= y + altura) {
+
+		if (a >= x && a <= (x + base) && b >= y 
+				&& b <= (y + altura)) {
 			return true;
 		}
-		
+
 		return false;
-		
+
 	}
-	
 
 }
-
-
-
-
-
-
