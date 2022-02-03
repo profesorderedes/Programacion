@@ -36,7 +36,8 @@ public class Rectangulo {
 	// Desplaza el rectángulo dx píxeles a la derecha y 
 	// dy píxeles hacia arriba.
 	void desplazar(int dx, int dy) {
-		
+		x = x + dx;
+		y = y + dy;
 	}
 	
 	
