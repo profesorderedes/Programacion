@@ -7,7 +7,14 @@ public class Punto {
 	int y;
 	String color;
 	
-	
+	// Método constructor
+	Punto(int x, int y, String color){
+
+		this.x = x;
+		this.y = y;
+		this.color = color;
+		
+	}
 
 	// Métodos
 	void mostrar() {

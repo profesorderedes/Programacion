@@ -8,12 +8,12 @@ public class Persona {
 	int edad;
 	
 	// Método constructor
-	Persona(){
+	Persona(String nombre, String apellidos, int edad){
 		
-		nombre = "Desconocido";
-		apellidos = "Desconocido";
-		edad = 18;
-		
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.edad = edad;
+				
 	}
 
 	// Métodos
