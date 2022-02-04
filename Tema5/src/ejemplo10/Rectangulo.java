@@ -11,7 +11,16 @@ public class Rectangulo {
 	String color;
 	
 	// Constructor
-	
+	Rectangulo(int x, int y, int base, int altura, 
+			String color){
+		
+		this.x = x;
+		this.y = y;
+		this.base = base;
+		this.altura = altura;
+		this.color = color;
+		
+	}
 
 	// Métodos
 	void mostrar() {
