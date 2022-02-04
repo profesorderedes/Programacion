@@ -8,8 +8,30 @@ public class Circulo {
 	int radio;
 	String color;
 
-	// Constructor
+	// Constructores
 
+	Circulo(){
+		
+	}
+	// Firma -> Circulo()
+	
+	Circulo(int radio){
+		x = 0;
+		y = 0;
+		this.radio = radio;
+		color = "Negro";
+	}
+	// Firma -> Circulo(int)
+	
+	Circulo(String color){
+		this.color = color;
+	}
+	// Firma -> Circulo(String)
+	
+	Circulo(int x){
+		this.x = x;
+	}
+	
 	Circulo(int x, int y, int radio, String color) {
 
 		this.x = x;
@@ -18,11 +40,12 @@ public class Circulo {
 		this.color = color;
 		
 	}
+	// Firma -> Circulo(int, int, int, String)
 
 	// Métodos
 	void mostrar() {
 
-		System.out.println("X: " + x);
+		System.out.println("\nX: " + x);
 		System.out.println("Y: " + y);
 		System.out.println("Radio: " + radio);
 		System.out.println("Color: " + color);

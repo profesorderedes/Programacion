@@ -10,7 +10,24 @@ public class Rectangulo {
 	int altura;
 	String color;
 	
-	// Constructor
+	// Constructores
+	
+	Rectangulo(){
+		// Constructor vacío.
+	}
+	// Firma: Rectangulo()
+	
+	Rectangulo(int x, int y, int base, int altura){
+		
+		this.x = x;
+		this.y = y;
+		this.base = base;
+		this.altura = altura;
+		this.color = "Negro";
+		
+	}
+	// Firma: Rectangulo(int, int, int, int)
+	
 	Rectangulo(int x, int y, int base, int altura, 
 			String color){
 		
@@ -21,6 +38,7 @@ public class Rectangulo {
 		this.color = color;
 		
 	}
+	// Firma: Rectangulo(int, int, int, int, String)
 
 	// Métodos
 	void mostrar() {
