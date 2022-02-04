@@ -28,10 +28,6 @@ public class Circulo {
 	}
 	// Firma -> Circulo(String)
 	
-	Circulo(int x){
-		this.x = x;
-	}
-	
 	Circulo(int x, int y, int radio, String color) {
 
 		this.x = x;
