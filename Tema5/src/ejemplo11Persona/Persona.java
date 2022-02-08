@@ -13,7 +13,7 @@ public class Persona {
 	}
 	
 	Persona(String nombre, String apellidos){
-		
+		this(nombre, apellidos, 0);
 	}
 	
 	Persona(String nombre, String apellidos, int edad){
@@ -27,7 +27,7 @@ public class Persona {
 	// Métodos
 	void mostrar() {
 
-		System.out.println("Datos de " + nombre);
+		System.out.println("\nDatos de " + nombre);
 		System.out.println("===============================");
 
 		System.out.println("Nombre: " + nombre);
