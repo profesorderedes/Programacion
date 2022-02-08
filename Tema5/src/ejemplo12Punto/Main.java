@@ -8,6 +8,14 @@ public class Main {
 		
 		p1.mostrar();
 		
+		Punto p2 = new Punto();
+		p2.mostrar();
+		
+		Punto p3 = new Punto("Rojo");
+		p3.mostrar();
+		
+		Punto p4 = new Punto(10, 15);
+		p4.mostrar();
 
 	}
 	

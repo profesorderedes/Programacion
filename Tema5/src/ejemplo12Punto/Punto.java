@@ -8,21 +8,20 @@ public class Punto {
 	String color;
 	
 	//Constructores
+	
 	Punto(){
 		
 	}
 	
 	// Deja la x y la y con valor 0.
 	Punto(String color){
-		this()
+		this(0,0,color);
 	}
 	
 	// Dejará el color con valor "Negro".
 	Punto(int x, int y){
-		
+		this(x,y,"Negro");
 	}
-	
-	
 	
 	Punto(int x, int y, String color){
 
@@ -35,7 +34,7 @@ public class Punto {
 	// Métodos
 	void mostrar() {
 
-		System.out.println("x: " + x);
+		System.out.println("\nx: " + x);
 		System.out.println("y: " + y);
 		System.out.println("Color: " + color);
 
