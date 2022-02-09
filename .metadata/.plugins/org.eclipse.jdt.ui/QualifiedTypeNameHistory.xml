@@ -6,4 +6,7 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="ejemplo06.Rectangulo"/>
     <fullyQualifiedTypeName name="ejemplo10.Rectangulo"/>
+    <fullyQualifiedTypeName name="ejemplo12Punto.Punto"/>
+    <fullyQualifiedTypeName name="ejemplo13Circulo.Circulo"/>
+    <fullyQualifiedTypeName name="cuentaBancaria.CuentaBancaria"/>
 </qualifiedTypeNameHistroy>
