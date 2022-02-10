@@ -1,4 +1,4 @@
-package geometria;
+package net.iessonferrer.geometria;
 
 public class Cilindro {
 

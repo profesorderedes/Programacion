@@ -1,6 +1,6 @@
-package inicio;
+package net.iessonferrer.inicio;
 
-import geometria.Cilindro;
+import net.iessonferrer.geometria.Cilindro;
 
 public class Inicio {
 
