@@ -1,6 +1,6 @@
-package net.iessonferrer.inicio;
+package inicio;
 
-import net.iessonferrer.geometria.Cilindro;
+import geometria.*;
 
 public class Inicio {
 
@@ -25,6 +25,6 @@ public class Inicio {
 		
 		System.out.println("Datos del cilindro:\n" 
 				+ cilindro1.toString());
-
+		
 	}
 }
