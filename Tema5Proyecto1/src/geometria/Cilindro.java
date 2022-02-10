@@ -25,20 +25,24 @@ public class Cilindro {
 
 	public String toString() {
 
-		String resultado;
-
-		resultado = "altura = " + altura + "\nradio = " 
-				+ radio;
-
-		return resultado;
+		return "altura = " + altura + "\nradio = " + radio;
 
 	}
 
+	public int getAltura() {
+		return altura;
+	}
+
+	public void setAltura(int altura) {
+		this.altura = altura;
+	}
+
+	public int getRadio() {
+		return radio;
+	}
+
+	public void setRadio(int radio) {
+		this.radio = radio;
+	}
+
 }
-
-
-
-
-
-
-

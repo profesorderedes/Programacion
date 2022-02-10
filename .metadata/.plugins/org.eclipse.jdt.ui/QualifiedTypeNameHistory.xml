@@ -9,4 +9,6 @@
     <fullyQualifiedTypeName name="ejemplo12Punto.Punto"/>
     <fullyQualifiedTypeName name="ejemplo13Circulo.Circulo"/>
     <fullyQualifiedTypeName name="cuentaBancaria.CuentaBancaria"/>
+    <fullyQualifiedTypeName name="geometria.Cilindro"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
