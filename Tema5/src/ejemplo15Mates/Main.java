@@ -21,7 +21,7 @@ public class Main {
 
 		System.out.println("mat = " + mat.num);
 		
-		System.out.println(mat.pow(2, 5));
+		System.out.println(Mates.pow(2, 5));
 
 	}
 
