@@ -14,5 +14,21 @@ public class Conversor {
 		return millas / KM_A_MILLAS;
 	}
 	
-	
+	public static double atmosferas(double milibares) {
+        return milibares*MB_A_ATM;
+    }
+    
+    public static double milibares(double atmosferas) {
+        return atmosferas/MB_A_ATM;
+    }
+    
+    public static double julios(double calorias) {
+        return CAL_A_JULIOS*calorias;
+    }
+    
+    public static double calorias(double julios) {
+        return julios / CAL_A_JULIOS;
+    }
+    
+    
 }
