@@ -41,7 +41,8 @@ public class Persona {
 	// el recolector de basura.
 	public void finalize(){
 		
-		
+		System.out.println("Eliminado por el Garbage "
+				+ "Collector");
 		
 	}
 
