@@ -37,16 +37,21 @@ public class Inicio {
 			System.out.println("Email:");
 			String email = entrada.nextLine();
 
-			System.out.println("Año:");
+			System.out.println("Año de nacimiento:");
 			int anyo = entrada.nextInt();
 			
 			// Crear objeto Autor con los datos
+			Autor autor = new Autor(nombre, email, anyo);
 			
 			// Añadirlo al array.
+			autores[i] = autor;
 			
 		}
 		
-		
+		// Prueba
+		for (int i = 0; i < autores.length; i++) {
+			System.out.println(autores[i].toString() + "\n");
+		}
 		
 		
 		
