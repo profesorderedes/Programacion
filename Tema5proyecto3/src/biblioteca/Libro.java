@@ -20,4 +20,57 @@ public class Libro {
 		this.autor = autor;
 		
 	}
+
+	public String toString() {
+		
+		return "Título: " + titulo + "\nISBN: " + isbn 
+				+ "\nAutor: " + autor.getNombre() 
+				+ "\nAño actual: " + anyoActual;
+		
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public Autor getAutor() {
+		return autor;
+	}
+
+	public void setAutor(Autor autor) {
+		this.autor = autor;
+	}
+
+	public static int getAnyoActual() {
+		return anyoActual;
+	}
+
+	public static void setAnyoActual(int anyoActual) {
+		Libro.anyoActual = anyoActual;
+	}
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
