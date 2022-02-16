@@ -1,5 +1,6 @@
 package inicio;
 
+import auxiliar.Alumno;
 import auxiliar.Grupo;
 
 public class Inicio {
@@ -10,9 +11,17 @@ public class Inicio {
 
 //		System.out.println(g1.toString());
 
-		Grupo g2 = new Grupo();
-		g2.leeDatos();
-		System.out.println(g2.toString());
+//		Grupo g2 = new Grupo();
+//		g2.leeDatos();
+//		System.out.println(g2.toString());
+		
+		Alumno alumno1 = new Alumno(10,"López Ramírez","Ana",
+				g1);
+		System.out.println(alumno1.toString());
+				
+		Alumno alumno2 = new Alumno();
+		alumno2.leeDatos();
+		System.out.println("\n" + alumno2.toString());
 
 	}
 
