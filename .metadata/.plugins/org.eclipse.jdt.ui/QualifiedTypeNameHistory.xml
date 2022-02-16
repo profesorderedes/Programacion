@@ -14,4 +14,5 @@
     <fullyQualifiedTypeName name="conversion.Conversor"/>
     <fullyQualifiedTypeName name="biblioteca.Autor"/>
     <fullyQualifiedTypeName name="biblioteca.Libro"/>
+    <fullyQualifiedTypeName name="auxiliar.Alumno"/>
 </qualifiedTypeNameHistroy>
