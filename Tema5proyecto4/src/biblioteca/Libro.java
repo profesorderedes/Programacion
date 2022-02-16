@@ -1,41 +1,49 @@
 package biblioteca;
 
 public class Libro {
-	
+
 	private String titulo;
 	private String isbn;
 	private Autor[] autores;
 	private static int anyoActual;
-	
+
 	public Libro(String titulo) {
-		
+
 		this.titulo = titulo;
-		
+
 	}
-	
+
 	public Libro(String titulo, String isbn, Autor[] autores) {
-		
+
 		this.titulo = titulo;
 		this.isbn = isbn;
 		this.autores = autores;
-		
+
 	}
 
 	public String toString() {
-		
-		if(autores.length == 1) {
+
+		if (autores.length == 1) {
 			// Mostramos el nombre del autor.
-			return "Título: " + titulo + "\nISBN: " + isbn 
-					+ "\nAutor: " + autores[0].getNombre() 
-					+ "\nAño actual: " + anyoActual;
-						
-		}else {
+			return "Título: " + titulo + "\nISBN: " + isbn + "\nAutor: " + autores[0].getNombre() + "\nAño actual: "
+					+ anyoActual;
+
+		} else {
 			// Mostramos "Varios autores".
-			return "Título: " + titulo + "\nISBN: " + isbn 
-					+ "\nAutor: " + "Varios autores" 
-					+ "\nAño actual: " + anyoActual;
+			return "Título: " + titulo + "\nISBN: " + isbn + "\nAutor: " + "Varios autores" + "\nAño actual: "
+					+ anyoActual;
 		}
-		
+
+	}
+
+	public void muestraAutores() {
+
+		System.out.println("\nAutores del libro:");
+		for (int i = 0; i < autores.length; i++) {
+			System.out.println(" - " + 
+					autores[i].getNombre());
+		}
+
 	}
 
 	public String getTitulo() {
@@ -69,19 +77,5 @@ public class Libro {
 	public static void setAnyoActual(int anyoActual) {
 		Libro.anyoActual = anyoActual;
 	}
-	
-	
-	
-	
-	
+
 }
-
-
-
-
-
-
-
-
-
-
