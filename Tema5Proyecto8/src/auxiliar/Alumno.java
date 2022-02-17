@@ -13,28 +13,26 @@ public class Alumno {
 
 	}
 
-	public Alumno(int numExpediente, String apellidos, 
-			String nombre, Grupo grupo) {
-		
+	public Alumno(int numExpediente, String apellidos, String nombre, Grupo grupo) {
+
 		this.numExpediente = numExpediente;
 		this.apellidos = apellidos;
 		this.nombre = nombre;
 		this.grupo = grupo;
-		
+
 	}
 
 	public String toString() {
 
-		return "\nNúmero de expediente: " + numExpediente 
-				+ "\nApellidos: " + apellidos + "\nNombre: " 
-				+ nombre + "\nGrupo: \n" + grupo.toString();
+		return "\nNúmero de expediente: " + numExpediente + "\nApellidos: " + apellidos + "\nNombre: " + nombre
+				+ "\nGrupo: \n" + grupo.toString();
 
 	}
 
 	public void leeDatos() {
 
 		Scanner entrada = new Scanner(System.in);
-		
+
 		System.out.println("Lectura de datos de alumno");
 		System.out.println("================================");
 
@@ -55,4 +53,37 @@ public class Alumno {
 		grupo.leeDatos();
 
 	}
+
+	public int getNumExpediente() {
+		return numExpediente;
+	}
+
+	public void setNumExpediente(int numExpediente) {
+		this.numExpediente = numExpediente;
+	}
+
+	public String getApellidos() {
+		return apellidos;
+	}
+
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Grupo getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(Grupo grupo) {
+		this.grupo = grupo;
+	}
+
 }

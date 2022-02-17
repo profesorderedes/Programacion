@@ -2,6 +2,7 @@ package inicio;
 
 import auxiliar.Alumno;
 import auxiliar.Grupo;
+import instituto.Instituto;
 
 public class Inicio {
 
@@ -17,11 +18,16 @@ public class Inicio {
 		
 		Alumno alumno1 = new Alumno(10,"López Ramírez","Ana",
 				g1);
-		System.out.println(alumno1.toString());
+//		System.out.println(alumno1.toString());
 				
 		Alumno alumno2 = new Alumno();
-		alumno2.leeDatos();
-		System.out.println("\n" + alumno2.toString());
+//		alumno2.leeDatos();
+//		System.out.println("\n" + alumno2.toString());
+		
+		Instituto instituto = new Instituto();
+		instituto.addAlumno(alumno1);
+		
+		
 
 	}
 
