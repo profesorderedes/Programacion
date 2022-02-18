@@ -37,10 +37,16 @@ public class Inicio {
 		
 		instituto.addAlumno(alumno3);
 		instituto.addAlumno(alumno4);
+		
 		instituto.muestraAlumnos();
+		System.out.println("\nHay " + instituto.numAlumnos() 
+		+ " alumnos en el instituto.");
 		
 		instituto.delAlumno(11);
 		instituto.muestraAlumnos();
+		
+		System.out.println("\nHay " + instituto.numAlumnos() 
+		+ " alumnos en el instituto.");
 		
 		Alumno alumno5 = new Alumno(13,"Sanchís Sánchez","Juan",
 				g1);
@@ -49,7 +55,15 @@ public class Inicio {
 		
 		System.out.println("\nHay " + instituto.numAlumnos() 
 			+ " alumnos en el instituto.");
+		
+		System.out.println("El alumno con expediente 10 está "
+				+ "en la posición " 
+				+ instituto.buscaAlumno(10) + ".");
 
+		System.out.println("El alumno con expediente 30 está "
+				+ "en la posición " 
+				+ instituto.buscaAlumno(30) + ".");
+		
 	}
 
 }

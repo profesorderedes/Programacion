@@ -1,13 +1,12 @@
 package instituto;
 
-import java.util.Iterator;
-
 import auxiliar.Alumno;
 
 public class Instituto {
 	
 	private final int MAX_ALUMNOS = 100;
 	private Alumno[] alumnos = new Alumno[MAX_ALUMNOS];
+	private int numAlumnos = 0;
 	
 	public void addAlumno(Alumno alu) {
 		
@@ -15,6 +14,7 @@ public class Instituto {
 			
 			if(alumnos[i] == null) {
 				alumnos[i] = alu;
+				numAlumnos++;
 				break;
 			}
 			
@@ -30,6 +30,7 @@ public class Instituto {
 					&& alumnos[i].getNumExpediente() 
 						== numExpediente) {
 				alumnos[i] = null;
+				numAlumnos--;
 				break;
 			}
 			
@@ -58,20 +59,30 @@ public class Instituto {
 	
 	public int numAlumnos() {
 		
-		int numAlumnos = 0;
+		return numAlumnos;
+		
+	}
+	
+	public int buscaAlumno(int numExpediente) {
+		
 		for (int i = 0; i < alumnos.length; i++) {
 			
-			if(alumnos[i] != null) {
-				numAlumnos++;
+			if(alumnos[i] != null 
+					&& alumnos[i].getNumExpediente() 
+						== numExpediente) {
+				return i;
 			}
 			
 		}
 		
-		return numAlumnos;
+		return -1;
 		
 	}
 
 }
+
+
+
 
 
 
