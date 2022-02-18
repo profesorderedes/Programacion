@@ -1,5 +1,7 @@
 package instituto;
 
+import java.util.Iterator;
+
 import auxiliar.Alumno;
 
 public class Instituto {
@@ -51,6 +53,21 @@ public class Instituto {
 			}
 			
 		}
+		
+	}
+	
+	public int numAlumnos() {
+		
+		int numAlumnos = 0;
+		for (int i = 0; i < alumnos.length; i++) {
+			
+			if(alumnos[i] != null) {
+				numAlumnos++;
+			}
+			
+		}
+		
+		return numAlumnos;
 		
 	}
 

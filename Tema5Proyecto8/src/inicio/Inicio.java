@@ -46,6 +46,9 @@ public class Inicio {
 				g1);
 		instituto.addAlumno(alumno5);
 		instituto.muestraAlumnos();
+		
+		System.out.println("\nHay " + instituto.numAlumnos() 
+			+ " alumnos en el instituto.");
 
 	}
 
