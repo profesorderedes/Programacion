@@ -25,10 +25,32 @@ public class Inicio {
 //		System.out.println("\n" + alumno2.toString());
 		
 		Instituto instituto = new Instituto();
+		
+		// Añadimos algunos alumnos ya creado.
+		
 		instituto.addAlumno(alumno1);
 		
+		Alumno alumno3 = new Alumno(11,"Mas Rodríguez","Marcos",
+				g1);
+		Alumno alumno4 = new Alumno(12,"Sánchez López","María",
+				g1);
 		
+		instituto.addAlumno(alumno3);
+		instituto.addAlumno(alumno4);
+		instituto.muestraAlumnos();
+		
+		instituto.delAlumno(11);
+		instituto.muestraAlumnos();
+		
+		Alumno alumno5 = new Alumno(13,"Sanchís Sánchez","Juan",
+				g1);
+		instituto.addAlumno(alumno5);
+		instituto.muestraAlumnos();
 
 	}
 
 }
+
+
+
+
