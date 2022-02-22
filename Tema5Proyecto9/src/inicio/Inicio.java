@@ -20,7 +20,7 @@ public class Inicio {
 
 
 		
-		Taller taller1 = new Taller();
+		Taller taller1 = new Taller(20);
 
 		taller1.addLavadora(lavadora1);
 		taller1.addLavadora(lavadora2);

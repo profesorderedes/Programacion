@@ -1,11 +1,24 @@
 package electrodomesticos;
 
+/*
+ * Hemos hecho una variación respecto al enunciado de la 
+ * práctica para que el tamaño del array de lavadoras 
+ * venga suministrador por el constructor.
+ */
 public class Taller {
 
-	private final int MAX_LAVADORAS = 20;
-	private Lavadora[] lavadoras = new Lavadora[MAX_LAVADORAS];
+	private final int MAX_LAVADORAS;
+	private Lavadora[] lavadoras;
 
 	private int numLavadoras = 0;
+	
+	// En la práctica no está así.
+	public Taller(int capacidad) {
+		
+		MAX_LAVADORAS = capacidad;
+		lavadoras = new Lavadora[MAX_LAVADORAS];
+		
+	}
 	
 	public void listaLavadoras() {
 
