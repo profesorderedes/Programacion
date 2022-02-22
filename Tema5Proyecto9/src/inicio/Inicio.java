@@ -17,28 +17,28 @@ public class Inicio {
 
 		System.out.println("DATOS DEL MOTOR:\n");
 
-		System.out.print("Identificador del motor:");
+		System.out.print("Identificador del motor: ");
 		int id = entrada.nextInt();
 
 		entrada.nextLine();
-		System.out.print("Nombre del fabricante:");
+		System.out.print("Nombre del fabricante: ");
 		String fabricante = entrada.nextLine();
 
-		System.out.print("Nombre del modelo:");
+		System.out.print("Nombre del modelo: ");
 		String modelo = entrada.nextLine();
 		
 		Motor motor = new Motor(id, fabricante, modelo);
 
 		System.out.println("\nDATOS DE LA LAVADORA:\n");
 
-		System.out.print("Idenfitificador de la lavadora:");
+		System.out.print("Identificador de la lavadora: ");
 		int idLav = entrada.nextInt();
 
 		entrada.nextLine();
-		System.out.print("Nombre de la marca:");
+		System.out.print("Nombre de la marca: ");
 		String marca = entrada.nextLine();
 
-		System.out.print("Precio:");
+		System.out.print("Precio: ");
 		float precio = entrada.nextFloat();
 		
 		Lavadora lavadora = new Lavadora(idLav, motor, marca, 
@@ -51,6 +51,8 @@ public class Inicio {
 		Taller miTaller = new Taller(maxLavadoras);
 		
 		miTaller.addLavadora(lavadora);
+		
+		miTaller.listaLavadoras();
 		
 
 //		Motor motor1 = new Motor(21, "Mitsubishi", "V3");
