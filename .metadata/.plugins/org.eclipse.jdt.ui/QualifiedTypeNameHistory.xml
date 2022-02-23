@@ -16,4 +16,6 @@
     <fullyQualifiedTypeName name="biblioteca.Libro"/>
     <fullyQualifiedTypeName name="auxiliar.Alumno"/>
     <fullyQualifiedTypeName name="instituto.Instituto"/>
+    <fullyQualifiedTypeName name="electrodomesticos.Motor"/>
+    <fullyQualifiedTypeName name="electrodomesticos.Lavadora"/>
 </qualifiedTypeNameHistroy>
