@@ -18,7 +18,6 @@ public class Main {
 		empleado1.apellidos = "Alarcón Sánchez";
 		empleado1.numSegSocial = "2123234tas";
 		
-		
 	}
 
 }
