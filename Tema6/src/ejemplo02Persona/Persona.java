@@ -8,7 +8,7 @@ public class Persona {
 	
 	public void mostrar() {
 		
-		System.out.println("DNI: " + dni);
+		System.out.println("\nDNI: " + dni);
 		System.out.println("Nombre: " + nombre);
 		System.out.println("Apellidos: " + apellidos);
 		

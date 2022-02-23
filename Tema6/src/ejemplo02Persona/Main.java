@@ -23,11 +23,10 @@ public class Main {
 		persona1.setNombre("Luisa");
 		persona1.setApellidos("Sáez Luque");
 		
-//		persona1.mostrar();
-		
 		// Cliente y empleado heredan el método mostrar().
 		cliente1.mostrar();
-		
+		empleado1.mostrar();
+
 		
 		
 		
