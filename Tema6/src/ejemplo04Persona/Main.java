@@ -11,6 +11,7 @@ public class Main {
 				"María", "Alarcón Sánchez", "2123234tas");
 		
 		cliente1.mostrar();
+		empleado1.mostrar();
 	}
 
 }
