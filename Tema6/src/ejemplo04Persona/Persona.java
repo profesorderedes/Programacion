@@ -1,6 +1,6 @@
 package ejemplo04Persona;
 
-public class Persona {
+public abstract class Persona {
 
 	private String dni;
 	private String nombre;
