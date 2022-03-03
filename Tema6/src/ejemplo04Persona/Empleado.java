@@ -2,6 +2,14 @@ package ejemplo04Persona;
 
 public class Empleado extends Persona {
 	
-	String numSegSocial;
+	private String numSegSocial;
+	
+	public Empleado(String dni, String nombre, 
+			String apellidos, String numSegSocial) {
+		
+		super(dni, nombre, apellidos);
+		this.numSegSocial = numSegSocial;
+		
+	}
 
 }
