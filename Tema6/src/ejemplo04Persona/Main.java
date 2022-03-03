@@ -10,6 +10,7 @@ public class Main {
 		Empleado empleado1 = new Empleado("21988921Y", 
 				"María", "Alarcón Sánchez", "2123234tas");
 		
+		cliente1.mostrar();
 	}
 
 }

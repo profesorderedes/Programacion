@@ -12,4 +12,14 @@ public class Cliente extends Persona{
 		
 	}
 	
+	public void mostrar() {
+		
+		System.out.println("Datos del cliente:");
+		System.out.println("DNI: " + getDni());
+		System.out.println("Apellidos: " + getApellidos());
+		System.out.println("Nombre: " + getNombre());
+		System.out.println("Visa: " + visa);
+		
+	}
+	
 }

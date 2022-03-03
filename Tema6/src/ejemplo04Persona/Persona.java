@@ -14,5 +14,21 @@ public abstract class Persona {
 		this.apellidos = apellidos;
 		
 	}
+	
+	public abstract void mostrar();
+
+	public String getDni() {
+		return dni;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getApellidos() {
+		return apellidos;
+	}
+	
+	
 
 }
