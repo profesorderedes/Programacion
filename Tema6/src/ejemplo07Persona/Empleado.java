@@ -1,4 +1,4 @@
-package ejemplo06Persona;
+package ejemplo07Persona;
 
 public class Empleado extends Persona {
 

@@ -1,4 +1,4 @@
-package ejemplo06Persona;
+package ejemplo07Persona;
 
 public class Cliente extends Persona {
 
@@ -10,7 +10,7 @@ public class Cliente extends Persona {
 		this.visa = visa;
 
 	}
-	
+
 	@Override
 	public void mostrar() {
 
@@ -24,6 +24,27 @@ public class Cliente extends Persona {
 
 		System.out.println("La VISA del cliente es " + visa);
 
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+
+		if (this == obj) {
+			return true;
+		} else if (obj == null) {
+			return false;
+		} else if (obj instanceof Cliente) {
+
+			return ((Cliente) obj).getDni().equals(getDni());
+
+		}
+
+		return false;
+
+	}
+
+	public String getDni() {
+		return super.getDni();
 	}
 
 }
