@@ -2,6 +2,7 @@ package ejemplo05Vehiculo;
 
 public class Coche extends Vehiculo {
 
+	// Un Coche es un Vehículo (HERENCIA)
 	private int potencia;
 	
 	public Coche(String matricula, String marca, 

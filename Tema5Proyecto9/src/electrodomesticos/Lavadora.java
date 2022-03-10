@@ -2,6 +2,7 @@ package electrodomesticos;
 
 public class Lavadora {
 
+	// Lavadora tiene Motor (COMPOSICIÓN)
 	private int id;
 	private Motor motor;
 	private String marca;
