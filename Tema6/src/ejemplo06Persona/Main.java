@@ -24,7 +24,7 @@ public class Main {
 		persona2.mostrar();
 		
 		// No podemos llamar a un método de Cliente que no 
-		// este en la clase padre (Persona).
+		// esté en la clase padre (Persona).
 		// persona1.mostrarVisa();
 		
 		// A no ser que hagamos una conversión (cast)
