@@ -1,6 +1,6 @@
 package ejemplo08Circulo;
 
-public class Circulo implements Figura2D{
+public class Circulo implements Figura2D {
 
 	private int radio;
 	private int x, y;

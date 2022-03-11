@@ -1,0 +1,48 @@
+package ejemplo08Circulo;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		// Podemos declarar variables de tipo Figura2D.
+		// Dentro de una variable de tipo Figura2D podemos 
+		// guardar un objeto de una clase que implemente
+		// la interfaz Figura2D.
+		Figura2D figura1 = new Circulo(10, 1, 5, "Verde");
+		Figura2D figura2 = new Cuadrado(20,0,0,"Rojo");
+		
+		// Podemos llamar a los métodos de Circulo y Cuadrado
+		// que estén en la interfaz Figura2D.
+		System.out.println("Área del círculo: " 
+				+ figura1.area());
+		System.out.println("Área del cuadrado: " 
+				+ figura2.area());
+		
+		Circulo circulo1 = new Circulo(5, 0, 0 , "Azul");
+		calcularArea(circulo1);
+		
+	}
+	
+	public static void calcularArea(Circulo circulo1) {
+		
+		System.out.println("Área: " + circulo1.area());
+		
+	}
+	
+	public static void calcularArea(Cuadrado cuadrado1) {
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
