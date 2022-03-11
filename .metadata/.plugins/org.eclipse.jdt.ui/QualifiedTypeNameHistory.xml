@@ -19,4 +19,6 @@
     <fullyQualifiedTypeName name="electrodomesticos.Motor"/>
     <fullyQualifiedTypeName name="electrodomesticos.Lavadora"/>
     <fullyQualifiedTypeName name="actividad1.Musica"/>
+    <fullyQualifiedTypeName name="ejemplo08Circulo.Figura2D"/>
+    <fullyQualifiedTypeName name="actividad1.Guardable"/>
 </qualifiedTypeNameHistroy>
