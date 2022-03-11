@@ -20,20 +20,22 @@ public class Main {
 		
 		Circulo circulo1 = new Circulo(5, 0, 0 , "Azul");
 		calcularArea(circulo1);
+		calcularArea(figura1);
+		calcularArea(figura2);
 		
 	}
 	
-	public static void calcularArea(Circulo circulo1) {
+	public static void calcularArea(Figura2D figura) {
 		
-		System.out.println("Área: " + circulo1.area());
+		System.out.println("Área: " + figura.area());
 		
 	}
 	
-	public static void calcularArea(Cuadrado cuadrado1) {
-		
-		
-		
-	}
+//	public static void calcularArea(Cuadrado cuadrado1) {
+//		
+//		System.out.println("Área: " + cuadrado1.area());
+//		
+//	}
 
 }
 
