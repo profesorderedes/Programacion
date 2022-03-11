@@ -5,7 +5,7 @@ public class Musica extends Medio {
 	private String artista;
 	private String estilo;
 	
-	public Musica(String nombre, int duracion, 
+	public Musica(String nombre, double duracion, 
 			String artista, String estilo) {
 		
 		super(nombre, duracion);
