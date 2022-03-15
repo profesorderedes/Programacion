@@ -1,0 +1,18 @@
+package actividad2;
+
+public class Condensador extends Componente {
+	private double capacidad;
+
+	public Condensador(double intensidadMaxima, 
+			double longitud, double capacidad) {
+		super(intensidadMaxima, longitud);
+		this.capacidad = capacidad;
+	}
+
+	@Override
+	public void conectar() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
