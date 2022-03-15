@@ -11,7 +11,8 @@ public class Diodo extends Componente {
 
 	@Override
 	public void conectar() {
-		// TODO Auto-generated method stub
+		
+		System.out.println("Componente conectado.");
 
 	}
 

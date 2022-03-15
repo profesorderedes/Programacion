@@ -1,6 +1,7 @@
 package actividad2;
 
-public class Condensador extends Componente {
+public class Condensador extends Componente implements Invertible{
+	
 	private double capacidad;
 
 	public Condensador(double intensidadMaxima, 
@@ -11,8 +12,16 @@ public class Condensador extends Componente {
 
 	@Override
 	public void conectar() {
-		// TODO Auto-generated method stub
+		
+		System.out.println("Componente conectado.");
 
+	}
+
+	@Override
+	public void girar() {
+		
+		System.out.println("Componente girado.");
+		
 	}
 
 }

@@ -21,4 +21,8 @@
     <fullyQualifiedTypeName name="actividad1.Musica"/>
     <fullyQualifiedTypeName name="ejemplo08Circulo.Figura2D"/>
     <fullyQualifiedTypeName name="actividad1.Guardable"/>
+    <fullyQualifiedTypeName name="actividad2.Componente"/>
+    <fullyQualifiedTypeName name="actividad2.Condensador"/>
+    <fullyQualifiedTypeName name="actividad2.Diodo"/>
+    <fullyQualifiedTypeName name="actividad2.Led"/>
 </qualifiedTypeNameHistroy>
