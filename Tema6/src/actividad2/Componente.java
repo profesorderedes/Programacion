@@ -11,4 +11,20 @@ public abstract class Componente {
 
 	public abstract void conectar();
 
+	public double getIntensidadMaxima() {
+		return intensidadMaxima;
+	}
+
+	public void setIntensidadMaxima(double intensidadMaxima) {
+		this.intensidadMaxima = intensidadMaxima;
+	}
+
+	public double getLongitud() {
+		return longitud;
+	}
+
+	public void setLongitud(double longitud) {
+		this.longitud = longitud;
+	}
+
 }

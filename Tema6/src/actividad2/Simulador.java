@@ -8,6 +8,9 @@ public class Simulador {
 		Condensador condensador1 = new Condensador(0.5, 12, 0.001);
 		Diodo diodo1 = new Diodo(0.15, 3, 2);
 		Led led1 = new Led(0.2, 5, 2, "Rojo");
+		
+		diodo1.leeDatos();
+		
 	}
 
 }

@@ -1,6 +1,6 @@
 package ejemplo08Circulo;
 
-public class Circulo implements Figura2D {
+public class Circulo implements Figura2D, Mostrable {
 
 	private int radio;
 	private int x, y;
@@ -24,6 +24,16 @@ public class Circulo implements Figura2D {
 	public double perimetro() {
 		
 		return 2* Math.PI * radio; 
+		
+	}
+
+	@Override
+	public void mostrar() {
+		
+		System.out.println("Radio = " + radio);
+		System.out.println("Coordenadas = (" + x + ", " 
+		   + y + ")");
+		System.out.println("Color = " + color);
 		
 	}
 
