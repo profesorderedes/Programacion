@@ -1,6 +1,6 @@
 package ejemplo08Circulo;
 
-public class Cuadrado implements Figura2D {
+public class Cuadrado implements Figura2D, Mostrable {
 
 	private int lado;
 	private int x, y;
@@ -22,6 +22,16 @@ public class Cuadrado implements Figura2D {
 	@Override
 	public double perimetro() {
 		return 4 * lado;
+	}
+
+	@Override
+	public void mostrar() {
+		
+		System.out.println("Lado = " + lado);
+		System.out.println("Coordenadas = (" + x + ", " 
+		   + y + ")");
+		System.out.println("Color = " + color);
+		
 	}
 
 }

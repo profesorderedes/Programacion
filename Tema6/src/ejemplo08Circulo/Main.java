@@ -23,6 +23,9 @@ public class Main {
 		calcularArea(figura1);
 		calcularArea(figura2);
 		
+		System.out.println("\nMostrando los datos de circulo1:");
+		circulo1.mostrar();
+		
 	}
 	
 	public static void calcularArea(Figura2D figura) {
