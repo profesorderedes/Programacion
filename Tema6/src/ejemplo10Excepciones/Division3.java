@@ -2,8 +2,8 @@ package ejemplo10Excepciones;
 
 import java.util.Scanner;
 
-public class Division2 {
-	
+public class Division3 {
+
 	public static void main(String[] args) {
 		
 		Scanner entrada = new Scanner(System.in);
@@ -19,13 +19,10 @@ public class Division2 {
 		
 			System.out.println("\nLa división de 20 entre " 
 				+ num + " da " + 20/num);
-		}catch (NumberFormatException ex) {
+		}catch (NumberFormatException | ArithmeticException ex) {
 			System.out.println("¡Debes introducir un número "
-					+ "entero!");
-		}catch (ArithmeticException ex) {
-			System.out.println("¡No se puede dividir entre 0!");
+					+ "entero distinto de 0!");
 		}
-		
 		
 	}
 
