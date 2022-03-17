@@ -49,23 +49,23 @@ public class Division4 {
 			// ArithmeticException, se mostrará el siguiente
 			// mensaje.
 			System.out.println("¡No se puede dividir entre 0!");
-			
+
 		} catch (Exception ex) {
-			
+
 			// Si ocurriera una excepción distinta de las dos
 			// anteriores, se mostraría el siguiente mensaje
 			// genérico.
 			System.out.println("Se ha producido un error " + "indeterminado.");
-			
+
 		} finally {
-			
-			// Las instrucciones que estén dentro del 
+
+			// Las instrucciones que estén dentro del
 			// bloque finally siempre se ejecutarán,
-			// tanto si se ha producido una excepción 
+			// tanto si se ha producido una excepción
 			// como si no. Incluso aunque hubiera un return
 			// antes del finally.
 			System.out.println("Gracias por dividir.");
-			
+
 		}
 
 	}
