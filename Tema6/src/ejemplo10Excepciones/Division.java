@@ -14,10 +14,16 @@ public class Division {
 		
 		String numero = entrada.nextLine();
 		
-		int num = Integer.parseInt(numero);
+		try {
+			int num = Integer.parseInt(numero);
 		
-		System.out.println("\nLa división de 20 entre " 
-				+ num + "da " + 20/num);
+			System.out.println("\nLa división de 20 entre " 
+				+ num + " da " + 20/num);
+		}catch (NumberFormatException ex) {
+			System.out.println("¡Debes introducir un número "
+					+ "entero!");
+		}
+		
 		
 	}
 
