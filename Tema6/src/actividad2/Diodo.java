@@ -41,8 +41,10 @@ public class Diodo extends Componente {
 
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} finally {
+			System.out.println("Fin de lectura de datos.");
 		}
-
+		
 	}
 
 }
