@@ -1,5 +1,6 @@
 package actividad2;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Diodo extends Componente {
@@ -19,22 +20,29 @@ public class Diodo extends Componente {
 
 	public void leeDatos() {
 
-        Scanner entrada = new Scanner(System.in);
+		Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Tensión inversa: ");
-        tensionInversa = entrada.nextDouble();
+		System.out.println("Datos del diodo:\n==============================");
 
-        System.out.print("Intensidad máxima: ");
-        double intensidadMaxima = entrada.nextDouble();
-        setIntensidadMaxima(intensidadMaxima);
+		try {
 
-        System.out.print("Longitud: ");
-        double longitud = entrada.nextDouble();
-        setLongitud(longitud);
-        
+			System.out.println("Intensidad máxima: ");
+			setIntensidadMaxima(entrada.nextDouble());
 
-       
+			System.out.println("Longitud: ");
+			setLongitud(entrada.nextDouble());
 
-    }
+			System.out.println("Tensión inversa: ");
+			tensionInversa = entrada.nextDouble();
+
+		} catch (InputMismatchException ex) {
+
+			System.out.println("Entrada incorrecta. " + "Sólo se aceptan valores númericos.");
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+
+	}
 
 }
