@@ -6,7 +6,8 @@ public class Ejemplo01 extends JFrame{
 		
 		super("Primera ventana");
 		setSize(400,300);
-		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
+			
 		setVisible(true);
 		
 	}
