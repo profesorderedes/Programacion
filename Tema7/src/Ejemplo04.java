@@ -1,3 +1,4 @@
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 
@@ -13,8 +14,13 @@ public class Ejemplo04 extends JFrame {
 		
 		setLayout(new FlowLayout());
 		
-		JRadioButton rdbHombre = new JRadioButton("Hombre");
+		JRadioButton rdbHombre = new JRadioButton("Hombre", 
+				true);
 		JRadioButton rdbMujer = new JRadioButton("Mujer");
+		
+		ButtonGroup grupo = new ButtonGroup();
+		grupo.add(rdbHombre);
+		grupo.add(rdbMujer);
 		
 		add(rdbHombre);
 		add(rdbMujer);
