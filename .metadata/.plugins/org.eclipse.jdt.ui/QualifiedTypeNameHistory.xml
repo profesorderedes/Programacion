@@ -41,4 +41,8 @@
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="javax.swing.UIManager"/>
     <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
+    <fullyQualifiedTypeName name="com.formdev.flatlaf.FlatLightLaf"/>
+    <fullyQualifiedTypeName name="com.formdev.flatlaf.FlatDarkLaf"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.ColorUIResource"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>
