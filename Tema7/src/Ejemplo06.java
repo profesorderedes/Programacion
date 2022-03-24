@@ -13,7 +13,7 @@ public class Ejemplo06 extends JFrame {
 		
 		try {
 			UIManager.setLookAndFeel(
-					UIManager.getSystemLookAndFeelClassName());
+					"com.sun.java.swing.plaf.motif.MotifLookAndFeel");
 			SwingUtilities.updateComponentTreeUI(this);
 		} catch (ClassNotFoundException | 
 				InstantiationException | 

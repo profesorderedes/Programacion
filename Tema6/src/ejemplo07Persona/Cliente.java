@@ -25,18 +25,28 @@ public class Cliente extends Persona {
 		System.out.println("La VISA del cliente es " + visa);
 
 	}
+	
+	// per1.equals(per2)
 
 	@Override
 	public boolean equals(Object obj) {
 
+		// ¿Está obj en la misma posición de memoria 
+		// que esta variable?
 		if (this == obj) {
 			return true;
-		} else if (obj == null) {
+		}
+		// ¿Es obj null?
+		else if (obj == null) {
 			return false;
-		} else if (obj instanceof Cliente) {
-
-			return ((Cliente) obj).getDni().equals(getDni());
-
+		} 
+		// ¿Es obj una instancia de Cliente?
+		else if (obj instanceof Cliente) {
+			
+			// ¿Tiene obj el mismo DNI que esta variable?
+			if(((Cliente)obj).getDni().equals(this.getDni())) {
+				return true;
+			}
 		}
 
 		return false;
