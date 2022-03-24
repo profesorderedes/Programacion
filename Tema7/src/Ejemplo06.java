@@ -13,7 +13,7 @@ public class Ejemplo06 extends JFrame {
 		
 		try {
 			UIManager.setLookAndFeel(
-					"javax.swing.plaf.nimbus.NimbusLookAndFeel");
+					UIManager.getSystemLookAndFeelClassName());
 			SwingUtilities.updateComponentTreeUI(this);
 		} catch (ClassNotFoundException | 
 				InstantiationException | 
