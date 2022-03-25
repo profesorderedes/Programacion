@@ -22,8 +22,23 @@ public class Ejemplo09 extends JFrame {
 
 		setVisible(true);
 
-		
-		
+		// Diálogos de entrada.
+//		String nombre = JOptionPane.showInputDialog(null, 
+//				"¿Cuál es tu nombre?");
+//		
+//		System.out.println("Nombre: " + nombre);
+
+		final String CODIGO_CORRECTO = "1234";
+
+		String codigo = JOptionPane.showInputDialog(null, "¿Código de verificación?", "Verificación",
+				JOptionPane.QUESTION_MESSAGE);
+
+		if (codigo != null && codigo.equals(CODIGO_CORRECTO)) {
+			JOptionPane.showMessageDialog(null, "Código correcto.");
+		} else {
+			JOptionPane.showMessageDialog(null, "Código incorrecto.");
+		}
+
 	}
 
 	public static void main(String[] args) {
