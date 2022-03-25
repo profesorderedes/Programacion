@@ -42,6 +42,12 @@ public class Ejemplo08 extends JFrame {
 			System.out.println("El usuario ha pulsado CANCELAR");
 		}
 		
+		JOptionPane.showConfirmDialog(null, 
+				"¿Desea reiniciar ahora?", 
+				"Reinicio necesario", 
+				JOptionPane.YES_NO_CANCEL_OPTION, 
+				JOptionPane.WARNING_MESSAGE);
+		
 		
 	}
 
