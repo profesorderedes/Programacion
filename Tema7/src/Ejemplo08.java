@@ -21,34 +21,27 @@ public class Ejemplo08 extends JFrame {
 		add(chkAceptarPublicidad);
 
 		setVisible(true);
-		
+
 		// Diálogo de mensaje.
-//		JOptionPane.showMessageDialog(null, 
-//				"Acabas de perder todos tus archivos.");
-//		JOptionPane.showMessageDialog(null, 
-//				"Acabas de perder todos tus archivos.", 
-//				"Archivos perdidos", 
-//				JOptionPane.WARNING_MESSAGE);
-		
+		JOptionPane.showMessageDialog(null, "Acabas de perder todos tus archivos.");
+
+		JOptionPane.showMessageDialog(null, "Acabas de perder todos tus archivos.", "Archivos perdidos",
+				JOptionPane.WARNING_MESSAGE);
+
 		// Diálogo de confirmación.
-		int eleccion = JOptionPane.showConfirmDialog(null, 
-				"¿Seguro que quieres formatear el disco?");
-		
-		if(eleccion == JOptionPane.YES_OPTION) {
+		int eleccion = JOptionPane.showConfirmDialog(null, "¿Seguro que quieres formatear el disco?");
+
+		if (eleccion == JOptionPane.YES_OPTION) {
 			System.out.println("El usuario ha pulsado YES");
-		}else if(eleccion == JOptionPane.NO_OPTION) {
+		} else if (eleccion == JOptionPane.NO_OPTION) {
 			System.out.println("El usuario ha pulsado NO");
-		}else {
+		} else {
 			System.out.println("El usuario ha pulsado CANCELAR");
 		}
-		
-		JOptionPane.showConfirmDialog(null, 
-				"¿Desea reiniciar ahora?", 
-				"Reinicio necesario", 
-				JOptionPane.YES_NO_CANCEL_OPTION, 
-				JOptionPane.WARNING_MESSAGE);
-		
-		
+
+		JOptionPane.showConfirmDialog(null, "¿Desea reiniciar ahora?", "Reinicio necesario",
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
+
 	}
 
 	public static void main(String[] args) {
