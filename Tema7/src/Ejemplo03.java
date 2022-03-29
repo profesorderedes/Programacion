@@ -14,11 +14,11 @@ public class Ejemplo03 extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		setLayout(new FlowLayout());
-		
+
 		JLabel lblDireccion = new JLabel("Dirección web:");
 		JTextField txtDireccion = new JTextField(30);
 		JButton btnEnviar = new JButton("Enviar");
-		
+
 		add(lblDireccion);
 		add(txtDireccion);
 		add(btnEnviar);

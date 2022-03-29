@@ -11,17 +11,16 @@ public class Ejemplo04 extends JFrame {
 		super("Cuestionario");
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+
 		setLayout(new FlowLayout());
-		
-		JRadioButton rdbHombre = new JRadioButton("Hombre", 
-				true);
+
+		JRadioButton rdbHombre = new JRadioButton("Hombre", true);
 		JRadioButton rdbMujer = new JRadioButton("Mujer");
-		
+
 		ButtonGroup grupo = new ButtonGroup();
 		grupo.add(rdbHombre);
 		grupo.add(rdbMujer);
-		
+
 		add(rdbHombre);
 		add(rdbMujer);
 
