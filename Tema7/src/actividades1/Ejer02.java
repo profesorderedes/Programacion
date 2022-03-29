@@ -6,10 +6,7 @@ public class Ejer02 {
 
 	public Ejer02() {
 
-		String respuesta = JOptionPane.showInputDialog(null, 
-				"Escribe tu Dni:", 
-				"Confirmación de identidad",
-				JOptionPane.QUESTION_MESSAGE);
+		JOptionPane.showInputDialog(null, "Escribe tu Dni:", "Confirmación de identidad", JOptionPane.QUESTION_MESSAGE);
 
 	}
 
