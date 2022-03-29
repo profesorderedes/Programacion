@@ -22,15 +22,12 @@ public class Ejemplo10 extends JFrame {
 
 		setVisible(true);
 
-		String[] estilos = {"Pop", "Rock", "Disco", "Clásica"};
-		
-		int genero = JOptionPane.showOptionDialog(null, 
-				"¿Cuál es tu género de música preferido?", 
-				"Género de música", 0, 
-				JOptionPane.QUESTION_MESSAGE, 
-				null, estilos, estilos[2]);
-		
-		switch(genero) {
+		String[] estilos = { "Pop", "Rock", "Disco", "Clásica" };
+
+		int genero = JOptionPane.showOptionDialog(null, "¿Cuál es tu género de música preferido?", "Género de música",
+				0, JOptionPane.QUESTION_MESSAGE, null, estilos, estilos[2]);
+
+		switch (genero) {
 		case 0:
 			System.out.println("Has elegido Pop");
 			break;
@@ -52,12 +49,3 @@ public class Ejemplo10 extends JFrame {
 	}
 
 }
-
-
-
-
-
-
-
-
-
