@@ -45,4 +45,6 @@
     <fullyQualifiedTypeName name="com.formdev.flatlaf.FlatDarkLaf"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.ColorUIResource"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="Ejemplo11"/>
+    <fullyQualifiedTypeName name="javax.swing.JSlider"/>
 </qualifiedTypeNameHistroy>
