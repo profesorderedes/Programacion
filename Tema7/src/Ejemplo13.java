@@ -20,6 +20,20 @@ public class Ejemplo13 extends JFrame {
 				new ImageIcon("iconos/unsubscribe.gif");
 		
 		// Botones para la barra de herramientas.
+		JButton btnLoad = new JButton(imgLoad);
+		JButton btnSave = new JButton(imgSave);
+		JButton btnSubscribe = new JButton(imgSubscribe);
+		JButton btnUnsubscribe = new JButton(imgUnsuscribe);
+		
+		// Barra de herramientas.
+		JToolBar barraHerramientas = new JToolBar();
+		barraHerramientas.add(btnLoad);
+		barraHerramientas.add(btnSave);
+		barraHerramientas.add(btnSubscribe);
+		barraHerramientas.add(btnUnsubscribe);
+		
+		// Añadimos controles a la ventana.
+		add(barraHerramientas);
 		
 		
 		
