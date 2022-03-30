@@ -15,6 +15,8 @@ public class Ejemplo12 extends JFrame {
 				"Escribe tu comentario...");
 		
 		JTextArea txtComentario = new JTextArea();
+		txtComentario.setLineWrap(true);
+		txtComentario.setWrapStyleWord(true);
 		
 		JScrollPane panelComentario = 
 				new JScrollPane(txtComentario);
