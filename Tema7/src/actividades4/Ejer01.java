@@ -25,6 +25,8 @@ public class Ejer01 extends JFrame {
 		panelBotones.add(btnWinslow);
 		panelBotones.add(btnAsalto);
 		panelBotones.add(btnBladeRunner);
+		
+		
 
 		// FOTOGRAFÍA ABAJO
 
@@ -36,7 +38,10 @@ public class Ejer01 extends JFrame {
 		add(panelBotones);
 		add(lblimagen);
 
+		
 		setVisible(true);
+		
+		btnBladeRunner.requestFocus();
 
 	}
 
