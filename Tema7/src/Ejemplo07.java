@@ -1,7 +1,13 @@
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 
-import com.formdev.flatlaf.FlatDarculaLaf;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class Ejemplo07 extends JFrame {
 
@@ -25,7 +31,7 @@ public class Ejemplo07 extends JFrame {
 //					+ "and feel del sistema.");
 //		}
 
-		FlatDarculaLaf.setup();
+//		FlatDarculaLaf.setup();
 
 		getContentPane().setBackground(new Color(60, 60, 60));
 

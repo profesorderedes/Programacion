@@ -11,8 +11,14 @@ public class Plantilla extends JFrame {
 		
 		setLayout(new FlowLayout(FlowLayout.LEFT));
 		
-		UIManager.setLookAndFeel(
-				"com.jtattoo.plaf.smart.SmartLookAndFeel");
+		try {
+			UIManager.setLookAndFeel(
+					"com.jtattoo.plaf.smart.SmartLookAndFeel");
+			SwingUtilities.updateComponentTreeUI(this);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+				| UnsupportedLookAndFeelException e) {
+			e.printStackTrace();
+		}
 		
 		setVisible(true);
 		
