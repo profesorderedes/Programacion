@@ -49,12 +49,17 @@ public class Ejemplo23 extends JFrame implements FocusListener{
 
 	@Override
 	public void focusGained(FocusEvent e) {
-		System.out.println("Foco ganado.");
+		
+		float media = (Float.parseFloat(txtNum1.getText()) 
+				+ Float.parseFloat(txtNum2.getText())
+				+ Float.parseFloat(txtNum3.getText())) / 3;
+		
+		lblMedia.setText("La media es " + media);
+		
 	}
 
 	@Override
-	public void focusLost(FocusEvent e) {
-		System.out.println("Foco perdido.");
+	public void focusLost(FocusEvent e) {		
 	}
 
 }
