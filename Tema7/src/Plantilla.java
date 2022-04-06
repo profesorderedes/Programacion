@@ -11,7 +11,8 @@ public class Plantilla extends JFrame {
 		
 		setLayout(new FlowLayout(FlowLayout.LEFT));
 		
-		
+		UIManager.setLookAndFeel(
+				"com.jtattoo.plaf.smart.SmartLookAndFeel");
 		
 		setVisible(true);
 		
