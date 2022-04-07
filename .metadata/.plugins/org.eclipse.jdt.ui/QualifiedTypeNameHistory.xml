@@ -33,7 +33,6 @@
     <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
     <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
     <fullyQualifiedTypeName name="javax.swing.UIManager"/>
-    <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
     <fullyQualifiedTypeName name="com.formdev.flatlaf.FlatLightLaf"/>
     <fullyQualifiedTypeName name="com.formdev.flatlaf.FlatDarkLaf"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.ColorUIResource"/>
@@ -52,9 +51,10 @@
     <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.DimensionUIResource"/>
     <fullyQualifiedTypeName name="javax.swing.JPanel"/>
-    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
     <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
-    <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="ejemploEventos.Manejador"/>
+    <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
 </qualifiedTypeNameHistroy>
