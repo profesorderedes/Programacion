@@ -55,7 +55,6 @@ public class Ejemplo24 extends JFrame implements ItemListener{
 		
 		lblAutor.setText(autores[indice]);
 		
-		
 	}
 
 }
