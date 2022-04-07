@@ -6,8 +6,6 @@ public class Ejemplo24 extends JFrame implements ItemListener{
 	
 	private JComboBox<String> cmbCanciones;
 	private JLabel lblAutor;
-	private String canciones[] = {"Te boté Remix", "Purpurina", 
-			"Amorfoda", "Suavemente", "Gasolina"};
 	
 	public Ejemplo24() {
 		
@@ -25,6 +23,9 @@ public class Ejemplo24 extends JFrame implements ItemListener{
 				| UnsupportedLookAndFeelException e) {
 			e.printStackTrace();
 		}
+		
+		String canciones[] = {"Te boté Remix", "Purpurina", 
+				"Amorfoda", "Suavemente", "Gasolina"};
 		
 		cmbCanciones = 
 				new JComboBox<>(canciones);
@@ -47,6 +48,12 @@ public class Ejemplo24 extends JFrame implements ItemListener{
 	@Override
 	public void itemStateChanged(ItemEvent e) {
 		
+		int indice = cmbCanciones.getSelectedIndex();
+		
+		String autores[] = {"Flow La Movie","Alberto Gambino",
+				"Bad Bunny", "Childish Gambino", "Daddy Yankee"};
+		
+		lblAutor.setText(autores[indice]);
 		
 		
 	}
