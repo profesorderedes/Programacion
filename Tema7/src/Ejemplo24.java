@@ -4,6 +4,11 @@ import java.awt.event.*;
 
 public class Ejemplo24 extends JFrame implements ItemListener{
 	
+	private JComboBox<String> cmbCanciones;
+	private JLabel lblAutor;
+	private String canciones[] = {"Te boté Remix", "Purpurina", 
+			"Amorfoda", "Suavemente", "Gasolina"};
+	
 	public Ejemplo24() {
 		
 		super("Canciones");
@@ -21,14 +26,12 @@ public class Ejemplo24 extends JFrame implements ItemListener{
 			e.printStackTrace();
 		}
 		
-		String canciones[] = {"Te boté Remix", "Purpurina", 
-				"Amorfoda", "Suavemente", "Gasolina"};
-		JComboBox<String> cmbCanciones = 
+		cmbCanciones = 
 				new JComboBox<>(canciones);
 		cmbCanciones.setPreferredSize(new Dimension(200,30));
 		cmbCanciones.addItemListener(this);
 		
-		JLabel lblAutor = new JLabel("Flow La Movie");
+		lblAutor = new JLabel("Flow La Movie");
 		
 		add(cmbCanciones);
 		add(lblAutor);
