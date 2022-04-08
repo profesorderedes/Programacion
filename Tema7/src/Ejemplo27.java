@@ -3,10 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Ejemplo27 extends JFrame implements ActionListener {
+public class Ejemplo27 extends JFrame {
 
-	private JLabel lblPulsado;
-	
 	public Ejemplo27() {
 
 		super("Pulsaciones");
@@ -15,29 +13,31 @@ public class Ejemplo27 extends JFrame implements ActionListener {
 
 		setLayout(new FlowLayout(FlowLayout.LEFT));
 
+		JLabel lblPulsado = new JLabel();
+
 		JButton btnPulsame = new JButton("Púlsame!");
 
-		// Asignamos el manejador al botón.
-		btnPulsame.addActionListener(this);
-		
-		lblPulsado = new JLabel();
+		// Usamos en este caso una clase interna anónima
+		// para manejar el evento de pulsar el botón.
+		btnPulsame.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				lblPulsado.setText("Bien!!!");
+
+			}
+		});
 
 		add(btnPulsame);
 		add(lblPulsado);
-		
+
 		setVisible(true);
 
 	}
 
 	public static void main(String[] args) {
 		new Ejemplo27();
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		
-		lblPulsado.setText("Bien!!!!");
-		
 	}
 
 }
