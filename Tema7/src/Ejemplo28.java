@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Ejemplo28 extends JFrame implements ActionListener {
+public class Ejemplo28 extends JFrame{
 
 	private JButton btnPlay, btnPause, btnStop;
 	private JLabel lblPulsado;
@@ -24,13 +24,34 @@ public class Ejemplo28 extends JFrame implements ActionListener {
 		}
 
 		btnPlay = new JButton("Play");
-		btnPlay.addActionListener(this);
+		btnPlay.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				lblPulsado.setText("Has pulsado Play");
+				
+			}
+		});
 
 		btnPause = new JButton("Pause");
-		btnPause.addActionListener(this);
+		btnPause.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				lblPulsado.setText("Has pulsado Pause");
+				
+			}
+		});
 
 		btnStop = new JButton("Stop");
-		btnStop.addActionListener(this);
+		btnStop.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				lblPulsado.setText("Has pulsado Stop");
+				
+			}
+		});
 
 		lblPulsado = new JLabel();
 
@@ -47,19 +68,19 @@ public class Ejemplo28 extends JFrame implements ActionListener {
 		new Ejemplo28();
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-
-		JButton boton = (JButton) e.getSource();
-
-		if (boton == btnPlay) {
-			lblPulsado.setText("Has pulsado Play");
-		} else if (boton == btnPause) {
-			lblPulsado.setText("Has pulsado Pause");
-		} else {
-			lblPulsado.setText("Has pulsado Stop");
-		}
-
-	}
+//	@Override
+//	public void actionPerformed(ActionEvent e) {
+//
+//		JButton boton = (JButton) e.getSource();
+//
+//		if (boton == btnPlay) {
+//			lblPulsado.setText("Has pulsado Play");
+//		} else if (boton == btnPause) {
+//			lblPulsado.setText("Has pulsado Pause");
+//		} else {
+//			lblPulsado.setText("Has pulsado Stop");
+//		}
+//
+//	}
 
 }
