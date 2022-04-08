@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/csogorb/eclipse-workspace/Tema7/JTattoo-1.6.13.jar"/>
+	<classpathentry kind="lib" path="JTattoo-1.6.13.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
