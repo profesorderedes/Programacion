@@ -34,7 +34,13 @@ public class App {
 		Libro libro5 = new Libro("Head first Java", new String[] { "Kathy Sierra", "Bert Bates" }, "O'Reilly", 2005);
 		biblioteca.addLibro(libro5);
 		biblioteca.listarLibros();
-
+		
+		// Probamos el método buscarLibro().
+		System.out.println("\nEl libro con id 5 está en la "
+				+ "posición " + biblioteca.buscarLibro(5));
+		System.out.println("El libro con id 100 está en la "
+				+ "posición " + biblioteca.buscarLibro(100));
+		
 	}
 
 }
