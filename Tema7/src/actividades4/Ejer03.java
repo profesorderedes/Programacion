@@ -11,7 +11,7 @@ public class Ejer03 extends JFrame {
 	private JLabel lblOpciones, lblTotal;
 	private JCheckBox chkAviones, chkAeropuerto, chkHotel, chkPension;
 	private float total = 0;
-	
+
 	public static void main(String[] args) {
 
 		new Ejer03();
@@ -33,17 +33,15 @@ public class Ejer03 extends JFrame {
 		chkPension = new JCheckBox("Pensión completa");
 
 		lblTotal = new JLabel("Precio total: 0 €");
-		
-		
 
 		chkAviones.addItemListener(new ItemListener() {
 
 			@Override
 			public void itemStateChanged(ItemEvent e) {
-				
-				if(chkAviones.isSelected()) {
+
+				if (chkAviones.isSelected()) {
 					total = total + 120;
-				}else {
+				} else {
 					total = total - 120;
 				}
 				lblTotal.setText("Precio total: " + total + " €");
@@ -55,9 +53,9 @@ public class Ejer03 extends JFrame {
 			@Override
 			public void itemStateChanged(ItemEvent e) {
 
-				if(chkAeropuerto.isSelected()) {
+				if (chkAeropuerto.isSelected()) {
 					total = total + 40;
-				}else {
+				} else {
 					total = total - 40;
 				}
 				lblTotal.setText("Precio total: " + total + " €");
@@ -69,9 +67,9 @@ public class Ejer03 extends JFrame {
 			@Override
 			public void itemStateChanged(ItemEvent e) {
 
-				if(chkHotel.isSelected()) {
+				if (chkHotel.isSelected()) {
 					total = total + 180;
-				}else {
+				} else {
 					total = total - 180;
 				}
 				lblTotal.setText("Precio total: " + total + " €");
@@ -83,9 +81,9 @@ public class Ejer03 extends JFrame {
 			@Override
 			public void itemStateChanged(ItemEvent e) {
 
-				if(chkPension.isSelected()) {
+				if (chkPension.isSelected()) {
 					total = total + 70;
-				}else {
+				} else {
 					total = total - 70;
 				}
 				lblTotal.setText("Precio total: " + total + " €");
