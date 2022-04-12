@@ -84,4 +84,18 @@ public class Biblioteca {
 
 	}
 
+	public int buscarLibro(int idLibro) {
+
+		for (int i = 0; i < numLibros; i++) {
+
+			if (idLibro == libros[i].getId()) {
+				return i;
+			}
+
+		}
+		
+		return -1;
+
+	}
+
 }
