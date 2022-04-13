@@ -53,12 +53,10 @@ public class Biblioteca {
 
 	}
 
-
-
 	public void delLibro(int idLibro) {
 
 		int pos = buscarLibro(idLibro);
-		
+
 		if (pos == -1) {
 			return;
 		}
