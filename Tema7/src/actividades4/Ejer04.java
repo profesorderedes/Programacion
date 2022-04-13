@@ -1,6 +1,9 @@
 package actividades4;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
 import java.awt.*;
 
 public class Ejer04 extends JFrame {
@@ -8,10 +11,10 @@ public class Ejer04 extends JFrame {
 	private JLabel lblRojo, lblVerde, lblAzul;
 	private JSlider sldRojo, sldVerde, sldAzul;
 	private JButton btnColor;
-	private JTextArea txtColor;
+	private JTextField txtColor;
+	private int rojo, verde, azul;
 
 	public static void main(String[] args) {
-
 		new Ejer04();
 	}
 
@@ -22,36 +25,72 @@ public class Ejer04 extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		setLayout(new FlowLayout());
+		rojo = 255;
+		verde = 200;
+		azul = 51;
 
 		lblRojo = new JLabel("Rojo");
-		sldRojo = new JSlider(JSlider.HORIZONTAL, 0, 255, 255);
+		sldRojo = new JSlider(JSlider.HORIZONTAL, 0, 255, rojo);
 		sldRojo.setMajorTickSpacing(50);
 		sldRojo.setMinorTickSpacing(25);
 		sldRojo.setPaintTicks(true);
 		sldRojo.setPaintLabels(true);
+		
+		sldRojo.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				
+				rojo = sldRojo.getValue();
+				btnColor.setBackground(new Color(rojo, verde, 
+						azul));
+			
+			}
+		});
 
 		lblVerde = new JLabel("Verde");
-		sldVerde = new JSlider(JSlider.HORIZONTAL, 0, 255, 200);
+		sldVerde = new JSlider(JSlider.HORIZONTAL, 0, 255, verde);
 		sldVerde.setMajorTickSpacing(50);
 		sldVerde.setMinorTickSpacing(25);
 		sldVerde.setPaintTicks(true);
 		sldVerde.setPaintLabels(true);
+		
+		sldVerde.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				
+				verde = sldVerde.getValue();
+				btnColor.setBackground(new Color(rojo, verde, 
+						azul));
+			
+			}
+		});
 
 		lblAzul = new JLabel("Azul");
-		sldAzul = new JSlider(JSlider.HORIZONTAL, 0, 255, 51);
+		sldAzul = new JSlider(JSlider.HORIZONTAL, 0, 255, azul);
 		sldAzul.setMajorTickSpacing(50);
 		sldAzul.setMinorTickSpacing(25);
 		sldAzul.setPaintTicks(true);
 		sldAzul.setPaintLabels(true);
+		
+		sldAzul.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				
+				azul = sldAzul.getValue();
+				btnColor.setBackground(new Color(rojo, verde, 
+						azul));
+			
+			}
+		});
 
 		btnColor = new JButton();
-		btnColor.setBackground(null);
 		btnColor.setPreferredSize(new Dimension(100, 27));
-		btnColor.setBackground(new Color(255, 200, 51));
+		btnColor.setBackground(new Color(rojo, verde, azul));
 
-		txtColor = new JTextArea(1, 7);
+		txtColor = new JTextField(7);
 		txtColor.setPreferredSize(new Dimension(70, 20));
 		txtColor.setText("#FFC833");
+		txtColor.setEditable(false);
 
 		add(lblRojo);
 		add(sldRojo);
