@@ -53,21 +53,12 @@ public class Biblioteca {
 
 	}
 
+
+
 	public void delLibro(int idLibro) {
 
-		int pos = -1;
-
-		for (int i = 0; i < numLibros; i++) {
-
-			if (libros[i].getId() == idLibro) {
-
-				pos = i;
-				break;
-
-			}
-
-		}
-
+		int pos = buscarLibro(idLibro);
+		
 		if (pos == -1) {
 			return;
 		}
@@ -93,7 +84,7 @@ public class Biblioteca {
 			}
 
 		}
-		
+
 		return -1;
 
 	}
