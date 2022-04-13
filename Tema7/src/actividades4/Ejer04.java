@@ -43,6 +43,8 @@ public class Ejer04 extends JFrame {
 				rojo = sldRojo.getValue();
 				btnColor.setBackground(new Color(rojo, verde, 
 						azul));
+				txtColor.setText(hexadecimal(rojo, verde, 
+						azul));
 			
 			}
 		});
@@ -61,7 +63,9 @@ public class Ejer04 extends JFrame {
 				verde = sldVerde.getValue();
 				btnColor.setBackground(new Color(rojo, verde, 
 						azul));
-			
+				txtColor.setText(hexadecimal(rojo, verde, 
+						azul));
+				
 			}
 		});
 
@@ -78,6 +82,8 @@ public class Ejer04 extends JFrame {
 				
 				azul = sldAzul.getValue();
 				btnColor.setBackground(new Color(rojo, verde, 
+						azul));
+				txtColor.setText(hexadecimal(rojo, verde, 
 						azul));
 			
 			}
@@ -105,5 +111,15 @@ public class Ejer04 extends JFrame {
 		add(txtColor);
 
 		setVisible(true);
+	}
+	
+	private String hexadecimal(int rojo, int verde, int azul) {
+		
+		String resultado = "#" + Integer.toHexString(rojo).toUpperCase()
+			+ Integer.toHexString(verde).toUpperCase()
+			+ Integer.toHexString(azul).toUpperCase();
+		
+		return resultado;
+		
 	}
 }
