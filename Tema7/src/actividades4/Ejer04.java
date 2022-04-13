@@ -115,11 +115,18 @@ public class Ejer04 extends JFrame {
 	
 	private String hexadecimal(int rojo, int verde, int azul) {
 		
-		String resultado = "#" + Integer.toHexString(rojo).toUpperCase()
-			+ Integer.toHexString(verde).toUpperCase()
-			+ Integer.toHexString(azul).toUpperCase();
+		String resultado = "#" + completarHex(rojo)
+			+ completarHex(verde)+ completarHex(azul);
 		
-		return resultado;
+		return resultado.toUpperCase();
 		
+	}
+	
+	private String completarHex(int valor) {
+		if(valor >15) {
+			return Integer.toHexString(valor);
+		}else {
+			return "0" + Integer.toHexString(valor);
+		}
 	}
 }
