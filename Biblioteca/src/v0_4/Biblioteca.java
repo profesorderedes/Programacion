@@ -14,6 +14,7 @@ public class Biblioteca {
 
 	}
 
+	// Añade un libro a la biblioteca.
 	public boolean addLibro(Libro libro) {
 
 		if (numLibros >= libros.length) {
