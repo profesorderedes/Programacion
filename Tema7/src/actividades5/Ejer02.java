@@ -29,6 +29,7 @@ public class Ejer02 extends JFrame {
 			@Override
 			public void keyTyped(KeyEvent e) {
 				
+				// Convertimos el carácter a minúsculas.
 				String cadena = 
 						("" + e.getKeyChar()).toLowerCase();
 				char caracter = cadena.charAt(0);
