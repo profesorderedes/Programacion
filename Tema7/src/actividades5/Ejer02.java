@@ -28,20 +28,24 @@ public class Ejer02 extends JFrame {
 
 			@Override
 			public void keyTyped(KeyEvent e) {
-
-				if (e.getKeyChar() == 'r' || e.getKeyChar() == 'R') {
+				
+				String cadena = 
+						("" + e.getKeyChar()).toLowerCase();
+				char caracter = cadena.charAt(0);
+				
+				if (caracter == 'r') {
 
 					lblColor.setForeground(Color.RED);
 
 					lblColor.setText("ROJO");
 
-				} else if (e.getKeyChar() == 'a' || e.getKeyChar() == 'A') {
+				} else if (caracter == 'a') {
 
 					lblColor.setForeground(Color.BLUE);
 
 					lblColor.setText("AZUL");
 
-				} else if (e.getKeyChar() == 'v' || e.getKeyChar() == 'V') {
+				} else if (caracter == 'v') {
 
 					lblColor.setForeground(Color.GREEN);
 
