@@ -56,8 +56,28 @@ public class Libro {
 		return anyoPublicacion;
 	}
 
+	public String[] getAutores() {
+		return autores;
+	}
+
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public void setAutores(String[] autores) {
+		this.autores = autores;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public void setEditorial(String editorial) {
+		this.editorial = editorial;
+	}
+
+	public void setAnyoPublicacion(int anyoPublicacion) {
+		this.anyoPublicacion = anyoPublicacion;
 	}
 
 }

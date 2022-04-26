@@ -87,4 +87,24 @@ public class Biblioteca {
 
 	}
 
+	public void modificaLibro(Libro libro) {
+
+		int pos = buscarLibro(libro.getId());
+		if (pos != -1) {
+			libros[pos] = libro;
+		}
+
+	}
+
+	public Libro obtenerLibro(int idLibro) {
+
+		int pos = buscarLibro(idLibro);
+		if(pos != -1) {
+			return libros[pos];
+		}
+		
+		return null;
+		
+	}
+
 }
