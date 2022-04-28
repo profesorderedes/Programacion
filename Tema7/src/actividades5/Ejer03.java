@@ -10,12 +10,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class Ejer3 extends JFrame {
+public class Ejer03 extends JFrame {
 
 	private JTextField txtOperandoA, txtOperandoB, txtResultado;
 	private JComboBox<String> cmbOperaciones;
 
-	public Ejer3() {
+	public Ejer03() {
 
 		super("Operaciones");
 		setSize(240, 200);
@@ -101,7 +101,7 @@ public class Ejer3 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Ejer3();
+		new Ejer03();
 	}
 
 }

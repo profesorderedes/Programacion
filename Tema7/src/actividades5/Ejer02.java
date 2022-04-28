@@ -8,11 +8,11 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejer2 extends JFrame {
+public class Ejer02 extends JFrame {
 
 	private JLabel lblColor;
 
-	public Ejer2() {
+	public Ejer02() {
 
 		super("Letras - Colores");
 		setSize(300, 100);
@@ -74,7 +74,7 @@ public class Ejer2 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Ejer2();
+		new Ejer02();
 	}
 
 }

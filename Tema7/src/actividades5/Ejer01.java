@@ -8,9 +8,9 @@ import java.awt.event.FocusListener;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-public class Ejer1 extends JFrame {
+public class Ejer01 extends JFrame {
 
-	public Ejer1() {
+	public Ejer01() {
 
 		super("Texto decorado");
 		setSize(300, 120);
@@ -76,7 +76,7 @@ public class Ejer1 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Ejer1();
+		new Ejer01();
 	}
 
 }
