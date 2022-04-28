@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ejemplo06.Rectangulo"/>
     <fullyQualifiedTypeName name="ejemplo10.Rectangulo"/>
     <fullyQualifiedTypeName name="ejemplo12Punto.Punto"/>
     <fullyQualifiedTypeName name="ejemplo13Circulo.Circulo"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="javax.swing.event.ChangeListener"/>
     <fullyQualifiedTypeName name="v0_4.Libro"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseEvent"/>
 </qualifiedTypeNameHistroy>
