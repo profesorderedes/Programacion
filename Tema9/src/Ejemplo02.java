@@ -32,11 +32,15 @@ public class Ejemplo02 {
 			original.close();
 			copia.close();
 
+			System.out.println("Copia finalizada.");
+			
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("Error: no existe el archivo");
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Error de entrada/salida");
 		}
+		
+		
 
 	}
 
