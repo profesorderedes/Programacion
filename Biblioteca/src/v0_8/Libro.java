@@ -1,0 +1,83 @@
+package v0_8;
+
+public class Libro {
+
+	private int id;
+	private String titulo;
+	private String[] autores;
+	private String editorial;
+	private int anyoPublicacion;
+
+	public Libro(String titulo, String[] autores, String editorial, int anyoPublicacion) {
+		this.titulo = titulo;
+		this.autores = autores;
+		this.editorial = editorial;
+		this.anyoPublicacion = anyoPublicacion;
+	}
+
+	public String obtenerCadenaAutores() {
+
+		String cadenaAutores = "";
+
+		for (int i = 0; i < autores.length; i++) {
+			cadenaAutores = cadenaAutores + autores[i];
+
+			if (i != autores.length - 1) {
+				cadenaAutores = cadenaAutores + "; ";
+			}
+
+		}
+
+		return cadenaAutores;
+
+	}
+
+	@Override
+	public String toString() {
+
+		return "Id: " + id + "\nTítulo: " + titulo + "\nAutores: " + obtenerCadenaAutores() + "\nEditorial: "
+				+ editorial + "\nAño de publicación: " + anyoPublicacion;
+
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public String getEditorial() {
+		return editorial;
+	}
+
+	public int getAnyoPublicacion() {
+		return anyoPublicacion;
+	}
+
+	public String[] getAutores() {
+		return autores;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setAutores(String[] autores) {
+		this.autores = autores;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public void setEditorial(String editorial) {
+		this.editorial = editorial;
+	}
+
+	public void setAnyoPublicacion(int anyoPublicacion) {
+		this.anyoPublicacion = anyoPublicacion;
+	}
+
+}
