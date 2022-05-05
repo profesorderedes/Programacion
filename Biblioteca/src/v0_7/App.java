@@ -8,10 +8,7 @@ public class App {
 
 		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("#################################################################################");
-		System.out.println("#\t\t\tBIBLIOTECA DEL IES SON FERRER\t\t\t\t#");
-		System.out.println("#\t\t\t   BASE DE DATOS DE LIBROS     \t\t\t\t#");
-		System.out.println("#################################################################################");
+		mostrarPresentacion();
 
 		while (true) {
 			System.out.println(
@@ -30,6 +27,15 @@ public class App {
 			}
 		}
 
+	}
+
+	private static void mostrarPresentacion() {
+		
+		System.out.println("#################################################################################");
+		System.out.println("#\t\t\tBIBLIOTECA DEL IES SON FERRER\t\t\t\t#");
+		System.out.println("#\t\t\t   BASE DE DATOS DE LIBROS     \t\t\t\t#");
+		System.out.println("#################################################################################");
+		
 	}
 
 }
