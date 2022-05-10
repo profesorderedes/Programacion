@@ -1,11 +1,13 @@
-package ejercicios;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Ejer04 {
+/*
+ * Ejercicio 4 como ejemplo de System.getProperty()
+ */
+public class Ejemplo07 {
 
 	public static void main(String[] args) {
 
@@ -19,13 +21,12 @@ public class Ejer04 {
 
 		System.out.print("Contenido de la página: ");
 		String contenido = entrada.nextLine();
-		String ruta = System.getProperty("user.home") +
-				"/index.html";
+
+		// Creamos una ruta para guardar en la carpeta personal.
+		String ruta = System.getProperty("user.home") + "/index.html";
 
 		try {
-			BufferedWriter buffer = 
-					new BufferedWriter(
-							new FileWriter(ruta));
+			BufferedWriter buffer = new BufferedWriter(new FileWriter(ruta));
 
 			buffer.write("<!DOCTYPE html>\n");
 			buffer.write("<html>\n<head>\n" + "<title>" + titulo + "</title>\n</head>\n");

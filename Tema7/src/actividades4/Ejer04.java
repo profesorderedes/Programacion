@@ -113,6 +113,8 @@ public class Ejer04 extends JFrame {
 		setVisible(true);
 	}
 	
+	// Devuelve una cadena con las componentes de color
+	// en hexadecimal.
 	private String hexadecimal(int rojo, int verde, int azul) {
 		
 		String resultado = "#" + completarHex(rojo)
@@ -122,6 +124,8 @@ public class Ejer04 extends JFrame {
 		
 	}
 	
+	// Pasa a hexadecimal el valor recibido, añadiéndole 
+	// si hace falta un 0 delante. 
 	private String completarHex(int valor) {
 		if(valor >15) {
 			return Integer.toHexString(valor);
