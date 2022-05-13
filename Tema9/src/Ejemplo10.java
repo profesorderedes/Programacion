@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -55,9 +56,12 @@ public class Ejemplo10 {
 			bufferEscritura.close();
 			
 			// Borramos el archivo original.
-			
+			File original = new File("ficheros/" + nombreArchivo);
+			original.delete();
 			
 			// Renombramos el archivo temporal.
+			File temporal = new File("ficheros/temporal.txt");
+			temporal.renameTo(original);
 			
 			System.out.println("Operación finalizada.");
 			
