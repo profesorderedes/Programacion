@@ -10,6 +10,10 @@ public class Ejemplo09 {
 		ruta.delete();
 		
 		// Renombrar contactos.txt -> agenda.txt
+		File archivoOriginal = new File("ficheros/contactos.txt");
+		File archivoNuevo = new File("ficheros/agenda.txt");
+		
+		archivoOriginal.renameTo(archivoNuevo);
 		
 	}
 
