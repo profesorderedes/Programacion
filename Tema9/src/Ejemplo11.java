@@ -1,4 +1,7 @@
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /*
  * Escribe un programa que cree la siguiente
@@ -30,14 +33,27 @@ public class Ejemplo11 {
 		
 		// Creamos el archivo version.txt con su contenido.
 		
-		
-		
+		try {
+			
+			BufferedWriter buffer = new BufferedWriter(
+					new FileWriter(ruta + "/version.txt"));
+			
+			buffer.write("Ejemplo11\nAutor: carlos"
+					+ "\nVersión: 1.0");
+			
+			buffer.close();
+			
+		} catch (IOException e) {
+			System.out.println("Error accediendo al disco.");
+		}
 		
 		// Renombramos el archivo version.txt.
+		File original = new File(ruta + "/version.txt");
+		File nuevo = new File(ruta + "/acercade.txt");
 		
+		original.renameTo(nuevo);
 		
-		
-		
+		System.out.println("Fin");
 		
 		
 		

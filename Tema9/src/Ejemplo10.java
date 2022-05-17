@@ -29,7 +29,7 @@ public class Ejemplo10 {
 			// Abrimos el archivo para lectura.
 			BufferedReader bufferLectura = new BufferedReader(
 					new FileReader("ficheros/" + nombreArchivo));
-			
+
 			// Abrimos el archivo temporal.txt para escritura.
 			BufferedWriter bufferEscritura = new BufferedWriter(
 					new FileWriter("ficheros/temporal.txt"));
