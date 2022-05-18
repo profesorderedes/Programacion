@@ -18,30 +18,63 @@ public class Ejer05 {
         System.out.println("¿Qué palabra quieres buscar?");
         String palabra = entrada.nextLine();
         
+        int contadorBreak = 0, contadorCase = 0;
+        
         try {
             BufferedReader bufferL = new BufferedReader(
             		new FileReader("src/ejercicios/" + nombre));
              
             String linea = bufferL.readLine();
-            
-            int contadorPalabra = 0;
              
             while (linea != null) {
-                if (linea.contains(palabra)) {
-                    contadorPalabra ++;
-                }
-                linea = bufferL.readLine();
+            	contadorBreak = contadorBreak 
+            			+ contarPalabras(linea, "break");
+            	contadorCase = contadorCase
+            			+ contarPalabras(linea, "case");
+            	
+                linea = bufferL.readLine(); 
             }
+           
             
             bufferL.close();
              
-            System.out.println("Hay "+ contadorPalabra +" coincidencias con la palabra "+ palabra);
+            
         } catch (FileNotFoundException e) {
             System.out.println("No se ha encontrado el fichero");
         } catch (IOException e) {
             e.printStackTrace();
         }
-         
+        
+        System.out.println("Nº de breaks = " + contadorBreak);
+        System.out.println("Nº de cases = " + contadorCase);
+        
     }
+    
+    private static int contarPalabras(String linea, String palabra) {
+    	
+    	int repeticiones = 0;
+    	
+    	// Primera aparición
+    	int pos = linea.indexOf(palabra);
+    	
+    	// Seguimos buscando mientras no obtengamos -1
+    	while(pos != -1) {
+    		repeticiones++;
+    		pos = linea.indexOf(palabra, pos + 1);	
+    	}
+    	
+    	return repeticiones;
+    	
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 } 
