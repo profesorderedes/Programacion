@@ -14,9 +14,6 @@ public class Ejer05 {
          
         System.out.println("Nombre del archivo?");
         String nombre = entrada.nextLine();
-         
-        System.out.println("¿Qué palabra quieres buscar?");
-        String palabra = entrada.nextLine();
         
         int contadorBreak = 0, contadorCase = 0;
         
@@ -47,6 +44,13 @@ public class Ejer05 {
         
         System.out.println("Nº de breaks = " + contadorBreak);
         System.out.println("Nº de cases = " + contadorCase);
+        
+        if(contadorBreak < contadorCase) {
+        	System.out.println("Advertencia: el número de break "
+        			+ "es inferior al de case.");
+        }else {
+        	System.out.println("Parece correcto.");
+        }
         
     }
     

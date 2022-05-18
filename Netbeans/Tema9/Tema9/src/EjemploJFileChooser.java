@@ -33,6 +33,7 @@ public class EjemploJFileChooser extends javax.swing.JFrame {
         barraMenu = new javax.swing.JMenuBar();
         menuFile = new javax.swing.JMenu();
         itemOpenFile = new javax.swing.JMenuItem();
+        itemGuardar = new javax.swing.JMenuItem();
         menuEdit = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,6 +48,15 @@ public class EjemploJFileChooser extends javax.swing.JFrame {
             }
         });
         menuFile.add(itemOpenFile);
+
+        itemGuardar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        itemGuardar.setText("Guardar");
+        itemGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemGuardarActionPerformed(evt);
+            }
+        });
+        menuFile.add(itemGuardar);
 
         barraMenu.add(menuFile);
 
@@ -87,12 +97,29 @@ public class EjemploJFileChooser extends javax.swing.JFrame {
             
             lblArchivoElegido.setText("Has elegido el archivo " 
                     + archivoElegido.toString());
-            
-            
-            
+                                   
         }
         
     }//GEN-LAST:event_itemOpenFileActionPerformed
+
+    private void itemGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemGuardarActionPerformed
+        
+        JFileChooser eleccion = new JFileChooser();
+        
+        int resultado = eleccion.showSaveDialog(null);
+        
+        if(resultado == JFileChooser.APPROVE_OPTION){
+            
+            File archivoElegido = eleccion.getSelectedFile();
+            
+            lblArchivoElegido.setText("Los cambios se han guardado en el archivo " 
+                    + archivoElegido.toString());
+            
+        }
+        
+        
+        
+    }//GEN-LAST:event_itemGuardarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -128,6 +155,7 @@ public class EjemploJFileChooser extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraMenu;
+    private javax.swing.JMenuItem itemGuardar;
     private javax.swing.JMenuItem itemOpenFile;
     private javax.swing.JLabel lblArchivoElegido;
     private javax.swing.JMenu menuEdit;
