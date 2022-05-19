@@ -1,4 +1,4 @@
-package v0_8;
+
 
 /**
  * La clase Biblioteca almacena la información de una 
