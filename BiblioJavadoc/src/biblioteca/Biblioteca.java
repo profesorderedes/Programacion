@@ -15,10 +15,27 @@ package biblioteca;
  */
 public class Biblioteca {
 
+	/**
+	 * Colección de libros almacenados 
+	 */
 	private Libro[] libros;
+	
+	/**
+	 * Número de libros que hay en la biblioteca
+	 */
 	private int numLibros;
+	
+	/**
+	 * Identificador que recibirá el nuevo libro que 
+	 * se añada a la biblioteca
+	 */
 	private int idNuevoLibro;
 
+	/**
+	 * Inicializa un objeto Biblioteca recién creado.
+	 * @param maxLibros máximo de libros que caben en 
+	 * la biblioteca
+	 */
 	public Biblioteca(int maxLibros) {
 
 		libros = new Libro[maxLibros];
@@ -27,7 +44,12 @@ public class Biblioteca {
 
 	}
 
-	// Añade un libro a la biblioteca.
+	/**
+	 * Añade un libro a la biblioteca.
+	 * @param libro libro que vamos a añadir
+	 * @return true si se ha podido añadir el 
+	 * libro y false si no había sitio en la biblioteca
+	 */
 	public boolean addLibro(Libro libro) {
 
 		if (numLibros >= libros.length) {
@@ -44,6 +66,10 @@ public class Biblioteca {
 
 	}
 
+	/**
+	 * Lista los libros registrados en la biblioteca (id, 
+	 * título, autor, editorial y año de publicación)
+	 */
 	public void listarLibros() {
 
 		System.out.println("LISTADO DE LIBROS");
@@ -66,7 +92,12 @@ public class Biblioteca {
 		}
 
 	}
-
+	
+	/**
+	 * Elimina todos los datos del libro cuyo id recibe 
+	 * como parámetro.
+	 * @param idLibro identificador del libro
+	 */
 	public void delLibro(int idLibro) {
 
 		int pos = buscarLibro(idLibro);
@@ -87,6 +118,13 @@ public class Biblioteca {
 
 	}
 
+	/**
+	 * Busca la posición del libro cuyo 
+	 * identificador recibe como parametro.
+	 * @param idLibro identificador del libro
+	 * @return la posición del libro o -1 
+	 * si el libro no se encuentra
+	 */
 	public int buscarLibro(int idLibro) {
 
 		for (int i = 0; i < numLibros; i++) {
@@ -101,6 +139,13 @@ public class Biblioteca {
 
 	}
 
+	/**
+	 * Actualiza los datos de un libro existente con los
+	 * de un libro que recibe como parámetro
+	 * @param libro libro cuyo id buscaremos en el array 
+	 * libros y cuyos datos sustituiremos en la posición que 
+	 * ocupa 
+	 */
 	public void modificaLibro(Libro libro) {
 
 		int pos = buscarLibro(libro.getId());

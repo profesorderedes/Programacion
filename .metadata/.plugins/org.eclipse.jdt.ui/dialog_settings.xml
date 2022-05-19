@@ -111,4 +111,123 @@
 		<item key="GenerateJavadoc" value="false"/>
 		<item key="AccessModifier" value="2"/>
 	</section>
+	<section name="JavadocWizardDialog">
+		<item key="DIALOG_X_ORIGIN" value="126"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="706"/>
+		<item key="DIALOG_HEIGHT" value="615"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="javadoc">
+		<item key="javadoc_command_history" value="/home/csogorb/Escritorio/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.2.v20220201-1208/jre/bin/javadoc"/>
+		<item key="fromStandard" value="true"/>
+		<item key="docletname" value=""/>
+		<item key="docletpath" value=""/>
+		<item key="access" value="private"/>
+		<item key="use" value="true"/>
+		<item key="author" value="true"/>
+		<item key="version" value="true"/>
+		<item key="nodeprecated" value="false"/>
+		<item key="nodeprecatedlist" value="false"/>
+		<item key="splitindex" value="true"/>
+		<item key="noindex" value="false"/>
+		<item key="notree" value="false"/>
+		<item key="nonavbar" value="false"/>
+		<item key="openinbrowser" value="false"/>
+		<item key="source" value="11"/>
+		<item key="antpath" value="/home/csogorb/eclipse-workspace/BiblioJavadoc/javadoc.xml"/>
+		<item key="destdir" value="/home/csogorb/eclipse-workspace/BiblioJavadoc/doc"/>
+		<section name="projects">
+			<section name="Tema5Proyecto2">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema5Proyecto2/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema5Proyecto2/javadoc.xml"/>
+			</section>
+			<section name="Tema5Proyecto8">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema5Proyecto8/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema5Proyecto8/javadoc.xml"/>
+			</section>
+			<section name="Calculadora">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Calculadora/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Calculadora/javadoc.xml"/>
+			</section>
+			<section name="BiblioJavadoc">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/BiblioJavadoc/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/BiblioJavadoc/javadoc.xml"/>
+			</section>
+			<section name="Tema1">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema1/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema1/javadoc.xml"/>
+			</section>
+			<section name="Tema3">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema3/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema3/javadoc.xml"/>
+			</section>
+			<section name="Tema5">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema5/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema5/javadoc.xml"/>
+			</section>
+			<section name="Tema7">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema7/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema7/javadoc.xml"/>
+			</section>
+			<section name="Tema9">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema9/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema9/javadoc.xml"/>
+			</section>
+			<section name="Tema5proyecto3">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema5proyecto3/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema5proyecto3/javadoc.xml"/>
+			</section>
+			<section name="Tema5Proyecto1">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema5Proyecto1/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema5Proyecto1/javadoc.xml"/>
+			</section>
+			<section name="Tema5Proyecto9">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema5Proyecto9/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema5Proyecto9/javadoc.xml"/>
+			</section>
+			<section name="Paleta">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Paleta/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Paleta/javadoc.xml"/>
+			</section>
+			<section name="Biblioteca">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Biblioteca/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Biblioteca/javadoc.xml"/>
+			</section>
+			<section name="Tema2">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema2/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema2/javadoc.xml"/>
+			</section>
+			<section name="Tema4">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema4/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema4/javadoc.xml"/>
+			</section>
+			<section name="Tema6">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema6/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema6/javadoc.xml"/>
+			</section>
+			<section name="Tema5proyecto4">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/csogorb/eclipse-workspace/Tema5proyecto4/doc"/>
+				<item key="antpath" value="/home/csogorb/eclipse-workspace/Tema5proyecto4/javadoc.xml"/>
+			</section>
+		</section>
+	</section>
 </section>
