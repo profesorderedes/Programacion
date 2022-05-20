@@ -137,6 +137,7 @@
 		<item key="source" value="11"/>
 		<item key="antpath" value="/home/csogorb/eclipse-workspace/BiblioJavadoc/javadoc.xml"/>
 		<item key="destdir" value="/home/csogorb/eclipse-workspace/BiblioJavadoc/doc"/>
+		<item key="additionalparam" value="-encoding UTF-8 -charset UTF-8 -docencoding UTF-8"/>
 		<section name="projects">
 			<section name="Tema5Proyecto2">
 				<item key="href" value=""/>
