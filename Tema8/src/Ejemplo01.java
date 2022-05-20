@@ -34,12 +34,28 @@ public class Ejemplo01 {
 			System.out.println(heroe);
 		}
 		
-		// 
+		// Añadimos superhéroes en posiciones concretas.
 		lista.add(0, "Lobezno");
 		mostrar(lista);
 		
 		lista.add(2, "Aquaman");
 		mostrar(lista);
+		
+		// Borramos superhéroes a partir de su posición.
+		lista.remove(2);
+		mostrar(lista);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 	
