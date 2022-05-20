@@ -33,7 +33,21 @@ public class Ejemplo01 {
 		for (String heroe : lista) {
 			System.out.println(heroe);
 		}
-
+		
+		// 
+		lista.add(0, "Lobezno");
+		mostrar(lista);
+		
+		lista.add(2, "Aquaman");
+		mostrar(lista);
+		
+	}
+	
+	private static void mostrar(List<String> lista) {
+		System.out.println("\nLista completa:");
+		for (String heroe : lista) {
+			System.out.println(heroe);
+		}
 	}
 
 }
