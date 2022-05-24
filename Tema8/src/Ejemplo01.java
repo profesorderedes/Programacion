@@ -42,10 +42,16 @@ public class Ejemplo01 {
 		mostrar(lista);
 		
 		// Borramos superhéroes a partir de su posición.
-		lista.remove(2);
+		String borrado = lista.remove(2);
+		System.out.println("\nBorrado a " + borrado);
+		
 		mostrar(lista);
 		
+		// Borramos superhéroes a partir del nombre.
+		boolean thorBorrado = lista.remove("Thor");
+		System.out.println("\n¿Thor borrado? " + thorBorrado);
 		
+		mostrar(lista);
 		
 		
 		
