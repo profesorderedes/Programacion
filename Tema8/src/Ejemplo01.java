@@ -53,14 +53,41 @@ public class Ejemplo01 {
 		
 		mostrar(lista);
 		
+		// Sustituimos un superhéroe por otro en la lista.
+		borrado = lista.set(3, "Antman");
+		System.out.println("\nBorrado " + borrado);
 		
+		mostrar(lista);
 		
+		// Vemos si Antman está en la lista.
+		boolean contiene = lista.contains("Antman");
+		System.out.println("\n¿Antman está dentro de la "
+				+ "lista? " + contiene);
 		
+		// Miramos dónde aparece Ironman en primer lugar 
+		// y en últim lugar.
+		lista.add("Ironman");
+		System.out.println("\nIronman aparece por primera vez"
+				+ " en la posición " 
+				+ lista.indexOf("Ironman"));
+		System.out.println("\nIronman aparece por última vez"
+				+ " en la posición " 
+				+ lista.lastIndexOf("Ironman"));
 		
+		mostrar(lista);
 		
+		// Miramos si la lista está vacía.
+		System.out.println("\n¿Lista vacía? " 
+				+ lista.isEmpty());
 		
+		// Miramos cuántos elementos hay en la lista.
+		System.out.println("\nHay " + lista.size() 
+		        + " superhéroes guardados.");
 		
-		
+		// Borramos la lista.
+		System.out.println("\nBorrando la lista");
+		lista.clear();
+		mostrar(lista);
 		
 		
 	}
