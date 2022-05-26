@@ -25,5 +25,24 @@ public class Hoja2Ejer14 {
 		
 		System.out.println("Precio total: " + total + "€");
 		
+		// ¿Cuántos artículos hay guardados?
+		
+		
+		// Borrar el artículo en la posición 2.
+		
+		
+		
 	}
+	
+	// Método para mostrar el contenido del ArrayList articulos.
+	
 }
+
+
+
+
+
+
+
+
+
