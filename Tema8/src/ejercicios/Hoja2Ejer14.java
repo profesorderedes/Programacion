@@ -1,6 +1,7 @@
 package ejercicios;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Hoja2Ejer14 {
@@ -16,8 +17,8 @@ public class Hoja2Ejer14 {
 		productos.add(new Articulo("Móvil HTC", 95));
 
 		mostrarArticulos(productos);
-		
-		for(Articulo producto: productos) {
+
+		for (Articulo producto : productos) {
 			precioTotal += producto.getPrecio();
 		}
 
@@ -25,39 +26,52 @@ public class Hoja2Ejer14 {
 
 		// ¿Cuantos artículos hay guardados?
 
-		System.out.println("\nHay " + productos.size() 
-			+ " productos en la lista.");
+		System.out.println("\nHay " + productos.size() + " productos en la lista.");
 
 		// Borrar el artículo en la posición 2.
 
 		productos.remove(2);
 
 		mostrarArticulos(productos);
-		
+
 		// Borrar el artículo "Tablet Samsung".
 		Articulo articulo = new Articulo("Tablet Samsung", 120);
 		productos.remove(articulo);
-		
-		mostrarArticulos(productos);
-		
-		// ¿En qué posición aparece el móvil HTC de 95 €?
-		
-		// ¿El móvil Sony de 115 euros aparece en la lista?
-		
-		
 
+		mostrarArticulos(productos);
+
+		// ¿En qué posición aparece el móvil HTC de 95 €?
+
+		articulo = new Articulo("Móvil HTC", 95);
+
+		System.out.println("\nEl móvil HTC aparece por primera"
+				+ " vez en la posición " 
+				+ productos.indexOf(articulo) + ".");
+
+		// ¿El móvil Sony de 115 euros aparece en la lista?
+
+		articulo = new Articulo("Móvil Sony", 115);
+		
+		System.out.println("\n¿Aparece el móvil Sony en la lista? " 
+				+ productos.contains(articulo));
+		
+		// Añadimos el producto "Móvil Samsung" de 200 € en la
+		// posición 1 del ArrayList.
+		
+		
+		
+		// Borramos la lista completa.
+		
 	}
 
 	// Método mostrar el contenido del arrayList
-	private static void mostrarArticulos(
-			List<Articulo> productos) {
+	private static void mostrarArticulos(List<Articulo> productos) {
 
 		System.out.println("\nArtículos\n=====================");
 
 		for (Articulo producto : productos) {
 
-			System.out.println(producto.getNombre() 
-					+ "\t" + producto.getPrecio());
+			System.out.println(producto.getNombre() + "\t" + producto.getPrecio());
 
 		}
 
