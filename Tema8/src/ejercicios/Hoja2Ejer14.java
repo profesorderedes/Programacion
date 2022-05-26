@@ -39,6 +39,12 @@ public class Hoja2Ejer14 {
 		productos.remove(articulo);
 		
 		mostrarArticulos(productos);
+		
+		// ¿En qué posición aparece el móvil HTC?
+		
+		// ¿El móvil Sony de 115 euros aparece en la lista?
+		
+		
 
 	}
 
