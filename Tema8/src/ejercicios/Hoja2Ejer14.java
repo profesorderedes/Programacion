@@ -18,7 +18,7 @@ public class Hoja2Ejer14 {
 		mostrarArticulos(productos);
 		
 		for(Articulo producto: productos) {
-			precioTotal += producto.getPrecioProducto();
+			precioTotal += producto.getPrecio();
 		}
 
 		System.out.println("\nTotal: " + precioTotal + " €");
@@ -50,8 +50,8 @@ public class Hoja2Ejer14 {
 
 		for (Articulo producto : productos) {
 
-			System.out.println(producto.getNombreProducto() 
-					+ "\t" + producto.getPrecioProducto());
+			System.out.println(producto.getNombre() 
+					+ "\t" + producto.getPrecio());
 
 		}
 
