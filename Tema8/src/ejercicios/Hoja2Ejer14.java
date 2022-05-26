@@ -40,7 +40,7 @@ public class Hoja2Ejer14 {
 		
 		mostrarArticulos(productos);
 		
-		// ¿En qué posición aparece el móvil HTC?
+		// ¿En qué posición aparece el móvil HTC de 95 €?
 		
 		// ¿El móvil Sony de 115 euros aparece en la lista?
 		
