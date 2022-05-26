@@ -1,48 +1,60 @@
 package ejercicios;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Hoja2Ejer14 {
+
 	public static void main(String[] args) {
-		
-		List<Articulo> articulos = new ArrayList<>();
 
-		articulos.add(new Articulo("Tablet Samsung", 120));
-		articulos.add(new Articulo("Móvil Sony", 115));
-		articulos.add(new Articulo("iPad Mini", 290));
-		articulos.add(new Articulo("Móvil HTC", 95));
+		List<Articulo> productos = new ArrayList<>();
+		double precioTotal = 0;
 
-		double total = 0;
+		productos.add(new Articulo("Tablet Samsung", 120));
+		productos.add(new Articulo("Móvil Sony", 115));
+		productos.add(new Articulo("Ipad Mini", 290));
+		productos.add(new Articulo("Móvil HTC", 95));
+
+		mostrarArticulos(productos);
 		
-		System.out.println("Articulos");
-		System.out.println("=====================");
-		
-		for (Articulo articulo : articulos) {
-			System.out.println(articulo.getNombreProducto() 
-					+ " | " + articulo.getPrecioProducto());
-			total = total + articulo.getPrecioProducto();
+		for(Articulo producto: productos) {
+			precioTotal += producto.getPrecioProducto();
 		}
-		
-		System.out.println("Precio total: " + total + "€");
-		
-		// ¿Cuántos artículos hay guardados?
-		
-		
+
+		System.out.println("\nTotal: " + precioTotal + " €");
+
+		// ¿Cuantos artículos hay guardados?
+
+		System.out.println("\nHay " + productos.size() 
+			+ " productos en la lista.");
+
 		// Borrar el artículo en la posición 2.
+
+		productos.remove(2);
+
+		mostrarArticulos(productos);
 		
+		// Borrar el artículo "Tablet Samsung".
+		Articulo articulo = new Articulo("Tablet Samsung", 120);
+		productos.remove(articulo);
 		
-		
+		mostrarArticulos(productos);
+
 	}
-	
-	// Método para mostrar el contenido del ArrayList articulos.
-	
+
+	// Método mostrar el contenido del arrayList
+	private static void mostrarArticulos(
+			List<Articulo> productos) {
+
+		System.out.println("\nArtículos\n=====================");
+
+		for (Articulo producto : productos) {
+
+			System.out.println(producto.getNombreProducto() 
+					+ "\t" + producto.getPrecioProducto());
+
+		}
+
+	}
+
 }
-
-
-
-
-
-
-
-
-
