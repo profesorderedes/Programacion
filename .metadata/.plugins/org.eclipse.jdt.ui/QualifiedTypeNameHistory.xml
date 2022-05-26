@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ejemplo08Circulo.Figura2D"/>
-    <fullyQualifiedTypeName name="actividad1.Guardable"/>
     <fullyQualifiedTypeName name="actividad2.Componente"/>
     <fullyQualifiedTypeName name="actividad2.Condensador"/>
     <fullyQualifiedTypeName name="actividad2.Diodo"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="ejercicios.Articulo"/>
 </qualifiedTypeNameHistroy>

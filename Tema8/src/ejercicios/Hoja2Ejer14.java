@@ -58,9 +58,14 @@ public class Hoja2Ejer14 {
 		// Añadimos el producto "Móvil Samsung" de 200 € en la
 		// posición 1 del ArrayList.
 		
+		productos.add(1, new Articulo("Móvil Samsung", 200));
 		
+		mostrarArticulos(productos);
 		
 		// Borramos la lista completa.
+		productos.clear();
+		
+		mostrarArticulos(productos);
 		
 	}
 
