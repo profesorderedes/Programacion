@@ -16,13 +16,7 @@ public class Hoja2Ejer13 {
 		medidas.add(new Medida(11, 1022, 45));
 		medidas.add(new Medida(7, 1023, 50));
 
-		System.out.println("Registros meteorológicos");
-		System.out.println("========================");
-
-		for (Medida medida : medidas) {
-			System.out.println(medida.getTemperatura() + "\t" + medida.getPresion() + "\t" + medida.getTemperatura());
-
-		}
+		mostrar(medidas);
 
 		// Ordenamos el ArrayList por temperaturas.
 		medidas.sort(new Comparator<Medida>() {
@@ -41,18 +35,32 @@ public class Hoja2Ejer13 {
 			}
 
 		});
+		
+		mostrar(medidas);
+		
+		// Ordenamos el ArrayList por humedades.
+		medidas.sort(new Comparator<Medida>() {
 
-		System.out.println("\nRegistros meteorológicos");
-		System.out.println("========================");
-
-		for (Medida medida : medidas) {
-			System.out.println(medida.getTemperatura() + "\t" + medida.getPresion() + "\t" + medida.getHumedad());
-
-		}
+			@Override
+			public int compare(Medida m1, Medida m2) {
+				
+				if(m1.getHumedad() < m2.getHumedad()) {
+					return -1;
+				}else if(m1.getHumedad() == m2.getHumedad()) {
+					return 0;
+				}else {
+					return 1;
+				}
+				
+			}
+			
+		});
+		
+		mostrar(medidas);
 
 	}
 
-	void mostrar(List<Medida> medidas) {
+	private static void mostrar(List<Medida> medidas) {
 
 		System.out.println("\nRegistros meteorológicos");
 		System.out.println("========================");
