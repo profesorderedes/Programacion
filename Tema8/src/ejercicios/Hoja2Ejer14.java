@@ -67,7 +67,8 @@ public class Hoja2Ejer14 {
 		
 		mostrarArticulos(productos);
 		
-		// Ordenamos el ArrayList.
+		// Ordenamos el ArrayList por precio.
+		
 		productos.sort(new Comparator<Articulo>() {
 
 			@Override
@@ -82,6 +83,29 @@ public class Hoja2Ejer14 {
 			}
 			
 		});
+		
+		mostrarArticulos(productos);
+		
+		// Ordenamos el ArrayList por nombre del artículo.
+		
+		productos.sort(new Comparator<Articulo>() {
+
+			@Override
+			public int compare(Articulo a1, Articulo a2) {
+
+				if (a1.getNombre().compareTo(a2.getNombre()) < 0) {
+					return -1;
+				} else if (a1.getNombre().equals(a2.getNombre())) {
+					return 0;
+				} else {
+					return 1;
+				}
+
+			}
+
+		});
+		
+		mostrarArticulos(productos);
 		
 	}
 
