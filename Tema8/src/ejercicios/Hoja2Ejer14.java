@@ -63,9 +63,25 @@ public class Hoja2Ejer14 {
 		mostrarArticulos(productos);
 		
 		// Borramos la lista completa.
-		productos.clear();
+		// productos.clear();
 		
 		mostrarArticulos(productos);
+		
+		// Ordenamos el ArrayList.
+		productos.sort(new Comparator<Articulo>() {
+
+			@Override
+			public int compare(Articulo a1, Articulo a2) {
+				if(a1.getPrecio() < a2.getPrecio()) {
+					return -1;
+				}else if(a1.getPrecio() == a2.getPrecio()) {
+					return 0;
+				}else {
+					return 1;
+				}
+			}
+			
+		});
 		
 	}
 
