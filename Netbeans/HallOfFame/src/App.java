@@ -75,7 +75,8 @@ public class App extends javax.swing.JFrame {
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
 
-
+        nuevoJugador();
+        
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
@@ -87,6 +88,12 @@ public class App extends javax.swing.JFrame {
      * listener del botón Nuevo.
      */
     private void nuevoJugador() {
+        
+        // Leemos los datos del jugador.
+        Jugador jugador = leerDatosJugador();
+        
+        // Mostramos los datos en la lista.
+        
     }
 
     /**
