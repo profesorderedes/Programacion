@@ -75,14 +75,6 @@ public class App extends javax.swing.JFrame {
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
 
-        String nombre = JOptionPane.showInputDialog(null, "¿Nombre del jugador?", "Nuevo",
-                JOptionPane.QUESTION_MESSAGE);
-
-        String puntuacion = JOptionPane.showInputDialog(null, "¿Puntuación del jugador?", "Nuevo",
-                JOptionPane.QUESTION_MESSAGE);
-
-        Jugador jugador = new Jugador(nombre, puntuacion);
-        jugador.leerDatosJugador(jugador);
 
     }//GEN-LAST:event_btnNuevoActionPerformed
 
@@ -90,11 +82,71 @@ public class App extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBorrarActionPerformed
 
-    private 
-    
     /**
-     * @param args the command line arguments
+     * Añade un jugador nuevo y su puntuación. Este método es llamado desde el
+     * listener del botón Nuevo.
      */
+    private void nuevoJugador() {
+    }
+
+    /**
+     * Pide al usuario los datos de un nuevo jugador y devuelve un objeto
+     * Jugador.
+     *
+     * @return Un objeto Jugador con los datos leídos, o null si los datos no
+     * son válidos.
+     */
+    private Jugador leerDatosJugador() {
+
+        String nombre = JOptionPane.showInputDialog(null, "¿Nombre del jugador?",
+                "Nuevo",
+                JOptionPane.QUESTION_MESSAGE);
+
+        String puntuacion = JOptionPane.showInputDialog(null, "¿Puntuación del jugador?",
+                "Nuevo", JOptionPane.QUESTION_MESSAGE);
+
+        if (nombre == null || nombre.trim().equals("")) {
+            return null;
+        }
+
+        int puntos;
+
+        try {
+            puntos = Integer.parseInt(puntuacion);
+        } catch (NumberFormatException e) {
+            return null;
+        }
+
+        Jugador jugador = new Jugador(nombre, puntos);
+
+        return jugador;
+
+    }
+
+    /**
+     * Guarda la información de un jugador en el archivo de disco, en formato
+     * csv.
+     *
+     * @param jugador Objeto Jugador con el nombre y la puntuación a añadir.
+     */
+    public void guardarJugador(Jugador jugador) {
+    }
+
+    /**
+     * Lee los datos sobre nombres y puntuaciones de jugadores. Los añade a la
+     * lista que se muestra en la ventana.6
+     */
+    public void cargarJugadores() {
+    }
+
+    /**
+     * Borra el contenido del archivo de jugadores, dejándolo en blanco. Y la
+     * lista de jugadores en la ventana. Este método es llamado desde el
+     * listener del botón Borrar.
+     */
+    public void borrarArchivo() {
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
