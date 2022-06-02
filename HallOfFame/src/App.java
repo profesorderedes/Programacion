@@ -65,6 +65,7 @@ public class App extends JFrame {
 		cargarJugadores();
 
 		setVisible(true);
+		
 	}
 
 	/**
@@ -152,7 +153,7 @@ public class App extends JFrame {
 	 * que se muestra en la ventana.
 	 */
 	private void cargarJugadores() {
-
+		
 	}
 
 	/**
