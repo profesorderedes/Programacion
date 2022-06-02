@@ -3,7 +3,10 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -154,6 +157,33 @@ public class App extends JFrame {
 	 */
 	private void cargarJugadores() {
 		
+		try {
+			BufferedReader buffer = new BufferedReader(
+					new FileReader(ARCHIVO));
+			
+			String linea = buffer.readLine();
+			
+			String datos[];
+			
+			while(linea != null) {
+				
+				datos = linea.split(",");
+				modeloLista.addElement(datos[0] + " ..." + datos[1] + " puntos.");
+				
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private String formatear(String nombre, String puntos) {
+		return nombre + " ... " + puntos + " puntos.";
 	}
 
 	/**
