@@ -86,9 +86,9 @@ public class App extends JFrame {
 
 		// Añadimos la línea con los datos del jugador
 		// al modelo del JList.
-		modeloLista.addElement(nuevoJugador.getNombre() 
-				+ " ... " + nuevoJugador.getPuntos() 
-				+ " puntos.");
+		modeloLista.addElement(formatear(
+				nuevoJugador.getNombre(),
+				nuevoJugador.getPuntos() + ""));
 
 		// Guardamos los datos del jugador en el archivo.
 		guardarJugador(nuevoJugador);
@@ -168,16 +168,22 @@ public class App extends JFrame {
 			while(linea != null) {
 				
 				datos = linea.split(",");
-				modeloLista.addElement(datos[0] + " ..." + datos[1] + " puntos.");
+				modeloLista.addElement(
+						formatear(datos[0],datos[1]));
+				linea = buffer.readLine();
 				
 			}
 			
+			buffer.close();
+			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, 
+					"Error cargando los datos del usuario.", 
+					"Hall of Fame", JOptionPane.ERROR_MESSAGE);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, 
+					"Error cargando los datos del usuario.", 
+					"Hall of Fame", JOptionPane.ERROR_MESSAGE);
 		}
 		
 	}
