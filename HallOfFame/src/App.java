@@ -120,7 +120,7 @@ public class App extends JFrame {
 	 * @param jugador Objeto Jugador con el nombre y la puntuación a añadir.
 	 */
 	private void guardarJugador(Jugador jugador) {
-
+		
 	}
 
 	/**
