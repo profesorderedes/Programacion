@@ -68,12 +68,16 @@ public class App extends JFrame {
 	 */
 	private void nuevoJugador() {
 
+		// Leemos los datos del jugador.
 		Jugador nuevoJugador = leerDatosJugador();
 
+		// Añadimos la línea con los datos del jugador
+		// al modelo del JList.
 		modeloLista.addElement(nuevoJugador.getNombre() 
 				+ " ... " + nuevoJugador.getPuntos() 
 				+ " puntos.");
 
+		// Guardamos los datos del jugador en el archivo.
 		guardarJugador(nuevoJugador);
 
 	}
