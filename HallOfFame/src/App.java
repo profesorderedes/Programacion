@@ -178,8 +178,8 @@ public class App extends JFrame {
 			
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(this, 
-					"Error cargando los datos del usuario.", 
-					"Hall of Fame", JOptionPane.ERROR_MESSAGE);
+					"No se han encontrado datos guardados de jugadores. Se creará uno nuevo.", 
+					"Hall of Fame", JOptionPane.INFORMATION_MESSAGE);
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(this, 
 					"Error cargando los datos del usuario.", 
@@ -198,7 +198,38 @@ public class App extends JFrame {
 	 * botón Borrar.
 	 */
 	private void borrarArchivo() {
-
+		
+		// Comprobar que el usuario quiere borrar 
+		// todo el contenido.
+		int respuesta = JOptionPane.showConfirmDialog(this, 
+				"¿Seguro que quieres borrar los datos de todos "
+				+ "los jugadores?", "Hall of Fame", 
+				JOptionPane.OK_CANCEL_OPTION, 
+				JOptionPane.QUESTION_MESSAGE);
+		
+		if(respuesta == JOptionPane.CANCEL_OPTION) {
+			JOptionPane.showMessageDialog(this, 
+					"Operación cancelada. No se ha borrado "
+					+ "ningún dato.", "Hall of Fame", 
+					JOptionPane.INFORMATION_MESSAGE);
+			return;
+		}
+		
+		// Borramos el contenido del archivo.
+		try {
+			
+			FileWriter archivo = new FileWriter(ARCHIVO);
+			archivo.close();
+			
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(this, 
+					"Error borrando los datos del usuario.", 
+					"Hall of Fame", JOptionPane.ERROR_MESSAGE);
+		}
+		
+		// Borramos la lista en la ventana.
+		modeloLista.clear();
+		
 	}
 
 	public static void main(String[] args) {
