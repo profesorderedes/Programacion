@@ -144,8 +144,7 @@ public class App extends JFrame {
 					"Error guardando los datos del usuario.", 
 					"Hall of Fame", JOptionPane.ERROR_MESSAGE);
 		}
-		
-		
+			
 	}
 
 	/**
