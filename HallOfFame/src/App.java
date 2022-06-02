@@ -3,6 +3,9 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -13,6 +16,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 
 public class App extends JFrame {
+	
+	private final String ARCHIVO = "ficheros/jugadores.txt";
 
 	private JList<String> lstJugadores;
 	private DefaultListModel<String> modeloLista;
@@ -70,6 +75,10 @@ public class App extends JFrame {
 
 		// Leemos los datos del jugador.
 		Jugador nuevoJugador = leerDatosJugador();
+		
+		if(nuevoJugador == null) {
+			return;
+		}
 
 		// Añadimos la línea con los datos del jugador
 		// al modelo del JList.
@@ -120,6 +129,22 @@ public class App extends JFrame {
 	 * @param jugador Objeto Jugador con el nombre y la puntuación a añadir.
 	 */
 	private void guardarJugador(Jugador jugador) {
+		
+		try {
+			BufferedWriter buffer = new BufferedWriter(
+					new FileWriter(ARCHIVO, true));
+			
+			buffer.write(jugador.getNombre() + "," 
+			        + jugador.getPuntos() + "\n");
+			
+			buffer.close();
+			
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(this, 
+					"Error guardando los datos del usuario.", 
+					"Hall of Fame", JOptionPane.ERROR_MESSAGE);
+		}
+		
 		
 	}
 
