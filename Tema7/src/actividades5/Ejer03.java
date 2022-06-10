@@ -51,13 +51,10 @@ public class Ejer03 extends JFrame {
 
 				try {
 
-					float num1 = Float.parseFloat(
-							txtOperandoA.getText());
-					float num2 = Float.parseFloat(
-							txtOperandoB.getText());
+					float num1 = Float.parseFloat(txtOperandoA.getText());
+					float num2 = Float.parseFloat(txtOperandoB.getText());
 					float resultado = 0;
-					String seleccion = (String) 
-							cmbOperaciones.getSelectedItem();
+					String seleccion = (String) cmbOperaciones.getSelectedItem();
 
 					if (seleccion.equals("Suma")) {
 

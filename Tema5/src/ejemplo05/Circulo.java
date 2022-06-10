@@ -19,17 +19,15 @@ public class Circulo {
 	}
 
 	double area() {
-		
+
 		return Math.PI * radio * radio;
 
 	}
-	
+
 	double perimetro() {
-		
+
 		return 2 * Math.PI * radio;
-		
+
 	}
-	
-	
 
 }

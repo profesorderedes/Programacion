@@ -31,42 +31,32 @@ public class App {
 		biblioteca.listarLibros();
 
 		System.out.println("\nAñadimos un nuevo libro...");
-		Libro libro5 = new Libro("Head first Java", 
-				new String[] { "Kathy Sierra", "Bert Bates" }, 
-				"O'Reilly", 2005);
+		Libro libro5 = new Libro("Head first Java", new String[] { "Kathy Sierra", "Bert Bates" }, "O'Reilly", 2005);
 		biblioteca.addLibro(libro5);
 		biblioteca.listarLibros();
-		
+
 		// Probamos el método buscarLibro().
-		System.out.println("\nEl libro con id 5 está en la "
-				+ "posición " + biblioteca.buscarLibro(5));
-		System.out.println("El libro con id 100 está en la "
-				+ "posición " + biblioteca.buscarLibro(100));
-		
+		System.out.println("\nEl libro con id 5 está en la " + "posición " + biblioteca.buscarLibro(5));
+		System.out.println("El libro con id 100 está en la " + "posición " + biblioteca.buscarLibro(100));
+
 		// Probamos el método modificaLibro().
 		System.out.println("\nModificamos el libro 5");
-		Libro libro5Modificado = new Libro("Grandes esperanzas", 
-				new String[] { "Charles Dickens" }, "Anaya", 
-				2000);
+		Libro libro5Modificado = new Libro("Grandes esperanzas", new String[] { "Charles Dickens" }, "Anaya", 2000);
 		libro5Modificado.setId(1);
 		biblioteca.modificaLibro(libro5Modificado);
 		biblioteca.listarLibros();
-		
-		System.out.println("\nIntentamos modificar un libro "
-				+ "inexistente:");
-		Libro libroInexistente = new Libro("aaa", 
-				new String[]{"bbb"}, "ccc", 2000);
+
+		System.out.println("\nIntentamos modificar un libro " + "inexistente:");
+		Libro libroInexistente = new Libro("aaa", new String[] { "bbb" }, "ccc", 2000);
 		libroInexistente.setId(200);
 		biblioteca.modificaLibro(libroInexistente);
 		biblioteca.listarLibros();
-		
+
 		// Probamos el método obtenerLibro.
-		System.out.println("\nEl libro con id 3 es \n" + 
-				biblioteca.obtenerLibro(3).toString());
-		
-		System.out.println("\nEl libro con id 2 es " + 
-				biblioteca.obtenerLibro(2));
-		
+		System.out.println("\nEl libro con id 3 es \n" + biblioteca.obtenerLibro(3).toString());
+
+		System.out.println("\nEl libro con id 2 es " + biblioteca.obtenerLibro(2));
+
 	}
 
 }

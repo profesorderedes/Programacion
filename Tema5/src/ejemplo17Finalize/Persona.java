@@ -35,15 +35,14 @@ public class Persona {
 		System.out.println("Edad: " + edad);
 
 	}
-	
+
 	// Este método se ejecutará automáticamente
 	// cuando el objeto Persona sea destruido por
 	// el recolector de basura.
-	public void finalize(){
-		
-		System.out.println("Eliminado por el Garbage "
-				+ "Collector");
-		
+	public void finalize() {
+
+		System.out.println("Eliminado por el Garbage " + "Collector");
+
 	}
 
 	// Métodos de acceso

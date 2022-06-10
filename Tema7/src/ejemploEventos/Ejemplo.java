@@ -1,4 +1,5 @@
 package ejemploEventos;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -13,11 +14,11 @@ public class Ejemplo extends JFrame {
 		setLayout(new FlowLayout(FlowLayout.LEFT));
 
 		JButton btnPulsame = new JButton("Púlsame!");
-		
+
 		// Creamos un objeto que gestionará los eventos de
 		// acción del botón (las pulsaciones).
 		Manejador manejador = new Manejador();
-		
+
 		// Asignamos el manejador al botón.
 		btnPulsame.addActionListener(manejador);
 

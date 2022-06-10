@@ -9,34 +9,33 @@ public class Rectangulo {
 	int base;
 	int altura;
 	String color;
-	
+
 	// Constructores
-	
-	Rectangulo(){
+
+	Rectangulo() {
 		// Constructor vacío.
 	}
 	// Firma: Rectangulo()
-	
-	Rectangulo(int x, int y, int base, int altura){
-		
+
+	Rectangulo(int x, int y, int base, int altura) {
+
 		this.x = x;
 		this.y = y;
 		this.base = base;
 		this.altura = altura;
 		this.color = "Negro";
-		
+
 	}
 	// Firma: Rectangulo(int, int, int, int)
-	
-	Rectangulo(int x, int y, int base, int altura, 
-			String color){
-		
+
+	Rectangulo(int x, int y, int base, int altura, String color) {
+
 		this.x = x;
 		this.y = y;
 		this.base = base;
 		this.altura = altura;
 		this.color = color;
-		
+
 	}
 	// Firma: Rectangulo(int, int, int, int, String)
 
@@ -74,8 +73,7 @@ public class Rectangulo {
 	// rectángulo, y false si no lo está.
 	boolean estaDentro(int a, int b) {
 
-		if (a >= x && a <= (x + base) && b >= y 
-				&& b <= (y + altura)) {
+		if (a >= x && a <= (x + base) && b >= y && b <= (y + altura)) {
 			return true;
 		}
 

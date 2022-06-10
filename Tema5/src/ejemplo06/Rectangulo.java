@@ -44,8 +44,7 @@ public class Rectangulo {
 	// rectángulo, y false si no lo está.
 	boolean estaDentro(int a, int b) {
 
-		if (a >= x && a <= (x + base) && b >= y 
-				&& b <= (y + altura)) {
+		if (a >= x && a <= (x + base) && b >= y && b <= (y + altura)) {
 			return true;
 		}
 

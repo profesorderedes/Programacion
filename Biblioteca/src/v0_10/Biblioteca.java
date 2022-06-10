@@ -1,11 +1,9 @@
 package v0_10;
 
 /**
- * La clase Biblioteca almacena la información de una 
- * colección de libros.
+ * La clase Biblioteca almacena la información de una colección de libros.
  * <p>
- * Incluye métodos para añadir, eliminar, modificar, etc., 
- * libros.
+ * Incluye métodos para añadir, eliminar, modificar, etc., libros.
  * 
  * @see Libro
  * @author Carlos Sogorb

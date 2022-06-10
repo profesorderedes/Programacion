@@ -15,16 +15,15 @@ public class Ejer01 extends JFrame {
 
 		setLayout(new FlowLayout());
 
-		JSlider jslVelocidad = new JSlider(JSlider.HORIZONTAL, 
-				10, 120, 90);
+		JSlider jslVelocidad = new JSlider(JSlider.HORIZONTAL, 10, 120, 90);
 
 		jslVelocidad.setPaintLabels(true);
 		jslVelocidad.setPaintTicks(true);
 		jslVelocidad.setMinorTickSpacing(5);
 		jslVelocidad.setMajorTickSpacing(20);
-		
-		jslVelocidad.setPreferredSize(new Dimension(300,50));
-		
+
+		jslVelocidad.setPreferredSize(new Dimension(300, 50));
+
 		add(jslVelocidad);
 
 		setVisible(true);

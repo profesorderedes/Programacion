@@ -6,29 +6,29 @@ public class Punto {
 	int x;
 	int y;
 	String color;
-	
-	//Constructores
-	
-	Punto(){
-		
+
+	// Constructores
+
+	Punto() {
+
 	}
-	
+
 	// Deja la x y la y con valor 0.
-	Punto(String color){
-		this(0,0,color);
+	Punto(String color) {
+		this(0, 0, color);
 	}
-	
+
 	// Dejará el color con valor "Negro".
-	Punto(int x, int y){
-		this(x,y,"Negro");
+	Punto(int x, int y) {
+		this(x, y, "Negro");
 	}
-	
-	Punto(int x, int y, String color){
+
+	Punto(int x, int y, String color) {
 
 		this.x = x;
 		this.y = y;
 		this.color = color;
-		
+
 	}
 
 	// Métodos
@@ -39,19 +39,11 @@ public class Punto {
 		System.out.println("Color: " + color);
 
 	}
-	
+
 	void desplazar(int dx) {
-		
+
 		x = x + dx;
-		
+
 	}
 
 }
-
-
-
-
-
-
-
-

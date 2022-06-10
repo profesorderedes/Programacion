@@ -28,7 +28,7 @@ public class Ejer04 extends JFrame {
 		JTextField txtEmail = new JTextField(20);
 
 		JLabel lblTituloCaja = new JLabel("Motivo por el que te suscribes");
-		
+
 		JTextArea txtCaja = new JTextArea();
 		JScrollPane scroll = new JScrollPane(txtCaja);
 		scroll.setPreferredSize(new Dimension(220, 100));

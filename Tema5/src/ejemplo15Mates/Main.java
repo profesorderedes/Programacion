@@ -20,13 +20,9 @@ public class Main {
 		mat2.num = 30;
 
 		System.out.println("mat = " + mat.num);
-		
+
 		System.out.println(Mates.pow(2, 5));
 
 	}
 
 }
-
-
-
-

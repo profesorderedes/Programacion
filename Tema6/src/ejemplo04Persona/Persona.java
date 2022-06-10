@@ -5,16 +5,15 @@ public abstract class Persona {
 	private String dni;
 	private String nombre;
 	private String apellidos;
-	
-	public Persona(String dni, String nombre, 
-			String apellidos) {
-		
+
+	public Persona(String dni, String nombre, String apellidos) {
+
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
-		
+
 	}
-	
+
 	public abstract void mostrar();
 
 	public String getDni() {
@@ -28,7 +27,5 @@ public abstract class Persona {
 	public String getApellidos() {
 		return apellidos;
 	}
-	
-	
 
 }

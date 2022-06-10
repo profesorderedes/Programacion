@@ -13,8 +13,8 @@ public class Ejer08 {
 
 		if (num1 > num2) {
 			return num1;
-		} 
-		
+		}
+
 		return num2;
 
 	}

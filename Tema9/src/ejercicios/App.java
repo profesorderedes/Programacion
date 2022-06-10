@@ -20,7 +20,7 @@ public class App {
 				break;
 			case 2:
 				System.out.println("\nHas elegido la opción 2");
-				
+
 			case 3:
 				System.out.println("\nHas elegido la opción 3");
 				break;

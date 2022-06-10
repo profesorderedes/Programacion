@@ -21,15 +21,12 @@ public class Ejer02 {
 			System.out.print("Telefono: ");
 			String telefono = entrada.nextLine();
 
-			String datosPersonales = apellidos + "," 
-					+ nombre + "," + telefono;
+			String datosPersonales = apellidos + "," + nombre + "," + telefono;
 
 			try {
 
-				FileWriter contactos = new FileWriter(
-						"ficheros/contactos.txt", true);
-				BufferedWriter bufferContactos = 
-						new BufferedWriter(contactos);
+				FileWriter contactos = new FileWriter("ficheros/contactos.txt", true);
+				BufferedWriter bufferContactos = new BufferedWriter(contactos);
 
 				bufferContactos.write(datosPersonales + "\n");
 

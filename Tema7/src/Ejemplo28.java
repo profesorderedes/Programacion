@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Ejemplo28 extends JFrame{
+public class Ejemplo28 extends JFrame {
 
 	private JButton btnPlay, btnPause, btnStop;
 	private JLabel lblPulsado;
@@ -27,9 +27,9 @@ public class Ejemplo28 extends JFrame{
 		btnPlay.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+
 				lblPulsado.setText("Has pulsado Play");
-				
+
 			}
 		});
 
@@ -37,19 +37,19 @@ public class Ejemplo28 extends JFrame{
 		btnPause.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+
 				lblPulsado.setText("Has pulsado Pause");
-				
+
 			}
 		});
 
 		btnStop = new JButton("Stop");
 		btnStop.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				lblPulsado.setText("Has pulsado Stop");
-				
+
 			}
 		});
 

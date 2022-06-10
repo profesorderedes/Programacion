@@ -23,18 +23,11 @@ public class Ejer10b {
 			return;
 		}
 
-		String nombresMes[] = { "Enero", "Febrero", "Marzo", 
-				"Abril", "Mayo", "Junio", "Julio", "Agosto", 
-				"Septiembre","Octubre", "Noviembre", 
-				"Diciembre" };
+		String nombresMes[] = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+				"Octubre", "Noviembre", "Diciembre" };
 
-		System.out.println(nombresMes[mes-1]);
-		
+		System.out.println(nombresMes[mes - 1]);
+
 	}
 
 }
-
-
-
-
-

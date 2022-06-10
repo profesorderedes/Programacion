@@ -46,9 +46,9 @@ public class Ejer03b extends JFrame {
 		pintarBarraMotor(prgMotor2);
 
 	}
-	
+
 	private void pintarBarraMotor(JProgressBar prgMotor) {
-		
+
 		for (int i = 0; i <= 75; i++) {
 
 			prgMotor.setValue(i);
@@ -74,7 +74,7 @@ public class Ejer03b extends JFrame {
 			}
 
 		}
-		
+
 	}
 
 	public static void main(String[] args) {

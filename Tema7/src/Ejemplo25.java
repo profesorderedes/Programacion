@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Ejemplo25 extends JFrame implements KeyListener{
+public class Ejemplo25 extends JFrame implements KeyListener {
 
 	private JLabel lblTele;
 	private int x, y; // Coordenadas
@@ -32,7 +32,7 @@ public class Ejemplo25 extends JFrame implements KeyListener{
 		x = 50;
 		y = 50;
 		lblTele.setBounds(x, y, 24, 24);
-		
+
 		// Asignamos el KeyListener a toda la ventana, ya
 		// que las pulsaciones las va a recibir el JFrame.
 		addKeyListener(this);
@@ -47,30 +47,30 @@ public class Ejemplo25 extends JFrame implements KeyListener{
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		
+
 		char tecla = e.getKeyChar();
-		if(tecla == 'a') {
+		if (tecla == 'a') {
 			x = x - 5;
-		}else if(tecla == 'd') {
+		} else if (tecla == 'd') {
 			x = x + 5;
-		}else if(tecla == 's') {
+		} else if (tecla == 's') {
 			y = y + 5;
-		}else if(tecla == 'w') {
+		} else if (tecla == 'w') {
 			y = y - 5;
 		}
-		
-		lblTele.setBounds(x,y,24,24);
-		
+
+		lblTele.setBounds(x, y, 24, 24);
+
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		
+
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		
+
 	}
 
 }

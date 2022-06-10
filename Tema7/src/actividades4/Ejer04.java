@@ -35,17 +35,15 @@ public class Ejer04 extends JFrame {
 		sldRojo.setMinorTickSpacing(25);
 		sldRojo.setPaintTicks(true);
 		sldRojo.setPaintLabels(true);
-		
+
 		sldRojo.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
-				
+
 				rojo = sldRojo.getValue();
-				btnColor.setBackground(new Color(rojo, verde, 
-						azul));
-				txtColor.setText(hexadecimal(rojo, verde, 
-						azul));
-			
+				btnColor.setBackground(new Color(rojo, verde, azul));
+				txtColor.setText(hexadecimal(rojo, verde, azul));
+
 			}
 		});
 
@@ -55,17 +53,15 @@ public class Ejer04 extends JFrame {
 		sldVerde.setMinorTickSpacing(25);
 		sldVerde.setPaintTicks(true);
 		sldVerde.setPaintLabels(true);
-		
+
 		sldVerde.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
-				
+
 				verde = sldVerde.getValue();
-				btnColor.setBackground(new Color(rojo, verde, 
-						azul));
-				txtColor.setText(hexadecimal(rojo, verde, 
-						azul));
-				
+				btnColor.setBackground(new Color(rojo, verde, azul));
+				txtColor.setText(hexadecimal(rojo, verde, azul));
+
 			}
 		});
 
@@ -75,17 +71,15 @@ public class Ejer04 extends JFrame {
 		sldAzul.setMinorTickSpacing(25);
 		sldAzul.setPaintTicks(true);
 		sldAzul.setPaintLabels(true);
-		
+
 		sldAzul.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
-				
+
 				azul = sldAzul.getValue();
-				btnColor.setBackground(new Color(rojo, verde, 
-						azul));
-				txtColor.setText(hexadecimal(rojo, verde, 
-						azul));
-			
+				btnColor.setBackground(new Color(rojo, verde, azul));
+				txtColor.setText(hexadecimal(rojo, verde, azul));
+
 			}
 		});
 
@@ -112,24 +106,23 @@ public class Ejer04 extends JFrame {
 
 		setVisible(true);
 	}
-	
+
 	// Devuelve una cadena con las componentes de color
 	// en hexadecimal.
 	private String hexadecimal(int rojo, int verde, int azul) {
-		
-		String resultado = "#" + completarHex(rojo)
-			+ completarHex(verde)+ completarHex(azul);
-		
+
+		String resultado = "#" + completarHex(rojo) + completarHex(verde) + completarHex(azul);
+
 		return resultado.toUpperCase();
-		
+
 	}
-	
-	// Pasa a hexadecimal el valor recibido, añadiéndole 
-	// si hace falta un 0 delante. 
+
+	// Pasa a hexadecimal el valor recibido, añadiéndole
+	// si hace falta un 0 delante.
 	private String completarHex(int valor) {
-		if(valor >15) {
+		if (valor > 15) {
 			return Integer.toHexString(valor);
-		}else {
+		} else {
 			return "0" + Integer.toHexString(valor);
 		}
 	}

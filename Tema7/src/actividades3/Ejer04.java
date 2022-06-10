@@ -39,7 +39,6 @@ public class Ejer04 extends JFrame {
 		menuCalculo.addSeparator();
 		menuCalculo.add(itemPolinomio);
 		menuCalculo.add(itemEcuacion);
-		
 
 		barraMenu.add(menuAritmetica);
 		barraMenu.add(menuCalculo);

@@ -3,13 +3,12 @@ package actividad1;
 public class Ogg extends Musica implements Guardable {
 
 	private int version;
-	
-	public Ogg(String nombre, double duracion, String artista,
-			String estilo, int version) {
-		
+
+	public Ogg(String nombre, double duracion, String artista, String estilo, int version) {
+
 		super(nombre, duracion, artista, estilo);
 		this.version = version;
-		
+
 	}
 
 	@Override

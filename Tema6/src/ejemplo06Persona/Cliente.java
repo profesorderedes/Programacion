@@ -10,7 +10,7 @@ public class Cliente extends Persona {
 		this.visa = visa;
 
 	}
-	
+
 	@Override
 	public void mostrar() {
 

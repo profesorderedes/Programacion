@@ -40,8 +40,7 @@ public class Libro {
 
 		System.out.println("\nAutores del libro:");
 		for (int i = 0; i < autores.length; i++) {
-			System.out.println(" - " + 
-					autores[i].getNombre());
+			System.out.println(" - " + autores[i].getNombre());
 		}
 
 	}

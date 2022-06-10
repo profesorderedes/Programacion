@@ -44,50 +44,48 @@ public class Hoja2Ejer14 {
 
 		articulo = new Articulo("Móvil HTC", 95);
 
-		System.out.println("\nEl móvil HTC aparece por primera"
-				+ " vez en la posición " 
-				+ productos.indexOf(articulo) + ".");
+		System.out.println(
+				"\nEl móvil HTC aparece por primera" + " vez en la posición " + productos.indexOf(articulo) + ".");
 
 		// ¿El móvil Sony de 115 euros aparece en la lista?
 
 		articulo = new Articulo("Móvil Sony", 115);
-		
-		System.out.println("\n¿Aparece el móvil Sony en la lista? " 
-				+ productos.contains(articulo));
-		
+
+		System.out.println("\n¿Aparece el móvil Sony en la lista? " + productos.contains(articulo));
+
 		// Añadimos el producto "Móvil Samsung" de 200 € en la
 		// posición 1 del ArrayList.
-		
+
 		productos.add(1, new Articulo("Móvil Samsung", 200));
-		
+
 		mostrarArticulos(productos);
-		
+
 		// Borramos la lista completa.
 		// productos.clear();
-		
+
 		mostrarArticulos(productos);
-		
+
 		// Ordenamos el ArrayList por precio.
-		
+
 		productos.sort(new Comparator<Articulo>() {
 
 			@Override
 			public int compare(Articulo a1, Articulo a2) {
-				if(a1.getPrecio() < a2.getPrecio()) {
+				if (a1.getPrecio() < a2.getPrecio()) {
 					return -1;
-				}else if(a1.getPrecio() == a2.getPrecio()) {
+				} else if (a1.getPrecio() == a2.getPrecio()) {
 					return 0;
-				}else {
+				} else {
 					return 1;
 				}
 			}
-			
+
 		});
-		
+
 		mostrarArticulos(productos);
-		
+
 		// Ordenamos el ArrayList por nombre del artículo.
-		
+
 		productos.sort(new Comparator<Articulo>() {
 
 			@Override
@@ -104,9 +102,9 @@ public class Hoja2Ejer14 {
 			}
 
 		});
-		
+
 		mostrarArticulos(productos);
-		
+
 	}
 
 	// Método mostrar el contenido del arrayList

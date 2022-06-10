@@ -100,12 +100,12 @@ public class Biblioteca {
 	public Libro obtenerLibro(int idLibro) {
 
 		int pos = buscarLibro(idLibro);
-		if(pos != -1) {
+		if (pos != -1) {
 			return libros[pos];
 		}
-		
+
 		return null;
-		
+
 	}
 
 }

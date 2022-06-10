@@ -51,14 +51,11 @@ public class Ejer3Nerea extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 
-					float numero1 = Float.parseFloat(
-							txtA.getText());
-					float numero2 = Float.parseFloat(
-							txtB.getText());
+					float numero1 = Float.parseFloat(txtA.getText());
+					float numero2 = Float.parseFloat(txtB.getText());
 					float resultado = 0;
 
-					String seleccionado = (String) 
-							cmbOpciones.getSelectedItem();
+					String seleccionado = (String) cmbOpciones.getSelectedItem();
 
 					if ("Suma".equals(seleccionado)) {
 						resultado = numero1 + numero2;
@@ -69,7 +66,7 @@ public class Ejer3Nerea extends JFrame {
 					} else if ("Division".equals(seleccionado)) {
 						resultado = numero1 / numero2;
 					}
-					
+
 					txtResultado.setText("" + resultado);
 
 				} catch (Exception ex) {

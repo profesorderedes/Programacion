@@ -1,6 +1,5 @@
 package biblioteca;
 
-
 public class Libro {
 
 	private int id;

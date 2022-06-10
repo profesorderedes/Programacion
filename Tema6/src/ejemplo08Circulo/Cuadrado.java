@@ -26,12 +26,11 @@ public class Cuadrado implements Figura2D, Mostrable {
 
 	@Override
 	public void mostrar() {
-		
+
 		System.out.println("Lado = " + lado);
-		System.out.println("Coordenadas = (" + x + ", " 
-		   + y + ")");
+		System.out.println("Coordenadas = (" + x + ", " + y + ")");
 		System.out.println("Color = " + color);
-		
+
 	}
 
 }

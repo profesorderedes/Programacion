@@ -14,8 +14,7 @@ public class Ejer8Jorge {
 		System.out.println("Piedra, Papel o Tijera ");
 		System.out.println("===========================\n");
 		System.out.println("Elige: \n");
-		System.out.println("1) piedra\n" + "2) papel\n" 
-		+ "3) tijera ");
+		System.out.println("1) piedra\n" + "2) papel\n" + "3) tijera ");
 		eleccion = entrada.nextInt();
 
 		aleatorio = (int) (Math.random() * 3 + 1);

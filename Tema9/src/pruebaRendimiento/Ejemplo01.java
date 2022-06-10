@@ -12,11 +12,10 @@ public class Ejemplo01 {
 		Scanner entrada = new Scanner(System.in);
 
 		long tiempoInicial = System.currentTimeMillis();
-		
+
 		// Abrimos el archivo para lectura.
 		try {
-			FileInputStream archivo = 
-					new FileInputStream("ficheros/cometa.jpg");
+			FileInputStream archivo = new FileInputStream("ficheros/cometa.jpg");
 
 			// Leemos el primer byte.
 			int byteLeido = archivo.read();
@@ -31,10 +30,8 @@ public class Ejemplo01 {
 
 			// Cerramos el archivo.
 			archivo.close();
-			
-			System.out.println("\nTiempo transcurrido: " 
-			+ (System.currentTimeMillis() - tiempoInicial)
-			+ " ms.");
+
+			System.out.println("\nTiempo transcurrido: " + (System.currentTimeMillis() - tiempoInicial) + " ms.");
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

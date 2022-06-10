@@ -35,27 +35,27 @@ public class Hoja2Ejer13 {
 			}
 
 		});
-		
+
 		mostrar(medidas);
-		
+
 		// Ordenamos el ArrayList por humedades.
 		medidas.sort(new Comparator<Medida>() {
 
 			@Override
 			public int compare(Medida m1, Medida m2) {
-				
-				if(m1.getHumedad() < m2.getHumedad()) {
+
+				if (m1.getHumedad() < m2.getHumedad()) {
 					return -1;
-				}else if(m1.getHumedad() == m2.getHumedad()) {
+				} else if (m1.getHumedad() == m2.getHumedad()) {
 					return 0;
-				}else {
+				} else {
 					return 1;
 				}
-				
+
 			}
-			
+
 		});
-		
+
 		mostrar(medidas);
 
 	}
@@ -66,9 +66,7 @@ public class Hoja2Ejer13 {
 		System.out.println("========================");
 
 		for (Medida medida : medidas) {
-			System.out.println(medida.getTemperatura() + "\t" 
-					+ medida.getPresion() + "\t" 
-					+ medida.getHumedad());
+			System.out.println(medida.getTemperatura() + "\t" + medida.getPresion() + "\t" + medida.getHumedad());
 		}
 
 	}

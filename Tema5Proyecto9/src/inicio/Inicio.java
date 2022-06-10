@@ -26,7 +26,7 @@ public class Inicio {
 
 		System.out.print("Nombre del modelo: ");
 		String modelo = entrada.nextLine();
-		
+
 		Motor motor = new Motor(id, fabricante, modelo);
 
 		System.out.println("\nDATOS DE LA LAVADORA:\n");
@@ -40,20 +40,17 @@ public class Inicio {
 
 		System.out.print("Precio: ");
 		float precio = entrada.nextFloat();
-		
-		Lavadora lavadora = new Lavadora(idLav, motor, marca, 
-				precio);
-		
-		System.out.println("¿De cuántas lavadoras quieres "
-				+ "el taller?");
+
+		Lavadora lavadora = new Lavadora(idLav, motor, marca, precio);
+
+		System.out.println("¿De cuántas lavadoras quieres " + "el taller?");
 		int maxLavadoras = entrada.nextInt();
-		
+
 		Taller miTaller = new Taller(maxLavadoras);
-		
+
 		miTaller.addLavadora(lavadora);
-		
+
 		miTaller.listaLavadoras();
-		
 
 //		Motor motor1 = new Motor(21, "Mitsubishi", "V3");
 //		Motor motor2 = new Motor(22, "Samsung", "A1");

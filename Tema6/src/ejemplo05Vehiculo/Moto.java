@@ -4,14 +4,13 @@ public class Moto extends Vehiculo {
 
 	private int cilindrada;
 
-	public Moto(String matricula, String modelo, 
-			String marca, int cilindrada) {
-		
+	public Moto(String matricula, String modelo, String marca, int cilindrada) {
+
 		super(matricula, modelo, marca);
 		this.cilindrada = cilindrada;
-		
+
 	}
-	
+
 	public int getCilindrada() {
 		return cilindrada;
 	}

@@ -6,14 +6,14 @@ public class Persona {
 	String nombre;
 	String apellidos;
 	int edad;
-	
+
 	// Método constructor
-	Persona(String nombre, String apellidos, int edad){
-		
+	Persona(String nombre, String apellidos, int edad) {
+
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
-				
+
 	}
 
 	// Métodos

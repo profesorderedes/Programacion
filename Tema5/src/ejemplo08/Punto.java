@@ -6,14 +6,14 @@ public class Punto {
 	int x;
 	int y;
 	String color;
-	
+
 	// Método constructor
-	Punto(int x, int y, String color){
+	Punto(int x, int y, String color) {
 
 		this.x = x;
 		this.y = y;
 		this.color = color;
-		
+
 	}
 
 	// Métodos
@@ -24,19 +24,11 @@ public class Punto {
 		System.out.println("Color: " + color);
 
 	}
-	
+
 	void desplazar(int dx) {
-		
+
 		x = x + dx;
-		
+
 	}
 
 }
-
-
-
-
-
-
-
-

@@ -20,9 +20,7 @@ public class Lavadora {
 
 	public String toString() {
 
-		return "Código: " + id + ", Motor: " 
-				+ motor.getFabricante() + ", Marca: " 
-				+ marca + ", Precio: " + precio
+		return "Código: " + id + ", Motor: " + motor.getFabricante() + ", Marca: " + marca + ", Precio: " + precio
 				+ " €";
 
 	}

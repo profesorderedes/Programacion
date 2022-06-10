@@ -48,14 +48,12 @@ public class Punto {
 		x = x + dx;
 
 	}
-	
+
 	void desplazar(int dx, int dy) {
-		
+
 		x = x + dx;
 		y = y + dy;
-		
-	}
 
-	
+	}
 
 }

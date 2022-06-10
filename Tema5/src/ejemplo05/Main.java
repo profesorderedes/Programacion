@@ -10,12 +10,11 @@ public class Main {
 		circulo1.y = 2;
 		circulo1.radio = 4;
 		circulo1.color = "Rosa";
-		
+
 		circulo1.mostrar();
-		
+
 		System.out.println("Área = " + circulo1.area());
-		System.out.println("Perímetro = " 
-				+ circulo1.perimetro());
+		System.out.println("Perímetro = " + circulo1.perimetro());
 
 	}
 

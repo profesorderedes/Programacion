@@ -11,8 +11,7 @@ public class Inicio {
 		System.out.println("Área: " + cilindro1.area());
 		System.out.println("Volumen: " + cilindro1.volumen());
 
-		System.out.println("Datos del cilindro:\n" 
-				+ cilindro1.toString());
+		System.out.println("Datos del cilindro:\n" + cilindro1.toString());
 
 		// Cambiar altura y radio
 		System.out.println("=============");
@@ -22,9 +21,8 @@ public class Inicio {
 		// Mostrar los nuevos valores de área y volumen.
 		System.out.println("Area: " + cilindro1.area());
 		System.out.println("Volumen " + cilindro1.volumen());
-		
-		System.out.println("Datos del cilindro:\n" 
-				+ cilindro1.toString());
-		
+
+		System.out.println("Datos del cilindro:\n" + cilindro1.toString());
+
 	}
 }

@@ -12,8 +12,7 @@ public class Autor {
 
 	}
 
-	public Autor(String nombre, String email, 
-			int fechaNacimiento) {
+	public Autor(String nombre, String email, int fechaNacimiento) {
 
 		this.nombre = nombre;
 		this.email = email;
@@ -23,8 +22,7 @@ public class Autor {
 
 	public String toString() {
 
-		return "Nombre: " + nombre + "\nEmail: " + email 
-				+ "\nFecha de nacimiento: " + fechaNacimiento;
+		return "Nombre: " + nombre + "\nEmail: " + email + "\nFecha de nacimiento: " + fechaNacimiento;
 
 	}
 

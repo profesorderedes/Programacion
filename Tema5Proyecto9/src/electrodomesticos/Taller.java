@@ -11,15 +11,15 @@ public class Taller {
 	private Lavadora[] lavadoras;
 
 	private int numLavadoras = 0;
-	
+
 	// En la práctica no está así.
 	public Taller(int capacidad) {
-		
+
 		MAX_LAVADORAS = capacidad;
 		lavadoras = new Lavadora[MAX_LAVADORAS];
-		
+
 	}
-	
+
 	public void listaLavadoras() {
 
 		System.out.println("\nLista de lavadoras");
@@ -55,8 +55,8 @@ public class Taller {
 	public void borraLavadora(int id) {
 
 		int pos = buscaLavadora(id);
-		
-		if(pos!=-1) {
+
+		if (pos != -1) {
 			lavadoras[pos] = null;
 			numLavadoras--;
 		}
@@ -67,23 +67,22 @@ public class Taller {
 
 		for (int i = 0; i < lavadoras.length; i++) {
 
-			if (lavadoras[i] != null 
-					&& lavadoras[i].getId() == id) {
+			if (lavadoras[i] != null && lavadoras[i].getId() == id) {
 
 				return i;
 
 			}
 
 		}
-		
+
 		return -1;
 
 	}
-	
+
 	public int numLavadoras() {
-		
+
 		return numLavadoras;
-		
+
 	}
 
 }

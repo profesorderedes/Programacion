@@ -15,8 +15,7 @@ public class Hoja1Ejer6 {
 
 		for (int i = 0; i < 10; i++) {
 
-			System.out.print("Precio del producto número " 
-					+ (i + 1) + ": ");
+			System.out.print("Precio del producto número " + (i + 1) + ": ");
 			cadaPrecio = entrada.nextDouble();
 			precios.add(cadaPrecio);
 

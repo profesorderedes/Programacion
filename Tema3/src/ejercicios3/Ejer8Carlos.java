@@ -12,11 +12,9 @@ public class Ejer8Carlos {
 
 		int eleccionMaquina;
 
-		System.out.println("Piedra, Papel o Tijera\n======"
-				+ "================");
+		System.out.println("Piedra, Papel o Tijera\n======" + "================");
 
-		System.out.println("Elige:\n1) Piedra\n2) Papel\n"
-				+ "3) Tijera");
+		System.out.println("Elige:\n1) Piedra\n2) Papel\n" + "3) Tijera");
 
 		respuesta = entrada.nextInt();
 

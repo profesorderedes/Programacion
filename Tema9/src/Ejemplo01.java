@@ -30,9 +30,8 @@ public class Ejemplo01 {
 
 			}
 
-			System.out.println("Se han leído " + numBytes 
-					+ " bytes.");
-			
+			System.out.println("Se han leído " + numBytes + " bytes.");
+
 			// Cerramos el archivo.
 			archivo.close();
 

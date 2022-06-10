@@ -10,25 +10,25 @@ public class Circulo {
 
 	// Constructores
 
-	Circulo(){
-		
+	Circulo() {
+
 	}
-	
-	Circulo(int radio){
-		this(0,0,radio,"Negro");
+
+	Circulo(int radio) {
+		this(0, 0, radio, "Negro");
 	}
-	
-	Circulo(String color){
-		this(0,0,0,color);
+
+	Circulo(String color) {
+		this(0, 0, 0, color);
 	}
-	
+
 	Circulo(int x, int y, int radio, String color) {
 
 		this.x = x;
 		this.y = y;
 		this.radio = radio;
 		this.color = color;
-		
+
 	}
 
 	// Métodos

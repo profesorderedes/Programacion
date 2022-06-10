@@ -6,7 +6,7 @@ import java.awt.event.*;
 public class Ejemplo21 extends JFrame implements ActionListener {
 
 	private JLabel lblPulsado;
-	
+
 	public Ejemplo21() {
 
 		super("Pulsaciones");
@@ -19,12 +19,12 @@ public class Ejemplo21 extends JFrame implements ActionListener {
 
 		// Asignamos el manejador al botón.
 		btnPulsame.addActionListener(this);
-		
+
 		lblPulsado = new JLabel();
 
 		add(btnPulsame);
 		add(lblPulsado);
-		
+
 		setVisible(true);
 
 	}
@@ -35,9 +35,9 @@ public class Ejemplo21 extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+
 		lblPulsado.setText("Bien!!!!");
-		
+
 	}
 
 }

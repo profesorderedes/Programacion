@@ -12,7 +12,7 @@ public class Libro {
 	// libro1.equals(libro2)
 	@Override
 	public boolean equals(Object obj) {
-		
+
 		if (obj == null) {
 			// Si obj es null, entonces no es igual a nuestro
 			// objeto.
@@ -27,14 +27,13 @@ public class Libro {
 			// que nuestro objeto.
 			Libro libro = (Libro) obj;
 
-			if (titulo.equals(libro.getTitulo()) 
-					&& autor.equals(libro.getAutor())) {
-				// Si el título y el autor coinciden, se 
+			if (titulo.equals(libro.getTitulo()) && autor.equals(libro.getAutor())) {
+				// Si el título y el autor coinciden, se
 				// considerará que son iguales.
 				return true;
-			} 
+			}
 		}
-		
+
 		return false;
 
 	}

@@ -15,15 +15,13 @@ public class Ejer02 extends JFrame {
 
 		JLabel lblModelo = new JLabel("Modelo?");
 
-		String[] modelos = { "Peugeot", "Volkswagen", 
-				"Renault", "Seat", "Ferrari", "Porshe", 
-				"Jaguar", "Dacia" };
+		String[] modelos = { "Peugeot", "Volkswagen", "Renault", "Seat", "Ferrari", "Porshe", "Jaguar", "Dacia" };
 
 		JList<String> lstModelos = new JList<>(modelos);
 
 		JScrollPane panelModelos = new JScrollPane(lstModelos);
-		panelModelos.setPreferredSize(new Dimension(120,120));
-		
+		panelModelos.setPreferredSize(new Dimension(120, 120));
+
 		add(panelModelos);
 		add(lblModelo);
 

@@ -24,7 +24,7 @@ public class Inicio {
 
 		Autor autor3 = new Autor(nombre, email, anyo);
 		System.out.println(autor3.toString());
-		
+
 		entrada.nextLine();
 
 		System.out.println("\nEscribe los datos del Libro");
@@ -34,13 +34,13 @@ public class Inicio {
 
 		System.out.println("isbn:");
 		String isbn = entrada.nextLine();
-		
+
 		System.out.println("Año actual:");
 		int anyoActual = entrada.nextInt();
 
 		Libro libro2 = new Libro(titulo, isbn, autor3);
 		Libro.setAnyoActual(anyoActual);
-		
+
 		System.out.println(libro2.toString());
 
 	}

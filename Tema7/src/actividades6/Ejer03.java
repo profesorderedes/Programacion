@@ -32,21 +32,21 @@ public class Ejer03 extends JFrame implements ItemListener {
 		JPanel panelSuperior = new JPanel();
 
 		cmbOrdenadores = new JComboBox<>(ordenadores);
-		cmbOrdenadores.setPreferredSize(new Dimension(350,22));
+		cmbOrdenadores.setPreferredSize(new Dimension(350, 22));
 		cmbOrdenadores.addItemListener(this);
-		
+
 		panelSuperior.add(cmbOrdenadores);
 
 		// Panel inferior.
 		JPanel panelInferior = new JPanel();
-		
+
 		ordenador1 = new ImageIcon("imgs/ordenador1.jpg");
 		ordenador2 = new ImageIcon("imgs/ordenador2.jpg");
 		ordenador3 = new ImageIcon("imgs/ordenador3.jpg");
 		ordenador4 = new ImageIcon("imgs/ordenador4.jpg");
 
 		lblImagen = new JLabel(ordenador1);
-		
+
 		panelInferior.add(lblImagen);
 
 		// Ventana.

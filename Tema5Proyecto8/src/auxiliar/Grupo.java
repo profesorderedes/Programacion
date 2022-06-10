@@ -76,7 +76,5 @@ public class Grupo {
 	public void setClase(String clase) {
 		this.clase = clase;
 	}
-	
-	
 
 }

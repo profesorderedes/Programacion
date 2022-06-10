@@ -16,8 +16,7 @@ public class Empleado extends Persona {
 
 		System.out.println("\nDatos del empleado:");
 		super.mostrar();
-		System.out.println("Número seg. social: " 
-				+ numSegSocial);
+		System.out.println("Número seg. social: " + numSegSocial);
 
 	}
 

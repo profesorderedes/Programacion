@@ -52,15 +52,15 @@ public class Inicio {
 		// Pedir el resto de datos del libro
 
 		entrada.nextLine();
-		
+
 		System.out.println("\nEscribe los datos del Libro");
-		
+
 		System.out.println("Titulo:");
 		String titulo = entrada.nextLine();
-		
+
 		System.out.println("isbn:");
 		String isbn = entrada.nextLine();
-		
+
 		System.out.println("Año actual:");
 		int anyoActual = entrada.nextInt();
 

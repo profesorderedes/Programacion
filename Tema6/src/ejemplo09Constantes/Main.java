@@ -15,8 +15,7 @@ public class Main {
 		System.out.print("Escribe un día de la semana: ");
 		int dia = entrada.nextInt();
 
-		if (dia == DiasSemana.SABADO 
-				|| dia == DiasSemana.DOMINGO) {
+		if (dia == DiasSemana.SABADO || dia == DiasSemana.DOMINGO) {
 
 			System.out.println("Es festivo.");
 

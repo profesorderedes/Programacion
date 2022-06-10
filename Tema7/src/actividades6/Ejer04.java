@@ -33,7 +33,7 @@ public class Ejer04 extends JFrame {
 		JLabel lblColor = new JLabel("COLOR");
 		Font negrita = new Font("Arial", Font.BOLD, 16);
 		lblColor.setFont(negrita);
-		
+
 		this.addMouseListener(new MouseListener() {
 
 			@Override
@@ -64,8 +64,7 @@ public class Ejer04 extends JFrame {
 				verde = e.getX();
 				azul = e.getY();
 
-				lblColor.setForeground(
-						new Color(rojo, verde, azul));
+				lblColor.setForeground(new Color(rojo, verde, azul));
 
 			}
 		});

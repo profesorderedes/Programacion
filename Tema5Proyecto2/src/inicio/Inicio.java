@@ -21,7 +21,7 @@ public class Inicio {
 		double distMillas = entrada.nextDouble();
 
 		System.out.println(distMillas + " millas son " + Conversor.km(distMillas) + " km.");
-		
+
 		// Pregunta una cantidad en milibares y la pasa a atm.
 		System.out.println("Escribe una cantidad en milibares y la pasaré a atmosferas: ");
 		double mil = entrada.nextDouble();

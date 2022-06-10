@@ -15,26 +15,25 @@ public class Circulo implements Figura2D, Mostrable {
 
 	@Override
 	public double area() {
-		
+
 		return Math.PI * radio * radio;
-		
+
 	}
 
 	@Override
 	public double perimetro() {
-		
-		return 2* Math.PI * radio; 
-		
+
+		return 2 * Math.PI * radio;
+
 	}
 
 	@Override
 	public void mostrar() {
-		
+
 		System.out.println("Radio = " + radio);
-		System.out.println("Coordenadas = (" + x + ", " 
-		   + y + ")");
+		System.out.println("Coordenadas = (" + x + ", " + y + ")");
 		System.out.println("Color = " + color);
-		
+
 	}
 
 }

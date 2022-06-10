@@ -15,19 +15,11 @@ public class Punto {
 		System.out.println("Color: " + color);
 
 	}
-	
+
 	void desplazar(int dx) {
-		
+
 		x = x + dx;
-		
+
 	}
 
 }
-
-
-
-
-
-
-
-

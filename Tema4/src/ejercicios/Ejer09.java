@@ -27,9 +27,8 @@ public class Ejer09 {
 	}
 
 	static boolean esBisiesto(int numero) {
-		
-		if ((numero % 4 == 0) && ((numero % 100 != 0) 
-				|| (numero % 400 == 0))) {
+
+		if ((numero % 4 == 0) && ((numero % 100 != 0) || (numero % 400 == 0))) {
 
 			return true;
 

@@ -19,13 +19,10 @@ public class Ejer04 {
 
 		System.out.print("Contenido de la página: ");
 		String contenido = entrada.nextLine();
-		String ruta = System.getProperty("user.home") +
-				"/index.html";
+		String ruta = System.getProperty("user.home") + "/index.html";
 
 		try {
-			BufferedWriter buffer = 
-					new BufferedWriter(
-							new FileWriter(ruta));
+			BufferedWriter buffer = new BufferedWriter(new FileWriter(ruta));
 
 			buffer.write("<!DOCTYPE html>\n");
 			buffer.write("<html>\n<head>\n" + "<title>" + titulo + "</title>\n</head>\n");

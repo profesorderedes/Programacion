@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Ejemplo23 extends JFrame implements FocusListener{
+public class Ejemplo23 extends JFrame implements FocusListener {
 
 	private JTextField txtNum1, txtNum2, txtNum3;
 	private JLabel lblMedia;
@@ -25,13 +25,13 @@ public class Ejemplo23 extends JFrame implements FocusListener{
 
 		txtNum1 = new JTextField("0", 7);
 		txtNum1.addFocusListener(this);
-		
+
 		txtNum2 = new JTextField("0", 7);
 		txtNum2.addFocusListener(this);
-		
+
 		txtNum3 = new JTextField("0", 7);
 		txtNum3.addFocusListener(this);
-		
+
 		lblMedia = new JLabel("La media es 0.0");
 
 		add(txtNum1);
@@ -49,17 +49,16 @@ public class Ejemplo23 extends JFrame implements FocusListener{
 
 	@Override
 	public void focusGained(FocusEvent e) {
-		
-		float media = (Float.parseFloat(txtNum1.getText()) 
-				+ Float.parseFloat(txtNum2.getText())
+
+		float media = (Float.parseFloat(txtNum1.getText()) + Float.parseFloat(txtNum2.getText())
 				+ Float.parseFloat(txtNum3.getText())) / 3;
-		
+
 		lblMedia.setText("La media es " + media);
-		
+
 	}
 
 	@Override
-	public void focusLost(FocusEvent e) {		
+	public void focusLost(FocusEvent e) {
 	}
 
 }

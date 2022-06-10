@@ -10,12 +10,10 @@ public class Ejemplo02 {
 		try {
 
 			// Abrimos el archivo original para lectura.
-			FileInputStream original = 
-					new FileInputStream("ficheros/cometa.jpg");
+			FileInputStream original = new FileInputStream("ficheros/cometa.jpg");
 
 			// Abrimos el archivo copia para escritura.
-			FileOutputStream copia = 
-					new FileOutputStream("ficheros/copia.jpg");
+			FileOutputStream copia = new FileOutputStream("ficheros/copia.jpg");
 
 			// Leemos el primer byte del archivo original.
 			int byteLeido = original.read();
@@ -33,14 +31,12 @@ public class Ejemplo02 {
 			copia.close();
 
 			System.out.println("Copia finalizada.");
-			
+
 		} catch (FileNotFoundException e) {
 			System.out.println("Error: no existe el archivo");
 		} catch (IOException e) {
 			System.out.println("Error de entrada/salida");
 		}
-		
-		
 
 	}
 

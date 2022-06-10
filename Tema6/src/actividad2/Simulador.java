@@ -13,7 +13,7 @@ public class Simulador {
 
 		Componente diodo = new Diodo(1, 1, 1);
 		Diodo led = new Led(1, 1, 1, "Azul");
-		
+
 	}
 
 }

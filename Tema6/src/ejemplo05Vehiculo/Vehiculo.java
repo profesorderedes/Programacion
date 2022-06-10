@@ -6,8 +6,7 @@ public abstract class Vehiculo {
 	private String modelo;
 	private String marca;
 
-	public Vehiculo(String matricula, String modelo, 
-			String marca) {
+	public Vehiculo(String matricula, String modelo, String marca) {
 
 		this.matricula = matricula;
 		this.modelo = modelo;

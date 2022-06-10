@@ -33,65 +33,57 @@ public class Ejemplo01 {
 		for (String heroe : lista) {
 			System.out.println(heroe);
 		}
-		
+
 		// Añadimos superhéroes en posiciones concretas.
 		lista.add(0, "Lobezno");
 		mostrar(lista);
-		
+
 		lista.add(2, "Aquaman");
 		mostrar(lista);
-		
+
 		// Borramos superhéroes a partir de su posición.
 		String borrado = lista.remove(2);
 		System.out.println("\nBorrado a " + borrado);
-		
+
 		mostrar(lista);
-		
+
 		// Borramos superhéroes a partir del nombre.
 		boolean thorBorrado = lista.remove("Thor");
 		System.out.println("\n¿Thor borrado? " + thorBorrado);
-		
+
 		mostrar(lista);
-		
+
 		// Sustituimos un superhéroe por otro en la lista.
 		borrado = lista.set(3, "Antman");
 		System.out.println("\nBorrado " + borrado);
-		
+
 		mostrar(lista);
-		
+
 		// Vemos si Antman está en la lista.
 		boolean contiene = lista.contains("Antman");
-		System.out.println("\n¿Antman está dentro de la "
-				+ "lista? " + contiene);
-		
-		// Miramos dónde aparece Ironman en primer lugar 
+		System.out.println("\n¿Antman está dentro de la " + "lista? " + contiene);
+
+		// Miramos dónde aparece Ironman en primer lugar
 		// y en últim lugar.
 		lista.add("Ironman");
-		System.out.println("\nIronman aparece por primera vez"
-				+ " en la posición " 
-				+ lista.indexOf("Ironman"));
-		System.out.println("\nIronman aparece por última vez"
-				+ " en la posición " 
-				+ lista.lastIndexOf("Ironman"));
-		
+		System.out.println("\nIronman aparece por primera vez" + " en la posición " + lista.indexOf("Ironman"));
+		System.out.println("\nIronman aparece por última vez" + " en la posición " + lista.lastIndexOf("Ironman"));
+
 		mostrar(lista);
-		
+
 		// Miramos si la lista está vacía.
-		System.out.println("\n¿Lista vacía? " 
-				+ lista.isEmpty());
-		
+		System.out.println("\n¿Lista vacía? " + lista.isEmpty());
+
 		// Miramos cuántos elementos hay en la lista.
-		System.out.println("\nHay " + lista.size() 
-		        + " superhéroes guardados.");
-		
+		System.out.println("\nHay " + lista.size() + " superhéroes guardados.");
+
 		// Borramos la lista.
 		System.out.println("\nBorrando la lista");
 		lista.clear();
 		mostrar(lista);
-		
-		
+
 	}
-	
+
 	private static void mostrar(List<String> lista) {
 		System.out.println("\nLista completa:");
 		for (String heroe : lista) {

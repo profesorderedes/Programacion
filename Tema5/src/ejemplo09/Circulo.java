@@ -10,31 +10,31 @@ public class Circulo {
 
 	// Constructores
 
-	Circulo(){
-		
+	Circulo() {
+
 	}
 	// Firma -> Circulo()
-	
-	Circulo(int radio){
+
+	Circulo(int radio) {
 		x = 0;
 		y = 0;
 		this.radio = radio;
 		color = "Negro";
 	}
 	// Firma -> Circulo(int)
-	
-	Circulo(String color){
+
+	Circulo(String color) {
 		this.color = color;
 	}
 	// Firma -> Circulo(String)
-	
+
 	Circulo(int x, int y, int radio, String color) {
 
 		this.x = x;
 		this.y = y;
 		this.radio = radio;
 		this.color = color;
-		
+
 	}
 	// Firma -> Circulo(int, int, int, String)
 

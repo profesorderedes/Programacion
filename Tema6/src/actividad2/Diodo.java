@@ -44,7 +44,7 @@ public class Diodo extends Componente {
 		} finally {
 			System.out.println("Fin de lectura de datos.");
 		}
-		
+
 	}
 
 }

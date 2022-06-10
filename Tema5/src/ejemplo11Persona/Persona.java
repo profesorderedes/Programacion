@@ -6,22 +6,22 @@ public class Persona {
 	String nombre;
 	String apellidos;
 	int edad;
-	
+
 	// Constructores
-	Persona(){
-		
+	Persona() {
+
 	}
-	
-	Persona(String nombre, String apellidos){
+
+	Persona(String nombre, String apellidos) {
 		this(nombre, apellidos, 0);
 	}
-	
-	Persona(String nombre, String apellidos, int edad){
-		
+
+	Persona(String nombre, String apellidos, int edad) {
+
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
-				
+
 	}
 
 	// Métodos
