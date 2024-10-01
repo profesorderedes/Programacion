@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+
+public class Ejemplo17 {
+	
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("¿Qué edad tienes?");
+		int edad = entrada.nextInt();
+		
+		System.out.println("No parece que tengas " + edad + " años.");
+		
+		System.out.println("¿Cómo te llamas?");
+		String nombre = entrada.nextLine();
+	}
+
+}
