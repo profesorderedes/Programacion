@@ -20,6 +20,8 @@ public class Ejemplo12 {
 		// Operación NOT (no).
 		System.out.println("¿no a? " + !a);
 		System.out.println("¿no c? " + !c);
+		
+		
 
 	}
 

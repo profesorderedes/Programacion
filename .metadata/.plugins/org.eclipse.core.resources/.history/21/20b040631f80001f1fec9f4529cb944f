@@ -22,9 +22,25 @@ public class Ejemplo09 {
 		// La operación módulo (%) nos devuelve el resto de
 		// dividir dos números.
 		System.out.println("Resto de la división: " + (num1 % num2));
-
+		
 		// Potencias con Math.pow(base, exponente)
 		System.out.println("2 elevado a 8: " + Math.pow(2, 8));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 	}
 

@@ -16,7 +16,8 @@ public class Ejer02 {
 		System.out.println("Escribe otro número:");
 		int num2 = entrada.nextInt();
 
-		System.out.println("El resto de dividir " + num1 + " entre " + num2 + " es " + num1 % num2);
+		System.out.println("El resto de dividir " + num1 + " entre " + num2 
+				+ " es " + num1 % num2);
 
 	}
 

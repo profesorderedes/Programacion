@@ -1,0 +1,18 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Ejer03 {
+
+	public static void main(String[] args) {
+		
+		// Programa que hace la división entera entre dos números 
+		// (devuelve el cociente y el resto).
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		
+		
+	}
+	
+}
