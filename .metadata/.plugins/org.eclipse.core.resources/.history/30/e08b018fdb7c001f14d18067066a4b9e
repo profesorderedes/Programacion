@@ -1,0 +1,13 @@
+
+public class Ejemplo08 {
+
+	public static void main(String[] args) {
+		
+		// Desbordamiento en variables
+		
+		byte edad = 126;
+		System.out.println(edad);
+		
+	}
+	
+}

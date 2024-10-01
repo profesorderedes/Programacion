@@ -1,0 +1,15 @@
+
+public class Ejemplo15 {
+	
+	public static void main(String[] args) {
+		
+		// Conversiones implícitas: se puede guardar un valor 
+		// de cierto tipo en una variable que sea de un tipo mayor.
+		
+		
+		
+		
+		
+	}
+
+}

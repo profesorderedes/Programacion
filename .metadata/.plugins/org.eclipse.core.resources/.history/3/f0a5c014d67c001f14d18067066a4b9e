@@ -1,0 +1,16 @@
+
+public class Ejemplo05 {
+	
+	public static void main(String[] args) {
+		
+		// Tipo booleano: permite guardar dos valores: true o false.
+		
+		boolean mayorDeEdad = false;
+		boolean aprobado = true;
+		boolean encendido = true; 
+		
+		
+		
+	}
+
+}

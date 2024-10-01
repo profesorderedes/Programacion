@@ -1,0 +1,12 @@
+
+public class Ejemplo12 {
+	
+	public static void main(String[] args) {
+		
+		// Operadores lógicos (o booleanos).
+		
+		boolean a = true, b = true, c = false, d = false;
+		
+	}
+
+}

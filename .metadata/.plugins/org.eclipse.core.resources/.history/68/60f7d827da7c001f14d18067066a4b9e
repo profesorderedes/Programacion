@@ -1,0 +1,45 @@
+
+public class Ejemplo07 {
+
+	public static void main(String[] args) {
+
+		// Crear una variable de cada tipo primitivo.
+
+		byte numero = 1;
+
+		short dada = 345;
+
+		int cifra = 657545;
+
+		long dato = 656787638736328L;
+
+		double decimal = 0.6547;
+
+		float flotante = 06547F;
+
+		boolean bueno = true;
+
+		boolean malo = false;
+
+		char signo = '@';
+
+		System.out.println(numero);
+
+		System.out.println(dada);
+
+		System.out.println(cifra);
+
+		System.out.println(dato);
+
+		System.out.println(decimal);
+
+		System.out.println(flotante);
+
+		System.out.println(bueno);
+
+		System.out.println(malo);
+
+		System.out.println(signo);
+
+	}
+}

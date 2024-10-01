@@ -1,0 +1,22 @@
+
+public class Ejemplo12 {
+	
+	public static void main(String[] args) {
+		
+		// Operadores lógicos (o booleanos).
+		
+		boolean a = true, b = true, c = false, d = false;
+		
+		// Operación AND (si).
+		System.out.println("¿a y b? " + (a && b));
+		System.out.println("¿a y c? " + (a && c));
+		System.out.println("¿c y d? " + (c && d));
+		
+		// Operación OR (o).
+		System.out.println("¿a y b? " + (a && b));
+		System.out.println("¿a y c? " + (a && c));
+		System.out.println("¿c y d? " + (c && d));
+		
+	}
+
+}

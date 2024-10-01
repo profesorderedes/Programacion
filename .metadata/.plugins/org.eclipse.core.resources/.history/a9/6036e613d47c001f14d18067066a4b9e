@@ -1,0 +1,42 @@
+
+public class Ejemplo04 {
+	
+	public static void main(String[] args) {
+		
+		// Tipos primitivos para números enteros.
+		
+		byte edad = 40; // De -128 a +127
+		
+		short anyo = 2025; // De -32768 32767
+		
+		int poblacion = 50_000_000; // De -2.147 millones a 2.147 millones
+		
+		long piSinComa = 3141592652846281342L; // De -9 trillones a 9 trillones
+		
+		// Tipos primitivos para números decimales.
+		
+		float pi = 3.1415926F; // De -3.4e38 a 3.4e38
+		
+		double e = 2.7182818;
+		
+		float num = 0.3F;
+		
+		System.out.println(num);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

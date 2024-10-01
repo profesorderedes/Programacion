@@ -1,0 +1,15 @@
+
+public class Ejemplo06 {
+	
+	public static void main(String[] args) {
+		
+		// Los Strings o cadenas de caracteres no son tipos
+		// primitivos, sino objetos.
+		
+		String mensaje = "Hola a todos.";
+		
+		System.out.println(mensaje.toUpperCase());
+		
+	}
+
+}

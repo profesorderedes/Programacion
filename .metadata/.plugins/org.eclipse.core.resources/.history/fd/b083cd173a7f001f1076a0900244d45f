@@ -1,0 +1,17 @@
+
+public class Ejemplo14 {
+	
+	public static void main(String[] args) {
+		
+		final float PI = 3.1416F;
+		final float DENSIDAD_MERCURIO = 13.598F;
+		final int VELOCIDAD_LUZ = 300_000_000;
+		
+		final int LONGITUD_TIERRA = 40000;
+		
+		// .....................................
+		
+		// PI = 4; Error si intentamos modificar una constante.
+	}
+
+}
