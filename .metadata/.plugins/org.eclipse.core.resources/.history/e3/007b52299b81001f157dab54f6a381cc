@@ -20,7 +20,7 @@ public class Ejer05 {
 		double precioFinal = precio - (descuento * precio) / 100;
 
 		System.out.println(
-				"El precio con descuento del siguiente producto, " + nombreProducto + ", es de: " + precioFinal);
+				"El precio con descuento del siguiente producto: " + nombreProducto + ". es de: " + precioFinal);
 
 	}
 

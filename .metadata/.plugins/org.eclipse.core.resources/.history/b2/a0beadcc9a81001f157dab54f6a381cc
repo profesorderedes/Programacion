@@ -11,16 +11,16 @@ public class Ejer05 {
 		System.out.println("¿Nombre del producto? ");
 		String nombreProducto = entrada.nextLine();
 
-		System.out.println("¿Cuánto cuesta el producto? ");
+		System.out.println("¿Cuanto cuesta el producto? ");
 		double precio = entrada.nextDouble();
 
-		System.out.println("¿Cuánto se descuenta del producto? ");
+		System.out.println("¿Cuanto se descuenta del producto? ");
 		double descuento = entrada.nextDouble();
 
 		double precioFinal = precio - (descuento * precio) / 100;
 
 		System.out.println(
-				"El precio con descuento del siguiente producto, " + nombreProducto + ", es de: " + precioFinal);
+				"El precio con descuento del siguiente producto: " + nombreProducto + ". es de: " + precioFinal);
 
 	}
 

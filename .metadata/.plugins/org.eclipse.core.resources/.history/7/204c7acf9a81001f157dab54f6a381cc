@@ -17,10 +17,11 @@ public class Ejer05 {
 		System.out.println("¿Cuánto se descuenta del producto? ");
 		double descuento = entrada.nextDouble();
 
-		double precioFinal = precio - (descuento * precio) / 100;
+		double cantidadDescontada = (descuento * precio) / 100;
+		double precioFinal = precio - ;
 
 		System.out.println(
-				"El precio con descuento del siguiente producto, " + nombreProducto + ", es de: " + precioFinal);
+				"El precio con descuento del siguiente producto: " + nombreProducto + ". es de: " + precioFinal);
 
 	}
 
