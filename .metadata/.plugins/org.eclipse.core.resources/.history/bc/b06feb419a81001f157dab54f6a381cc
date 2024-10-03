@@ -1,0 +1,30 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Ejer04 {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+
+		System.out.println("Escriba tu nombre: ");
+		String nombre = entrada.nextLine();
+
+		System.out.println("Escriba la nota de la primera evaluación: ");
+		int nota1 = entrada.nextInt();
+
+		System.out.println("Escriba la nota de la segunda evaluación: ");
+		int nota2 = entrada.nextInt();
+
+		System.out.println("Escriba la nota de la tercera evaluación: ");
+		int nota3 = entrada.nextInt();
+
+		float notaFinal = (nota1 + nota2 + nota3) / 3.0;
+
+		System.out.println(nombre + " tu nota de evaluación es: " 
+				+ notaFinal + ". ¡Enhorabuena!");
+
+	}
+
+}
