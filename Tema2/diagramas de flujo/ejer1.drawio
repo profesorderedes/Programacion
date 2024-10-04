@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0" version="24.7.17">
+  <diagram name="Página-1" id="O2I0BDQsWxk-uO9vbXtN">
+    <mxGraphModel dx="919" dy="434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="583" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-1" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Algoritmo para sumar los números del 1 al 7 y&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;mostrar el resultado en pantalla&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZYu2L4tD_VyV1UhTmUHr-3" target="ZYu2L4tD_VyV1UhTmUHr-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-3" value="Inicio" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="70" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZYu2L4tD_VyV1UhTmUHr-5" target="ZYu2L4tD_VyV1UhTmUHr-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-5" value="&lt;div&gt;contador = 1&lt;/div&gt;&lt;div&gt;suma = 0&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZYu2L4tD_VyV1UhTmUHr-12" target="ZYu2L4tD_VyV1UhTmUHr-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-9" value="Sí" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ZYu2L4tD_VyV1UhTmUHr-8">
+          <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+            <mxPoint x="2" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZYu2L4tD_VyV1UhTmUHr-12" target="ZYu2L4tD_VyV1UhTmUHr-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-12" value="¿contador &amp;lt; 7?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="310" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZYu2L4tD_VyV1UhTmUHr-14" target="ZYu2L4tD_VyV1UhTmUHr-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-14" value="contador = contador + 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-15" value="Fin" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="500" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-16" value="suma = suma +&amp;nbsp; contador" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.507;entryY=0.057;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ZYu2L4tD_VyV1UhTmUHr-16" target="ZYu2L4tD_VyV1UhTmUHr-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZYu2L4tD_VyV1UhTmUHr-20" target="ZYu2L4tD_VyV1UhTmUHr-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZYu2L4tD_VyV1UhTmUHr-20" value="escribir suma" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="414" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
