@@ -11,13 +11,13 @@ public class Ejer02 {
 		System.out.println("¿Cuánto vale el producto?");
 		float precio = teclado.nextFloat();
 
-		float resultado = precio * 20 / 100;
-
-		float solucion = precio - resultado;
-
 		if (precio > 80) {
-			System.out.println("Tendrás que pagar " + solucion);
+			float descuento = precio * 10 / 100;
+			precio = precio - descuento;
+			System.out.println("¡Tienes derecho a descuento!");
 		}
+
+		System.out.println("Tendrás que pagar " + precio + " euros.");
 
 	}
 

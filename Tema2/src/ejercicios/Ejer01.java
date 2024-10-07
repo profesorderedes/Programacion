@@ -15,7 +15,7 @@ public class Ejer01 {
 		System.out.println("Temperatura del reactor: ");
 		int temperatura = entrada.nextInt();
 
-		if (temperatura >= 120) {
+		if (temperatura > 120) {
 			System.out.println("TEMPERATURA DEL REACTOR CRÍTICA. ¡CORRED,INSENSATOS!");
 		}
 
