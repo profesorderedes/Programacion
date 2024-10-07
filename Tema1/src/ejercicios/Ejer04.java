@@ -22,8 +22,7 @@ public class Ejer04 {
 
 		float notaFinal = (nota1 + nota2 + nota3) / 3.0F;
 
-		System.out.println(nombre + " tu nota de evaluación es: " 
-				+ notaFinal + ". ¡Enhorabuena!");
+		System.out.println(nombre + " tu nota de evaluación es: " + notaFinal + ". ¡Enhorabuena!");
 
 	}
 
