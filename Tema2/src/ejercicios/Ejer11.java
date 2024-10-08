@@ -15,38 +15,41 @@ public class Ejer11 {
 		// sobrepasa los 200 €, el descuento será del 15%. De lo contrario será del 10%
 		// solamente.
 
-		System.out.println("¿Cuanto cuesta este producto? ");
+		System.out.println("¿Cuánto cuesta este producto? ");
 		double precio = entrada.nextDouble();
 
-		System.out.println("¿Cuantas unidades se van a comprar? ");
+		System.out.println("¿Cuántas unidades se van a comprar? ");
 		int unidades = entrada.nextInt();
 
-		double precioFinal = precio * unidades;
-		double descuentoPequenyo = precioFinal * 10 / 100;
-		double descuentoGrande = precioFinal * 15 / 100;
-		double precioDescontadoPequenyo = precioFinal - descuentoPequenyo;
-		double precioDescontadoGrande = precioFinal - descuentoGrande;
+		double precioCompra = precio * unidades;
 
-		if (precioFinal < 100) {
+		double precioDescontado;
+		double descuento;
+		if (precioCompra < 100) {
 
+			precioDescontado = precioCompra;
 			System.out.println("No tienes descuento :(");
-			System.out.println("El precio final es: " + precioFinal);
-
 		}
 
-		else if (precioFinal > 200) {
+		else if (precioCompra > 200) {
+
+			descuento = precioCompra * 15 / 100;
+			precioDescontado = precioCompra - descuento;
 
 			System.out.println("¡Descuento del 15%!");
-			System.out.println("El precio final es: " + precioDescontadoGrande);
 
 		}
 
 		else {
 
+			descuento = precioCompra * 10 / 100;
+			precioDescontado = precioCompra - descuento;
+
 			System.out.println("¡Descuento del 10%!");
-			System.out.println("El precio final es: " + precioDescontadoPequenyo);
 
 		}
+
+		System.out.println("El precio final es: " + precioDescontado);
 
 	}
 
