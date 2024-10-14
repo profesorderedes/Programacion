@@ -10,21 +10,21 @@ public class Ejemplo05 {
 		String color = entrada.nextLine();
 
 		if (color.equals("verde")) {
-			
+
 			System.out.println("Pasa.");
-			
+
 		} else if (color.equals("naranja")) {
-			
+
 			System.out.println("Para si te da tiempo.");
-			
-		} else if (color.equals("rojo")){
-			
+
+		} else if (color.equals("rojo")) {
+
 			System.out.println("Para.");
-			
+
 		} else {
 			System.out.println("No has introducido un color correcto.");
 		}
-		
+
 		System.out.println("Gracias.");
 
 	}

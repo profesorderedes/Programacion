@@ -62,7 +62,7 @@ public class Ejer14 {
 
 			System.out.println("diciembre");
 
-		} 
+		}
 
 	}
 

@@ -12,9 +12,9 @@ public class Ejer16 {
 		System.out.print("Nota: ");
 		float nota = entrada.nextFloat();
 
-		// Versión suponiendo que el número que introduce el 
+		// Versión suponiendo que el número que introduce el
 		// usuario está entre 0 y 10 (no se equivoca).
-				
+
 		if (nota < 4) {
 			System.out.println("Rojo");
 		} else if (nota < 5) {

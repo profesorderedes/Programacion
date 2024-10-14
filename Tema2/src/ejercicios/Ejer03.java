@@ -27,8 +27,8 @@ public class Ejer03 {
 		if (precio < 5) {
 
 			float precioAumentado = precio + 2;
-			System.out.println(
-					"Al ser menos de 5€, se aumenta en 2€ por gastos de gestión, por lo tanto es " + precioAumentado + ".");
+			System.out.println("Al ser menos de 5€, se aumenta en 2€ por gastos de gestión, por lo tanto es "
+					+ precioAumentado + ".");
 
 		}
 

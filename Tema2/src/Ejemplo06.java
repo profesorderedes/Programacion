@@ -12,8 +12,8 @@ public class Ejemplo06 {
 		// Pasamos color a minúsculas, para que la salida no dependa
 		// de cómo lo escriba el usuario.
 		color = color.toLowerCase();
-		
-		// En función del valor de "color", se indicará una cosa 
+
+		// En función del valor de "color", se indicará una cosa
 		// u otra.
 		switch (color) {
 		case "verde":

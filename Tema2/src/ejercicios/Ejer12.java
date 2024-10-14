@@ -12,9 +12,9 @@ public class Ejer12 {
 		int nota = entrada.nextInt();
 
 		if (nota >= 0 && nota < 5) {
-			
+
 			System.out.println("Insuficiente");
-			
+
 		} else if (nota == 5) {
 
 			System.out.println("Suficiente");
