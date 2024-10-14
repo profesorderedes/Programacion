@@ -2,7 +2,7 @@ package ejercicios;
 
 import java.util.Scanner;
 
-public class Ejer17 {
+public class Ejer17b {
 
 	public static void main(String[] args) {
 
@@ -11,45 +11,54 @@ public class Ejer17 {
 		System.out.println("Dime el número de mes y te diré ćomo se llama:");
 		int numMes = entrada.nextInt();
 
+		String mes;
 		switch (numMes) {
 		case 1:
-			System.out.println("Enero");
+			mes = "Enero";
 			break;
 		case 2:
-			System.out.println("Febrero");
+			mes = "Febrero";
 			break;
 		case 3:
-			System.out.println("Marzo");
+			mes = "Marzo";
 			break;
 		case 4:
-			System.out.println("Abril");
+			mes = "Abril";
 			break;
 		case 5:
-			System.out.println("Mayo");
+			mes = "Mayo";
 			break;
 		case 6:
-			System.out.println("Junio");
+			mes = "Junio";
 			break;
 		case 7:
-			System.out.println("Julio");
+			mes = "Julio";
 			break;
 		case 8:
-			System.out.println("Agosto");
+			mes = "Agosto";
 			break;
 		case 9:
-			System.out.println("Septiembre");
+			mes = "Septiembre";
 			break;
 		case 10:
-			System.out.println("Octubre");
+			mes = "Octubre";
 			break;
 		case 11:
-			System.out.println("Noviembre");
+			mes = "Noviembre";
 			break;
 		case 12:
-			System.out.println("Diciembre");
+			mes = "Diciembre";
 			break;
 		default:
-			System.out.println("El número no es válido.");
+			mes = "Error";
+		}
+
+		// Mostramos un mensaje distinto según si el número de mes es válido
+		// o no.
+		if (mes.equals("Error")) {
+			System.out.println("El número de mes no es válido.");
+		} else {
+			System.out.println("El mes es " + mes + ".");
 		}
 
 	}
