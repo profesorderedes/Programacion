@@ -3,7 +3,9 @@ package ejercicios;
 import java.util.Scanner;
 
 // Ejercicio 19 de la hoja 1 de condicionales.
-public class Ejer19b {
+// Modificación para que sólo pida el año en caso de que el mes sea el 2.
+
+public class Ejer19c {
 
 	public static void main(String[] args) {
 
