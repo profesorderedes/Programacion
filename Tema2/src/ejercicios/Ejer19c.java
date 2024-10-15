@@ -16,9 +16,6 @@ public class Ejer19c {
 		System.out.println("Dime un número de mes y te cuento cuántos días tiene:");
 		int mes = entrada.nextInt();
 
-		System.out.println("Dime también el año:");
-		int anyo = entrada.nextInt();
-
 		switch (mes) {
 		case 1:
 		case 3:
@@ -31,6 +28,9 @@ public class Ejer19c {
 			break;
 
 		case 2:
+
+			System.out.println("Necesito saber el año para ver si es bisiesto:");
+			int anyo = entrada.nextInt();
 
 			// Comprobamos si es bisiesto.
 			if (anyo % 4 == 0 && anyo % 100 != 0 || anyo % 400 == 0) {
