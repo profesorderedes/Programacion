@@ -13,9 +13,9 @@ public class Ejer24 {
 
 		boolean mayorDeEdad = edad >= 18 ? true : false;
 
-		if(mayorDeEdad == true) {
+		if (mayorDeEdad == true) {
 			System.out.println("Eres mayor de edad.");
-		}else {
+		} else {
 			System.out.println("Eres menor de edad.");
 		}
 

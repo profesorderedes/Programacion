@@ -19,19 +19,14 @@ public class Ejemplo09 {
 //		} else {
 //			descuento = 15;
 //		}
-		
+
 		// variable = condición ? valor1 : valor2;
 		// La variable tomará el valor 1 si la condición es cierta, y el
 		// valor 2 si es falsa.
-		
+
 		int descuento = precio < 100 ? 0 : 15;
-		
 
 		System.out.println("Se le aplicará un descuento del " + descuento + "%.");
 
 	}
 }
-
-
-
-

@@ -22,7 +22,7 @@ public class Ejer02 {
 			i++;
 
 		}
-		
+
 	}
 
 }

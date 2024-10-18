@@ -14,16 +14,16 @@ public class Ejer23 {
 
 			int numEnt = entrada.nextInt();
 
-			if(numEnt == 3 ) {
-				
+			if (numEnt == 3) {
+
 				System.out.println("Has acertado.");
-				
+
 			} else if (numEnt >= 1 && numEnt <= 10) {
-				
+
 				System.out.println(numEnt + ", es un número entero.");
-				
+
 			} else {
-				
+
 				System.out.println("Había que escribir un número del 1 al 10.");
 			}
 

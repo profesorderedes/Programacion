@@ -34,7 +34,7 @@ public class Ejer21 {
 
 			System.out.println("\"Buenos días\" en italiano es: Buongiorno");
 			break;
-		
+
 		default:
 			System.out.println("Buenos días.");
 
