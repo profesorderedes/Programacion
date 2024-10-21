@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejemplo14 {
+public class Ejemplo14c {
 
 	public static void main(String[] args) {
 
@@ -13,9 +13,11 @@ public class Ejemplo14 {
 
 		// Variable semáforo. Mientras valga true, se ejecutará el bucle.
 		// Cuando cambie a false, el bucle terminará.
-		boolean incorrecta = true;
+		boolean correcta = false;
 
-		while (incorrecta == true) {
+		// Nunca se utiliza la condición "incorrecta == true". Se usa
+		// "incorrecta", ya que es un valor booleano.
+		while (!correcta) {
 
 			System.out.print("Password: ");
 			String password = entrada.nextLine();
@@ -23,7 +25,7 @@ public class Ejemplo14 {
 			// Comprobamos si la contraseña es correcta. Si lo es, cambiamos
 			// el valor del semáforo para que termine el bucle.
 			if (password.equals(CONTRASENYA_BUENA)) {
-				incorrecta = false;
+				correcta = true;
 			}
 
 		}

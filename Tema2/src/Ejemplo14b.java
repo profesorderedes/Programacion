@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejemplo14 {
+public class Ejemplo14b {
 
 	public static void main(String[] args) {
 
@@ -15,7 +15,9 @@ public class Ejemplo14 {
 		// Cuando cambie a false, el bucle terminará.
 		boolean incorrecta = true;
 
-		while (incorrecta == true) {
+		// Nunca se utiliza la condición "incorrecta == true". Se usa
+		// "incorrecta", ya que es un valor booleano.
+		while (incorrecta) {
 
 			System.out.print("Password: ");
 			String password = entrada.nextLine();
