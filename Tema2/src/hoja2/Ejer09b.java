@@ -20,6 +20,11 @@ public class Ejer09b {
 
 			dividendo -= divisor;
 			System.out.println(dividendo + " - " + divisor + " = " + dividendo);
+			
+			// Paramos de restar cuando el dividendo sea menor que el divisor.
+			if(divisor > dividendo) {
+				seguirRestando = false;
+			}
 
 		}
 
