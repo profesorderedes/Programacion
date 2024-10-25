@@ -10,7 +10,7 @@ public class Ejemplo17 {
 		int numAleatorio;
 		int i = 1;
 		while (i <= 10) {
-			numAleatorio = (int) (100000* Math.random());
+			numAleatorio = (int) (100000 * Math.random());
 			System.out.println(numAleatorio);
 			i++;
 		}
