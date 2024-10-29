@@ -13,16 +13,16 @@ public class Ejer09b {
 
 		System.out.println("Inserte el dividendo");
 		int divisor = entrada.nextInt();
-		
+
 		boolean seguirRestando = true;
 
 		while (seguirRestando) {
 
 			dividendo -= divisor;
 			System.out.println(dividendo + " - " + divisor + " = " + dividendo);
-			
+
 			// Paramos de restar cuando el dividendo sea menor que el divisor.
-			if(divisor > dividendo) {
+			if (divisor > dividendo) {
 				seguirRestando = false;
 			}
 

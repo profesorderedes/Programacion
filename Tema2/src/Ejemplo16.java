@@ -25,12 +25,12 @@ public class Ejemplo16 {
 			System.out.println(2 * Math.random() + 1);
 			i++;
 		}
-		
+
 		System.out.println("\nNúmeros aleatorios enteros entre 1 y 2 (ambos inclusive):");
 
 		i = 1;
 		while (i <= 5) {
-			System.out.println((int)(2 * Math.random() + 1));
+			System.out.println((int) (2 * Math.random() + 1));
 			i++;
 		}
 

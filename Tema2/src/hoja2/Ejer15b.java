@@ -11,7 +11,7 @@ public class Ejer15b {
 		do {
 			System.out.println(exponente + ") " + Math.pow(3, exponente));
 			exponente++;
-		} while (Math.pow(3,  exponente) < 12000);
+		} while (Math.pow(3, exponente) < 12000);
 
 		System.out.println("De nada.");
 

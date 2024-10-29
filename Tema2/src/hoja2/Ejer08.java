@@ -7,7 +7,6 @@ public class Ejer08 {
 		// Crea un programa que muestre todos los números impares menores de 200.
 
 		int i = 1;
-		
 
 		while (i < 200) {
 

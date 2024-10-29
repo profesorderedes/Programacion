@@ -12,7 +12,7 @@ public class Ejer03c {
 
 		System.out.println("Escribe un número entre 1 y 10:");
 		int num;
-		
+
 		// No hacer esto.
 		for (num = entrada.nextInt(); num < 1 || num > 10; num = entrada.nextInt()) {
 
