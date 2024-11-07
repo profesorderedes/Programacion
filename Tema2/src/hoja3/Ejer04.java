@@ -23,16 +23,16 @@ public class Ejer04 {
 			} else {
 				System.out.println("Has fallado. La suma era " + suma + ".");
 			}
-			
+
 			// Preguntamos si quiere continuar.
 			entrada.nextLine();
 			System.out.println("¿Quieres continuar (s/n)?");
 			char continuar = entrada.nextLine().charAt(0);
-			
-			if(continuar == 'n') {
+
+			if (continuar == 'n') {
 				break;
-			}			
-			
+			}
+
 		}
 
 	}

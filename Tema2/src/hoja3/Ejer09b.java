@@ -20,10 +20,10 @@ public class Ejer09b {
 				System.out.println("Activar ventiladores a media potencia.\n");
 			} else if (temperatura > 40 && temperatura <= 50) {
 				System.out.println("Activar ventiladores a máxima potencia.\n");
-			} 
+			}
 
 		}
-		
+
 		System.out.println("Temperatura fuera de rango.");
 
 	}

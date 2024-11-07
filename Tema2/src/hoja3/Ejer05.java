@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejer05 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
 		int num;
 
@@ -23,6 +23,6 @@ public class Ejer05 {
 		} while (num != 0);
 
 		System.out.println("Has introducido el número 0. El programa ha finalizado.");
-		
+
 	}
 }

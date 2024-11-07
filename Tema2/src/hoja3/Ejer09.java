@@ -9,7 +9,7 @@ public class Ejer09 {
 		Scanner entrada = new Scanner(System.in);
 
 		while (true) {
-			
+
 			System.out.println("TEMPERATURA? ");
 			double temperatura = entrada.nextDouble();
 

@@ -5,15 +5,15 @@ import java.util.Scanner;
 public class Ejer06 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
 		int num;
 
 		do {
 			System.out.print("Escriba el número que desee para ver su tabla de multiplicar: ");
 			num = entrada.nextInt();
-			
-			if(num == 1) {
+
+			if (num == 1) {
 				System.out.println("No seas tonto.\n");
 				continue;
 			}
@@ -28,6 +28,6 @@ public class Ejer06 {
 		} while (num != 0);
 
 		System.out.println("Has introducido el número 0. El programa ha finalizado.");
-		
+
 	}
 }
