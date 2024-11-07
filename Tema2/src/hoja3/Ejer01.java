@@ -27,7 +27,7 @@ public class Ejer01 {
 
 			intento++;
 		}
-		
+
 		if (numAcertado) {
 			System.out.println("LO HAS CONSEGUIDO");
 			System.out.println("Has necesitado " + intento + " intentos.");
