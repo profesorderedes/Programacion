@@ -34,6 +34,10 @@ public class Ejer08 {
 
 		while (i < notas.length) {
 
+			// Dejamos de mostrar notas al encontrar un número negativo.
+			if (notas[i] < 0) {
+				break;
+			}
 			System.out.print(notas[i] + ", ");
 			i++;
 
