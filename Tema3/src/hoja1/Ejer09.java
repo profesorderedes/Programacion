@@ -13,11 +13,11 @@ public class Ejer09 {
 		System.out.println("Dame una pregunta");
 		ans[0] = entrada.nextLine();
 
-		System.out.println("Dame 4 respuetsas para la pregunta");
+		System.out.println("Dame 4 respuestas para la pregunta");
 
 		for (int i = 1; i < ans.length; i++) {
 
-			System.out.println("La respuesta " + (i + 1) + " es:");
+			System.out.println("La respuesta " + i + " es:");
 			ans[i] = entrada.nextLine();
 
 		}
