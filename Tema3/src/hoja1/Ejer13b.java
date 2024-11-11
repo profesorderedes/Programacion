@@ -1,14 +1,18 @@
 package hoja1;
 
+// Versión hecha sin usar Math.pow().
+
 public class Ejer13b {
 
 	public static void main(String[] args) {
 
 		int[] potencias = new int[20];
+		int potencia = 1;
 
 		int i = 0;
 		while (i < potencias.length) {
-			potencias[i] = ((int) Math.pow(2, i));
+			potencias[i] = potencia;
+			potencia = potencia * 2;
 			i++;
 		}
 
