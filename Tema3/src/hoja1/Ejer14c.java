@@ -7,11 +7,12 @@ public class Ejer14c {
 
 		boolean esPrimo;
 		
-		// Generamos números entre 2 y 100. Para cada número, 
+		System.out.println("Lista de números primos comprendidos entre 2 y 100");
+		System.out.println("==================================================\n");
+
+		// Generamos números entre 2 y 100. Para cada número,
 		// comprobaremos si es primo o compuesto.
 		for (int num = 2; num <= 100; num++) {
-
-			System.out.println(num);
 
 			// Comprobamos si num es primo o no.
 
@@ -21,14 +22,11 @@ public class Ejer14c {
 			// y num-1.
 			for (int i = 2; i < num; i++) {
 
-				System.out.println("   Probamos a dividir por " + i);
-
 				// Intentamos dividir num entre i. i va a ir tomando
 				// todos los valores entre 2 y num (sin incluir num).
 				// Si una de las divisiones da resto 0, el número
 				// automáticamente es compuesto.
 				if (num % i == 0) {
-					System.out.println("Es compuesto");
 					esPrimo = false;
 					break;
 				}
@@ -39,7 +37,7 @@ public class Ejer14c {
 			// la variable esPrimo habrá conservado su valor inicial,
 			// true.
 			if (esPrimo) {
-				System.out.println("Es primo");
+				System.out.println(num);
 			}
 
 		}
