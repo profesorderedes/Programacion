@@ -6,7 +6,8 @@ public class Ejer14b {
 	public static void main(String[] args) {
 
 		boolean esPrimo;
-		// Generamos números entre 2 y 100.
+		// Generamos números entre 2 y 100. Para cada número, 
+		// comprobaremos si es primo o compuesto.
 		for (int num = 2; num <= 100; num++) {
 
 			System.out.println(num);
