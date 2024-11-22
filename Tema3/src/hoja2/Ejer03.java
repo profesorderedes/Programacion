@@ -25,11 +25,11 @@ public class Ejer03 {
 
 			nombres[i] = nombre;
 
-			i++;
-
 			if (nombre.equalsIgnoreCase("Calderón")) {
 				nombreEncontrado = true;
 			}
+
+			i++;
 
 		}
 
