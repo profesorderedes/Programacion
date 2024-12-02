@@ -1,5 +1,6 @@
-
 // Intercambiar dos valores.
+package ejemplosArrays;
+
 
 import java.util.Arrays;
 

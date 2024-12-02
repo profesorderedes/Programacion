@@ -1,5 +1,6 @@
-
 // Buscar el mínimo de un array a partir de una posición
+package ejemplosArrays;
+
 
 public class Ejemplo07 {
 

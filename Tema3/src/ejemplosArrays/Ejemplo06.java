@@ -1,6 +1,7 @@
-
 // Variación del ejemplo anterior donde vemos que nos basta con
 // la variable posMin para sacar el mínimo.
+package ejemplosArrays;
+
 
 public class Ejemplo06 {
 

@@ -1,5 +1,6 @@
-
 // Método de selección: ordenar un array de menor a mayor.
+package ejemplosArrays;
+
 
 import java.util.Arrays;
 

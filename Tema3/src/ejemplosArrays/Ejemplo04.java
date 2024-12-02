@@ -1,5 +1,6 @@
-
 // Algoritmo de búsqueda del mínimo y el máximo de un array.
+package ejemplosArrays;
+
 
 public class Ejemplo04 {
 
