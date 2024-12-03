@@ -12,8 +12,8 @@ public class Ejer03 {
 		String palabra = entrada.nextLine();
 		
 		// Recorremos la cadena empezando por el final.
-		for(int i = ) {
-			
+		for(int i = palabra.length()-1; i >=0; i--) {
+			System.out.print(palabra.charAt(i));
 		}
 	}
 
