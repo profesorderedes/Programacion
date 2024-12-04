@@ -1460,3 +1460,400 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY ch.qos.logback.classic 1 0 2024-12-03 18:17:49.744
 !MESSAGE Logback config file: /home/csogorb/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+!SESSION 2024-12-04 18:16:30.853 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-04 18:16:48.809
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-04 18:20:46.295
+!MESSAGE Logback config file: /home/csogorb/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-04 18:21:01.691
+!MESSAGE Failed to init packages for /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/lib/jrt-fs.jar
+!STACK 0
+java.nio.file.NoSuchFileException: /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.readJdkReleaseFile(JRTUtil.java:472)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.lambda$0(JRTUtil.java:426)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.<init>(JRTUtil.java:424)
+	at org.eclipse.jdt.internal.compiler.util.JRTUtil.getJrtSystem(JRTUtil.java:107)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:58)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:66)
+	at org.eclipse.jdt.internal.core.builder.ClasspathLocation.forJrtSystem(ClasspathLocation.java:176)
+	at org.eclipse.jdt.internal.core.builder.State.readBinaryLocations(State.java:425)
+	at org.eclipse.jdt.internal.core.builder.State.read(State.java:311)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.readState(JavaBuilder.java:191)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readStateTimed(JavaModelManager.java:4140)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readState(JavaModelManager.java:4121)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getLastBuiltState(JavaModelManager.java:2302)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.getLastState(JavaBuilder.java:500)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:222)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-04 18:21:01.691
+!MESSAGE Failed to init packages for /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/lib/jrt-fs.jar
+!STACK 0
+java.nio.file.NoSuchFileException: /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.readJdkReleaseFile(JRTUtil.java:472)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.lambda$0(JRTUtil.java:426)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.<init>(JRTUtil.java:424)
+	at org.eclipse.jdt.internal.compiler.util.JRTUtil.getJrtSystem(JRTUtil.java:107)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:58)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:66)
+	at org.eclipse.jdt.internal.core.builder.ClasspathLocation.forJrtSystem(ClasspathLocation.java:176)
+	at org.eclipse.jdt.internal.core.builder.State.readBinaryLocations(State.java:425)
+	at org.eclipse.jdt.internal.core.builder.State.read(State.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.readState(JavaBuilder.java:191)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readStateTimed(JavaModelManager.java:4140)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readState(JavaModelManager.java:4121)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getLastBuiltState(JavaModelManager.java:2302)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.getLastState(JavaBuilder.java:500)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:222)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-04 18:21:03.243
+!MESSAGE Failed to init packages for /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/lib/jrt-fs.jar
+!STACK 0
+java.nio.file.NoSuchFileException: /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.readJdkReleaseFile(JRTUtil.java:472)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.lambda$0(JRTUtil.java:426)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.<init>(JRTUtil.java:424)
+	at org.eclipse.jdt.internal.compiler.util.JRTUtil.getJrtSystem(JRTUtil.java:107)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:58)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:66)
+	at org.eclipse.jdt.internal.core.builder.ClasspathLocation.forJrtSystem(ClasspathLocation.java:176)
+	at org.eclipse.jdt.internal.core.builder.State.readBinaryLocations(State.java:425)
+	at org.eclipse.jdt.internal.core.builder.State.read(State.java:311)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.readState(JavaBuilder.java:191)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readStateTimed(JavaModelManager.java:4140)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readState(JavaModelManager.java:4121)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getLastBuiltState(JavaModelManager.java:2302)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.getLastState(JavaBuilder.java:500)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:222)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-04 18:21:03.244
+!MESSAGE Failed to init packages for /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/lib/jrt-fs.jar
+!STACK 0
+java.nio.file.NoSuchFileException: /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.readJdkReleaseFile(JRTUtil.java:472)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.lambda$0(JRTUtil.java:426)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.<init>(JRTUtil.java:424)
+	at org.eclipse.jdt.internal.compiler.util.JRTUtil.getJrtSystem(JRTUtil.java:107)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:58)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:66)
+	at org.eclipse.jdt.internal.core.builder.ClasspathLocation.forJrtSystem(ClasspathLocation.java:176)
+	at org.eclipse.jdt.internal.core.builder.State.readBinaryLocations(State.java:425)
+	at org.eclipse.jdt.internal.core.builder.State.read(State.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.readState(JavaBuilder.java:191)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readStateTimed(JavaModelManager.java:4140)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readState(JavaModelManager.java:4121)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getLastBuiltState(JavaModelManager.java:2302)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.getLastState(JavaBuilder.java:500)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:222)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-04 18:21:06.264
+!MESSAGE Failed to init packages for /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/lib/jrt-fs.jar
+!STACK 0
+java.nio.file.NoSuchFileException: /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.readJdkReleaseFile(JRTUtil.java:472)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.lambda$0(JRTUtil.java:426)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.<init>(JRTUtil.java:424)
+	at org.eclipse.jdt.internal.compiler.util.JRTUtil.getJrtSystem(JRTUtil.java:107)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:58)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:66)
+	at org.eclipse.jdt.internal.core.builder.ClasspathLocation.forJrtSystem(ClasspathLocation.java:176)
+	at org.eclipse.jdt.internal.core.builder.State.readBinaryLocations(State.java:425)
+	at org.eclipse.jdt.internal.core.builder.State.read(State.java:311)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.readState(JavaBuilder.java:191)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readStateTimed(JavaModelManager.java:4140)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readState(JavaModelManager.java:4121)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getLastBuiltState(JavaModelManager.java:2302)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.getLastState(JavaBuilder.java:500)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:222)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-04 18:21:06.265
+!MESSAGE Failed to init packages for /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/lib/jrt-fs.jar
+!STACK 0
+java.nio.file.NoSuchFileException: /snap/eclipse/101/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre/release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.readJdkReleaseFile(JRTUtil.java:472)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.lambda$0(JRTUtil.java:426)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.eclipse.jdt.internal.compiler.util.Jdk.<init>(JRTUtil.java:424)
+	at org.eclipse.jdt.internal.compiler.util.JRTUtil.getJrtSystem(JRTUtil.java:107)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:58)
+	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.<init>(ClasspathJrt.java:66)
+	at org.eclipse.jdt.internal.core.builder.ClasspathLocation.forJrtSystem(ClasspathLocation.java:176)
+	at org.eclipse.jdt.internal.core.builder.State.readBinaryLocations(State.java:425)
+	at org.eclipse.jdt.internal.core.builder.State.read(State.java:314)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.readState(JavaBuilder.java:191)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readStateTimed(JavaModelManager.java:4140)
+	at org.eclipse.jdt.internal.core.JavaModelManager.readState(JavaModelManager.java:4121)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getLastBuiltState(JavaModelManager.java:2302)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.getLastState(JavaBuilder.java:500)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:222)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2024-12-04 18:23:38.802
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2024-12-04 18:23:38.802
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.802
+!MESSAGE Software being installed: Mylyn Task List 4.4.0.v20240828-0218 (org.eclipse.mylyn.tasks.feature.feature.group 4.4.0.v20240828-0218)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.802
+!MESSAGE Software currently installed: Mylyn Tasks Connector: GitHub 6.6.0.v20241002-1142 (org.eclipse.mylyn.github.feature.feature.group 6.6.0.v20241002-1142)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.802
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.802
+!MESSAGE Mylyn Tasks 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.activity.ui 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.802
+!MESSAGE Mylyn Tasks 4.4.0.v20240617-1534 (org.eclipse.mylyn.tasks.activity.ui 4.4.0.v20240617-1534)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.802
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.802
+!MESSAGE From: Mylyn Tasks Connector: GitHub 6.6.0.v20241002-1142 (org.eclipse.mylyn.github.feature.feature.group 6.6.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.802
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.feature.feature.group [4.5.0,4.6.0), filter=(!(org.eclipse.equinox.p2.exclude.import=true))
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.802
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.802
+!MESSAGE From: Mylyn Task List 4.4.0.v20240828-0218 (org.eclipse.mylyn.tasks.feature.feature.group 4.4.0.v20240828-0218)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.803
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.4.0.v20240617-1534,4.4.0.v20240617-1534]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.803
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.803
+!MESSAGE From: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.803
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.5.0.v20241002-1142,4.5.0.v20241002-1142]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2024-12-04 18:23:38.827
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2024-12-04 18:23:38.827
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE Software being installed: Mylyn Task List 4.4.0.v20240828-0218 (org.eclipse.mylyn.tasks.feature.feature.group 4.4.0.v20240828-0218)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE Software currently installed: Mylyn Tasks Connector: GitHub 6.6.0.v20241002-1142 (org.eclipse.mylyn.github.feature.feature.group 6.6.0.v20241002-1142)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.827
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE Mylyn Tasks 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.activity.ui 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE Mylyn Tasks 4.4.0.v20240617-1534 (org.eclipse.mylyn.tasks.activity.ui 4.4.0.v20240617-1534)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.827
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE From: Mylyn Tasks Connector: GitHub 6.6.0.v20241002-1142 (org.eclipse.mylyn.github.feature.feature.group 6.6.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.feature.feature.group [4.5.0,4.6.0), filter=(!(org.eclipse.equinox.p2.exclude.import=true))
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.827
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE From: Mylyn Task List 4.4.0.v20240828-0218 (org.eclipse.mylyn.tasks.feature.feature.group 4.4.0.v20240828-0218)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.4.0.v20240617-1534,4.4.0.v20240617-1534]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.827
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE From: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.827
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.5.0.v20241002-1142,4.5.0.v20241002-1142]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2024-12-04 18:23:38.843
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2024-12-04 18:23:38.843
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.843
+!MESSAGE Software being installed: Mylyn Task List 4.4.0.v20240828-0218 (org.eclipse.mylyn.tasks.feature.feature.group 4.4.0.v20240828-0218)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.843
+!MESSAGE Software currently installed: Mylyn Tasks Connector: GitHub 6.6.0.v20241002-1142 (org.eclipse.mylyn.github.feature.feature.group 6.6.0.v20241002-1142)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.843
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.843
+!MESSAGE Mylyn Tasks 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.activity.ui 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.843
+!MESSAGE Mylyn Tasks 4.4.0.v20240617-1534 (org.eclipse.mylyn.tasks.activity.ui 4.4.0.v20240617-1534)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.844
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.844
+!MESSAGE From: Mylyn Tasks Connector: GitHub 6.6.0.v20241002-1142 (org.eclipse.mylyn.github.feature.feature.group 6.6.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.844
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.feature.feature.group [4.5.0,4.6.0), filter=(!(org.eclipse.equinox.p2.exclude.import=true))
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.844
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.844
+!MESSAGE From: Mylyn Task List 4.4.0.v20240828-0218 (org.eclipse.mylyn.tasks.feature.feature.group 4.4.0.v20240828-0218)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.844
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.4.0.v20240617-1534,4.4.0.v20240617-1534]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.844
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.844
+!MESSAGE From: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.844
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.5.0.v20241002-1142,4.5.0.v20241002-1142]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2024-12-04 18:23:38.846
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2024-12-04 18:23:38.846
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE Software being installed: Mylyn Task List 4.4.0.v20240828-0218 (org.eclipse.mylyn.tasks.feature.feature.group 4.4.0.v20240828-0218)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE Software currently installed: Mylyn Tasks Connector: GitHub 6.6.0.v20241002-1142 (org.eclipse.mylyn.github.feature.feature.group 6.6.0.v20241002-1142)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.846
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE Mylyn Tasks 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.activity.ui 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE Mylyn Tasks 4.4.0.v20240617-1534 (org.eclipse.mylyn.tasks.activity.ui 4.4.0.v20240617-1534)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.846
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE From: Mylyn Tasks Connector: GitHub 6.6.0.v20241002-1142 (org.eclipse.mylyn.github.feature.feature.group 6.6.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.feature.feature.group [4.5.0,4.6.0), filter=(!(org.eclipse.equinox.p2.exclude.import=true))
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.846
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE From: Mylyn Task List 4.4.0.v20240828-0218 (org.eclipse.mylyn.tasks.feature.feature.group 4.4.0.v20240828-0218)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.4.0.v20240617-1534,4.4.0.v20240617-1534]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2024-12-04 18:23:38.846
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE From: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2024-12-04 18:23:38.846
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.5.0.v20241002-1142,4.5.0.v20241002-1142]

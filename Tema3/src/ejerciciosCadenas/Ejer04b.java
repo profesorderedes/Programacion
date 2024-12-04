@@ -20,11 +20,11 @@ public class Ejer04b {
 			}
 
 			System.out.print(frase.charAt(i));
-			
+			primeraPalabra = primeraPalabra + frase.charAt(i);
 
 		}
 		
-		System.out.println("La primera palabra es " + primeraPalabra);
+		System.out.println("\nLa primera palabra es " + primeraPalabra);
 
 	}
 
