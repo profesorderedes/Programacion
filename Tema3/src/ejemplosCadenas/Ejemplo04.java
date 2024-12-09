@@ -8,7 +8,9 @@ public class Ejemplo04 {
 		
 		System.out.println("La palabra crees aparece en la posición " + frase.indexOf("crees"));
 		System.out.println("La palabra luz aparece en la posición " + frase.indexOf("luz"));
-
+		
+		System.out.println("La última aparición de la palabra crees es en la posición " + frase.lastIndexOf("crees"));
+		
 	}
 
 }
