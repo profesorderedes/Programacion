@@ -9,46 +9,26 @@ public class Ejer12b {
 
 		Scanner entrada = new Scanner(System.in);
 
-		System.out.print("Dime una frase: ");
-		String frase = entrada.nextLine();
-
-		// Como máximo habrá tantas palabras como letras.
-		String[] palabras = new String[frase.length()];
+//		System.out.print("Dime una frase: ");
+//		String frase = entrada.nextLine();
+		String frase = "PROGRAMA QUE LEE UNA FRASE";
 
 		// Recorremos la cadena de espacio en espacio.
 		int ini = 0;
-		int fin;
-		int pos = 0;
+		int espacios = 0;
 
-		// Mientras quede algún espacio en la frase, seguimos mostrando palabras.
+		// Contamos cuántos espacios hay en la frase.
 		while (frase.indexOf(" ", ini) != -1) {
-
-			// fin será la posición del siguiente espacio
-			fin = frase.indexOf(" ", ini);
-
-			// Mostramos la palabra entre las posiciones ini y fin.
-			// System.out.println(frase.substring(ini, fin));
-			palabras[pos] = frase.substring(ini, fin);
-			pos++;
-
-			// Actualizamos ini para que sea la posición justo después del
-			// espacio.
-			ini = fin + 1;
-
+			espacios++;
+			ini = frase.indexOf(" ", ini) + 1;
 		}
 
-		// Falta por mostrar la última palabra, ya que ésta no tiene un espacio
-		// al final.
-		// System.out.println(frase.substring(ini));
-		palabras[pos] = frase.substring(ini);
+		System.out.println("Hay " + (espacios + 1) + " palabras.");
 
-		for (int i = 0; i < palabras.length; i++) {
-			if (palabras[i] == null) {
-				break;
-			}
-			System.out.println(palabras[i]);
-		}
-		System.out.println(Arrays.toString(palabras));
+		String[] palabras = new String[espacios + 1];
+		
+		// Rellenamos el array de palabras colocando una palabra en cada posición.
+		
 
 	}
 
