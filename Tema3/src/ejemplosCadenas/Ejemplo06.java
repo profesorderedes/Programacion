@@ -5,7 +5,7 @@ public class Ejemplo06 {
 	public static void main(String[] args) {
 
 		String palabra1 = "perro";
-		String palabra2 = "gato";
+		String palabra2 = "hamster";
 
 		System.out.println("La primera palabra, alfabéticamente, es:");
 		if (palabra1.compareTo(palabra2) < 0) {
