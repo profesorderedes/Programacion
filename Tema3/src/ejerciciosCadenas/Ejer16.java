@@ -2,7 +2,7 @@ package ejerciciosCadenas;
 
 import java.util.Scanner;
 
-public class Ejer15 {
+public class Ejer16 {
 
 	public static void main(String[] args) {
 
@@ -13,10 +13,9 @@ public class Ejer15 {
 
 		String[] palabras = frase.split(" ");
 
-		for (int i = palabras.length - 1; i >= 0; i--) {
-			System.out.print(palabras[i] + " ");
-		}
-
+		for()
+		
+		
 	}
 
 }
