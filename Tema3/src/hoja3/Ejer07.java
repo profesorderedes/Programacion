@@ -23,8 +23,8 @@ public class Ejer07 {
 
 		System.out.println("Número de pedidos fallidos: " + pedidosFallidos);
 
-		double porcentaje = pedidosFallidos / tiemposEntrega.length * 100;
-		System.out.println("Porcentaje de pedidos fallidos: " + porcentaje);
+		double porcentaje = (double)pedidosFallidos / tiemposEntrega.length * 100;
+		System.out.println("Porcentaje de pedidos fallidos: " + porcentaje + "%");
 
 	}
 }
