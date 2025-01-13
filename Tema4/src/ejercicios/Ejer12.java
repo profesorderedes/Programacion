@@ -12,9 +12,9 @@ public class Ejer12 {
 		int nums[] = { 2, 6, 4, 1, 3, 6, 7, 8, 9, 0, };
 
 		System.out.println("Array antes de ordenar: " + Arrays.toString(nums));
-		
+
 		ordenar(nums);
-		
+
 		System.out.println("Array después de ordenar: " + Arrays.toString(nums));
 
 	}
