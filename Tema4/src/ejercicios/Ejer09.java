@@ -16,9 +16,8 @@ public class Ejer09 {
 
 		if (x > y) {
 			return x;
-		} else {
-			return y;
 		}
+		return y;
 
 	}
 
@@ -26,9 +25,8 @@ public class Ejer09 {
 
 		if (x < y) {
 			return x;
-		} else {
-			return y;
 		}
+		return y;
 
 	}
 
