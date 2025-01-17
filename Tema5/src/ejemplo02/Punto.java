@@ -15,4 +15,29 @@ public class Punto {
 		System.out.println("Color = " + color);
 
 	}
+	
+	// Desplaza este punto dx caracteres a la derecha y 
+	// dy caracteres hacia abajo.
+	void desplazar(int dx, int dy) {
+		x = x + dx;
+		y = y + dy;
+	}
+	
+	// Nos indica si el punto es de color rojo.
+	boolean esRojo() {
+		if(color.equals("rojo")) {
+			return true;
+		}
+		
+		return false;
+	}
+	
 }
+
+
+
+
+
+
+
+
