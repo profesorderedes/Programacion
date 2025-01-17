@@ -11,12 +11,12 @@ public class Ejemplo07 {
 		int min = minimo(notasPrimeraEval);
 
 		System.out.println("El mínimo del array es " + min + ".");
-		
+
 		System.out.println(Arrays.toString(notasPrimeraEval));
 
 	}
 
-	// notas se pasa por referencia: si cambia dentro del método, 
+	// notas se pasa por referencia: si cambia dentro del método,
 	// cambia también la variable original.
 	// En Java, cualquier variable que no sea de tipo primitivo
 	// se pasa por referencia.
@@ -31,7 +31,7 @@ public class Ejemplo07 {
 		}
 
 		notas[0] = 0;
-		
+
 		return notas[posMin];
 
 	}

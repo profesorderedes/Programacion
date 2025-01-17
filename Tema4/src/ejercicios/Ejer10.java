@@ -16,20 +16,16 @@ public class Ejer10 {
 	}
 
 	static void nombreMes(int mes) {
-		
-		if(mes < 1 || mes > 12) {
+
+		if (mes < 1 || mes > 12) {
 			return;
 		}
 
-		String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
-		
-		System.out.println("El mes " + mes +  " es " + meses[mes-1]);
+		String[] meses = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+				"Octubre", "Noviembre", "Diciembre" };
+
+		System.out.println("El mes " + mes + " es " + meses[mes - 1]);
 
 	}
 
 }
-
-
-
-
-

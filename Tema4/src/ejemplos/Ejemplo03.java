@@ -15,12 +15,12 @@ public class Ejemplo03 {
 		String apellidos = entrada.nextLine();
 
 		mostrarNombreCompleto(tuNombre, apellidos);
-		
+
 		System.out.println("¿Cuántos años tienes?");
 		int edad = entrada.nextInt();
 
 		mostrarInformacionCompleta(tuNombre, apellidos, edad);
-		
+
 	}
 
 	static void mostrarNombreCompleto(String nombre, String apellidos) {

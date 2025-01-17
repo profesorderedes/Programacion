@@ -10,13 +10,13 @@ public class Ejemplo02 {
 		System.out.println("¿Qué te parece?");
 
 		despedir("Óscar");
-		
+
 		felicitar("David");
-		
+
 		mostrarEdad(40);
-		
+
 		mostrarPrecio(30.15);
-		
+
 		rebajarPrecio(30);
 
 	}
@@ -32,40 +32,35 @@ public class Ejemplo02 {
 		System.out.println("Hasta mañana, " + nombre + ".");
 
 	}
-	
+
 	static void felicitar(String nombre) {
-		
+
 		System.out.println("¡Felicidades, " + nombre + ", disfruta mucho!");
-		
+
 	}
-	
+
 	static void mostrarEdad(int edad) {
-		
+
 		System.out.println("Tienes " + edad + " años.");
-		
+
 	}
-	
+
 	static void mostrarPrecio(double precio) {
-		
+
 		System.out.println("El precio de la compra ha sido " + precio + " euros.");
-		
+
 	}
-	
-	static void rebajarPrecio (double precio) {
-		
-		double rebaja = precio * 15 /100;
+
+	static void rebajarPrecio(double precio) {
+
+		double rebaja = precio * 15 / 100;
 		double precioRebajado = precio - rebaja;
-		
-		System.out.println("El precio de la compra ha sido " + precio + " euros. Y, rebajado, " + precioRebajado + " euros.");
-		
+
+		System.out.println(
+				"El precio de la compra ha sido " + precio + " euros. Y, rebajado, " + precioRebajado + " euros.");
+
 	}
-	
+
 	// rebajarPrecio(precio) -> Muestra el precio rebajado un 15%.
-	
+
 }
-
-
-
-
-
-
