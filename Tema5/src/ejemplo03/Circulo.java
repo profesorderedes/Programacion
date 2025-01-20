@@ -1,16 +1,32 @@
 package ejemplo03;
 
-/*
-Crear una clase Main, que sólo contendrá el método main( ).
-2. Crear una clase Circulo.
-1. Atributos: x, y, radio.
-2. Ningún método, de momento.
-3. Añadir el método mostrar( ). Sustituir en la clase Main.
-4. Repetir el proceso del ejemplo anterior, creando un par de objetos y mostrando luego sus
-valores.
-5. Añadir el método area( ) (devuelve el área del círculo).
-6. Añadir el método perimetro( ) (devuelve el perímetro del círculo).
- */
 public class Circulo {
+
+	int x;
+	int y;
+	int radio;
+
+	void mostrar() {
+
+		System.out.println("Atributo x: " + x);
+		System.out.println("Atributo y: " + y);
+		System.out.println("Atributo radio: " + radio);
+
+	}
+
+	double area() {
+		double area;
+		area = Math.PI * radio * radio;
+
+		return area;
+	}
+
+	double perimetro() {
+
+		double perimetro = 2 * Math.PI * radio;
+
+		return perimetro;
+
+	}
 
 }
