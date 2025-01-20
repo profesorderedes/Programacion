@@ -1,4 +1,4 @@
-package ejemplo01;
+package ejemplo01Persona;
 
 import java.util.Scanner;
 
