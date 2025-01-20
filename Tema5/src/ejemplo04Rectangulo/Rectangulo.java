@@ -22,4 +22,41 @@ public class Rectangulo {
 		return 2 * base + 2 * altura;
 	}
 
+	void desplazar(int dx, int dy) {
+
+		x = x + dx;
+		y = y + dy;
+
+	}
+	
+	// Recibe las coordenadas (a,b) de un punto y nos dice si ese 
+	// punto está dentro del rectángulo.
+	boolean contiene(int a, int b) {
+		
+		if(a > x && a < x + base && b > y && b < y + altura) {
+			return true;
+		}
+		
+		return false;
+		
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
