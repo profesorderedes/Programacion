@@ -9,7 +9,9 @@ public class Punto {
 	
 	// Constructor.
 	Punto(int x, int y, String color){
-		// Tarea: rellenar
+		this.x = x;
+		this.y = y;
+		this.color = color;
 	}
 
 	// Métodos.

@@ -8,8 +8,10 @@ public class Circulo {
 	int y;
 	int radio;
 	
-	Circulo(...){
-		
+	Circulo(int x, int y, int radio){
+		this.x = x;
+		this.y = y;
+		this.radio = radio;
 	}
 
 	void mostrar() {
