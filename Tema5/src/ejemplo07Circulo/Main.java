@@ -6,7 +6,6 @@ public class Main {
 
 		Circulo circulo1 = new Circulo(10, 15, 12);
 		circulo1.mostrar();
-		
 
 	}
 }

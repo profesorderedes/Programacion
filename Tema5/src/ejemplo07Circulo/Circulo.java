@@ -7,8 +7,8 @@ public class Circulo {
 	int x;
 	int y;
 	int radio;
-	
-	Circulo(int x, int y, int radio){
+
+	Circulo(int x, int y, int radio) {
 		this.x = x;
 		this.y = y;
 		this.radio = radio;
@@ -38,7 +38,7 @@ public class Circulo {
 	}
 
 	void leerPropiedades() {
-		
+
 		Scanner entrada = new Scanner(System.in);
 
 		System.out.println("Introduzca las propiedades del círculo:");

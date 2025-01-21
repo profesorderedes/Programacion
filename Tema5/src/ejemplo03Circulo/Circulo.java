@@ -32,7 +32,7 @@ public class Circulo {
 	}
 
 	void leerPropiedades() {
-		
+
 		Scanner entrada = new Scanner(System.in);
 
 		System.out.println("Introduzca las propiedades del círculo:");
