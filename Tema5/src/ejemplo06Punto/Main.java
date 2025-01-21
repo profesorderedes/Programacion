@@ -8,6 +8,9 @@ public class Main {
 		Punto p1 = new Punto(0,0,"azul");
 		p1.mostrar();
 		
+		Punto p2 = new Punto(5,10);
+		p2.mostrar();
+		
 	}
 	
 	

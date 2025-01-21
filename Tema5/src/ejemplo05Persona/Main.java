@@ -16,9 +16,21 @@ public class Main {
 		Persona p2 = new Persona("David", "Fernández", "11200301P", 24, 1.80);
 		p2.mostrar();
 		
-		Persona p3 = new Persona();
+		Persona p3 = new Persona("Ramón", "López", "59190190R");
+		p3.mostrar();
+		
+		Persona p4 = new Persona("María", 30, 1.80);
+		p4.mostrar();
+		
 		
 
 	}
 
 }
+
+
+
+
+
+
+
