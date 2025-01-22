@@ -13,6 +13,14 @@ public class Rectangulo {
 		this.altura = altura;
 		this.color = color;
 	}
+	
+	Rectangulo(int x, int y, int base){
+		this.x = x;
+		this.y = y;
+		this.base = base;
+		altura = 10;
+		color = "morado";
+	}
 
 	void mostrar() {
 

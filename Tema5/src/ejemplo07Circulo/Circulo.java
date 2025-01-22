@@ -13,10 +13,14 @@ public class Circulo {
 		this.y = y;
 		this.radio = radio;
 	}
+	
+	Circulo(int radio){
+		this.radio = radio;
+	}
 
 	void mostrar() {
 
-		System.out.println("Atributo x: " + x);
+		System.out.println("\nAtributo x: " + x);
 		System.out.println("Atributo y: " + y);
 		System.out.println("Atributo radio: " + radio);
 
