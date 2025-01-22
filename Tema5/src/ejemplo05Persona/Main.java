@@ -10,7 +10,6 @@ public class Main {
 
 		// Creamos algunos objetos de la clase Persona.
 		Persona p1 = new Persona("Carlos", "Sogorb", "10200200T", 49, 1.72);
-
 		p1.mostrar();
 
 		Persona p2 = new Persona("David", "Fernández", "11200301P", 24, 1.80);
