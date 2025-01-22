@@ -15,11 +15,7 @@ public class Rectangulo {
 	}
 	
 	Rectangulo(int x, int y, int base){
-		this.x = x;
-		this.y = y;
-		this.base = base;
-		altura = 10;
-		color = "morado";
+		this(x, y, base, 10, "morado");
 	}
 
 	void mostrar() {

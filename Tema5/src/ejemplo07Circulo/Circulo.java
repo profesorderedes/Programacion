@@ -15,7 +15,7 @@ public class Circulo {
 	}
 	
 	Circulo(int radio){
-		this.radio = radio;
+		this(0, 0, radio);
 	}
 
 	void mostrar() {
