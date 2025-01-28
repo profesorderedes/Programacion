@@ -12,7 +12,7 @@ public class Ejer18 {
 		// Recorremos el array de palabras mostrando cada palabra con la
 		// primera letra mayúscula.
 		for (int i = 0; i < palabras.length; i++) {
-			
+
 			System.out.print(palabras[i].toUpperCase().charAt(0));
 
 			for (int j = 1; j < palabras[i].length(); j++) {

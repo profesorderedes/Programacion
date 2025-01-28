@@ -10,7 +10,7 @@ public class Ejer09 {
 
 		System.out.print("Dime una frase: ");
 		String frase = entrada.nextLine();
-		
+
 		int posPrimerEspacio = frase.indexOf(" ");
 
 		for (int i = posPrimerEspacio + 1; i < frase.length(); i++) {

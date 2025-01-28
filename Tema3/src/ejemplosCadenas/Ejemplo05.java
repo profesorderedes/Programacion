@@ -7,7 +7,7 @@ public class Ejemplo05 {
 		String frase = "No por mucho madrugar amanece más temprano";
 
 		System.out.println(frase.substring(3, 12));
-		
+
 		System.out.println(frase.substring(3));
 
 	}

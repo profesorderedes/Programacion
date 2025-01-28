@@ -38,10 +38,9 @@ public class Ejer19 {
 			total = total + Double.parseDouble(nominas[fila][2]);
 
 			// Mostramos la fila.
-			System.out.println(nominas[fila][0] + "\t" + nominas[fila][1] 
-					+ "\t" + nominas[fila][2]);
+			System.out.println(nominas[fila][0] + "\t" + nominas[fila][1] + "\t" + nominas[fila][2]);
 		}
-		
+
 		System.out.println("\nSuma de los sueldos: " + total + " euros.");
 
 	}

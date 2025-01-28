@@ -12,7 +12,7 @@ public class Ejer17 {
 		String frase = entrada.nextLine();
 
 		String[] palabras = frase.split(" ");
-		
+
 		for (int i = 0; i < palabras.length - 1; i++) {
 			System.out.print(palabras[i] + " ");
 		}

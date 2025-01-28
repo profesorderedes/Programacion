@@ -13,8 +13,8 @@ public class Rectangulo {
 		this.altura = altura;
 		this.color = color;
 	}
-	
-	Rectangulo(int x, int y, int base){
+
+	Rectangulo(int x, int y, int base) {
 		this(x, y, base, 10, "morado");
 	}
 

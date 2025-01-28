@@ -41,21 +41,17 @@ public class Ejer14e {
 			// true.
 			if (esPrimo) {
 				System.out.println(contadorPrimos + ") " + num);
-				primos[contadorPrimos-1] = num;
+				primos[contadorPrimos - 1] = num;
 				contadorPrimos++;
 			}
 
 			num++;
 
 		}
-		
+
 		System.out.println("\n\nNÚMEROS PRIMOS ALMACENADOS EN EL ARRAY:");
 		for (int i = 0; i < primos.length; i++) {
 			System.out.println(primos[i]);
 		}
 	}
 }
-
-
-
-

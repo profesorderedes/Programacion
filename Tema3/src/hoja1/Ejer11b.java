@@ -18,7 +18,7 @@ public class Ejer11b {
 
 		String[] ordenes = new String[1000];
 
-		//String[] ordenes2 = { "izquierda", "derecha", "arriba", "abajo", "matar" };
+		// String[] ordenes2 = { "izquierda", "derecha", "arriba", "abajo", "matar" };
 
 		int i = 0;
 		String orden;
@@ -28,8 +28,7 @@ public class Ejer11b {
 			System.out.println("Orden número " + (i + 1) + ": ");
 			orden = entrada.nextLine();
 
-			if (orden.equals("izquierda") || orden.equals("derecha") 
-					|| orden.equals("arriba") || orden.equals("abajo") 
+			if (orden.equals("izquierda") || orden.equals("derecha") || orden.equals("arriba") || orden.equals("abajo")
 					|| orden.equals("matar")) {
 
 				ordenes[i] = orden;

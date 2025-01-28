@@ -2,7 +2,6 @@
 // la variable posMin para sacar el mínimo.
 package ejemplosArrays;
 
-
 public class Ejemplo06 {
 
 	public static void main(String[] args) {

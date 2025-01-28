@@ -5,13 +5,13 @@ public class Ejer07 {
 
 		String[] dias = { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes" };
 		int[] espectadores = { 2000000, 2500000, 3100000, 3000000, 1200000, 1800000, 2050000 };
-		
+
 		int min = espectadores[0];
 		int max = espectadores[0];
 
 		String diaMin = "";
 		String diaMax = "";
-		
+
 		for (int i = 0; i < espectadores.length; i++) {
 
 			if (espectadores[i] < min) {

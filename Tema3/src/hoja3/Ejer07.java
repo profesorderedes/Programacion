@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejer07 {
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
 
 		int[] tiemposEntrega = new int[15];
@@ -23,7 +23,7 @@ public class Ejer07 {
 
 		System.out.println("Número de pedidos fallidos: " + pedidosFallidos);
 
-		double porcentaje = (double)pedidosFallidos / tiemposEntrega.length * 100;
+		double porcentaje = (double) pedidosFallidos / tiemposEntrega.length * 100;
 		System.out.println("Porcentaje de pedidos fallidos: " + porcentaje + "%");
 
 	}

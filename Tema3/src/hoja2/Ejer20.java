@@ -47,15 +47,13 @@ public class Ejer20 {
 		int posMin = 0;
 		for (int fila = 1; fila < nominas.length; fila++) {
 
-			if (Double.parseDouble(nominas[fila][2]) 
-					< Double.parseDouble(nominas[posMin][2])) {
+			if (Double.parseDouble(nominas[fila][2]) < Double.parseDouble(nominas[posMin][2])) {
 				posMin = fila;
 			}
 
 		}
 
-		System.out.println("El empleado con el sueldo más bajo es " 
-				+ nominas[posMin][1] + " " + nominas[posMin][0]
+		System.out.println("El empleado con el sueldo más bajo es " + nominas[posMin][1] + " " + nominas[posMin][0]
 				+ ", que gana " + nominas[posMin][2] + " euros al mes.");
 
 	}

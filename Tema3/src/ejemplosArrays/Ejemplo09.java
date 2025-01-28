@@ -1,7 +1,6 @@
 // Método de selección: ordenar un array de menor a mayor.
 package ejemplosArrays;
 
-
 import java.util.Arrays;
 
 public class Ejemplo09 {
@@ -36,11 +35,11 @@ public class Ejemplo09 {
 			aux = notas[i];
 			notas[i] = notas[posMin];
 			notas[posMin] = aux;
-			
+
 			System.out.println(Arrays.toString(notas));
 
 		}
-		
+
 		System.out.println("El array ordenado ha quedado:");
 		System.out.println(Arrays.toString(notas));
 

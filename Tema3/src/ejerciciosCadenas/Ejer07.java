@@ -14,26 +14,20 @@ public class Ejer07 {
 		String frase = entrada.nextLine();
 
 		// Buscamos si aparecen palabrotas en la frase.
-		
+
 		boolean hayPalabrotas = false;
-		for(int i = 0; i < palabrotas.length; i++) {
-			if(frase.indexOf(palabrotas[i]) >= 0) {
+		for (int i = 0; i < palabrotas.length; i++) {
+			if (frase.indexOf(palabrotas[i]) >= 0) {
 				System.out.println("Alerta de palabrotas");
 				hayPalabrotas = true;
 				break;
 			}
 		}
-		
-		if(!hayPalabrotas) {
+
+		if (!hayPalabrotas) {
 			System.out.println("La frase es correcta.");
 		}
-		
+
 	}
 
 }
-
-
-
-
-
-

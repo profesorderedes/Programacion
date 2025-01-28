@@ -32,11 +32,9 @@ public class Ejer15 {
 		int posMin = 0;
 		int posMax = 0;
 		for (int fila = 1; fila < precios.length; fila++) {
-			if (Integer.parseInt(precios[fila][1]) 
-					< Integer.parseInt(precios[posMin][1])) {
+			if (Integer.parseInt(precios[fila][1]) < Integer.parseInt(precios[posMin][1])) {
 				posMin = fila;
-			} else if (Integer.parseInt(precios[fila][1]) 
-					> Integer.parseInt(precios[posMax][1])) {
+			} else if (Integer.parseInt(precios[fila][1]) > Integer.parseInt(precios[posMax][1])) {
 				posMax = fila;
 			}
 		}

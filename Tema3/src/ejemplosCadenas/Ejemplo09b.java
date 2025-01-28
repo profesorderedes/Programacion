@@ -22,16 +22,16 @@ public class Ejemplo09b {
 
 		System.out.print("Escribe otra letra: ");
 		char letra2 = entrada.nextLine().charAt(0);
-		
-		String nuevaFrase="";
+
+		String nuevaFrase = "";
 		for (int i = 0; i < frase.length(); i++) {
-			if(frase.charAt(i) == letra1) {
+			if (frase.charAt(i) == letra1) {
 				nuevaFrase = nuevaFrase + letra2;
-			}else {
+			} else {
 				nuevaFrase = nuevaFrase + frase.charAt(i);
 			}
 		}
-		
+
 		System.out.println("Frase modificada:\n" + nuevaFrase);
 
 	}

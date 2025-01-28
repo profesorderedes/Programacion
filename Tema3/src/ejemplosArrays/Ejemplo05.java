@@ -1,7 +1,6 @@
 // Algoritmo para obtener el mínimo de un array y la posición donde se encuentra.
 package ejemplosArrays;
 
-
 public class Ejemplo05 {
 
 	public static void main(String[] args) {

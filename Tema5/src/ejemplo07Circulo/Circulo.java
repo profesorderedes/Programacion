@@ -13,8 +13,8 @@ public class Circulo {
 		this.y = y;
 		this.radio = radio;
 	}
-	
-	Circulo(int radio){
+
+	Circulo(int radio) {
 		this(0, 0, radio);
 	}
 

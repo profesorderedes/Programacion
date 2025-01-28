@@ -10,8 +10,8 @@ public class Ejer04b {
 
 		System.out.println("Dime una frase");
 		String frase = entrada.nextLine();
-		
-		String primeraPalabra="";
+
+		String primeraPalabra = "";
 
 		for (int i = 0; i < frase.length(); i++) {
 
@@ -23,7 +23,7 @@ public class Ejer04b {
 			primeraPalabra = primeraPalabra + frase.charAt(i);
 
 		}
-		
+
 		System.out.println("\nLa primera palabra es " + primeraPalabra);
 
 	}

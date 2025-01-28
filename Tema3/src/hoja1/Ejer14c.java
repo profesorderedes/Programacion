@@ -6,7 +6,7 @@ public class Ejer14c {
 	public static void main(String[] args) {
 
 		boolean esPrimo;
-		
+
 		System.out.println("Lista de números primos comprendidos entre 2 y 100");
 		System.out.println("==================================================\n");
 

@@ -34,10 +34,10 @@ class Ejer09b {
 			precios[posMax] = aux;
 
 			System.out.println(Arrays.toString(precios));
-			
+
 			// Hacemos una pequeña pausa dramática de 500 ms.
 			Thread.sleep(500);
-			
+
 		}
 
 		System.out.println("ARRAY ORDENADO:");

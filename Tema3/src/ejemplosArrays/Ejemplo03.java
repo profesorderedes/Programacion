@@ -1,4 +1,5 @@
 package ejemplosArrays;
+
 import java.util.Scanner;
 
 public class Ejemplo03 {

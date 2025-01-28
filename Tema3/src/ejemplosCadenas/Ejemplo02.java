@@ -7,7 +7,7 @@ public class Ejemplo02 {
 		String frase = "Mi carro me lo robaron";
 		System.out.println("El carácter en la posición 3 es " + frase.charAt(3) + ".");
 
-		// Usando .length() y charAt() podemos recorrer una cadena carácter a 
+		// Usando .length() y charAt() podemos recorrer una cadena carácter a
 		// carácter.
 		String palabra = "Espacial";
 		for (int i = 0; i < palabra.length(); i++) {

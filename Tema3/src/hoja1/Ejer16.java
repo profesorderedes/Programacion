@@ -14,13 +14,13 @@ public class Ejer16 {
 		for (int i = 0; i < temps.length; i++) {
 
 			suma = suma + temps[i];
-			
-			if(temps[i] > 12) {
+
+			if (temps[i] > 12) {
 				altas++;
 			}
 
 		}
-	
+
 		System.out.println("Temperatura media: " + suma / temps.length + "ºC.");
 		System.out.println("Número de temperaturas superiores a 12ºC: " + altas + ".");
 

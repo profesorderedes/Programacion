@@ -7,14 +7,14 @@ public class Ejer14d {
 
 		boolean esPrimo;
 		int contadorPrimos = 1;
-		
+
 		System.out.println("Lista de los 100 primeros números primos");
 		System.out.println("========================================\n");
 
 		// Generamos números entre 2 y 100. Para cada número,
 		// comprobaremos si es primo o compuesto.
 		int num = 2;
-		while(contadorPrimos <= 100) {
+		while (contadorPrimos <= 100) {
 
 			// Comprobamos si num es primo o no.
 
@@ -39,10 +39,10 @@ public class Ejer14d {
 			// la variable esPrimo habrá conservado su valor inicial,
 			// true.
 			if (esPrimo) {
-				System.out.println(contadorPrimos + ") "  + num);
+				System.out.println(contadorPrimos + ") " + num);
 				contadorPrimos++;
 			}
-			
+
 			num++;
 
 		}

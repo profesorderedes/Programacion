@@ -48,7 +48,7 @@ public class Ejer10 {
 
 		System.out.println("La temperatura ordenada es " + Arrays.toString(temperaturas));
 		System.out.println("El mínimo es " + temperaturas[0]);
-		System.out.println("El máximo es " + temperaturas[temperaturas.length-1]);
+		System.out.println("El máximo es " + temperaturas[temperaturas.length - 1]);
 
 	}
 

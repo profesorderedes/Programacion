@@ -35,8 +35,7 @@ public class Ejer22 {
 
 		for (int fila = 0; fila < alumnos.length; fila++) {
 
-			media = (50 * Double.parseDouble(alumnos[fila][1]) 
-					+ 40 * Double.parseDouble(alumnos[fila][2])
+			media = (50 * Double.parseDouble(alumnos[fila][1]) + 40 * Double.parseDouble(alumnos[fila][2])
 					+ 10 * Double.parseDouble(alumnos[fila][3])) / 100;
 
 			System.out.println(alumnos[fila][0] + ": " + media);

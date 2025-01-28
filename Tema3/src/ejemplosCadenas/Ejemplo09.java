@@ -9,7 +9,7 @@ import java.util.Scanner;
 // Forma rápida: usando replace.
 
 public class Ejemplo09 {
-	
+
 	public static void main(String[] args) {
 
 		Scanner entrada = new Scanner(System.in);

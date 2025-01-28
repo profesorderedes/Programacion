@@ -16,7 +16,7 @@ public class Ejer05 {
 
 		double total = 0;
 
-		// Leemos los precios y los almacenamos en el array, calculando el 
+		// Leemos los precios y los almacenamos en el array, calculando el
 		// el coste total.
 		for (int i = 0; i < precios.length; i++) {
 
@@ -34,7 +34,7 @@ public class Ejer05 {
 			}
 
 			total = total + precios[i];
-			
+
 		}
 
 		System.out.println("\nTicket de la compra");

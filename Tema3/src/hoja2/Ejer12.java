@@ -30,7 +30,7 @@ public class Ejer12 {
 
 		System.out.println("El array ordenado es " + Arrays.toString(elementos));
 		System.out.println("El mínimo es " + elementos[0]);
-		System.out.println("El máximo es " + elementos[elementos.length-1]);
+		System.out.println("El máximo es " + elementos[elementos.length - 1]);
 
 	}
 

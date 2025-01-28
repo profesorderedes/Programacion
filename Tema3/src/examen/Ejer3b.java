@@ -24,7 +24,7 @@ public class Ejer3b {
 			}
 
 		}
-		
+
 		System.out.println("#" + frase + "#");
 
 		// Eliminamos los espacios al final.
@@ -33,14 +33,13 @@ public class Ejer3b {
 
 			// ¿Hay un espacio en la posición i?
 			if (frase.charAt(i) != ' ') {
-				frase = frase.substring(0, i+1);
+				frase = frase.substring(0, i + 1);
 				break;
 			}
 
 		}
-		
+
 		System.out.println("#" + frase + "#");
-		
 
 	}
 }

@@ -15,20 +15,19 @@ public class Ejer3c {
 		System.out.println("\nFrase original:\n#" + frase + "#");
 
 		String[] palabras = frase.split(" ");
-		
+
 		System.out.print("#");
 		for (int i = 0; i < palabras.length; i++) {
-			
-			if(!palabras[i].equals("") && i < palabras.length-1) {
+
+			if (!palabras[i].equals("") && i < palabras.length - 1) {
 				System.out.print(palabras[i] + " ");
-			}else {
+			} else {
 				System.out.print(palabras[i]);
 			}
-			
+
 		}
 		System.out.println("#");
 //		System.out.println("#" + frase + "#");
-		
 
 	}
 }

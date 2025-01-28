@@ -31,7 +31,7 @@ public class Ejer21 {
 
 		double total = 0;
 		int posMin = 0;
-		
+
 		// Mostramos la tabla y calculamos el total.
 		for (int fila = 0; fila < nominas.length; fila++) {
 
@@ -40,13 +40,12 @@ public class Ejer21 {
 
 			// Mostramos la fila.
 			System.out.println(nominas[fila][0] + "\t" + nominas[fila][1] + "\t" + nominas[fila][2]);
-			
+
 			// Buscamos el sueldo más bajo.
-			
+
 			for (int i = 1; i < nominas.length; i++) {
 
-				if (Double.parseDouble(nominas[i][2]) 
-						< Double.parseDouble(nominas[posMin][2])) {
+				if (Double.parseDouble(nominas[i][2]) < Double.parseDouble(nominas[posMin][2])) {
 					posMin = i;
 				}
 
@@ -55,8 +54,7 @@ public class Ejer21 {
 
 		System.out.println("\nSuma de los sueldos: " + total + " euros.");
 
-		System.out.println("El empleado con el sueldo más bajo es " 
-				+ nominas[posMin][1] + " " + nominas[posMin][0]
+		System.out.println("El empleado con el sueldo más bajo es " + nominas[posMin][1] + " " + nominas[posMin][0]
 				+ ", que gana " + nominas[posMin][2] + " euros al mes.");
 
 	}
