@@ -18,14 +18,13 @@ public class Inicio {
 		c1.setRadio(sc.nextInt());
 
 		System.out.println(
-				"\nEl área del primer cilindro es " + c1.getArea() 
-				+ " \ny el volumen es " + c1.getVolumen() + ".");
+				"\nEl área del primer cilindro es " + c1.getArea() + " \ny el volumen es " + c1.getVolumen() + ".");
 
 		System.out.println("Qué altura tiene el cilintro?");
 		int altura = sc.nextInt();
 		System.out.println("\nQué radio tiene el cilindro?");
 		int radio = sc.nextInt();
-		
+
 		Cilindro c2 = new Cilindro(altura, radio);
 
 		System.out.println(
