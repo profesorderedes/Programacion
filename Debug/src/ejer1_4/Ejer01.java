@@ -10,10 +10,10 @@ public class Ejer01 {
 
 		float[] notas = new float[10];
 
-		float max = 0;
-		float min = 0;
+		int max = 0;
+		int min = 0;
 		float total = 0;
-		float media = 0;
+		int numNotas = 0;
 		int aprobados = 0;
 
 		System.out.println("Introduce tus notas. Cuando ya no haya más notas, escribe -1:");
@@ -22,20 +22,25 @@ public class Ejer01 {
 			System.out.print("Nota " + (i + 1) + ": ");
 			notas[i] = entrada.nextFloat();
 
-			if (notas[i] < 0) {
+			if (notas[i] == -1) {
 				break;
 			}
 
 			total += notas[i];
-			media = total / notas.length;
+			numNotas++;
+
 		}
 
 		System.out.println("\nNotas introducidas:");
 		for (int i = 0; i < notas.length; i++) {
 
-			if (notas[i] < notas[(int) min]) {
+			if (notas[i] == -1) {
+				break;
+			}
+
+			if (notas[i] < notas[min]) {
 				min = i;
-			} else if (notas[i] > notas[(int) max]) {
+			} else if (notas[i] > notas[max]) {
 				max = i;
 			}
 
@@ -43,16 +48,13 @@ public class Ejer01 {
 				aprobados++;
 			}
 
-			if (notas[i] <= 0) {
-				continue;
-			}
-
 			System.out.print(notas[i] + " ");
 		}
 
-		System.out.println("\n\nLas notas más baja y más alta son " + min + " y " + max + ", respectivamente.");
+		System.out.println(
+				"\n\nLas notas más baja y más alta son " + notas[min] + " y " + notas[max] + ", respectivamente.");
 		System.out.println("\nHas aprobado " + aprobados + " exámenes.");
-		System.out.println("\nTu nota media ha sido: " + media);
+		System.out.println("\nTu nota media ha sido: " + (total / numNotas));
 
 	}
 
