@@ -4,18 +4,14 @@ public class Libro {
 
 	private String titulo;
 	private String isbn;
-	private String autor;
+	private Autor autor;
 	private static int anyoActual = 2025;
 
-	public Libro() {
-	}
-
 	public Libro(String titulo) {
-
 		this.titulo = titulo;
 	}
 
-	public Libro(String titulo, String isbn, String autor) {
+	public Libro(String titulo, String isbn, Autor autor) {
 
 		this.titulo = titulo;
 		this.isbn = isbn;
@@ -26,12 +22,12 @@ public class Libro {
 	// Pasamos a string
 	public String toString() {
 
-		if (autor == null) {
-			autor = "Unknown";
+		if(isbn != null && autor.getNombre() != null) {
+			return "Titulo: " + titulo + "\nISBN: " + isbn + "\nAño actual: " + anyoActual + "\nAutor:" + autor.getNombre();
 		}
-
-		return "Titulo: " + titulo + "\nISBN: " + isbn + "\nAño actual: " + anyoActual + "\nAutor: " + autor;
-
+		
+		return "Título: " + titulo;
+		
 	}
 
 	// getters y setters
@@ -59,11 +55,11 @@ public class Libro {
 		Libro.anyoActual = anyoActual;
 	}
 
-	public String getAutor() {
+	public Autor getAutor() {
 		return autor;
 	}
 
-	public void setAutor(String autor) {
+	public void setAutor(Autor autor) {
 		this.autor = autor;
 	}
 

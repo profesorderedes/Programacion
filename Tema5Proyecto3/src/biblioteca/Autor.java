@@ -7,27 +7,18 @@ public class Autor {
 	private int fechaNacimiento;
 
 	public Autor(String nombre, String email, int fechaNacimiento) {
-
 		this.email = email;
 		this.nombre = nombre;
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public Autor() {
-
-	}
-
 	public Autor(String nombre) {
-		this.nombre = nombre;
+		this(nombre, "Unknown", 0);
 	}
 
 	public String toString() {
 
-		if (email == null) {
-			email = "Unknown";
-		}
-
-		return "\nNombre:" + nombre + "\nemail:" + email + "\nFecha de nacimiento:" + fechaNacimiento;
+		return "Nombre: " + nombre + "\nemail: " + email + "\nFecha de nacimiento: " + fechaNacimiento;
 
 	}
 
