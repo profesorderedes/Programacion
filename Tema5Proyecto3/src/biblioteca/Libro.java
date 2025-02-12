@@ -22,12 +22,13 @@ public class Libro {
 	// Pasamos a string
 	public String toString() {
 
-		if(isbn != null && autor.getNombre() != null) {
-			return "Titulo: " + titulo + "\nISBN: " + isbn + "\nAño actual: " + anyoActual + "\nAutor:" + autor.getNombre();
+		if (isbn != null && autor.getNombre() != null) {
+			return "Titulo: " + titulo + "\nISBN: " + isbn + "\nAño actual: " + anyoActual + "\nAutor:"
+					+ autor.getNombre();
 		}
-		
+
 		return "Título: " + titulo;
-		
+
 	}
 
 	// getters y setters

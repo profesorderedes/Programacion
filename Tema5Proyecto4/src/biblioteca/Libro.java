@@ -39,6 +39,25 @@ public class Libro {
 
 	}
 
+	public String muestraAutores() {
+
+		String listaAutores = "";
+		for (int i = 0; i < autores.length; i++) {
+
+			if (i < autores.length - 1) {
+				listaAutores = listaAutores + autores[i].getNombre() + " - ";
+			} else {
+				listaAutores = listaAutores + autores[i].getNombre();
+			}
+
+		}
+
+		System.out.println(listaAutores);
+
+		return listaAutores;
+
+	}
+
 	// getters y setters
 	public String getTitulo() {
 		return titulo;

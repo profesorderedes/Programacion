@@ -39,7 +39,7 @@ public class Ejer01 {
 			if (notas[i] == -1) {
 				break;
 			}
-			
+
 			numNotas++;
 			System.out.print(notas[i] + " ");
 

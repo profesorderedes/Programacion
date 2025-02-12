@@ -53,7 +53,6 @@ public class Ejer01 {
 
 		}
 
-		
 		System.out.println(
 				"\n\nLas notas más baja y más alta son " + notas[posMin] + " " + notas[posMax] + ", respectivamente.");
 
