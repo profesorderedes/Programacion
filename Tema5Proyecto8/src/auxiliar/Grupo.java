@@ -24,7 +24,7 @@ public class Grupo {
 
 	public String toString() {
 
-		return "ID: " + id + "\nNivel: " + nivel + "\nCurso: " + curso + "\nClase: " + clase;
+		return curso + "º " + nivel + " " + clase;
 
 	}
 
