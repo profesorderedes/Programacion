@@ -8,17 +8,28 @@ public class Instituto {
 
 	private Alumno[] alumnos = new Alumno[MAX_ALUMNOS];
 
+	// Posición donde se va a guardar el próximo alumno
+	// que añadamos al array.
+	private int posSiguienteAlumno = 0;
+
 	public void addAlumno(Alumno alu) {
 
-		for (int i = 0; i < alumnos.length; i++) {
-			if (alumnos[i] == null) {
-				alumnos[i] = alu;
-				break;
-			}
+		// Si el array está lleno, no se puede añadir al alumno.
+		if (posSiguienteAlumno == alumnos.length) {
+			System.out.println("Lista llena.");
+			return;
 		}
+
+		// Guardamos al alumno en la posición designada.
+		alumnos[posSiguienteAlumno] = alu;
+
+		// Actualizamos posSiguienteAlumno.
+		posSiguienteAlumno++;
 
 	}
 
+	// Ejercicio: modifica este método de acuerdo a lo explicado
+	// en clase.
 	public void muestraAlumnos() {
 
 		System.out.println("Listado de alumnos matriculados");
@@ -47,6 +58,8 @@ public class Instituto {
 
 	}
 
+	// Ejercicio: modifica este método de acuerdo a lo explicado
+	// en clase.
 	public int numAlumnos() {
 
 		int matriculados = 0;
