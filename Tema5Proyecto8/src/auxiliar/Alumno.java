@@ -28,33 +28,30 @@ public class Alumno {
 				+ grupo.toString();
 
 	}
-	
+
 	public void leeDatos() {
-		
+
 		Scanner entrada = new Scanner(System.in);
-		
+
 		System.out.print("Nº de expediente: ");
 		numExpediente = entrada.nextInt();
-		
+
+		entrada.nextLine();
+
 		System.out.print("Apellidos: ");
 		apellidos = entrada.nextLine();
-		
+
 		System.out.print("Nombre: ");
 		nombre = entrada.nextLine();
-		
+
 		System.out.println("Grupo:");
-		Grupo grupo = new Grupo();
+		grupo = new Grupo();
 		grupo.leeDatos();
-		
+
+	}
+
+	public int getNumExpediente() {
+		return numExpediente;
 	}
 
 }
-
-
-
-
-
-
-
-
-
