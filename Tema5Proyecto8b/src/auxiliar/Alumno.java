@@ -24,8 +24,7 @@ public class Alumno {
 
 	public String toString() {
 
-		return "Numero expediente: " + numExpediente + "\nApellidos: " + apellidos + "\nNombre: " + nombre + "\nGrupo: "
-				+ grupo.toString();
+		return numExpediente + " " + apellidos + ", " + nombre + " (" + grupo.toString() + ")";
 
 	}
 

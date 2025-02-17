@@ -23,15 +23,27 @@ public class Inicio {
 		insti.muestraAlumnos();
 		System.out.println("Hay " + insti.numAlumnos() + " alumnos matriculados.");
 
-		insti.delAlumno(100);
-		insti.delAlumno(500);
-		insti.muestraAlumnos();
-		insti.delAlumno(502);
-		insti.muestraAlumnos();
+//		System.out.println("\nSubiendo alumnos desde la posición 0:");
+//		insti.subirAlumnos(0);
+//		insti.muestraAlumnos();
+		
+		
+//		System.out.println();
+//		insti.delAlumno(502);
+//		insti.muestraAlumnos();
+//		System.out.println();
+//		
+//		insti.delAlumno(500);
+//		insti.muestraAlumnos();
+//		System.out.println();
+//		
+//		insti.delAlumno(501);
+//		insti.muestraAlumnos();
+		
 		System.out.println("Hay " + insti.numAlumnos() + " alumnos matriculados.");
 
 		System.out
-				.println("El alumno con número de expediente 500 está en la posición " + insti.buscaAlumno(500) + ".");
+				.println("El alumno con número de expediente 300 está en la posición " + insti.buscaAlumno(300) + ".");
 		System.out
 				.println("El alumno con número de expediente 501 está en la posición " + insti.buscaAlumno(501) + ".");
 

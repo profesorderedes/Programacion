@@ -28,19 +28,12 @@ public class Instituto {
 
 	}
 
-	// Ejercicio: modifica este método de acuerdo a lo explicado
-	// en clase.
 	public void muestraAlumnos() {
 
-		System.out.println("Listado de alumnos matriculados");
-		System.out.println("==========================================");
+		System.out.println("Listado de alumnos matriculados:\n=========================");
 
-		for (int i = 0; i < alumnos.length; i++) {
-
-			if (alumnos[i] != null) {
-				System.out.println(alumnos[i] + "\n");
-			}
-
+		for (int i = 0; i < posSiguienteAlumno; i++) {
+			System.out.println(alumnos[i]);
 		}
 
 	}
@@ -51,38 +44,43 @@ public class Instituto {
 		// el alumno con número de expediente numExp.
 		int pos = buscaAlumno(numExp);
 
-		// Vaciamos la posición del array donde se encuentra el alumno.
+		// Subimos una posición a todos los alumnos por debajo del que
+		// queremos eliminar.
 		if (pos != -1) {
-			alumnos[pos] = null;
+			subirAlumnos(pos);
+			posSiguienteAlumno--;
 		}
 
 	}
 
-	// Ejercicio: modifica este método de acuerdo a lo explicado
-	// en clase.
 	public int numAlumnos() {
 
-		int matriculados = 0;
-
-		for (int i = 0; i < alumnos.length; i++) {
-			if (alumnos[i] != null) {
-				matriculados++;
-			}
-		}
-
-		return matriculados;
+		return posSiguienteAlumno;
 
 	}
 
+	// Ejercicio: adaptar este método a la nueva manera de gestionar el array.
 	public int buscaAlumno(int numExp) {
 
-		for (int i = 0; i < alumnos.length; i++) {
-			if (alumnos[i] != null && numExp == alumnos[i].getNumExpediente()) {
+		for (int i = 0; i < posSiguienteAlumno; i++) {
+			if (numExp == alumnos[i].getNumExpediente()) {
 				return i;
 			}
 		}
 
 		return -1;
+
+	}
+
+	// Sube cada alumno una posición en el array. Desde la posición pos.
+	// Usaremos este método en delAlumno().
+	public void subirAlumnos(int pos) {
+
+		for (int i = pos; i < posSiguienteAlumno - 1; i++) {
+
+			alumnos[i] = alumnos[i + 1];
+
+		}
 
 	}
 
