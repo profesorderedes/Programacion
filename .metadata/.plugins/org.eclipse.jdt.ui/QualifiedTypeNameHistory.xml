@@ -14,4 +14,5 @@
     <fullyQualifiedTypeName name="auxiliar.Alumno"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="instituto.Instituto"/>
+    <fullyQualifiedTypeName name="mates.Mates"/>
 </qualifiedTypeNameHistroy>
