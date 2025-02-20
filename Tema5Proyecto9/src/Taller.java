@@ -3,8 +3,8 @@ public class Taller {
 
 	private int MAX_LAVADORAS = 20;
 	private Lavadora[] lavadoras;
-	
-	// Variable que indica la posición donde se insertará la 
+
+	// Variable que indica la posición donde se insertará la
 	// próxima lavadora en el array.
 	private int limite;
 
@@ -24,6 +24,42 @@ public class Taller {
 
 		limite++;
 
+	}
+
+	public void listaLavadoras() {
+
+		System.out.println("\n--- LISTADO DE LAVADORAS EN STOCK ---");
+		for (int i = 0; i < limite; i++) {
+			System.out.println(lavadoras[i].toString());
+		}
+
+	}
+
+	public int buscaLavadora(int id) {
+
+		for (int i = 0; i < limite; i++) {
+			if (lavadoras[i].getId() == id) {
+				return i;
+			}
+		}
+
+		return -1;
+
+	}
+	
+	public void delLavadora(int id) {
+		
+		// Averiguamos la posición en el array donde se encuentra la 
+		// lavadora.
+		
+		
+		// Subimos cada lavadora una posición en el array, desde 
+		// la posición siguiente a la que ocupaba la lavadora.
+		
+		
+		// Actualizamos la variable limite.
+		
+		
 	}
 
 }
