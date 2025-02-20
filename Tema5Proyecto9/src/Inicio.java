@@ -8,6 +8,10 @@ public class Inicio {
 		Lavadora lava1 = new Lavadora(1, motor1, "Balay", 500);
 
 		System.out.println(lava1.toString());
+		
+		Taller taller = new Taller();
+		
+		taller.addLavadora(lava1);
 
 	}
 
