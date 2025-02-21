@@ -68,4 +68,34 @@ public class Taller {
 
 	}
 
+	// Devuelve la suma de precios de todas las lavadoras del taller.
+	public float totalLavadoras() {
+		return 0;
+	}
+
+	// Aplica un porcentaje de descuento a todas las lavadoras de cierta marca.
+	public void descuentoLavadora(String marca, float descuento) {
+		
+	}
+
+	// Devuelve el precio indicado sumándole el IVA indicado.
+	double precioConIva(float precio, int iva) {
+		return 0;
+	}
+
+	// Devuelve el número de espacios que quedan en el array lavadoras.
+	public int lavadorasRestantes() {
+		return 0;
+	}
+
+	// Muestra una lista con las lavadoras de cierta marca.
+	public void marcaLavadora(String marca) {
+
+	}
+
+	// Muestra las lavadoras ordenadas por precio.
+	public void ordenarLavadoras() {
+
+	}
+
 }
