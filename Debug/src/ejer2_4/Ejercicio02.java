@@ -49,7 +49,7 @@ public class Ejercicio02 {
 		System.out.println("Tras aumentar 5€ los precios de los móviles, quedan así:");
 
 		for (int fila = 0; fila < tienda.length; fila++) {
-			
+
 			aumentoPrecio = Double.parseDouble(tienda[fila][1]) + 5;
 			tienda[fila][1] = "" + aumentoPrecio;
 		}

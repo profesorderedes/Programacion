@@ -42,16 +42,12 @@ public class Inicio {
 //		double julios = entrada.nextDouble();
 //
 //		System.out.println(julios + " julios son " + Conversor.calorias(julios) + " calorias.");
-		
+
 		// Prueba de la librería utilidades.
 		double precio = 12.62121;
-		
+
 		System.out.println(Mates.redondear(precio));
-		
+
 	}
 
 }
-
-
-
-

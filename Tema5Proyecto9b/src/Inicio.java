@@ -33,10 +33,10 @@ public class Inicio {
 		taller.listaLavadoras();
 		taller.delLavadora(3);
 		taller.listaLavadoras();
-		
+
 		taller.delLavadora(1);
 		taller.listaLavadoras();
-		
+
 	}
 
 }
