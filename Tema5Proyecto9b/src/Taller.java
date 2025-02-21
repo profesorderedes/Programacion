@@ -57,7 +57,6 @@ public class Taller {
 			return;
 		}
 
-		System.out.println("Valor en limite = " + lavadoras[limite]);
 		// Subimos cada lavadora una posición en el array, desde
 		// la posición siguiente a la que ocupaba la lavadora.
 		for (int i = pos; i < limite - 1; i++) {
