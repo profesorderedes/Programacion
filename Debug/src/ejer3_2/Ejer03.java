@@ -8,18 +8,19 @@ public class Ejer03 {
 
 		Scanner entrada = new Scanner(System.in);
 
-		String[] vocales = { "a", "e", "i", "o", "u", "A", "E", "I", "O", "U", "á", "é", "í", "ó", "ú", "Á", "É", "Í",
-				"Ó", "Ú" };
+		String vocales = "aeiouáéíóú";
 
 		int contadorVocales = 0;
 
 		System.out.println("Escribe una frase, por favor, y te diré cuántas vocales tiene:");
-		String frase = entrada.nextLine();
+		String frase = entrada.nextLine().toLowerCase();
 
-		for (int i = 0; i < vocales.length; i++) {
+		for (int i = 0; i < frase.length(); i++) {
 
-			// TODO: Rellenar el array
-			
+			if (vocales.indexOf(frase.charAt(i)) != -1) {
+				contadorVocales++;
+			}
+
 		}
 
 		System.out.println("\nEn tu frase hay " + contadorVocales + " vocales.");
