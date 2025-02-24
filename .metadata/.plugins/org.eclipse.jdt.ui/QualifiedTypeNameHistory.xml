@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="ejemplo04Rectangulo.Rectangulo"/>
     <fullyQualifiedTypeName name="ejemplo07Circulo.Circulo"/>
     <fullyQualifiedTypeName name="ejemplo08Rectangulo.Rectangulo"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="ejemplo13Coche.Coche"/>
     <fullyQualifiedTypeName name="biblioteca.Libro"/>
     <fullyQualifiedTypeName name="auxiliar.Grupo"/>
@@ -17,4 +16,5 @@
     <fullyQualifiedTypeName name="mates.Mates"/>
     <fullyQualifiedTypeName name="Lavadora"/>
     <fullyQualifiedTypeName name="Taller"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
