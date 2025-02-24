@@ -70,17 +70,49 @@ public class Taller {
 
 	// Devuelve la suma de precios de todas las lavadoras del taller.
 	public float totalLavadoras() {
-		return 0;
+
+		float total = 0;
+
+		for (int i = 0; i < limite; i++) {
+			total = total + lavadoras[i].getPrecio();
+		}
+
+		return total;
+
 	}
 
 	// Aplica un porcentaje de descuento a todas las lavadoras de cierta marca.
-	public void descuentoLavadora(String marca, float descuento) {
-		
+	public void descuentoLavadoras(String marca, float descuento) {
+
+		float rebaja = 0;
+		float precioConDescuento = 0;
+		boolean hayLavadoras = false;
+
+		for (int i = 0; i < limite; i++) {
+			if (marca.equalsIgnoreCase(lavadoras[i].getMarca())) {
+				rebaja = lavadoras[i].getPrecio() * descuento / 100;
+				precioConDescuento = lavadoras[i].getPrecio() - rebaja;
+				lavadoras[i].setPrecio(precioConDescuento);
+				hayLavadoras = true;
+			}
+		}
+
+		if (!hayLavadoras) {
+			System.out.println("No hay lavadoras de " + marca + ".");
+		}
+
 	}
 
 	// Devuelve el precio indicado sumándole el IVA indicado.
-	double precioConIva(float precio, int iva) {
-		return 0;
+	public double precioConIva(float precio, int iva) {
+
+		if (iva < 0) {
+			System.out.println("EL IVA no puede ser negativo.");
+			return precio;
+		}
+
+		return precio + precio * iva / 100;
+
 	}
 
 	// Devuelve el número de espacios que quedan en el array lavadoras.

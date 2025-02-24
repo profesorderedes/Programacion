@@ -21,21 +21,27 @@ public class Inicio {
 
 		taller.listaLavadoras();
 
-		System.out.println("\nLa lavadora con id 1 está en la posición " + taller.buscaLavadora(1) + ".");
-		System.out.println("\nLa lavadora con id 3 está en la posición " + taller.buscaLavadora(3) + ".");
-		System.out.println("\nLa lavadora con id 57 está en la posición " + taller.buscaLavadora(57) + ".");
-
-		taller.delLavadora(2);
+//		System.out.println("\nLa lavadora con id 1 está en la posición " + taller.buscaLavadora(1) + ".");
+//		System.out.println("\nLa lavadora con id 3 está en la posición " + taller.buscaLavadora(3) + ".");
+//		System.out.println("\nLa lavadora con id 57 está en la posición " + taller.buscaLavadora(57) + ".");
+//
+//		taller.delLavadora(2);
+//		taller.listaLavadoras();
+//		taller.delLavadora(4);
+//		taller.listaLavadoras();
+//		taller.delLavadora(1);
+//		taller.listaLavadoras();
+//		taller.delLavadora(3);
+//		taller.listaLavadoras();
+//
+//		taller.delLavadora(1);
+//		taller.listaLavadoras();
+		
+		System.out.println("\nPrecio total de las lavadoras: " + taller.totalLavadoras() + " euros.");
+		
+		taller.descuentoLavadoras("Balay2", 10);
 		taller.listaLavadoras();
-		taller.delLavadora(4);
-		taller.listaLavadoras();
-		taller.delLavadora(1);
-		taller.listaLavadoras();
-		taller.delLavadora(3);
-		taller.listaLavadoras();
-
-		taller.delLavadora(1);
-		taller.listaLavadoras();
+		
 
 	}
 
