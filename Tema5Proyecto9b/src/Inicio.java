@@ -49,6 +49,8 @@ public class Inicio {
 		
 		System.out.println("\nLavadoras de marca Samsung:");
 		taller.marcaLavadora("Samsung");
+		
+		taller.ordenarLavadoras();
 
 	}
 
