@@ -57,6 +57,8 @@ public class Inicio {
 		System.out.println("\nHay " + taller.contMarcas("Samsung") + " lavadoras de la marca Samsung.");
 
 		taller.ordernarPorMarca();
+		
+		taller.ordenarPorMotor();
 	}
 
 }

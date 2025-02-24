@@ -207,7 +207,32 @@ public class Taller {
 	}
 
 	// Muestra las lavadoras ordenadas por el fabricante del motor.
-	public void ordernarPorMotor() {
+	public void ordenarPorMotor() {
+
+		int posMin;
+		Lavadora aux;
+
+		for (int i = 0; i < limite - 1; i++) {
+
+			posMin = i;
+			for (int j = i + 1; j < limite; j++) {
+
+				if (lavadoras[j].getMotor().getFabricante()
+						.compareTo(lavadoras[posMin].getMotor().getFabricante()) < 0) {
+					posMin = j;
+				}
+
+			}
+
+			aux = lavadoras[i];
+			lavadoras[i] = lavadoras[posMin];
+			lavadoras[posMin] = aux;
+
+		}
+
+		System.out.println("\nLavadoras ordenadas alfabéticamente por "
+				+ "fabricante del motor:");
+		listaLavadoras();
 
 	}
 

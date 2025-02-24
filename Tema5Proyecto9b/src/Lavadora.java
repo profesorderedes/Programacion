@@ -37,5 +37,9 @@ public class Lavadora {
 	public String getMarca() {
 		return marca;
 	}
+	
+	public Motor getMotor() {
+		return motor;
+	}
 
 }
