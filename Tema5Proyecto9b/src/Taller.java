@@ -208,19 +208,7 @@ public class Taller {
 
 	// Muestra las lavadoras ordenadas por el fabricante del motor.
 	public void ordernarPorMotor() {
-		
-		
 
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
