@@ -104,7 +104,7 @@ public class Taller {
 	}
 
 	// Devuelve el precio indicado sumándole el IVA indicado.
-	public double precioConIva(float precio, int iva) {
+	public static double precioConIva(float precio, int iva) {
 
 		if (iva < 0) {
 			System.out.println("EL IVA no puede ser negativo.");
@@ -117,17 +117,55 @@ public class Taller {
 
 	// Devuelve el número de espacios que quedan en el array lavadoras.
 	public int lavadorasRestantes() {
-		return 0;
+
+		return lavadoras.length - limite;
+
 	}
 
 	// Muestra una lista con las lavadoras de cierta marca.
 	public void marcaLavadora(String marca) {
-
+		
+		for (int i = 0; i < limite; i++) {
+			
+			if(marca.equals(lavadoras[i].getMarca())) {
+				System.out.println(lavadoras[i].toString());
+			}
+			
+		}
+		
 	}
 
 	// Muestra las lavadoras ordenadas por precio.
 	public void ordenarLavadoras() {
-
+		
+		int posMin = 0;
+		Lavadora aux;
+		
+		for (int i = 0; i < limite - 1; i++) {
+			
+			posMin = i;
+			
+			for (int j = i+1; j < limite; j++) {
+				
+				if(lavadoras[j].getPrecio() < lavadoras[posMin].getPrecio()) {
+					posMin = j;
+				}
+				
+			}
+			
+			aux = lavadoras[i];
+			lavadoras[i] = lavadoras[posMin];
+			lavadoras[posMin] = aux;
+			
+		}
+		
+		System.out.println("\nLavadoras ordenadas de menor a mayor:");
+		listaLavadoras();
+		
 	}
 
 }
+
+
+
+
