@@ -25,15 +25,15 @@ public class Lavadora {
 	public int getId() {
 		return id;
 	}
-	
+
 	public float getPrecio() {
 		return precio;
 	}
-	
+
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
-	
+
 	public String getMarca() {
 		return marca;
 	}
