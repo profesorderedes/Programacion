@@ -124,48 +124,60 @@ public class Taller {
 
 	// Muestra una lista con las lavadoras de cierta marca.
 	public void marcaLavadora(String marca) {
-		
+
 		for (int i = 0; i < limite; i++) {
-			
-			if(marca.equals(lavadoras[i].getMarca())) {
+
+			if (marca.equals(lavadoras[i].getMarca())) {
 				System.out.println(lavadoras[i].toString());
 			}
-			
+
 		}
-		
+
 	}
 
 	// Muestra las lavadoras ordenadas por precio.
 	public void ordenarLavadoras() {
-		
+
 		int posMin = 0;
 		Lavadora aux;
-		
+
 		for (int i = 0; i < limite - 1; i++) {
-			
+
 			posMin = i;
-			
-			for (int j = i+1; j < limite; j++) {
-				
-				if(lavadoras[j].getPrecio() < lavadoras[posMin].getPrecio()) {
+
+			for (int j = i + 1; j < limite; j++) {
+
+				if (lavadoras[j].getPrecio() < lavadoras[posMin].getPrecio()) {
 					posMin = j;
 				}
-				
+
 			}
-			
+
 			aux = lavadoras[i];
 			lavadoras[i] = lavadoras[posMin];
 			lavadoras[posMin] = aux;
-			
+
 		}
-		
+
 		System.out.println("\nLavadoras ordenadas de menor a mayor:");
 		listaLavadoras();
-		
+
+	}
+
+	public int contMarcas(String marca) {
+
+		int marcas = 0;
+
+		for (int i = 0; i < limite; i++) {
+
+			if (lavadoras[i].getMarca().equalsIgnoreCase(marca)) {
+				marcas++;
+			}
+
+		}
+
+		return marcas;
+
 	}
 
 }
-
-
-
-

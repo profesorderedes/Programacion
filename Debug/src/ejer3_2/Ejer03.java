@@ -18,13 +18,8 @@ public class Ejer03 {
 
 		for (int i = 0; i < vocales.length; i++) {
 
-			if (frase.indexOf(vocales[i]) >= 0) {
-				contadorVocales++;
-
-				if (frase.indexOf(vocales[i]) >= 0) {
-					contadorVocales++;
-				}
-			}
+			// TODO: Rellenar el array
+			
 		}
 
 		System.out.println("\nEn tu frase hay " + contadorVocales + " vocales.");
