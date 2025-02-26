@@ -237,13 +237,37 @@ public class Taller {
 
 	// Devuelve la media de los precios de todas las lavadoras registradas.
 	public float mediaPrecio() {
-		
-		return ...
-		
+
+		return totalLavadoras() / limite;
+
 	}
 
 	// Ordena las lavadoras por id.
 	public void ordenarPorId() {
+
+		int posMin = 0;
+		Lavadora aux;
+
+		for (int i = 0; i < limite - 1; i++) {
+
+			posMin = i;
+			for (int j = i + 1; j < limite; j++) {
+
+				if (lavadoras[j].getId() < lavadoras[posMin].getId()) {
+					posMin = j;
+				}
+
+			}
+
+			aux = lavadoras[i];
+			lavadoras[i] = lavadoras[posMin];
+			lavadoras[posMin] = aux;
+
+		}
+
+		System.out.println("\nLavadoras ordenadas por id");
+
+		listaLavadoras();
 
 	}
 
@@ -251,7 +275,11 @@ public class Taller {
 	// y devuelve este número.
 
 	public int contarMarcas() {
-		
+		return 0;
 	}
 
+	// Lista las lavadoras entre un rango de precios, incluyendo esos precios.
+	public void lavadorasPorRangoDePrecio(float precioMin, float precioMax) {
+
+	}
 }
