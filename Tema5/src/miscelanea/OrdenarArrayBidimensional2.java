@@ -1,13 +1,13 @@
 package miscelanea;
 
-public class OrdenarArrayBidimensional {
+public class OrdenarArrayBidimensional2 {
 
 	public static void main(String[] args) {
 
 		String[][] notas = { { "Jose Luis Martínez", "7" }, { "Antonia Ruiz", "9" }, { "Marcos Ramírez", "10" },
 				{ "Juana Herranz", "4" }, { "Alberto López", "7" } };
 
-		// Ordenar el array por nota.
+		// Ordenar el array por nombre.
 
 		int posMin;
 		// La variable aux almacenará una fila de la tabla.
@@ -15,8 +15,9 @@ public class OrdenarArrayBidimensional {
 
 		for (int i = 0; i < notas.length - 1; i++) {
 
-			// Buscamos la fila posMin donde estará la nota
-			// más pequeña desde la posición i hasta el final.
+			// Buscamos la fila posMin donde estará el primer 
+			// nombre alfabéticamente desde la posición i 
+			// hasta el final.
 			posMin = i;
 			for (int j = i; j < notas.length; j++) {
 				if (Double.parseDouble(notas[j][1]) < Double.parseDouble(notas[posMin][1])) {
