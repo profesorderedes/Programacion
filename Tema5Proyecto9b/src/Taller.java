@@ -230,10 +230,28 @@ public class Taller {
 
 		}
 
-		System.out.println("\nLavadoras ordenadas alfabéticamente por "
-				+ "fabricante del motor:");
+		System.out.println("\nLavadoras ordenadas alfabéticamente por " + "fabricante del motor:");
 		listaLavadoras();
 
+	}
+
+	// Devuelve la media de los precios de todas las lavadoras registradas.
+	public float mediaPrecio() {
+		
+		return ...
+		
+	}
+
+	// Ordena las lavadoras por id.
+	public void ordenarPorId() {
+
+	}
+
+	// Cuenta todas las marcas de motor diferentes sin que se repitan
+	// y devuelve este número.
+
+	public int contarMarcas() {
+		
 	}
 
 }
