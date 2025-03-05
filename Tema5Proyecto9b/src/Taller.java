@@ -14,7 +14,7 @@ public class Taller {
 	}
 
 	public boolean addLavadora(Lavadora lav) {
-		
+
 		if (limite == lavadoras.length) {
 			System.out.println("Lista llena");
 			return false;
@@ -22,8 +22,21 @@ public class Taller {
 
 		lavadoras[limite] = lav;
 		limite++;
-		
+
 		return true;
+
+	}
+
+	// Inserta una nueva lavadora en la posición pos del array. El elemento que
+	// estaba en esta posición y los siguientes se moverán una posición hacia 
+	// abajo para dejar sitio.
+	boolean addLavadora(int pos, Lavadora lav) {
+
+		// Comprobamos que hay sitio en el array.
+
+		// Movemos las posiciones pos y siguientes un sitio hacia abajo.
+
+		// Insertamos la lavadora en su posición nueva.
 
 	}
 
@@ -55,7 +68,7 @@ public class Taller {
 		int pos = buscaLavadora(id);
 		if (pos == -1) {
 			System.out.println("Lavadora con id " + id + " no encontrada.");
-			return;
+			return false;
 		}
 
 		// Subimos cada lavadora una posición en el array, desde
@@ -66,6 +79,8 @@ public class Taller {
 
 		// Actualizamos la variable limite.
 		limite--;
+
+		return true;
 
 	}
 
