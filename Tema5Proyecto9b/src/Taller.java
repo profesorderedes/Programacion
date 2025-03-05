@@ -279,7 +279,41 @@ public class Taller {
 	}
 
 	// Lista las lavadoras entre un rango de precios, incluyendo esos precios.
-	public void lavadorasPorRangoDePrecio(float precioMin, float precioMax) {
+	public void lavadorasPorRangoDePrecio(double precioMin, double precioMax) {
+
+		System.out.println("\nLavadoras en el rango de precios: " + precioMin + " - " + precioMax);
+
+		boolean hayLavadoras = false;
+
+		for (int i = 0; i < limite; i++) {
+
+			double precio = lavadoras[i].getPrecio();
+
+			if (precio >= precioMin && precio <= precioMax) {
+
+				System.out.println(lavadoras[i].toString());
+				hayLavadoras = true;
+
+			}
+
+		}
+
+		if (!hayLavadoras) {
+			System.out.println("No hay lavadoras en este rango de precios.");
+		}
 
 	}
+	
+	// Ordena las lavadoras por el id del motor.
+	public void ordenarPorIdMotor () {
+		
+		
+		
+	}
 }
+
+
+
+
+
+

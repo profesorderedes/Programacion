@@ -19,10 +19,8 @@ public class Ejercicio03 {
 
 			for (int j = 0; j < vocales.length; j++) {
 
-				if (vocales[j].equals(frase.charAt(i))) {
-
+				if (vocales[j].equals(""+frase.charAt(i))) {
 					contadorVocales++;
-
 				}
 			}
 		}

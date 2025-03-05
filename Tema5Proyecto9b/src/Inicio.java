@@ -64,6 +64,8 @@ public class Inicio {
 
 		taller.ordenarPorId();
 		
+		taller.lavadorasPorRangoDePrecio(400, 500);
+		
 		
 	}
 
