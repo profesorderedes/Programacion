@@ -1,7 +1,7 @@
 
 public class Taller {
 
-	private int MAX_LAVADORAS = 20;
+	private int MAX_LAVADORAS = 4;
 	private Lavadora[] lavadoras;
 
 	// Variable que indica la posición donde se insertará la
@@ -13,16 +13,17 @@ public class Taller {
 		limite = 0;
 	}
 
-	public void addLavadora(Lavadora lav) {
-
+	public boolean addLavadora(Lavadora lav) {
+		
 		if (limite == lavadoras.length) {
 			System.out.println("Lista llena");
-			return;
+			return false;
 		}
 
 		lavadoras[limite] = lav;
-
 		limite++;
+		
+		return true;
 
 	}
 
@@ -47,7 +48,7 @@ public class Taller {
 
 	}
 
-	public void delLavadora(int id) {
+	public boolean delLavadora(int id) {
 
 		// Averiguamos la posición en el array donde se encuentra la
 		// lavadora.
@@ -207,7 +208,7 @@ public class Taller {
 	}
 
 	// Muestra las lavadoras ordenadas por el fabricante del motor.
-	public void ordenarPorMotor() {
+	public void ordenarPorFabricanteMotor() {
 
 		int posMin;
 		Lavadora aux;
@@ -303,17 +304,33 @@ public class Taller {
 		}
 
 	}
-	
+
 	// Ordena las lavadoras por el id del motor.
-	public void ordenarPorIdMotor () {
-		
-		
-		
+	public void ordenarPorIdMotor() {
+
+		int posMin = 0;
+		Lavadora aux;
+
+		for (int i = 0; i < limite - 1; i++) {
+
+			posMin = i;
+			for (int j = i + 1; j < limite; j++) {
+
+				if (lavadoras[j].getMotor().getId() < lavadoras[posMin].getMotor().getId()) {
+					posMin = j;
+				}
+
+			}
+
+			aux = lavadoras[i];
+			lavadoras[i] = lavadoras[posMin];
+			lavadoras[posMin] = aux;
+
+		}
+
+		System.out.println("\nLavadoras ordenadas por id del motor:");
+
+		listaLavadoras();
+
 	}
 }
-
-
-
-
-
-

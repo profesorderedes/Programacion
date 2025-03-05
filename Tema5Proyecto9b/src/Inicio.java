@@ -16,57 +16,14 @@ public class Inicio {
 
 		Taller taller = new Taller();
 
-		taller.addLavadora(lava1);
-		taller.addLavadora(lava2);
-		taller.addLavadora(lava3);
-		taller.addLavadora(lava4);
+		System.out.println(taller.addLavadora(lava1));
+		System.out.println(taller.addLavadora(lava2));
+		System.out.println(taller.addLavadora(lava3));
+		System.out.println(taller.addLavadora(lava4));
+		System.out.println(taller.addLavadora(lava4));
 
 		taller.listaLavadoras();
 
-//		System.out.println("\nLa lavadora con id 1 está en la posición " + taller.buscaLavadora(1) + ".");
-//		System.out.println("\nLa lavadora con id 3 está en la posición " + taller.buscaLavadora(3) + ".");
-//		System.out.println("\nLa lavadora con id 57 está en la posición " + taller.buscaLavadora(57) + ".");
-//
-//		taller.delLavadora(2);
-//		taller.listaLavadoras();
-//		taller.delLavadora(4);
-//		taller.listaLavadoras();
-//		taller.delLavadora(1);
-//		taller.listaLavadoras();
-//		taller.delLavadora(3);
-//		taller.listaLavadoras();
-//
-//		taller.delLavadora(1);
-//		taller.listaLavadoras();
-//
-//		System.out.println("\nPrecio total de las lavadoras: " + taller.totalLavadoras() + " euros.");
-//
-//		taller.descuentoLavadoras("Balay2", 10);
-//		taller.listaLavadoras();
-//
-//		System.out.println(
-//				"\nUn producto de 100 euros, con un IVA del 21%, costará " + Taller.precioConIva(100, 21) + " euros.");
-//
-//		System.out.println("\nHay " + taller.lavadorasRestantes() + " espacios vacíos en el array.");
-//
-//		System.out.println("\nLavadoras de marca Samsung:");
-//		taller.marcaLavadora("Samsung");
-//
-//		taller.ordenarPorPrecio();
-//
-//		System.out.println("\nHay " + taller.contMarcas("Samsung") + " lavadoras de la marca Samsung.");
-//
-//		taller.ordernarPorMarca();
-//		
-//		taller.ordenarPorMotor();
-
-		System.out.println("\nEl precio medio de las lavadoras en el taller es de " + taller.mediaPrecio() + " euros.");
-
-		taller.ordenarPorId();
-		
-		taller.lavadorasPorRangoDePrecio(400, 500);
-		
-		
 	}
 
 }

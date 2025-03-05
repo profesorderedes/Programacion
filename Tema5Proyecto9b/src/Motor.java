@@ -14,4 +14,8 @@ public class Motor {
 	public String getFabricante() {
 		return fabricante;
 	}
+	
+	public int getId() {
+		return id;
+	}
 }
