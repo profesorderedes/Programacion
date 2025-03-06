@@ -22,7 +22,7 @@ public class Inicio {
 
 		taller.listaLavadoras();
 		
-		taller.addLavadora(1, lava5);
+		taller.addLavadora(2, lava5);
 
 		taller.listaLavadoras();
 	}

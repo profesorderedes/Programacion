@@ -37,9 +37,8 @@ public class Taller {
 			return false;
 		}
 
-		System.out.println(limite);
 		for (int i = limite; i > pos; i--) {
-			lavadoras[i] = lavadoras[i-1];
+			lavadoras[i] = lavadoras[i - 1];
 		}
 
 		lavadoras[pos] = lav;
@@ -355,6 +354,30 @@ public class Taller {
 		System.out.println("\nLavadoras ordenadas por id del motor:");
 
 		listaLavadoras();
+
+	}
+
+	// Devuelve el objeto Lavadora almacenado en la posición pos del array.
+	public Lavadora get(int pos) {
+
+		return lavadoras[pos];
+
+	}
+
+	// Reemplaza la lavadora que había en la posición por la que le pasamos
+	// como parámetro. Devuelve el elemento que se encontraba en dicha
+	// posición anteriormente.
+	public Lavadora set(int pos, Lavadora lav) {
+		return null;
+	}
+
+	// Devuelve true si la colección está vacía. Y false en caso contrario.
+	public boolean isEmpty() {
+		return false;
+	}
+
+	// Elimina todos los elementos de la colección.
+	public void vaciar() {
 
 	}
 }
