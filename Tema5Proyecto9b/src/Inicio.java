@@ -21,10 +21,11 @@ public class Inicio {
 		System.out.println(taller.addLavadora(lava4));
 
 		taller.listaLavadoras();
-		
-		taller.addLavadora(2, lava5);
+
+		taller.set(1, lava5);
 
 		taller.listaLavadoras();
+
 	}
 
 }
