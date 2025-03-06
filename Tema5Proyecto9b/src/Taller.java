@@ -1,7 +1,7 @@
 
 public class Taller {
 
-	private int MAX_LAVADORAS = 4;
+	private int MAX_LAVADORAS = 5;
 	private Lavadora[] lavadoras;
 
 	// Variable que indica la posición donde se insertará la
@@ -28,15 +28,24 @@ public class Taller {
 	}
 
 	// Inserta una nueva lavadora en la posición pos del array. El elemento que
-	// estaba en esta posición y los siguientes se moverán una posición hacia 
+	// estaba en esta posición y los siguientes se moverán una posición hacia
 	// abajo para dejar sitio.
-	boolean addLavadora(int pos, Lavadora lav) {
+	public boolean addLavadora(int pos, Lavadora lav) {
 
-		// Comprobamos que hay sitio en el array.
+		if (limite == lavadoras.length || pos > limite) {
+			System.out.println("No se ha podido insertar el elemento.");
+			return false;
+		}
 
-		// Movemos las posiciones pos y siguientes un sitio hacia abajo.
+		System.out.println(limite);
+		for (int i = limite; i > pos; i--) {
+			lavadoras[i] = lavadoras[i-1];
+		}
 
-		// Insertamos la lavadora en su posición nueva.
+		lavadoras[pos] = lav;
+		limite++;
+
+		return true;
 
 	}
 

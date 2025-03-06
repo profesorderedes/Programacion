@@ -11,8 +11,7 @@ public class Inicio {
 		Lavadora lava2 = new Lavadora(4, motor1, "Samsung", 420);
 		Lavadora lava3 = new Lavadora(1, motor2, "Samsung", 570);
 		Lavadora lava4 = new Lavadora(3, motor3, "Balay", 610);
-
-		System.out.println(lava1.toString());
+		Lavadora lava5 = new Lavadora(5, motor3, "LG", 550);
 
 		Taller taller = new Taller();
 
@@ -20,10 +19,12 @@ public class Inicio {
 		System.out.println(taller.addLavadora(lava2));
 		System.out.println(taller.addLavadora(lava3));
 		System.out.println(taller.addLavadora(lava4));
-		System.out.println(taller.addLavadora(lava4));
 
 		taller.listaLavadoras();
+		
+		taller.addLavadora(1, lava5);
 
+		taller.listaLavadoras();
 	}
 
 }
