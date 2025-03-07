@@ -13,7 +13,10 @@ public class Autor {
 	}
 
 	public Autor(String nombre) {
-		this(nombre, "Unknown", 0);
+//		this(nombre, "Unknown", 0);
+		this.nombre = nombre;
+		this.email = "Unknown";
+		this.fechaNacimiento = 0;
 	}
 
 	public String toString() {

@@ -368,19 +368,29 @@ public class Taller {
 	// como parámetro. Devuelve el elemento que se encontraba en dicha
 	// posición anteriormente.
 	public Lavadora set(int pos, Lavadora lav) {
-		return null;
+
+		Lavadora lavadoraAntigua = lavadoras[pos];
+		lavadoras[pos] = lav;
+
+		return lavadoraAntigua;
+
 	}
 
 	// Devuelve true si la colección está vacía. Y false en caso contrario.
 	public boolean isEmpty() {
+
+		if (limite == 0) {
+			return true;
+		}
+
 		return false;
+
 	}
 
 	// Elimina todos los elementos de la colección.
 	public void vaciar() {
 
+		limite = 0;
+
 	}
 }
-
-
-
