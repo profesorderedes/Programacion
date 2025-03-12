@@ -15,8 +15,8 @@ public class OrdenarArrayBidimensional2 {
 
 		for (int i = 0; i < notas.length - 1; i++) {
 
-			// Buscamos la fila posMin donde estará el primer 
-			// nombre alfabéticamente desde la posición i 
+			// Buscamos la fila posMin donde estará el primer
+			// nombre alfabéticamente desde la posición i
 			// hasta el final.
 			posMin = i;
 			for (int j = i; j < notas.length; j++) {

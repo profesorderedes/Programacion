@@ -7,7 +7,7 @@ public class Circulo {
 	private int x;
 	private int y;
 	private int radio;
-	
+
 	@Override
 	protected void finalize() throws Throwable {
 		System.out.println("En marcha el recolector de basura!!!");
