@@ -3091,3 +3091,195 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY ch.qos.logback.classic 1 0 2025-03-12 18:18:26.916
 !MESSAGE Logback config file: /home/csogorb/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+!SESSION 2025-03-13 16:52:00.170 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-13 16:52:12.521
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-13 17:03:37.863
+!MESSAGE Logback config file: /home/csogorb/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2025-03-13 17:06:16.614
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2025-03-13 17:06:16.614
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.614
+!MESSAGE Software being installed: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.614
+!MESSAGE Software currently installed: Mylyn Context Connector: Eclipse IDE 4.6.0.v20241229-1209 (org.eclipse.mylyn.ide.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.614
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.614
+!MESSAGE Mylyn Tasks 4.6.0.v20241229-1209 (org.eclipse.mylyn.tasks.activity.ui 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.614
+!MESSAGE Mylyn Tasks 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.activity.ui 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.614
+!MESSAGE Mylyn Tasks 4.4.0.v20240617-1534 (org.eclipse.mylyn.tasks.activity.ui 4.4.0.v20240617-1534)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.614
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.614
+!MESSAGE From: Mylyn Context Connector: Eclipse IDE 4.6.0.v20241229-1209 (org.eclipse.mylyn.ide.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.614
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.feature.feature.group [4.6.0,4.7.0), filter=(!(org.eclipse.equinox.p2.exclude.import=true))
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.615
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.615
+!MESSAGE From: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.615
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.5.0.v20241002-1142,4.5.0.v20241002-1142]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.615
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.615
+!MESSAGE From: Mylyn Task List 4.6.0.v20241229-1209 (org.eclipse.mylyn.tasks.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.615
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.6.0.v20241229-1209,4.6.0.v20241229-1209]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2025-03-13 17:06:16.628
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2025-03-13 17:06:16.628
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE Software being installed: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE Software currently installed: Mylyn Context Connector: Eclipse IDE 4.6.0.v20241229-1209 (org.eclipse.mylyn.ide.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.628
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE Mylyn Tasks 4.6.0.v20241229-1209 (org.eclipse.mylyn.tasks.activity.ui 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE Mylyn Tasks 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.activity.ui 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE Mylyn Tasks 4.4.0.v20240617-1534 (org.eclipse.mylyn.tasks.activity.ui 4.4.0.v20240617-1534)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.628
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE From: Mylyn Context Connector: Eclipse IDE 4.6.0.v20241229-1209 (org.eclipse.mylyn.ide.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.feature.feature.group [4.6.0,4.7.0), filter=(!(org.eclipse.equinox.p2.exclude.import=true))
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.628
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE From: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.5.0.v20241002-1142,4.5.0.v20241002-1142]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.628
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE From: Mylyn Task List 4.6.0.v20241229-1209 (org.eclipse.mylyn.tasks.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.628
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.6.0.v20241229-1209,4.6.0.v20241229-1209]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2025-03-13 17:06:16.641
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2025-03-13 17:06:16.641
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.641
+!MESSAGE Software being installed: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.641
+!MESSAGE Software currently installed: Mylyn Context Connector: Eclipse IDE 4.6.0.v20241229-1209 (org.eclipse.mylyn.ide.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.641
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.641
+!MESSAGE Mylyn Tasks 4.6.0.v20241229-1209 (org.eclipse.mylyn.tasks.activity.ui 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.641
+!MESSAGE Mylyn Tasks 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.activity.ui 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.641
+!MESSAGE Mylyn Tasks 4.4.0.v20240617-1534 (org.eclipse.mylyn.tasks.activity.ui 4.4.0.v20240617-1534)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.641
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.641
+!MESSAGE From: Mylyn Context Connector: Eclipse IDE 4.6.0.v20241229-1209 (org.eclipse.mylyn.ide.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.641
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.feature.feature.group [4.6.0,4.7.0), filter=(!(org.eclipse.equinox.p2.exclude.import=true))
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.641
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.642
+!MESSAGE From: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.642
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.5.0.v20241002-1142,4.5.0.v20241002-1142]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.642
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.642
+!MESSAGE From: Mylyn Task List 4.6.0.v20241229-1209 (org.eclipse.mylyn.tasks.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.642
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.6.0.v20241229-1209,4.6.0.v20241229-1209]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2025-03-13 17:06:16.642
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2025-03-13 17:06:16.643
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE Software being installed: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE Software currently installed: Mylyn Context Connector: Eclipse IDE 4.6.0.v20241229-1209 (org.eclipse.mylyn.ide.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.643
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE Mylyn Tasks 4.6.0.v20241229-1209 (org.eclipse.mylyn.tasks.activity.ui 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE Mylyn Tasks 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.activity.ui 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE Mylyn Tasks 4.4.0.v20240617-1534 (org.eclipse.mylyn.tasks.activity.ui 4.4.0.v20240617-1534)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.643
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE From: Mylyn Context Connector: Eclipse IDE 4.6.0.v20241229-1209 (org.eclipse.mylyn.ide.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.feature.feature.group [4.6.0,4.7.0), filter=(!(org.eclipse.equinox.p2.exclude.import=true))
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.643
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE From: Mylyn Task List 4.5.0.v20241002-1142 (org.eclipse.mylyn.tasks.feature.feature.group 4.5.0.v20241002-1142)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.5.0.v20241002-1142,4.5.0.v20241002-1142]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2025-03-13 17:06:16.643
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE From: Mylyn Task List 4.6.0.v20241229-1209 (org.eclipse.mylyn.tasks.feature.feature.group 4.6.0.v20241229-1209)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2025-03-13 17:06:16.643
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.tasks.activity.ui [4.6.0.v20241229-1209,4.6.0.v20241229-1209]
+!SESSION 2025-03-13 17:07:08.806 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/home/csogorb/eclipse-workspace/
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-13 17:07:11.081
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-13 17:07:14.041
+!MESSAGE Logback config file: /home/csogorb/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+!SESSION 2025-03-14 15:20:46.242 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-14 15:20:57.458
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-14 15:21:05.161
+!MESSAGE Logback config file: /home/csogorb/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+!SESSION 2025-03-17 15:19:09.675 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-17 15:19:26.092
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-17 15:19:36.236
+!MESSAGE Logback config file: /home/csogorb/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml

@@ -1,10 +1,23 @@
 package ejemplo02Vehiculo;
 
-public class Vehiculo {
+public abstract class Vehiculo {
 
 	private String matricula;
 	private String marca;
 	private String modelo;
+
+	public Vehiculo(String matricula, String marca, String modelo) {
+
+		this.matricula = matricula;
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+
+	public void mostrar() {
+		System.out.println("\nMatricula: " + matricula + "\nMarca " + marca + " \nModelo " + modelo);
+	}
+
+	public abstract void matricular();
 
 	public String getMatricula() {
 		return matricula;
