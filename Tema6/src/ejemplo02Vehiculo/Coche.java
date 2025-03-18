@@ -17,11 +17,11 @@ public final class Coche extends Vehiculo {
 		System.out.println("Potencia:" + potencia);
 
 	}
-	
+
 	@Override
 	public void matricular() {
 		System.out.println("Coche matriculado.");
-		
+
 	}
 
 	public int getPotencia() {

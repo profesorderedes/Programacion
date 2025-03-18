@@ -34,7 +34,8 @@ public class Vehiculo {
 
 			Vehiculo vehiculo = (Vehiculo) obj;
 
-			if (vehiculo.marca.equals(marca) && vehiculo.matricula.equals(matricula) && vehiculo.modelo.equals(modelo)) {
+			if (vehiculo.marca.equals(marca) && vehiculo.matricula.equals(matricula)
+					&& vehiculo.modelo.equals(modelo)) {
 				return true;
 			}
 
