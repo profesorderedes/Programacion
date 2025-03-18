@@ -30,11 +30,11 @@ public class Vehiculo {
 			return false;
 		}
 
-		if (obj instanceof Persona) {
+		if (obj instanceof Vehiculo) {
 
-			Vehiculo v1 = (Vehiculo) obj;
+			Vehiculo vehiculo = (Vehiculo) obj;
 
-			if (v1.getMarca().equals(marca) && v1.getMatricula().equals(matricula) && v1.getModelo().equals(modelo)) {
+			if (vehiculo.marca.equals(marca) && vehiculo.matricula.equals(matricula) && vehiculo.modelo.equals(modelo)) {
 				return true;
 			}
 

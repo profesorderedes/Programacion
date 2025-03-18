@@ -15,7 +15,17 @@ public class Main {
 		Persona p2 = new Persona("López", "Pedro", "12000000F");
 
 		System.out.println(p1.equals(p2));
+		
+		Vehiculo v1 = new Vehiculo("1992CDF", "Volkswagen", "Golf");
+		Vehiculo v2 = new Vehiculo("1992CDF", "Volkswagen", "Golf");
+		Vehiculo v3 = new Vehiculo("3142ASD", "Audi", "A3");
+		
+		System.out.println(v1.equals(v3));
 
 	}
 
 }
+
+
+
+
