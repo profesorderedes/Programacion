@@ -17,10 +17,30 @@ public class Vehiculo {
 		System.out.println("\nMatricula: " + matricula + "\nMarca " + marca + " \nModelo " + modelo);
 	}
 
-	// Dos vehículos serán "iguales" si tienen la misma marca, 
+	// Dos vehículos serán "iguales" si tienen la misma marca,
 	// modelo y matrícula.
 	@Override
 	public boolean equals(Object obj) {
+
+		if (obj == this) {
+			return true;
+		}
+
+		if (obj == null) {
+			return false;
+		}
+
+		if (obj instanceof Persona) {
+
+			Vehiculo v1 = (Vehiculo) obj;
+
+			if (v1.getMarca().equals(marca) && v1.getMatricula().equals(matricula) && v1.getModelo().equals(modelo)) {
+				return true;
+			}
+
+		}
+
+		return false;
 
 	}
 
