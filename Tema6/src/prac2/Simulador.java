@@ -1,6 +1,6 @@
 package prac2;
 
-public class Main {
+public class Simulador {
 
 	public static void main(String[] args) {
 
