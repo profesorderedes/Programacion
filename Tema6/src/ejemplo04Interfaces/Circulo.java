@@ -20,12 +20,12 @@ public class Circulo implements Figura2D, Mostrable {
 
 	@Override
 	public double area() {
-		return Math.PI * radio * radio;
+		return Figura2D.PI * radio * radio;
 	}
 
 	@Override
 	public double perimetro() {
-		return 2 * Math.PI * radio;
+		return 2 * Figura2D.PI * radio;
 
 	}
 

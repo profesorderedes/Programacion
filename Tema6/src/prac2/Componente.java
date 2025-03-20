@@ -1,6 +1,6 @@
 package prac2;
 
-public class Componente {
+public abstract class Componente {
 
 	private double intensidadMaxima;
 	private double longitud;
@@ -11,5 +11,7 @@ public class Componente {
 		this.longitud = longitud;
 
 	}
+
+	public abstract void conectar();
 
 }
