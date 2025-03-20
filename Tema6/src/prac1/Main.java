@@ -6,9 +6,13 @@ public class Main {
 
 //		Medio me1 = new Medio();
 
-		Mp3 mp1 = new Mp3();
+		Medio m1 = new Mp3("Celine", 2.20, "Kidd Keo", "Pop", 1);
 
-		Ogg o1 = new Ogg();
+		m1.reproducir();
+
+		((Mp3) m1).guardar();
+
+		Guardable g1 = new Ogg("Celine", 2.20, "Kidd Keo", "Pop", 1);
 
 	}
 
