@@ -10,6 +10,5 @@ public class Led extends Diodo {
 		this.color = color;
 
 	}
-	
 
 }

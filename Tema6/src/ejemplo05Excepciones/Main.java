@@ -27,7 +27,7 @@ public class Main {
 			// Este bloque catch se ejecutará si dentro del try se
 			// ha producido una NumberFormatException.
 			System.out.println("No se puede hacer la división. Tenías que escribir un número entero.");
-			
+
 			// Podemos obtener información de la variable nfe recibida en
 			// el catch.
 			// nfe.printStackTrace();
