@@ -2,7 +2,7 @@ package ejemplo05Excepciones;
 
 import java.util.Scanner;
 
-public class Main2 {
+public class Main3 {
 
 	public static void main(String[] args) {
 
@@ -19,13 +19,18 @@ public class Main2 {
 
 		} catch (NumberFormatException | ArithmeticException ex) {
 
-			// Este multicatch captura las excepciones de tipo NumberFormatException y
-			// ArithmeticException.
 			System.out.println("No se puede hacer la división. Tenías que escribir un número entero distinto de cero.");
+			return;
 
 		} catch (Exception e) {
 
 			System.out.println("Error. No se ha podido hacer la división.");
+
+		} finally {
+
+			// Ocurra lo que ocurra en el try, este bloque finally se va a
+			// ejecutar. Da igual si se produce una excepción o no.
+			System.out.println("Esta instrucción está dentro del finally y se va a ejecutar sí o sí.");
 
 		}
 
