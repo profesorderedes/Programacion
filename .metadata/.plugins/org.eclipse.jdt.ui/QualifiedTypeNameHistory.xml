@@ -11,7 +11,6 @@
     <fullyQualifiedTypeName name="auxiliar.Grupo"/>
     <fullyQualifiedTypeName name="java.security.AllPermission"/>
     <fullyQualifiedTypeName name="auxiliar.Alumno"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="instituto.Instituto"/>
     <fullyQualifiedTypeName name="mates.Mates"/>
     <fullyQualifiedTypeName name="Lavadora"/>
@@ -19,4 +18,16 @@
     <fullyQualifiedTypeName name="Taller"/>
     <fullyQualifiedTypeName name="ejemplo03Equals.Vehiculo"/>
     <fullyQualifiedTypeName name="prac1.Mp3"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo01Botones"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo03Texto"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo04Checkboxes"/>
+    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
 </qualifiedTypeNameHistroy>
