@@ -24,7 +24,7 @@ public class Ejemplo06Combobox extends JFrame {
 		cmbProvincias.addItem("Albacete");
 		cmbProvincias.addItem("Valencia");
 		cmbProvincias.addItem("Baleares");
-		
+
 		cmbProvincias.setPreferredSize(new Dimension(300, 30));
 
 		add(lblProvincias);

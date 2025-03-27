@@ -21,7 +21,7 @@ public class Ejemplo07TextArea extends JFrame {
 		JLabel lblComentarios = new JLabel("Escriba su comentario:");
 		JTextArea txtComentarios = new JTextArea();
 
-		// Investigar cómo hacer que al llegar al final de una línea, 
+		// Investigar cómo hacer que al llegar al final de una línea,
 		// el cursor salte a la siguiente línea. Y que al saltar a la
 		// siguiente línea no deje palabras cortadas.
 		JScrollPane panelComentarios = new JScrollPane(txtComentarios);

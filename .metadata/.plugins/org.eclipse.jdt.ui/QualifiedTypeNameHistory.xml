@@ -30,7 +30,6 @@
     <fullyQualifiedTypeName name="ejemplos.Ejemplo05Radiobuttons"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo01"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo06Combobox"/>
-    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
     <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo07TextArea"/>
@@ -39,4 +38,7 @@
     <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
     <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
     <fullyQualifiedTypeName name="javax.swing.UIManager"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo10Dialogos"/>
+    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

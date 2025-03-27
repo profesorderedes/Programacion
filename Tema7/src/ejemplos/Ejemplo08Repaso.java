@@ -34,7 +34,7 @@ public class Ejemplo08Repaso extends JFrame {
 		JTextArea txtQuejas = new JTextArea();
 		txtQuejas.setLineWrap(true);
 		txtQuejas.setWrapStyleWord(true);
-		
+
 		JScrollPane panelQuejas = new JScrollPane(txtQuejas);
 		panelQuejas.setPreferredSize(new Dimension(220, 180));
 
