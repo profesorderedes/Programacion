@@ -27,4 +27,19 @@ public class ConsolaB {
 		return leerInt("Introduce un número entero válido.");
 
 	}
+	
+	public static double leerDouble(String mensajeError) {
+		
+		while (true) {
+			try {
+				return Double.parseDouble(entrada.nextLine());
+			} catch (NumberFormatException nfe) {
+				System.out.println(mensajeError);
+			}
+		}
+	}
+
+	public static double leerDouble() {
+		return leerDouble("Introduce un numero entero válido.");
+	}
 }
