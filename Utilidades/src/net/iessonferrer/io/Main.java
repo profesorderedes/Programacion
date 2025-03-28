@@ -22,13 +22,17 @@ public class Main {
 //		estatura = Consola.leerDouble("Tienes que escribir un número. Vuelve a intentarlo.");
 //		System.out.println("Mides " + estatura + " metros.");
 //		
-		System.out.println("Dime tu estaura en metros:");
-		double estatura = ConsolaB.leerDouble("Tienes que escribir un número. Vuelve a intentarlo.");
-		System.out.println("Mides " + estatura + " metros.");
+//		System.out.println("Dime tu estaura en metros:");
+//		double estatura = ConsolaB.leerDouble("Tienes que escribir un número. Vuelve a intentarlo.");
+//		System.out.println("Mides " + estatura + " metros.");
+//		
+//		System.out.println("Dime tu estaura en metros:");
+//		estatura = ConsolaB.leerDouble("Tienes que escribir un número. Vuelve a intentarlo.");
+//		System.out.println("Mides " + estatura + " metros.");
 		
-		System.out.println("Dime tu estaura en metros:");
-		estatura = ConsolaB.leerDouble("Tienes que escribir un número. Vuelve a intentarlo.");
-		System.out.println("Mides " + estatura + " metros.");
+		// Ejemplo del método trim().
+		String frase = "       Érase una vez        ";
+		System.out.println(frase.trim());
 
 	}
 

@@ -3,6 +3,7 @@ package ejemplos;
 import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class Ejemplo10Dialogos extends JFrame {
@@ -18,11 +19,23 @@ public class Ejemplo10Dialogos extends JFrame {
 		// Hacemos que la ventana se muestre centrada en la pantalla.
 		setLocationRelativeTo(null);
 
+		JLabel lblRespuesta = new JLabel("Respuesta: ");
+
+		add(lblRespuesta);
+
 		setVisible(true);
 
 		// Vamos probando los paneles de diálogo.
 		// JOptionPane.showMessageDialog(this, "Copia de seguridad terminada.");
-//		JOptionPane.showMessageDialog(this, "No se ha encontrado el archivo.", "Error de E/S", JOptionPane.ERROR_MESSAGE);
+		// JOptionPane.showMessageDialog(this, "No se ha encontrado el archivo.", "Error
+		// de E/S", JOptionPane.ERROR_MESSAGE);
+
+		int respuesta = JOptionPane.showConfirmDialog(this, "¿Quieres guardar antes de cerrar?");
+
+		if(respuesta == JOptionPane.YES_OPTION) {
+			lblRespuesta.setText("Respuesta: Sí");
+		}
+		
 
 	}
 
