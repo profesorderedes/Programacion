@@ -21,4 +21,10 @@ public class ConsolaB {
 		}
 
 	}
+
+	public int leerInt() {
+
+		return leerInt("Introduce un número entero válido.");
+
+	}
 }
