@@ -30,12 +30,17 @@ public class Ejemplo10Dialogos extends JFrame {
 		// JOptionPane.showMessageDialog(this, "No se ha encontrado el archivo.", "Error
 		// de E/S", JOptionPane.ERROR_MESSAGE);
 
-		int respuesta = JOptionPane.showConfirmDialog(this, "¿Quieres guardar antes de cerrar?");
-
-		if(respuesta == JOptionPane.YES_OPTION) {
-			lblRespuesta.setText("Respuesta: Sí");
-		}
+//		int respuesta = JOptionPane.showConfirmDialog(this, "¿Quieres guardar antes de cerrar?");
+//
+//		if (respuesta == JOptionPane.YES_OPTION) {
+//			lblRespuesta.setText("Respuesta: Sí");
+//		} else if (respuesta == JOptionPane.NO_OPTION) {
+//			lblRespuesta.setText("Respuesta: No");
+//		} else if (respuesta == JOptionPane.CANCEL_OPTION) {
+//			lblRespuesta.setText("Respuesta: Cancelar");
+//		}
 		
+		int respuesta = JOptionPane.showConfirmDialog(this, "¿Resetear el equipo?", "Resetear", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
 
 	}
 
