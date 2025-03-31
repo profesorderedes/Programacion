@@ -80,8 +80,7 @@ public class Consola {
 	// y repite la pregunta.
 	public static String leerString() {
 
-		return leerString(
-				"Entrada incorrecta: se esperaba algún carácter distinto de espacio.");
+		return leerString("Entrada incorrecta: se esperaba algún carácter distinto de espacio.");
 
 	}
 
