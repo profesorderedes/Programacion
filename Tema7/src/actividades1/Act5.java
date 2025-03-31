@@ -20,10 +20,8 @@ public class Act5 extends JFrame {
 		setVisible(true);
 
 		String[] cursos = { "Apache", "IIS", "Nginx", "Node.JS" };
-		int response = JOptionPane.showOptionDialog(null, 
-				"¿Qué servidor web desea para su hosting?",
-				"Elección de servidor web", 0, 
-				JOptionPane.INFORMATION_MESSAGE, null, cursos, cursos[1]);
+		int response = JOptionPane.showOptionDialog(null, "¿Qué servidor web desea para su hosting?",
+				"Elección de servidor web", 0, JOptionPane.INFORMATION_MESSAGE, null, cursos, cursos[1]);
 
 	}
 

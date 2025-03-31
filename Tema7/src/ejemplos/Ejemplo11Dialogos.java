@@ -32,9 +32,9 @@ public class Ejemplo11Dialogos extends JFrame {
 //		} else {
 //			lblRespuesta.setText("Has pulsado cancelar.");
 //		}
-		
-		String respuesta = JOptionPane.showInputDialog(this, "¿Altura?", "Introducción de altura", JOptionPane.INFORMATION_MESSAGE);
-		
+
+		String respuesta = JOptionPane.showInputDialog(this, "¿Altura?", "Introducción de altura",
+				JOptionPane.INFORMATION_MESSAGE);
 
 	}
 

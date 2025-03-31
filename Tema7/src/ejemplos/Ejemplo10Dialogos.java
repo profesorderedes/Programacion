@@ -39,8 +39,9 @@ public class Ejemplo10Dialogos extends JFrame {
 //		} else if (respuesta == JOptionPane.CANCEL_OPTION) {
 //			lblRespuesta.setText("Respuesta: Cancelar");
 //		}
-		
-		int respuesta = JOptionPane.showConfirmDialog(this, "¿Resetear el equipo?", "Resetear", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
+
+		int respuesta = JOptionPane.showConfirmDialog(this, "¿Resetear el equipo?", "Resetear",
+				JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
 
 	}
 

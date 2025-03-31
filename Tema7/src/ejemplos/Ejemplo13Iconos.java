@@ -25,7 +25,7 @@ public class Ejemplo13Iconos extends JFrame {
 
 		// Para ver la imagen, hay que asignársela a un JLabel o un JButton.
 		JLabel lblAbrir = new JLabel(imgAbrir);
-		
+
 		JButton btnAbrir = new JButton("Abrir", imgAbrir);
 
 		add(lblAbrir);

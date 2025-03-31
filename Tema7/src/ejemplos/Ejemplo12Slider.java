@@ -23,7 +23,7 @@ public class Ejemplo12Slider extends JFrame {
 
 		JSlider sldEspacio = new JSlider(JSlider.HORIZONTAL, 5, 50, 25);
 		sldEspacio.setPreferredSize(new Dimension(390, 40));
-		
+
 		sldEspacio.setPaintTicks(true);
 		sldEspacio.setPaintLabels(true);
 		sldEspacio.setMinorTickSpacing(1);
