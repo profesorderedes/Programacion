@@ -53,8 +53,36 @@ public class Consola {
 	// Lee un número decimal desde la consola y lo devuelve. Si lo que se escribe no
 	// es un número, mostrará un mensaje de error genérico y vuelve a repetir la
 	// lectura.
-	public double leerDouble() {
+	public static double leerDouble() {
 		return leerDouble("Introduce un número válido");
+	}
+
+	// Lee un String desde la consola y lo devuelve. En caso de que el String
+	// esté vacío o sólo tenga espacios, muestra el mensaje de error y repite
+	// la pregunta.
+	public static String leerString(String mensajeError) {
+
+		while (true) {
+
+			String frase = sc.nextLine();
+
+			if (frase.trim().length() == 0) {
+				System.out.println(mensajeError);
+			} else {
+				return frase;
+			}
+		}
+
+	}
+
+	// Lee un String desde la consola y lo devuelve. En caso de que el String
+	// esté vacío o sólo tenga espacios, muestra un mensaje de error estándar
+	// y repite la pregunta.
+	public static String leerString() {
+
+		return leerString(
+				"Entrada incorrecta: se esperaba algún carácter distinto de espacio.");
+
 	}
 
 }
