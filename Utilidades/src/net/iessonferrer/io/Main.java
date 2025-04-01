@@ -7,11 +7,11 @@ public class Main {
 		System.out.println("Escribe tu nombre:");
 		String nombre = Consola.leerString("Lo has escrito mal.");
 		System.out.println("Te llamas " + nombre);
-		
+
 		System.out.println("Escribe tu nombre:");
 		nombre = Consola.leerString("Lo has escrito mal.");
 		System.out.println("Te llamas " + nombre);
-		
+
 	}
 
 }

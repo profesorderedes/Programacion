@@ -42,7 +42,7 @@ public class Diodo extends Componente {
 			System.out.println("Entrada incorrecta");
 			return;
 
-		} catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println("Error al leer los datos del diodo.");
 			e.printStackTrace();
 			return;

@@ -29,7 +29,5 @@ public abstract class Componente {
 	public void setLongitud(double longitud) {
 		this.longitud = longitud;
 	}
-	
-	
 
 }

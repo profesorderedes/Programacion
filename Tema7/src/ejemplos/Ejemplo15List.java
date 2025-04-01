@@ -18,12 +18,13 @@ public class Ejemplo15List extends JFrame {
 
 		setLocationRelativeTo(null);
 
-		String[] comprar = { "Pan", "Fruta", "Leche", "Huevos", "Lavavajillas", "Papel de cocina", "Carne", "Pescado", "Embutido" };
-		
+		String[] comprar = { "Pan", "Fruta", "Leche", "Huevos", "Lavavajillas", "Papel de cocina", "Carne", "Pescado",
+				"Embutido" };
+
 		JList<String> lstComprar = new JList<>(comprar);
-		
+
 		JScrollPane panelComprar = new JScrollPane(lstComprar);
-		
+
 		add(panelComprar);
 
 		setVisible(true);

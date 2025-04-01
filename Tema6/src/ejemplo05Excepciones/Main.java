@@ -48,7 +48,6 @@ public class Main {
 			System.out.println("Error. No se ha podido hacer la división.");
 
 		}
-		
 
 		// Tanto si se ha producido una excepción en el try como si no,
 		// el programa continúa fuera del bloque try-catch.
