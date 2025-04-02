@@ -2,6 +2,7 @@ package actividades2;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -19,7 +20,7 @@ public class Act4b extends JFrame {
 	public Act4b() {
 
 		super("Suscripción");
-		setSize(275, 300);
+		setSize(275, 370);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		setLayout(new BorderLayout());
@@ -38,11 +39,13 @@ public class Act4b extends JFrame {
 		tlbMenu.add(btnIcono1);
 		tlbMenu.add(btnIcono2);
 		tlbMenu.add(btnIcono3);
+		tlbMenu.addSeparator();
 		tlbMenu.add(btnIcono4);
 		tlbMenu.add(btnIcono5);
 		tlbMenu.add(btnIcono6);
 
 		JPanel panelContenido = new JPanel();
+		panelContenido.setLayout(new FlowLayout());
 
 		JLabel lblNombre = new JLabel("Nombre");
 		JTextField txtNombre = new JTextField(23);
@@ -68,11 +71,10 @@ public class Act4b extends JFrame {
 		panelContenido.add(lblMotivo);
 		panelContenido.add(pnlMotivo);
 		panelContenido.add(chckInfo);
+		panelContenido.add(btnEnviar);
 
 		add(tlbMenu, BorderLayout.NORTH);
 		add(panelContenido, BorderLayout.CENTER);
-
-		add(btnEnviar);
 
 		setVisible(true);
 
