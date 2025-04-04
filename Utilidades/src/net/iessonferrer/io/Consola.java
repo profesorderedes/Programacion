@@ -27,7 +27,7 @@ public class Consola {
 	// Lee un número entero desde la consola y lo devuelve. Si lo que se escribe no
 	// es un entero, mostrará un mensaje de error genérico y vuelve a repetir la
 	// lectura.
-	public int leerInt() {
+	public static int leerInt() {
 
 		return leerInt("Introduce un número entero válido.");
 

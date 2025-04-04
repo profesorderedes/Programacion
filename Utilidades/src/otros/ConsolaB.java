@@ -1,4 +1,4 @@
-package net.iessonferrer.io;
+package otros;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

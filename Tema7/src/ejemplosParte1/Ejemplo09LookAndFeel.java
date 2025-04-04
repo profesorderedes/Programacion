@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosParte1;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -10,16 +10,27 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
-public class Ejemplo08Repaso extends JFrame {
+public class Ejemplo09LookAndFeel extends JFrame {
 
-	public Ejemplo08Repaso() {
+	public Ejemplo09LookAndFeel() {
 
 		super("Comentarios");
 		setSize(250, 420);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		setLayout(new FlowLayout());
+
+		try {
+			UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
+			SwingUtilities.updateComponentTreeUI(this);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+				| UnsupportedLookAndFeelException e) {
+			System.out.println("Error al aplicar el look and feel.");
+		}
 
 		JLabel lblNacimiento = new JLabel("Fecha de nacimiento:");
 		JTextField txtNacimiento = new JTextField(22);
@@ -62,7 +73,7 @@ public class Ejemplo08Repaso extends JFrame {
 
 	public static void main(String[] args) {
 
-		new Ejemplo08Repaso();
+		new Ejemplo09LookAndFeel();
 
 	}
 

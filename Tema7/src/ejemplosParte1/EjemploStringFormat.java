@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosParte1;
 
 // Ejemplo de cómo conseguir que un método devuelva una cadena formateada
 // al estilo de cuando mostramos datos con printf().
