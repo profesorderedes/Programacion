@@ -13,7 +13,9 @@ public class Ejemplo01 extends JFrame {
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-		setLayout(new FlowLayout());
+		// Separamos los componentes 20px en horizontal y 10px 
+		// en vertical.
+		setLayout(new FlowLayout(FlowLayout.LEFT, 20, 10));
 
 		setLocationRelativeTo(null);
 

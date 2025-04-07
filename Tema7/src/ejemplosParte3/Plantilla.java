@@ -1,4 +1,4 @@
-package ejemplosParte2;
+package ejemplosParte3;
 
 import java.awt.FlowLayout;
 
