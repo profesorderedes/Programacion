@@ -26,7 +26,7 @@ public class Ejemplo16ProgressBar extends JFrame {
 		prgBateria.setPreferredSize(new Dimension(380, 30));
 		prgBateria.setBackground(Color.ORANGE);
 		prgBateria.setForeground(Color.CYAN);
-		
+
 		add(prgBateria);
 
 		setVisible(true);

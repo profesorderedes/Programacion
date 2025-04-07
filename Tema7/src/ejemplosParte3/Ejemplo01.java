@@ -9,10 +9,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo01 extends JFrame implements ActionListener{
+public class Ejemplo01 extends JFrame implements ActionListener {
 
 	private JLabel lblMensaje;
-	
+
 	public Ejemplo01() {
 
 		super("Eventos");
@@ -22,16 +22,16 @@ public class Ejemplo01 extends JFrame implements ActionListener{
 		setLayout(new FlowLayout());
 
 		setLocationRelativeTo(null);
-		
+
 		JButton btnPulsar = new JButton("¡Púlsame!");
 		btnPulsar.setPreferredSize(new Dimension(200, 50));
 		btnPulsar.addActionListener(this);
-		
+
 		lblMensaje = new JLabel("Aún no has pulsado.");
 
 		add(btnPulsar);
 		add(lblMensaje);
-		
+
 		setVisible(true);
 
 	}

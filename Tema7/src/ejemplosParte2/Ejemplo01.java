@@ -13,7 +13,7 @@ public class Ejemplo01 extends JFrame {
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-		// Separamos los componentes 20px en horizontal y 10px 
+		// Separamos los componentes 20px en horizontal y 10px
 		// en vertical.
 		setLayout(new FlowLayout(FlowLayout.LEFT, 20, 10));
 
@@ -29,7 +29,7 @@ public class Ejemplo01 extends JFrame {
 		JButton btn8 = new JButton("Botón 8");
 		JButton btn9 = new JButton("Botón 9");
 		JButton btn10 = new JButton("Botón 10");
-		
+
 		add(btn1);
 		add(btn2);
 		add(btn3);
@@ -41,8 +41,6 @@ public class Ejemplo01 extends JFrame {
 		add(btn9);
 		add(btn10);
 
-		
-		
 		setVisible(true);
 
 	}
