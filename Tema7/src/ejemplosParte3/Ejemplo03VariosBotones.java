@@ -9,10 +9,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo03VariosBotones extends JFrame implements ActionListener{
+public class Ejemplo03VariosBotones extends JFrame implements ActionListener {
 
 	private JLabel lblMensaje;
-	
+	private JButton btnPulsar;
+
 	public Ejemplo03VariosBotones() {
 
 		super("Eventos");
@@ -22,21 +23,21 @@ public class Ejemplo03VariosBotones extends JFrame implements ActionListener{
 		setLayout(new FlowLayout());
 
 		setLocationRelativeTo(null);
-		
-		JButton btnPulsar = new JButton("¡Púlsame!");
+
+		btnPulsar = new JButton("¡Púlsame!");
 		btnPulsar.setPreferredSize(new Dimension(200, 50));
 		btnPulsar.addActionListener(this);
-		
+
 		JButton btnPulsar2 = new JButton("¡Púlsame a mí!");
 		btnPulsar2.setPreferredSize(new Dimension(200, 50));
 		btnPulsar2.addActionListener(this);
-		
+
 		lblMensaje = new JLabel("Aún no has pulsado.");
 
 		add(btnPulsar);
 		add(btnPulsar2);
 		add(lblMensaje);
-		
+
 		setVisible(true);
 
 	}
@@ -47,7 +48,14 @@ public class Ejemplo03VariosBotones extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		lblMensaje.setText("Gracias por pulsar.");
+
+		JButton boton = (JButton) arg0.getSource();
+
+		if (boton == btnPulsar) {
+			lblMensaje.setText("Has pulsado el botón izquierdo.");
+		} else {
+			lblMensaje.setText("Has pulsado el botón derecho.");
+		}
 	}
 
 }
