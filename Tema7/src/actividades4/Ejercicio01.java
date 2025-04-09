@@ -33,18 +33,15 @@ public class Ejercicio01 extends JFrame {
 		panelBotones.add(btnAsalto);
 		panelBotones.add(btnBlade);
 
-		add(panelBotones, BorderLayout.NORTH);
-
 		// Panel central con imagen
 		JPanel panelImagen = new JPanel(new FlowLayout());
+
 		lblImagen = new JLabel();
+		lblImagen.setIcon(new ImageIcon("fotos/blade.png"));
 
 		panelImagen.add(lblImagen);
 
-		add(panelImagen, BorderLayout.CENTER);
-
-		lblImagen.setIcon(new ImageIcon("fotos/blade.png"));
-
+		add(panelBotones, BorderLayout.NORTH);
 		add(panelImagen, BorderLayout.CENTER);
 
 		setVisible(true);
