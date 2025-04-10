@@ -11,12 +11,12 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class Ejemplo05 extends JFrame implements FocusListener {
+public class Ejemplo05FocusListener extends JFrame implements FocusListener {
 
 	private JTextField txtUsuario;
 	private JPasswordField txtPassword;
 
-	public Ejemplo05() {
+	public Ejemplo05FocusListener() {
 
 		super("Eventos de foco");
 		setSize(250, 200);
@@ -47,7 +47,7 @@ public class Ejemplo05 extends JFrame implements FocusListener {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo05();
+		new Ejemplo05FocusListener();
 	}
 
 	@Override
