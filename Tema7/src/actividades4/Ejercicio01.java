@@ -23,6 +23,7 @@ public class Ejercicio01 extends JFrame {
 
 		// Panel superior con botones
 		JPanel panelBotones = new JPanel(new FlowLayout());
+		
 		JButton btnBlackRain = new JButton("Black Rain");
 		JButton btnElCaso = new JButton("El caso Winslow");
 		JButton btnAsalto = new JButton("Asalto al distrito 13");
