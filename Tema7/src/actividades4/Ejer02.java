@@ -1,48 +1,73 @@
 package actividades4;
 
+import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class Ejer02 extends JFrame {
+public class Ejer02 extends JFrame implements ItemListener {
+
+	private JComboBox<String> cmbCursos;
+
+	private JLabel lblCursoSelecionado;
 
 	public Ejer02() {
 
 		super("Matrícula");
-		setSize(200, 300);
+		setSize(240, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		setLayout(new FlowLayout(FlowLayout.LEFT));
 
-		setLocationRelativeTo(null);
-
 		JLabel lblApellidos = new JLabel("Apellidos");
-		JTextField txtApellidos = new JTextField(16);
+		JTextField txtApellidos = new JTextField(20);
 
 		JLabel lblNombre = new JLabel("Nombre");
-		JTextField txtNombre = new JTextField(16);
+		JTextField txtNombre = new JTextField(20);
 
 		JLabel lblCurso = new JLabel("Curso");
+
 		String[] cursos = { "Selecciona un curso", "1º ESO", "2º ESO", "3º ESO", "4º ESO" };
 
-		JComboBox<String> cmbCursos = new JComboBox<String>(cursos);
+		cmbCursos = new JComboBox<String>(cursos);
+		cmbCursos.setPreferredSize(new Dimension(150, 20));
+		cmbCursos.addItemListener(this);
+
+		lblCursoSelecionado = new JLabel();
 
 		add(lblApellidos);
 		add(txtApellidos);
 		add(lblNombre);
 		add(txtNombre);
+
 		add(lblCurso);
 		add(cmbCursos);
+
+		add(lblCursoSelecionado);
 
 		setVisible(true);
 
 	}
 
 	public static void main(String[] args) {
+
 		new Ejer02();
+
+	}
+
+	@Override
+	public void itemStateChanged(ItemEvent arg0) {
+
+		if (cmbCursos.getSelectedIndex() == 0) {
+			lblCursoSelecionado.setText("");
+		} else {
+			lblCursoSelecionado.setText("Curso: " + cmbCursos.getSelectedItem());
+		}
 	}
 
 }
