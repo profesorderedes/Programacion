@@ -6,6 +6,7 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class Ejemplo07KeyListener extends JFrame implements KeyListener {
 
@@ -24,7 +25,7 @@ public class Ejemplo07KeyListener extends JFrame implements KeyListener {
 		addKeyListener(this);
 
 		lblMensaje = new JLabel();
-		
+
 		add(lblMensaje);
 
 		setVisible(true);
@@ -48,20 +49,13 @@ public class Ejemplo07KeyListener extends JFrame implements KeyListener {
 	@Override
 	public void keyTyped(KeyEvent arg0) {
 		lblMensaje.setText("Has pulsado " + arg0.getKeyChar());
-		
-		// Si el usuario pulsa la letra A, se le muestra un panel de diálogo 
+
+		// Si el usuario pulsa la letra A, se le muestra un panel de diálogo
 		// que diga "Felicidades".
-		if() {
-			
+		if (arg0.getKeyChar() == 'A') {
+			JOptionPane.showMessageDialog(this, "¡¡Felicidades!!");
 		}
-		
+
 	}
 
 }
-
-
-
-
-
-
-

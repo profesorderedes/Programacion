@@ -8,7 +8,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo06ItemListener extends JFrame implements ItemListener{
+public class Ejemplo06ItemListener extends JFrame implements ItemListener {
 
 	private JComboBox<String> cmbDeportes;
 
@@ -26,10 +26,10 @@ public class Ejemplo06ItemListener extends JFrame implements ItemListener{
 
 		String[] deportes = { "Ping pong", "Fútbol", "Baloncesto", "Petanca", "Tenis", "Ajedrez", "Waterpolo", "Judo",
 				"Rugby", "Boxeo" };
-		
+
 		cmbDeportes = new JComboBox<String>(deportes);
 		cmbDeportes.addItemListener(this);
-		
+
 		add(lblDeportes);
 		add(cmbDeportes);
 
@@ -43,16 +43,10 @@ public class Ejemplo06ItemListener extends JFrame implements ItemListener{
 
 	@Override
 	public void itemStateChanged(ItemEvent e) {
-		
-		//System.out.println("Has elegido " + cmbDeportes.getSelectedItem());
+
+		// System.out.println("Has elegido " + cmbDeportes.getSelectedItem());
 		System.out.println("Has elegido la opción " + cmbDeportes.getSelectedIndex());
-		
+
 	}
 
 }
-
-
-
-
-
-
