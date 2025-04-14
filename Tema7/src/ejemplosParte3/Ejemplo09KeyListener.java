@@ -56,14 +56,14 @@ public class Ejemplo09KeyListener extends JFrame implements KeyListener {
 	@Override
 	public void keyTyped(KeyEvent e) {
 
-		if (e.getKeyChar() == 'w') {
-			y = y - 3;
-		} else if (e.getKeyChar() == 's') {
-			y = y + 3;
-		} else if (e.getKeyChar() == 'a') {
-			x = x - 3;
-		} else if (e.getKeyChar() == 'd') {
-			x = x + 3;
+		if (e.getKeyChar() == 'w' && y > 0) {
+			y = y - 5;
+		} else if (e.getKeyChar() == 's' && y < 235) {
+			y = y + 5;
+		} else if (e.getKeyChar() == 'a' && x > 0) {
+			x = x - 5;
+		} else if (e.getKeyChar() == 'd' && x < 375) {
+			x = x + 5;
 		}
 
 		lblTv.setBounds(x, y, 24, 24);
