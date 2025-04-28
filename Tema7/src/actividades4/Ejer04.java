@@ -12,12 +12,13 @@ import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-public class Ejer04 extends JFrame implements ChangeListener{
+public class Ejer04 extends JFrame implements ChangeListener {
 
 	private JSlider sldRojo;
 	private JSlider sldVerde;
 	private JSlider sldAzul;
 	private JButton btnColores;
+	private JTextField txtColores;
 
 	public Ejer04() {
 		super("Paleta");
@@ -56,7 +57,7 @@ public class Ejer04 extends JFrame implements ChangeListener{
 		btnColores.setPreferredSize(new Dimension(100, 25));
 		btnColores.setBackground(new Color(sldRojo.getValue(), sldVerde.getValue(), sldAzul.getValue()));
 
-		JTextField txtColores = new JTextField("#FFC833", 7);
+		txtColores = new JTextField("#FFC833", 7);
 
 		add(lblRojo);
 		add(sldRojo);
@@ -75,15 +76,30 @@ public class Ejer04 extends JFrame implements ChangeListener{
 
 	@Override
 	public void stateChanged(ChangeEvent e) {
-		
+
 		int rojo = sldRojo.getValue();
 		int verde = sldVerde.getValue();
 		int azul = sldAzul.getValue();
-		
+
 		btnColores.setBackground(new Color(rojo, verde, azul));
+		txtColores.setText("#" + aHexadecimal(rojo) + aHexadecimal(verde) + aHexadecimal(azul));
+
+	}
+
+	private String aHexadecimal(int num) {
+
+		String[] caracteresHex = { "0", "1", "2", "3", "4", "5", "6", "7", "8",
+				"9", "A", "B", "C", "D", "E", "F" };
+
+		int division = num / 16;
+		int resto = num % 16;
+
+		String divisionCadena = caracteresHex[division];
+		String restoCadena = caracteresHex[resto];
+
+		System.out.println(num + " = " + divisionCadena + restoCadena);
+		
+		return divisionCadena + restoCadena;
 		
 	}
 }
-
-
-
