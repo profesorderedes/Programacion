@@ -64,4 +64,46 @@ public class Agenda {
 
 	}
 
+	// Devuelve el contacto almacenado en la posición indicada del array contactos.
+	public Contacto getContacto(int pos) {
+
+		if (pos >= 0 && pos < limite) {
+			return contactos[pos];
+		}
+
+		return null;
+
+	}
+
+	// Almacena en la posición pos del array contactos el contacto recibido como
+	// parámetro.
+	public void setContacto(int pos, Contacto contacto) {
+
+		if (pos >= 0 && pos < limite) {
+			contactos[pos] = contacto;
+		}
+
+	}
+
+	// Elimina del array contactos el contacto con el id proporcionado. Devuelve
+	// true si se ha podido hacer y false si no.
+	public boolean eliminarContacto(int idContacto) {
+
+		int pos = buscarContacto(idContacto);
+
+		if (pos == -1) {
+			return false;
+		}
+
+		// Movemos todos los elementos por debajo de pos un sitio hacia arriba.
+		for (int i = pos; i < limite - 1; i++) {
+			contactos[pos] = contactos[pos + 1];
+		}
+
+		limite--;
+
+		return true;
+
+	}
+
 }
