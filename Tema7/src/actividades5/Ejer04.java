@@ -40,7 +40,7 @@ public class Ejer04 extends JFrame{
             
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
+            	getContentPane().setBackground(Color.white);
                 
             }
             
