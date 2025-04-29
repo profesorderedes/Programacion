@@ -1,8 +1,12 @@
 
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -56,7 +60,14 @@ public class Paleta extends JFrame implements ChangeListener {
 		btnColores = new JButton();
 		btnColores.setPreferredSize(new Dimension(100, 25));
 		btnColores.setBackground(new Color(sldRojo.getValue(), sldVerde.getValue(), sldAzul.getValue()));
-
+		btnColores.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Clipboard portapapeles = Toolkit.getDefaultToolkit().getSystemClipboard();
+				StringSelection seleccion = new StringSelection(txtColores.getText());
+				portapapeles.setContents(seleccion, null);
+			}
+		});
 		txtColores = new JTextField("#FFC833", 7);
 
 		add(lblRojo);
@@ -88,8 +99,7 @@ public class Paleta extends JFrame implements ChangeListener {
 
 	private String aHexadecimal(int num) {
 
-		String[] caracteresHex = { "0", "1", "2", "3", "4", "5", "6", "7", "8",
-				"9", "A", "B", "C", "D", "E", "F" };
+		String[] caracteresHex = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
 
 		int division = num / 16;
 		int resto = num % 16;
@@ -97,9 +107,7 @@ public class Paleta extends JFrame implements ChangeListener {
 		String divisionCadena = caracteresHex[division];
 		String restoCadena = caracteresHex[resto];
 
-		System.out.println(num + " = " + divisionCadena + restoCadena);
-		
 		return divisionCadena + restoCadena;
-		
+
 	}
 }
