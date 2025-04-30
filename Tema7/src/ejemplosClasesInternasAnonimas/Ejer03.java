@@ -1,4 +1,4 @@
-package ejemplosParte4;
+package ejemplosClasesInternasAnonimas;
 import java.awt.FlowLayout;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;

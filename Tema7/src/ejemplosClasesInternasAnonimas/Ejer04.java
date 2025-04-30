@@ -1,5 +1,5 @@
 // Hacer el ejercicio que se copie directamente en el portapapeles cuando hagas click en el botón
-package ejemplosParte4;
+package ejemplosClasesInternasAnonimas;
 
 import java.awt.Color;
 import java.awt.Dimension;

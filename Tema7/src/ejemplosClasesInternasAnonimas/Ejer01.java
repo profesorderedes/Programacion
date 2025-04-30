@@ -1,4 +1,4 @@
-package ejemplosParte4;
+package ejemplosClasesInternasAnonimas;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;

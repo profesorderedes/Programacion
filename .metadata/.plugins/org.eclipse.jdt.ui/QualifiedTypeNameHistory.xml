@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
-    <fullyQualifiedTypeName name="ejemplo04Rectangulo.Rectangulo"/>
-    <fullyQualifiedTypeName name="ejemplo07Circulo.Circulo"/>
     <fullyQualifiedTypeName name="ejemplo08Rectangulo.Rectangulo"/>
     <fullyQualifiedTypeName name="ejemplo13Coche.Coche"/>
     <fullyQualifiedTypeName name="biblioteca.Libro"/>
@@ -58,6 +55,9 @@
     <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
     <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
-    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="java.awt.event.ItemListener"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="java.awt.Toolkit"/>
+    <fullyQualifiedTypeName name="java.awt.datatransfer.StringSelection"/>
+    <fullyQualifiedTypeName name="java.awt.datatransfer.Clipboard"/>
 </qualifiedTypeNameHistroy>
