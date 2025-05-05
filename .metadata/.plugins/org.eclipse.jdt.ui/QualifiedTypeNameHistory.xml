@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ejemplo08Rectangulo.Rectangulo"/>
-    <fullyQualifiedTypeName name="ejemplo13Coche.Coche"/>
-    <fullyQualifiedTypeName name="biblioteca.Libro"/>
     <fullyQualifiedTypeName name="auxiliar.Grupo"/>
     <fullyQualifiedTypeName name="java.security.AllPermission"/>
     <fullyQualifiedTypeName name="auxiliar.Alumno"/>
@@ -14,7 +11,6 @@
     <fullyQualifiedTypeName name="ejemplo03Equals.Vehiculo"/>
     <fullyQualifiedTypeName name="prac1.Mp3"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo01Botones"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo03Texto"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo04Checkboxes"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="java.awt.Toolkit"/>
     <fullyQualifiedTypeName name="java.awt.datatransfer.StringSelection"/>
     <fullyQualifiedTypeName name="java.awt.datatransfer.Clipboard"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 </qualifiedTypeNameHistroy>
