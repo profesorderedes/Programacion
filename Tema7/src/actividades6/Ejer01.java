@@ -4,6 +4,9 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class Ejer01 extends JFrame {
 
@@ -15,7 +18,17 @@ public class Ejer01 extends JFrame {
 
 		setLocationRelativeTo(null);
 
-		JMenuBar mnBara = new JMenuBar();
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			SwingUtilities.updateComponentTreeUI(this);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+				| UnsupportedLookAndFeelException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error al aplicar el look and feel");
+			e.printStackTrace();
+		}
+
+		JMenuBar mnBarra = new JMenuBar();
 
 		JMenu mnFormato = new JMenu("Formato");
 
@@ -34,10 +47,13 @@ public class Ejer01 extends JFrame {
 		mnTabla.addSeparator();
 		mnTabla.add(new JMenuItem("Seleccionar"));
 		mnTabla.add(new JMenuItem("Unir celdas"));
-		mnBara.add(mnFormato);
-		mnBara.add(mnTabla);
 
-		setJMenuBar(mnBara);
+		mnBarra.add(mnFormato);
+		mnBarra.add(mnTabla);
+
+		setJMenuBar(mnBarra);
+		
+		// TODO Añadir componentes a la ventana (sólo está el menú).
 
 	}
 
