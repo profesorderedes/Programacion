@@ -20,7 +20,7 @@ public class Ejemplo02GuardarPuntuacion {
 			FileWriter archivo = new FileWriter(nombreArchivo, true);
 			BufferedWriter buffer = new BufferedWriter(archivo);
 			
-			buffer.write("Juan -> 900 puntos\n");
+			buffer.write("Alejandro -> 1010 puntos\n");
 			
 			buffer.close();
 			
