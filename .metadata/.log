@@ -10932,3 +10932,171 @@ java.io.IOException: Pipe closed
 	at org.eclipse.epp.internal.mpc.ui.discovery.DiscoverFileSupportJob.run(DiscoverFileSupportJob.java:85)
 	at org.eclipse.epp.internal.mpc.ui.discovery.DiscoverFileSupportJob.run(DiscoverFileSupportJob.java:69)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.171
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.171
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.172
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.172
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.172
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.172
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.172
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.172
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.172
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.173
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.173
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.173
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.173
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-05-06 19:09:35.173
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1 RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+	 at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+	 at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.get(ResourceProvider.java:127)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.getURL(ResourceProvider.java:162)
+	 at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalogSource.getResource(MarketplaceCatalogSource.java:48)
+	 at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDiscoveryResources$1.run(MarketplaceDiscoveryResources.java:149)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
