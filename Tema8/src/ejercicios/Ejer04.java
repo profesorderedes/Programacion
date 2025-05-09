@@ -8,7 +8,8 @@ public class Ejer04 {
 
     public static void main(String[] args) {
 
-        final String NOMBRE_ARCHIVO = "ficheros/index.html";
+    	
+        final String NOMBRE_ARCHIVO = System.getProperty("user.home") +  "/index.html";
 
         datosHtml(NOMBRE_ARCHIVO);
 
@@ -39,7 +40,7 @@ public class Ejer04 {
 
             buffer.write("<p>" + parrafo + "</p>" + "</body>" + "</html>");
 
-            System.out.println("\nSe ha creado la página en tu carpeta personal. De nada");
+            System.out.println("\nSe ha creado la página en tu carpeta personal. De nada.");
 
             buffer.close();
         } catch (IOException e) {
