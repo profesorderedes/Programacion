@@ -24,7 +24,7 @@ public class Ejemplo10MouseListener extends JFrame implements MouseListener {
 		lblCoordenadas = new JLabel("Pulsa en cualquier parte de la ventana");
 
 		add(lblCoordenadas);
-		
+
 		addMouseListener(this);
 
 		setVisible(true);
@@ -37,8 +37,7 @@ public class Ejemplo10MouseListener extends JFrame implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		lblCoordenadas.setText("(" + e.getX() + ", " + e.getY() + "); Botón: " 
-				+ e.getButton());
+		lblCoordenadas.setText("(" + e.getX() + ", " + e.getY() + "); Botón: " + e.getButton());
 	}
 
 	@Override

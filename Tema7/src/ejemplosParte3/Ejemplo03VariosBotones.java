@@ -27,7 +27,7 @@ public class Ejemplo03VariosBotones extends JFrame {
 		btnPulsar = new JButton("¡Púlsame!");
 		btnPulsar.setPreferredSize(new Dimension(200, 50));
 		btnPulsar.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				lblMensaje.setText("Has pulsado el botón izquierdo.");
@@ -37,10 +37,10 @@ public class Ejemplo03VariosBotones extends JFrame {
 		JButton btnPulsar2 = new JButton("¡Púlsame a mí!");
 		btnPulsar2.setPreferredSize(new Dimension(200, 50));
 		btnPulsar2.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				lblMensaje.setText("Has pulsado el botón derecho.");		
+				lblMensaje.setText("Has pulsado el botón derecho.");
 			}
 		});
 

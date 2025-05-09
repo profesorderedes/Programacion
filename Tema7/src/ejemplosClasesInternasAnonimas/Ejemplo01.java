@@ -11,8 +11,6 @@ import javax.swing.JLabel;
 
 public class Ejemplo01 extends JFrame {
 
-	
-
 	public Ejemplo01() {
 
 		super("Eventos");
@@ -26,16 +24,14 @@ public class Ejemplo01 extends JFrame {
 		JButton btnPulsar = new JButton("¡Púlsame!");
 		btnPulsar.setPreferredSize(new Dimension(200, 50));
 		JLabel lblMensaje = new JLabel("Aún no has pulsado.");
-		
+
 		btnPulsar.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				lblMensaje.setText("Gracias por pulsar.");
 			}
 		});
-
-		
 
 		add(btnPulsar);
 		add(lblMensaje);

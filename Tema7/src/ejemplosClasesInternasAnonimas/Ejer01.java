@@ -70,10 +70,10 @@ public class Ejer01 extends JFrame {
 
 		btnFear = new JButton("Primal Fear");
 		btnFear.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				lblImagen.setIcon(new ImageIcon("fotogramas/img05.jpg"));					
+				lblImagen.setIcon(new ImageIcon("fotogramas/img05.jpg"));
 			}
 		});
 

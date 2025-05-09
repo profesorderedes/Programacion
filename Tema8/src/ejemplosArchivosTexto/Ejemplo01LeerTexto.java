@@ -21,11 +21,11 @@ public class Ejemplo01LeerTexto {
 			BufferedReader buffer = new BufferedReader(archivo);
 
 			String linea = buffer.readLine();
-			while(linea != null) {
+			while (linea != null) {
 				System.out.println(linea);
 				linea = buffer.readLine();
 			}
-			
+
 			buffer.close();
 
 		} catch (FileNotFoundException e) {

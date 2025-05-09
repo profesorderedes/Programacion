@@ -1,4 +1,5 @@
 package ejemplosClasesInternasAnonimas;
+
 import java.awt.FlowLayout;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
@@ -11,95 +12,95 @@ import ejemplosParte3.Plantilla;
 
 public class Ejer03 extends JFrame {
 
-    private JCheckBox chkBilletes;
-    private JCheckBox chkTransporte;
-    private JCheckBox chkEstancia;
-    private JCheckBox chkPension;
-    private JLabel lblPrecio;
+	private JCheckBox chkBilletes;
+	private JCheckBox chkTransporte;
+	private JCheckBox chkEstancia;
+	private JCheckBox chkPension;
+	private JLabel lblPrecio;
 
-    public Ejer03() {
+	public Ejer03() {
 
-        super("Escribir título");
-        setSize(190, 300);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+		super("Escribir título");
+		setSize(190, 300);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        setLayout(new FlowLayout(FlowLayout.LEFT));
+		setLayout(new FlowLayout(FlowLayout.LEFT));
 
-        setLocationRelativeTo(null);
+		setLocationRelativeTo(null);
 
-        JLabel lblOpciones = new JLabel("Opciones:");
+		JLabel lblOpciones = new JLabel("Opciones:");
 
-        chkBilletes = new JCheckBox("Billetes de avión", true);
-        chkBilletes.addItemListener(new ItemListener() {
+		chkBilletes = new JCheckBox("Billetes de avión", true);
+		chkBilletes.addItemListener(new ItemListener() {
 
-            @Override
-            public void itemStateChanged(ItemEvent arg0) {
-                calcularPrecio();
-            }
-        });
+			@Override
+			public void itemStateChanged(ItemEvent arg0) {
+				calcularPrecio();
+			}
+		});
 
-        chkTransporte = new JCheckBox("Transporte aeropuerto");
-        chkTransporte.addItemListener(new ItemListener() {
+		chkTransporte = new JCheckBox("Transporte aeropuerto");
+		chkTransporte.addItemListener(new ItemListener() {
 
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                calcularPrecio();
-            }
-        });
-        chkEstancia = new JCheckBox("Estancia en el hotel");
-        chkEstancia.addItemListener(new ItemListener() {
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				calcularPrecio();
+			}
+		});
+		chkEstancia = new JCheckBox("Estancia en el hotel");
+		chkEstancia.addItemListener(new ItemListener() {
 
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                calcularPrecio();
-            }
-        });
-        chkPension = new JCheckBox("Pensión completa");
-        chkPension.addItemListener(new ItemListener() {
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				calcularPrecio();
+			}
+		});
+		chkPension = new JCheckBox("Pensión completa");
+		chkPension.addItemListener(new ItemListener() {
 
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                calcularPrecio();
-            }
-        });
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				calcularPrecio();
+			}
+		});
 
-        lblPrecio = new JLabel("Precio total: 120 €");
+		lblPrecio = new JLabel("Precio total: 120 €");
 
-        add(lblOpciones);
-        add(chkBilletes);
-        add(chkTransporte);
-        add(chkEstancia);
-        add(chkPension);
-        add(lblPrecio);
+		add(lblOpciones);
+		add(chkBilletes);
+		add(chkTransporte);
+		add(chkEstancia);
+		add(chkPension);
+		add(lblPrecio);
 
-        setVisible(true);
+		setVisible(true);
 
-    }
+	}
 
-    private void calcularPrecio() {
-    	
-        int total = 0;
+	private void calcularPrecio() {
 
-        if (chkBilletes.isSelected()) {
-            total = total + 120;
-        }
+		int total = 0;
 
-        if (chkTransporte.isSelected()) {
-            total = total + 40;
-        }
+		if (chkBilletes.isSelected()) {
+			total = total + 120;
+		}
 
-        if (chkEstancia.isSelected()) {
-            total = total + 180;
-        }
+		if (chkTransporte.isSelected()) {
+			total = total + 40;
+		}
 
-        if (chkPension.isSelected()) {
-            total = total + 70;
-        }
+		if (chkEstancia.isSelected()) {
+			total = total + 180;
+		}
 
-        lblPrecio.setText("Precio total: " + total + " €");
-    }
+		if (chkPension.isSelected()) {
+			total = total + 70;
+		}
 
-    public static void main(String[] args) {
-        new Ejer03();
-    }
+		lblPrecio.setText("Precio total: " + total + " €");
+	}
+
+	public static void main(String[] args) {
+		new Ejer03();
+	}
 }

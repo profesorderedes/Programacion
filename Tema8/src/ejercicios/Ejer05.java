@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Ejer05 {
-	
+
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
 
 		int contadorLineas = 0;
@@ -22,7 +22,7 @@ public class Ejer05 {
 		System.out.println("Introduzca la palabra a encontrar y te diré cuántas veces aparece");
 		System.out.println("-----------------------------------------------------------------");
 		String palabraUsuario = entrada.nextLine();
-		
+
 		try {
 			FileReader documento = new FileReader("ficheros/" + archivo);
 			BufferedReader bufer = new BufferedReader(documento);
@@ -30,7 +30,7 @@ public class Ejer05 {
 			String linea = bufer.readLine();
 
 			while (linea != null) {
-				
+
 				contadorLineas++;
 
 				String[] palabras = linea.split(" ");

@@ -52,7 +52,7 @@ public class Ejer01 extends JFrame {
 		mnBarra.add(mnTabla);
 
 		setJMenuBar(mnBarra);
-		
+
 		// TODO Añadir componentes a la ventana (sólo está el menú).
 
 	}

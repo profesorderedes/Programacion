@@ -1,53 +1,57 @@
 package ejercicios;
+
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Ejer04 {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-    	
-        final String NOMBRE_ARCHIVO = System.getProperty("user.home") +  "/index.html";
+		File web = new File(System.getProperty("user.home") + "/web");
+		web.mkdir();
 
-        datosHtml(NOMBRE_ARCHIVO);
+		final String NOMBRE_ARCHIVO = web + "/index.html";
 
-    }
+		datosHtml(NOMBRE_ARCHIVO);
 
-    private static void datosHtml(String nombreArchivo) {
+	}
 
-        Scanner teclado = new Scanner(System.in);
+	private static void datosHtml(String nombreArchivo) {
 
-        try {
+		Scanner teclado = new Scanner(System.in);
 
-            FileWriter archivo = new FileWriter(nombreArchivo);
-            BufferedWriter buffer = new BufferedWriter(archivo);
+		try {
 
-            System.out.println("Título de la página: ");
+			FileWriter archivo = new FileWriter(nombreArchivo);
+			BufferedWriter buffer = new BufferedWriter(archivo);
 
-            String title = teclado.nextLine();
+			System.out.println("Título de la página: ");
 
-            buffer.write("<html>" + "<head><title>" + title + "</title></head>");
+			String title = teclado.nextLine();
 
-            System.out.println("Encabezado de la página: ");
-            String h1 = teclado.nextLine();
+			buffer.write("<html>" + "<head><title>" + title + "</title></head>");
 
-            buffer.write("<body><h1>" + h1 + "</h1>");
+			System.out.println("Encabezado de la página: ");
+			String h1 = teclado.nextLine();
 
-            System.out.println("Contenido de la página: ");
-            String parrafo = teclado.nextLine();
+			buffer.write("<body><h1>" + h1 + "</h1>");
 
-            buffer.write("<p>" + parrafo + "</p>" + "</body>" + "</html>");
+			System.out.println("Contenido de la página: ");
+			String parrafo = teclado.nextLine();
 
-            System.out.println("\nSe ha creado la página en tu carpeta personal. De nada.");
+			buffer.write("<p>" + parrafo + "</p>" + "</body>" + "</html>");
 
-            buffer.close();
-        } catch (IOException e) {
-            System.out.println("Error al abrir el archivo");
-            e.printStackTrace();
-        }
+			System.out.println("\nSe ha creado la página en tu carpeta personal. De nada.");
 
-    }
+			buffer.close();
+		} catch (IOException e) {
+			System.out.println("Error al abrir el archivo");
+			e.printStackTrace();
+		}
+
+	}
 
 }

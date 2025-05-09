@@ -10,7 +10,7 @@ public class Buffers {
 	private static String archivo = "ficheros/numeros.dat";
 
 	public static void main(String[] args) {
-		
+
 // Escribimos los números del 1 al 50 en un archivo de disco.
 		escribir();
 // Leemos el contenido del anterior archivo y lo mostramos en la

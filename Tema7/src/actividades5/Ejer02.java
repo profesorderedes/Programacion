@@ -26,7 +26,7 @@ public class Ejer02 extends JFrame {
 
 			@Override
 			public void keyTyped(KeyEvent arg0) {
-				
+
 				if (arg0.getKeyChar() == 'r') {
 					lblColor.setText("ROJO");
 					lblColor.setForeground(Color.RED);
