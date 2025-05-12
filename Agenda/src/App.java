@@ -1,0 +1,111 @@
+import java.util.Scanner;
+
+import net.iessonferrer.io.Consola;
+
+public class App {
+
+	private static Scanner entrada = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		Agenda agenda = new Agenda(100);
+
+		agenda.anyadirContacto(new Contacto("Sogorb Valls", "Carlos", "555 19 92 00"));
+		agenda.anyadirContacto(new Contacto("Marín López", "Ana", "555 20 20 30"));
+
+		menuPrincipal(agenda);
+
+		System.out.println("\nGracias por usar la agenda.");
+
+	}
+
+	private static void mostrarCabecera() {
+
+		System.out.println("***************************************************************************************");
+		System.out.println("*                                                                                     *");
+		System.out.println("*                                 AGENDA TELEFÓNICA                                   *");
+		System.out.println("*                                                                                     *");
+		System.out.println("*                                    Por: Carlos                                      *");
+		System.out.println("*                                                                                     *");
+		System.out.println("***************************************************************************************");
+
+	}
+
+	private static void borrarPantalla() {
+//		for (int i = 1; i <= 50; i++) {
+//			System.out.println();
+//		}
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
+	}
+
+	private static void menuPrincipal(Agenda agenda) {
+
+		int opcion;
+
+		do {
+
+			borrarPantalla();
+
+			mostrarCabecera();
+
+			System.out.println("\nMENÚ PRINCIPAL - AGENDA TELEFÓNICA");
+			System.out
+					.println("=======================================================================================");
+
+			System.out.println();
+			System.out.println(" (1) Ver todos los contactos");
+			System.out.println(" (2) Añadir un contacto");
+			System.out.println(" (3) Editar un contacto");
+			System.out.println(" (4) Borrar un contacto");
+			System.out.println(" (5) Salir");
+
+			System.out.print("\n> ");
+
+			opcion = Consola.leerInt("Tiene que escribir un número entre 1 y 5.");
+
+			while (opcion < 1 || opcion > 5) {
+				System.out.println("Tiene que escribir un número entre 1 y 5.");
+				opcion = Consola.leerInt();
+			}
+
+			switch (opcion) {
+			case 1:
+				menuVerContactos(agenda);
+				break;
+			case 2:
+				menuAnyadirContacto(agenda);
+				break;
+			case 3:
+				menuEditarContacto(agenda);
+				break;
+			case 4:
+				menuBorrarContacto(agenda);
+				break;
+			}
+
+		} while (opcion != 5);
+
+	}
+
+	private static void menuVerContactos(Agenda agenda) {
+
+	}
+
+	private static void menuAnyadirContacto(Agenda agenda) {
+
+	}
+
+	private static Contacto leerDatosContacto() {
+		return null;
+	}
+
+	private static void menuEditarContacto(Agenda agenda) {
+
+	}
+
+	private static void menuBorrarContacto(Agenda agenda) {
+
+	}
+
+}
