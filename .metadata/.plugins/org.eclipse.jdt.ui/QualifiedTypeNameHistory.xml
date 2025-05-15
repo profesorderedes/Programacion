@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="auxiliar.Alumno"/>
     <fullyQualifiedTypeName name="instituto.Instituto"/>
     <fullyQualifiedTypeName name="mates.Mates"/>
     <fullyQualifiedTypeName name="Lavadora"/>
@@ -23,7 +22,6 @@
     <fullyQualifiedTypeName name="javax.swing.JSlider"/>
     <fullyQualifiedTypeName name="javax.swing.JToolBar"/>
     <fullyQualifiedTypeName name="javax.swing.JList"/>
-    <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
     <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
     <fullyQualifiedTypeName name="net.iessonferrer.io.Consola"/>
     <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
+    <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
 </qualifiedTypeNameHistroy>

@@ -14,13 +14,15 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class Ejemplo08FileChooser extends JFrame {
 
 	public Ejemplo08FileChooser() {
 
 		super("Elegir un archivo");
-		setSize(400, 300);
+		setSize(700, 500);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -30,6 +32,12 @@ public class Ejemplo08FileChooser extends JFrame {
 		
 		JButton btnElegirArchivo = new JButton("Elegir un archivo");
 		btnElegirArchivo.setPreferredSize(new Dimension(150,30));
+		
+		JLabel lblRutaArchivo = new JLabel();
+		JTextArea txtTexto = new JTextArea();
+		JScrollPane scrTexto = new JScrollPane(txtTexto);
+		scrTexto.setPreferredSize(new Dimension(690, 420));
+		
 		btnElegirArchivo.addActionListener(new ActionListener() {
 			
 			@Override
@@ -40,6 +48,7 @@ public class Ejemplo08FileChooser extends JFrame {
 				int eleccion = elegir.showOpenDialog(null);
 				
 				if(eleccion == JFileChooser.APPROVE_OPTION) {
+					
 					System.out.println(elegir.getSelectedFile().toString());
 					File archivo = elegir.getSelectedFile();
 					
@@ -47,13 +56,16 @@ public class Ejemplo08FileChooser extends JFrame {
 						FileReader fichero = new FileReader(archivo);
 						BufferedReader buffer = new BufferedReader(fichero);
 						
+						String texto = "";
 						String linea = buffer.readLine();
 						while(linea != null) {
 							
-							System.out.println(linea);
+							texto = texto + linea + "\n";
 							linea = buffer.readLine();
 							
 						}
+						
+						txtTexto.setText(texto);
 						
 						buffer.close();
 						
@@ -69,11 +81,10 @@ public class Ejemplo08FileChooser extends JFrame {
 				
 			}
 		});
-		
-		JLabel lblRutaArchivo = new JLabel();
-			
+
 		add(btnElegirArchivo);
 		add(lblRutaArchivo);
+		add(scrTexto);
 
 		setVisible(true);
 
