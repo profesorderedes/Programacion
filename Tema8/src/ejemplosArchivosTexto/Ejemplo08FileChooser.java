@@ -31,14 +31,15 @@ public class Ejemplo08FileChooser extends JFrame {
 		setLayout(new FlowLayout(FlowLayout.LEFT));
 
 		setLocationRelativeTo(null);
-		
+
 		JMenuBar barraMenu = new JMenuBar();
-		
+
 		JMenu menuArchivo = new JMenu("Archivo");
-		
+
 		JMenuItem itemAbrir = new JMenuItem("Abrir");
+
 		menuArchivo.add(itemAbrir);
-		
+
 		barraMenu.add(menuArchivo);
 
 		JButton btnElegirArchivo = new JButton("Elegir un archivo");
@@ -49,48 +50,21 @@ public class Ejemplo08FileChooser extends JFrame {
 		JScrollPane scrTexto = new JScrollPane(txtTexto);
 		scrTexto.setPreferredSize(new Dimension(690, 420));
 
+		itemAbrir.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				mostrarContenido(txtTexto);
+			}
+		});
+
 		btnElegirArchivo.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-
-				JFileChooser elegir = new JFileChooser();
-
-				int eleccion = elegir.showOpenDialog(null);
-
-				if (eleccion == JFileChooser.APPROVE_OPTION) {
-
-					System.out.println(elegir.getSelectedFile().toString());
-					File archivo = elegir.getSelectedFile();
-
-					try {
-						FileReader fichero = new FileReader(archivo);
-						BufferedReader buffer = new BufferedReader(fichero);
-
-						String texto = "";
-						String linea = buffer.readLine();
-						while (linea != null) {
-
-							texto = texto + linea + "\n";
-							linea = buffer.readLine();
-
-						}
-
-						txtTexto.setText(texto);
-
-						buffer.close();
-
-					} catch (FileNotFoundException e) {
-						e.printStackTrace();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-
-				} else {
-					System.out.println("Se ha cancelado.");
-				}
-
+				mostrarContenido(txtTexto);
 			}
+
 		});
 
 		setJMenuBar(barraMenu);
@@ -100,6 +74,44 @@ public class Ejemplo08FileChooser extends JFrame {
 
 		setVisible(true);
 
+	}
+
+	private void mostrarContenido(JTextArea txtTexto) {
+		JFileChooser elegir = new JFileChooser();
+
+		int eleccion = elegir.showOpenDialog(null);
+
+		if (eleccion == JFileChooser.APPROVE_OPTION) {
+
+			System.out.println(elegir.getSelectedFile().toString());
+			File archivo = elegir.getSelectedFile();
+
+			try {
+				FileReader fichero = new FileReader(archivo);
+				BufferedReader buffer = new BufferedReader(fichero);
+
+				String texto = "";
+				String linea = buffer.readLine();
+				while (linea != null) {
+
+					texto = texto + linea + "\n";
+					linea = buffer.readLine();
+
+				}
+
+				txtTexto.setText(texto);
+
+				buffer.close();
+
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+		} else {
+			System.out.println("Se ha cancelado.");
+		}
 	}
 
 	public static void main(String[] args) {
