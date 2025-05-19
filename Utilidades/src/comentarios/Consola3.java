@@ -1,4 +1,4 @@
-package net.iessonferrer.io;
+package comentarios;
 
 import java.util.Scanner;
 
@@ -11,17 +11,20 @@ import java.util.Scanner;
  * lectura hasta que el usuario lo escriba correctamente.
  *
  * @see net.iessonferrer.mates.Mates
- * @author Emilio Soto
+ * @author Yago Lopez
  * @version 0.1
  */
-public class Consola {
+public class Consola3 {
 
 	/**
+	 * 
 	 * Variable que permite acceder a la terminal del equipo.
+	 * 
 	 */
 	private static Scanner sc = new Scanner(System.in);
 
 	/**
+	 * 
 	 * Lee un número entero desde la consola y lo devuelve. Si lo que se escribe no
 	 * es un entero, mostrará el mensaje de error y vuelve a repetir la lectura.
 	 * 
@@ -36,11 +39,13 @@ public class Consola {
 		while (!sc.hasNextInt()) {
 
 			System.out.println(mensajeError);
+
 			sc.nextLine();
 
 		}
 
 		int num = sc.nextInt();
+
 		sc.nextLine();
 
 		return num;
@@ -66,7 +71,7 @@ public class Consola {
 	 * Lee un número decimal desde la consola y lo devuelve. Si lo que se escribe no
 	 * es un número, mostrará el mensaje de error y vuelve a repetir la lectura.
 	 * 
-	 * @param mensajeError Mensaje que se mostrará si el usuario introduce un dato
+	 * @param mensajeError Mensaje que se mostrara si el usuario introduce un dato
 	 *                     incorrecto
 	 * 
 	 * @return el numero decimal escrito por el usuario
@@ -108,7 +113,7 @@ public class Consola {
 	 * vacío o sólo tenga espacios, muestra el mensaje de error y repite la
 	 * pregunta.
 	 * 
-	 * @param mensajeError Mensaje que se mostrará si el usuario introduce un dato
+	 * @param mensajeError Mensaje que se mostrara si el usuario introduce un dato
 	 *                     incorrecto
 	 * 
 	 * @return la cadena escrita por el usuario

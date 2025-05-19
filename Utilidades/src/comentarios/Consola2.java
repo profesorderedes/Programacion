@@ -1,23 +1,23 @@
-package net.iessonferrer.io;
+package comentarios;
 
 import java.util.Scanner;
 
 /**
+ * Clase que contiene métodos para leer información de la terminal
  * 
- * Clase que contiene metodos para leer informacion de la terminal.
  * <p>
+ * Estos métodos se aseguran de devolver valores correctos, repitiendo la
+ * lectura de un dato hasta que el usuario lo escriba correctamente.
  * 
- * Estos metodos se aseguran de devolver valores correctos , repitiendo la
- * lectura hasta que el usuario lo escriba correctamente.
- *
  * @see net.iessonferrer.mates.Mates
- * @author Emilio Soto
+ * @author David Fernández
  * @version 0.1
  */
-public class Consola {
+
+public class Consola2 {
 
 	/**
-	 * Variable que permite acceder a la terminal del equipo.
+	 * Variable que permite acceder a la terminal del equipo
 	 */
 	private static Scanner sc = new Scanner(System.in);
 
@@ -27,9 +27,7 @@ public class Consola {
 	 * 
 	 * @param mensajeError Mensaje que va a mostrarse cuando el usuario escriba un
 	 *                     dato que no sea entero
-	 * 
-	 * @return el numero entero escrito por el usuario
-	 * 
+	 * @return el número entero escrito por el usuario
 	 */
 	public static int leerInt(String mensajeError) {
 
@@ -48,13 +46,11 @@ public class Consola {
 	}
 
 	/**
-	 * 
 	 * Lee un número entero desde la consola y lo devuelve. Si lo que se escribe no
 	 * es un entero, mostrará un mensaje de error genérico y vuelve a repetir la
 	 * lectura.
 	 * 
-	 * @return el numero entero escrito por el usuario
-	 * 
+	 * @return el número entero escrito por el usuario.
 	 */
 	public static int leerInt() {
 
@@ -66,11 +62,8 @@ public class Consola {
 	 * Lee un número decimal desde la consola y lo devuelve. Si lo que se escribe no
 	 * es un número, mostrará el mensaje de error y vuelve a repetir la lectura.
 	 * 
-	 * @param mensajeError Mensaje que se mostrará si el usuario introduce un dato
-	 *                     incorrecto
-	 * 
-	 * @return el numero decimal escrito por el usuario
-	 * 
+	 * @param mensajeError error que se mostrará al no escribir un decimal
+	 * @return el número decimal introducido
 	 */
 	public static double leerDouble(String mensajeError) {
 
@@ -85,22 +78,17 @@ public class Consola {
 		sc.nextLine();
 
 		return num;
-
 	}
 
 	/**
-	 * 
 	 * Lee un número decimal desde la consola y lo devuelve. Si lo que se escribe no
 	 * es un número, mostrará un mensaje de error genérico y vuelve a repetir la
 	 * lectura.
 	 * 
-	 * @return el numero decimal escrito por el usuario
-	 * 
+	 * @return frase introducida por el usuario.
 	 */
 	public static double leerDouble() {
-
 		return leerDouble("Introduce un número válido");
-
 	}
 
 	/**
@@ -108,11 +96,8 @@ public class Consola {
 	 * vacío o sólo tenga espacios, muestra el mensaje de error y repite la
 	 * pregunta.
 	 * 
-	 * @param mensajeError Mensaje que se mostrará si el usuario introduce un dato
-	 *                     incorrecto
-	 * 
-	 * @return la cadena escrita por el usuario
-	 * 
+	 * @param mensajeError error producido al escribrir numeros en vez de letras
+	 * @return frase introducida por el usuario
 	 */
 	public static String leerString(String mensajeError) {
 
@@ -121,27 +106,20 @@ public class Consola {
 			String frase = sc.nextLine();
 
 			if (frase.trim().length() == 0) {
-
 				System.out.println(mensajeError);
-
 			} else {
-
 				return frase;
-
 			}
-
 		}
 
 	}
 
 	/**
-	 * 
 	 * Lee un String desde la consola y lo devuelve. En caso de que el String esté
 	 * vacío o sólo tenga espacios, muestra un mensaje de error estándar y repite la
 	 * pregunta.
 	 * 
-	 * @return la cadena escrita por el usuario
-	 * 
+	 * @return mensaje de error al poner un espacio.
 	 */
 	public static String leerString() {
 
