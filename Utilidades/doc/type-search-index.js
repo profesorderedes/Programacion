@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"comentarios","l":"Consola"},{"p":"net.iessonferrer.io","l":"Consola"},{"p":"comentarios","l":"Consola2"},{"p":"comentarios","l":"Consola3"},{"p":"otros","l":"ConsolaB"},{"p":"net.iessonferrer.mates","l":"Mates"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"net.iessonferrer.io","l":"Consola"},{"p":"otros","l":"ConsolaB"},{"p":"net.iessonferrer.mates","l":"Mates"}];updateSearchResults();
