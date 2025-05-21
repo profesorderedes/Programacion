@@ -27,7 +27,8 @@ public class Mates {
 	}
 
 	/**
-	 * Recibe un número decimal y lo devuelve redondeado al número de cifras que se le pasa  como parámetro.
+	 * Recibe un número decimal y lo devuelve redondeado al número de cifras que se
+	 * le pasa como parámetro.
 	 * 
 	 * @param num       número introducido por el usuario.
 	 * @param decimales cantidad de decimales que queremos.
