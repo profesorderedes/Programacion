@@ -25,7 +25,8 @@ public class Ejemplo01ArrayList {
 		}
 
 		System.out.println("Borrando la posición 1...");
-		nombres.remove(1);
+		String borrado = nombres.remove(1);
+		System.out.println("Se ha borrado a " + borrado);
 
 		System.out.println(nombres.toString());
 

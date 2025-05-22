@@ -24,8 +24,14 @@ public class Ejemplo02Contactos {
 		Contacto cEliminar = new Contacto("Tallón", "Alejandro", "555 21 21 21");
 		System.out.println(c1.equals(cEliminar));
 
-		lista.remove(cEliminar);
-
+		boolean eliminado = lista.remove(cEliminar);
+		
+		if(eliminado) {
+			System.out.println("Eliminado");
+		}else {
+			System.out.println("No encontrado.");
+		}
+		
 		for (Contacto c : lista) {
 			System.out.println(c.toString());
 		}
