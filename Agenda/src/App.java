@@ -90,6 +90,16 @@ public class App {
 
 	private static void menuVerContactos(Agenda agenda) {
 
+		borrarPantalla();
+
+		System.out.println("\nCONTACTOS - AGENDA TELEFÓNICA");
+		System.out.println("=======================================================================================");
+
+		agenda.listarContactos();
+
+		System.out.println("\nPulse INTRO para volver al menú principal...");
+		entrada.nextLine();
+
 	}
 
 	private static void menuAnyadirContacto(Agenda agenda) {
@@ -97,7 +107,30 @@ public class App {
 	}
 
 	private static Contacto leerDatosContacto() {
-		return null;
+
+		// Leemos los datos del contacto (menos el id, que se le asigna
+		// automáticamente).
+
+		System.out.print("\nApellidos del contacto: ");
+		String apellidos = Consola.leerString();
+
+		System.out.print("Nombre del contacto: ");
+		String nombre = Consola.leerString();
+
+		System.out.print("Teléfono del contacto: ");
+		String tel = Consola.leerString();
+
+		// Pedimos confirmación para dar por bueno el contacto nuevo.
+
+		System.out.println("\n¿Confirma que los datos del contacto son correctos (s/n)?");
+		String confirma = Consola.leerString();
+
+		if (confirma.equalsIgnoreCase("s")) {
+			return new Contacto(apellidos, nombre, tel);
+		} else {
+			return null;
+		}
+
 	}
 
 	private static void menuEditarContacto(Agenda agenda) {

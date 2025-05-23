@@ -97,7 +97,7 @@ public class Agenda {
 
 		// Movemos todos los elementos por debajo de pos un sitio hacia arriba.
 		for (int i = pos; i < limite - 1; i++) {
-			contactos[pos] = contactos[pos + 1];
+			contactos[i] = contactos[i + 1];
 		}
 
 		limite--;
