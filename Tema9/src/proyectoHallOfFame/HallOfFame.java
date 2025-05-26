@@ -4,6 +4,8 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -15,6 +17,7 @@ import javax.swing.JScrollPane;
 
 public class HallOfFame extends JFrame {
 
+	private List<Jugador> jugadores;
 	private DefaultListModel<String> modelo;
 
 	public HallOfFame() {
@@ -26,6 +29,8 @@ public class HallOfFame extends JFrame {
 		setLayout(new FlowLayout());
 
 		setLocationRelativeTo(null);
+
+		jugadores = new ArrayList<>();
 
 		JLabel lblHallOfFame = new JLabel("Hall of fame");
 
@@ -45,6 +50,13 @@ public class HallOfFame extends JFrame {
 		});
 
 		JButton btnBorrar = new JButton("Borrar");
+		btnBorrar.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				borrarArchivo();
+			}
+		});
 
 		add(lblHallOfFame);
 		add(panelJugadores);
@@ -52,6 +64,8 @@ public class HallOfFame extends JFrame {
 		add(btnBorrar);
 
 		setVisible(true);
+		
+		cargarJugadores();
 
 	}
 
@@ -69,8 +83,10 @@ public class HallOfFame extends JFrame {
 			return;
 		}
 
+		jugadores.add(jugadorNuevo);
+
 		// Añadimos a la lista el jugador y sus puntos.
-		modelo.addElement(jugadorNuevo.getNombre() + " ... " + jugadorNuevo.getPuntuacion());
+		modelo.addElement(jugadorNuevo.getNombre() + " ... " + jugadorNuevo.getPuntuacion() + " puntos");
 
 	}
 
@@ -117,9 +133,14 @@ public class HallOfFame extends JFrame {
 
 	/**
 	 * Lee los datos sobre nombres y puntuaciones de jugadores. Los añade a la lista
-	 * que se muestra en la ventana. 6
+	 * que se muestra en la ventana.
 	 */
 	public void cargarJugadores() {
+
+		// Cargamos los datos en el ArrayList jugadores.
+
+		// Recorremos el ArrayList y rellenamos el JList con los nombres y puntuaciones.
+
 	}
 
 	/**
@@ -128,6 +149,21 @@ public class HallOfFame extends JFrame {
 	 * botón Borrar.
 	 */
 	public void borrarArchivo() {
+
+		// Pedimos confirmación del borrado.
+
+		int borrar = JOptionPane.showConfirmDialog(null, "¿Seguro que quieres borrar los datos de todos los jugadores?",
+				"Advertencia", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+
+		if (borrar != JOptionPane.OK_OPTION) {
+			JOptionPane.showMessageDialog(null, "Operación cancelada. No se ha borrado ningún dato.");
+			return;
+		}
+
+		// Borramos el JList y el ArrayList de jugadores.
+		modelo.clear();
+		jugadores.clear();
+
 	}
 
 	public static void main(String[] args) {

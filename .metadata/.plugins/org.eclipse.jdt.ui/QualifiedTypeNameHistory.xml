@@ -48,7 +48,6 @@
     <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
     <fullyQualifiedTypeName name="javax.swing.JMenu"/>
     <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="proyectoHallOfFame.HallOfFame"/>
     <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
@@ -57,7 +56,8 @@
     <fullyQualifiedTypeName name="javax.swing.DefaultListModel"/>
     <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 </qualifiedTypeNameHistroy>
