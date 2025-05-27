@@ -4,6 +4,10 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +20,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 
 public class HallOfFame extends JFrame {
+
+	private final String NOMBRE_ARCHIVO = "ficheros/jugadores.txt";
 
 	private List<Jugador> jugadores;
 	private DefaultListModel<String> modelo;
@@ -64,7 +70,7 @@ public class HallOfFame extends JFrame {
 		add(btnBorrar);
 
 		setVisible(true);
-		
+
 		cargarJugadores();
 
 	}
@@ -139,7 +145,41 @@ public class HallOfFame extends JFrame {
 
 		// Cargamos los datos en el ArrayList jugadores.
 
+		try {
+			FileReader archivo = new FileReader(NOMBRE_ARCHIVO);
+			BufferedReader buffer = new BufferedReader(archivo);
+
+			String linea = buffer.readLine();
+
+			while (linea != null) {
+				System.out.println(linea);
+				
+				// Descomponemos cada línea en nombre y puntuacion.
+				String[] datos = linea.split(",");
+				
+				String nombre = datos[0];
+				int puntuacion = Integer.parseInt(datos[1]);
+				
+				Jugador jugadorNuevo = new Jugador(nombre, puntuacion);
+				jugadores.add(jugadorNuevo);
+				
+				linea = buffer.readLine();
+			}
+
+			buffer.close();
+
+		} catch (FileNotFoundException e) {
+			JOptionPane.showMessageDialog(null,
+					"No se han encontrado datos guardados de jugadores. Se creará un archivo nuevo.");
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null, "Se ha producido un error leyendo el archivo.");
+		}
+
 		// Recorremos el ArrayList y rellenamos el JList con los nombres y puntuaciones.
+		
+		for(Jugador jugador : jugadores) {
+			modelo.addElement(jugador.getNombre() + " ... " + jugador.getPuntuacion());
+		}
 
 	}
 
