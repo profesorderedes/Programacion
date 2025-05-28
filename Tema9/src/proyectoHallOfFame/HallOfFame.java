@@ -4,9 +4,13 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,14 +68,66 @@ public class HallOfFame extends JFrame {
 			}
 		});
 
+		addWindowListener(new WindowListener() {
+
+			@Override
+			public void windowOpened(WindowEvent arg0) {
+
+			}
+
+			@Override
+			public void windowIconified(WindowEvent arg0) {
+
+			}
+
+			@Override
+			public void windowDeiconified(WindowEvent arg0) {
+
+			}
+
+			@Override
+			public void windowDeactivated(WindowEvent arg0) {
+
+			}
+
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+
+				// Borramos el contenido del fichero de jugadores.
+				try {
+					FileWriter archivo = new FileWriter(NOMBRE_ARCHIVO);
+					archivo.close();
+				} catch (IOException e) {
+					JOptionPane.showMessageDialog(null,
+							"Se ha producido un error al eliminar el contenido del archivo.");
+				}
+
+				// Guardamos la información de todos los jugadores.
+				for (Jugador jugador : jugadores) {
+					guardarJugador(jugador);
+				}
+
+			}
+
+			@Override
+			public void windowClosed(WindowEvent arg0) {
+
+			}
+
+			@Override
+			public void windowActivated(WindowEvent arg0) {
+
+			}
+		});
+
+		cargarJugadores();
+
 		add(lblHallOfFame);
 		add(panelJugadores);
 		add(btnNuevo);
 		add(btnBorrar);
 
 		setVisible(true);
-
-		cargarJugadores();
 
 	}
 
@@ -135,6 +191,19 @@ public class HallOfFame extends JFrame {
 	 * @param jugador Objeto Jugador con el nombre y la puntuación a añadir.
 	 */
 	public void guardarJugador(Jugador jugador) {
+
+		try {
+			BufferedWriter buffer = new BufferedWriter(new FileWriter(NOMBRE_ARCHIVO, true));
+
+			buffer.write(jugador.getNombre() + "," + jugador.getPuntuacion() + "\n");
+
+			buffer.close();
+
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null,
+					"Se ha producido un error guardando la información de los jugadores en el disco.");
+		}
+
 	}
 
 	/**
@@ -153,16 +222,16 @@ public class HallOfFame extends JFrame {
 
 			while (linea != null) {
 				System.out.println(linea);
-				
+
 				// Descomponemos cada línea en nombre y puntuacion.
 				String[] datos = linea.split(",");
-				
+
 				String nombre = datos[0];
 				int puntuacion = Integer.parseInt(datos[1]);
-				
+
 				Jugador jugadorNuevo = new Jugador(nombre, puntuacion);
 				jugadores.add(jugadorNuevo);
-				
+
 				linea = buffer.readLine();
 			}
 
@@ -176,8 +245,8 @@ public class HallOfFame extends JFrame {
 		}
 
 		// Recorremos el ArrayList y rellenamos el JList con los nombres y puntuaciones.
-		
-		for(Jugador jugador : jugadores) {
+
+		for (Jugador jugador : jugadores) {
 			modelo.addElement(jugador.getNombre() + " ... " + jugador.getPuntuacion());
 		}
 

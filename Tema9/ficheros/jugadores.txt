@@ -1,2 +1,0 @@
-charlie,1200
-juan,1500
