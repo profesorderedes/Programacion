@@ -164,7 +164,7 @@ public class HallOfFame extends JFrame {
 				JOptionPane.QUESTION_MESSAGE);
 
 		// Comprobamos que el nombre no esté vacío.
-		if (nombre.trim().equals("")) {
+		if (nombre == null || nombre.trim().equals("")) {
 			return null;
 		}
 
