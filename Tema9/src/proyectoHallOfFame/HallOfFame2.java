@@ -24,14 +24,14 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 
-public class HallOfFame extends JFrame {
+public class HallOfFame2 extends JFrame {
 
 	private final String NOMBRE_ARCHIVO = System.getProperty("user.home") + "/HallOfFame/jugadores.txt";
 
 	private List<Jugador> jugadores;
 	private DefaultListModel<String> modelo;
 
-	public HallOfFame() {
+	public HallOfFame2() {
 
 		super("Puntuaciones");
 		setSize(400, 570);
@@ -202,8 +202,9 @@ public class HallOfFame extends JFrame {
 		try {
 			BufferedWriter buffer = new BufferedWriter(new FileWriter(NOMBRE_ARCHIVO, true));
 
-			buffer.write(jugador.getNombre() + "," + jugador.getPuntuacion() + "\n");
-
+			buffer.write("nombre=" + jugador.getNombre() + "\n");
+			buffer.write("puntos=" + jugador.getPuntuacion() + "\n");
+			
 			buffer.close();
 
 		} catch (IOException e) {
@@ -282,6 +283,6 @@ public class HallOfFame extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new HallOfFame();
+		new HallOfFame2();
 	}
 }
