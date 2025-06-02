@@ -1,18 +1,17 @@
 package agendaConArrayList;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Agenda {
 
-//	private Contacto[] contactos;
 	private List<Contacto> contactos;
-	private int limite;
 	private int siguienteId; // Id que asignaremos al añadir un nuevo contacto. Siempre irá en aumento.
 
+	// TODO Eliminar el parámetro numPosiciones que es innecesario.
 	public Agenda(int numPosiciones) {
 
-		contactos = new Contacto[numPosiciones];
-		limite = 0;
+		contactos = new ArrayList<>();
 		siguienteId = 1;
 
 	}
@@ -21,18 +20,12 @@ public class Agenda {
 	// identificador. Devuelve true si ha podido añadirlo y false si no.
 	public boolean anyadirContacto(Contacto contacto) {
 
-		// Verificamos si hay sitio para el nuevo contacto.
-		if (limite == contactos.length) {
-			return false;
-		}
-
 		// Asignamos un id al contacto.
 		contacto.setId(siguienteId);
 		siguienteId++;
 
 		// Añadimos el nuevo contacto.
-		contactos[limite] = contacto;
-		limite++;
+		contactos.add(contacto);
 
 		return true;
 
@@ -42,14 +35,14 @@ public class Agenda {
 	public void listarContactos() {
 
 		// Verificamos si hay contactos almacenados
-		if (limite == 0) {
+		if (contactos.isEmpty()) {
 			System.out.println("No hay ningún contacto almacenado.");
 			return;
 		}
 
 		// Recorremos el array de contactos y mostramos sus datos.
-		for (int i = 0; i < limite; i++) {
-			System.out.println(contactos[i].toString());
+		for (Contacto contacto : contactos) {
+			System.out.println(contacto.toString());
 		}
 
 	}
@@ -58,8 +51,8 @@ public class Agenda {
 	// encuentra, devuelve -1.
 	public int buscarContacto(int idContacto) {
 
-		for (int i = 0; i < limite; i++) {
-			if (contactos[i].getId() == idContacto) {
+		for (int i = 0; i < contactos.size(); i++) {
+			if (contactos.get(i).getId() == idContacto) {
 				return i;
 			}
 		}
@@ -71,8 +64,9 @@ public class Agenda {
 	// Devuelve el contacto almacenado en la posición indicada del array contactos.
 	public Contacto getContacto(int pos) {
 
-		if (pos >= 0 && pos < limite) {
-			return contactos[pos];
+		// TODO: Comprobar si se puede eliminar el if.
+		if (pos >= 0 && pos < contactos.size()) {
+			return contactos.get(pos);
 		}
 
 		return null;
@@ -80,11 +74,12 @@ public class Agenda {
 	}
 
 	// Almacena en la posición pos del array contactos el contacto recibido como
-	// parámetro.
+	// parámetro. El resto de contactos no sufrirá modificaciones.
 	public void setContacto(int pos, Contacto contacto) {
 
-		if (pos >= 0 && pos < limite) {
-			contactos[pos] = contacto;
+		// TODO: Comprobar si se puede eliminar el if.
+		if (pos >= 0 && pos < contactos.size()) {
+			contactos.set(pos, contacto);
 		}
 
 	}
@@ -100,11 +95,7 @@ public class Agenda {
 		}
 
 		// Movemos todos los elementos por debajo de pos un sitio hacia arriba.
-		for (int i = pos; i < limite - 1; i++) {
-			contactos[i] = contactos[i + 1];
-		}
-
-		limite--;
+		contactos.remove(pos);
 
 		return true;
 
