@@ -229,7 +229,7 @@ public class HallOfFame2 extends JFrame {
 			String lineaNombre = buffer.readLine();
 			String lineaPuntuacion = buffer.readLine();
 
-			// Mientras haya datoss se hace...
+			// Mientras haya datos se hace...
 			while (lineaNombre != null && lineaPuntuacion != null) {
 
 				// Descomponemos cada línea en nombre y puntuacion.

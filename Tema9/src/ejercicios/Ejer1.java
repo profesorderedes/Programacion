@@ -10,14 +10,20 @@ public class Ejer1 {
 
 	public static void main(String[] args) {
 
-		int num = 16;
+		int num = 11;
 		System.out.println("El número " + num + " en binario es " + transforma(num));
 
 	}
 
-	private static String transforma(int dato) {
-		
-		
-		return null;
+	public static String transforma(int dato) {
+
+		if (dato < 2) {
+			// Caso base
+			return "" + dato;
+
+		} else {
+			// Caso recursivo
+			return transforma(dato / 2) + (dato % 2);
+		}
 	}
 }
