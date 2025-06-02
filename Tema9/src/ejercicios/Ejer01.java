@@ -6,7 +6,7 @@ Crea una clase con un método:
 que transforme un número entero en base diez a binario. 
 Utiliza un procedimiento recursivo.
  */
-public class Ejer1 {
+public class Ejer01 {
 
 	public static void main(String[] args) {
 
