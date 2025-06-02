@@ -1,3 +1,4 @@
+package agenda;
 import java.util.Scanner;
 
 import net.iessonferrer.io.Consola;
