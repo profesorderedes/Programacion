@@ -125,8 +125,7 @@ public class HallOfFame2 extends JFrame {
 		// personal del usuario.
 		File carpeta = new File(System.getProperty("user.home") + "/HallOfFame");
 		carpeta.mkdir();
-		
-		
+
 		cargarJugadores();
 
 		add(lblHallOfFame);
@@ -204,7 +203,7 @@ public class HallOfFame2 extends JFrame {
 
 			buffer.write("nombre=" + jugador.getNombre() + "\n");
 			buffer.write("puntos=" + jugador.getPuntuacion() + "\n");
-			
+
 			buffer.close();
 
 		} catch (IOException e) {
@@ -226,20 +225,26 @@ public class HallOfFame2 extends JFrame {
 			FileReader archivo = new FileReader(NOMBRE_ARCHIVO);
 			BufferedReader buffer = new BufferedReader(archivo);
 
-			String linea = buffer.readLine();
+			// Declaras e itera una vez
+			String lineaNombre = buffer.readLine();
+			String lineaPuntuacion = buffer.readLine();
 
-			while (linea != null) {
+			// Mientras haya datoss se hace...
+			while (lineaNombre != null && lineaPuntuacion != null) {
 
 				// Descomponemos cada línea en nombre y puntuacion.
-				String[] datos = linea.split(",");
 
-				String nombre = datos[0];
-				int puntuacion = Integer.parseInt(datos[1]);
+				String[] partesNombre = lineaNombre.split("=");
+				String nombre = partesNombre[1];
+				String[] partesPuntuacion = lineaPuntuacion.split("=");
+				int puntuacion = Integer.parseInt(partesPuntuacion[1]);
 
 				Jugador jugadorNuevo = new Jugador(nombre, puntuacion);
 				jugadores.add(jugadorNuevo);
 
-				linea = buffer.readLine();
+				// Se actualiza e itera todas las veces necesarias dentro del bucle.
+				lineaNombre = buffer.readLine();
+				lineaPuntuacion = buffer.readLine();
 			}
 
 			buffer.close();
