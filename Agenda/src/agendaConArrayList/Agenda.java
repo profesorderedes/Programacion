@@ -8,8 +8,7 @@ public class Agenda {
 	private List<Contacto> contactos;
 	private int siguienteId; // Id que asignaremos al añadir un nuevo contacto. Siempre irá en aumento.
 
-	// TODO Eliminar el parámetro numPosiciones que es innecesario.
-	public Agenda(int numPosiciones) {
+	public Agenda() {
 
 		contactos = new ArrayList<>();
 		siguienteId = 1;
@@ -64,7 +63,6 @@ public class Agenda {
 	// Devuelve el contacto almacenado en la posición indicada del array contactos.
 	public Contacto getContacto(int pos) {
 
-		// TODO: Comprobar si se puede eliminar el if.
 		if (pos >= 0 && pos < contactos.size()) {
 			return contactos.get(pos);
 		}
@@ -77,10 +75,7 @@ public class Agenda {
 	// parámetro. El resto de contactos no sufrirá modificaciones.
 	public void setContacto(int pos, Contacto contacto) {
 
-		// TODO: Comprobar si se puede eliminar el if.
-		if (pos >= 0 && pos < contactos.size()) {
-			contactos.set(pos, contacto);
-		}
+		contactos.set(pos, contacto);
 
 	}
 

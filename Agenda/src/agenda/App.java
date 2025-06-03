@@ -12,9 +12,6 @@ public class App {
 
 		Agenda agenda = new Agenda(100);
 
-		agenda.anyadirContacto(new Contacto("Sogorb Valls", "Carlos", "555 19 92 00"));
-		agenda.anyadirContacto(new Contacto("Marín López", "Ana", "555 20 20 30"));
-
 		menuPrincipal(agenda);
 
 		System.out.println("\nGracias por usar la agenda.");

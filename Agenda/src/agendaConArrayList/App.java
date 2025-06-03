@@ -1,4 +1,5 @@
 package agendaConArrayList;
+
 import java.util.Scanner;
 
 import net.iessonferrer.io.Consola;
@@ -9,7 +10,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Agenda agenda = new Agenda(100);
+		Agenda agenda = new Agenda();
 
 		agenda.anyadirContacto(new Contacto("Sogorb Valls", "Carlos", "555 19 92 00"));
 		agenda.anyadirContacto(new Contacto("Marín López", "Ana", "555 20 20 30"));
@@ -105,6 +106,24 @@ public class App {
 
 	private static void menuAnyadirContacto(Agenda agenda) {
 
+		borrarPantalla();
+
+		System.out.println("\nAÑADIR CONTACTO - AGENDA TELEFÓNICA");
+		System.out.println("=======================================================================================");
+
+		// Leemos los datos del próximo contacto.
+		Contacto contactoNuevo = leerDatosContacto();
+
+		if (contactoNuevo != null) {
+			agenda.anyadirContacto(contactoNuevo);
+			System.out.println("\nSe ha añadido el contacto a la agenda.");
+		} else {
+			System.out.println("\nNo se ha añadido el contacto a la agenda.");
+		}
+
+		System.out.println("\nPulse INTRO para volver al menú principal...");
+		entrada.nextLine();
+
 	}
 
 	private static Contacto leerDatosContacto() {
@@ -136,9 +155,78 @@ public class App {
 
 	private static void menuEditarContacto(Agenda agenda) {
 
+		borrarPantalla();
+
+		System.out.println("\nEDITAR CONTACTO - AGENDA TELEFÓNICA");
+		System.out.println("=======================================================================================");
+
+		System.out.print("Id del contacto que desea modificar: ");
+		int id = Consola.leerInt("Tiene que escribir un número entero. Vuelva a hacerlo.");
+
+		int pos = agenda.buscarContacto(id);
+
+		if (pos == -1) {
+			System.out.println("\nNo existe ningún contacto con el id indicado.");
+			System.out.println("\nPulse INTRO para volver al menú principal...");
+			entrada.nextLine();
+			return;
+		}
+
+		Contacto contactoAntiguo = agenda.getContacto(pos);
+
+		System.out.println("\nLos datos del contacto elegido son:\n" + contactoAntiguo);
+		System.out.println("\nEscriba los nuevos datos del contacto:");
+
+		Contacto contactoEditar = leerDatosContacto();
+
+		if (contactoEditar != null) {
+			contactoEditar.setId(contactoAntiguo.getId());
+			agenda.setContacto(pos, contactoEditar);
+			System.out.println("\nSe ha modificado el contacto en la agenda.");
+		} else {
+			System.out.println("\nNo se ha modificado el contacto en la agenda.");
+		}
+
+		System.out.println("\nPulse INTRO para volver al menú principal...");
+		entrada.nextLine();
+
 	}
 
 	private static void menuBorrarContacto(Agenda agenda) {
+
+		borrarPantalla();
+
+		System.out.println("\nBORRAR CONTACTO - AGENDA TELEFÓNICA");
+		System.out.println("=======================================================================================");
+
+		System.out.print("Id del contacto que desea eliminar: ");
+		int id = Consola.leerInt("Tiene que escribir un número entero. Vuelva a hacerlo.");
+
+		int pos = agenda.buscarContacto(id);
+
+		if (pos == -1) {
+			System.out.println("\nNo existe ningún contacto con el id indicado.");
+			System.out.println("\nPulse INTRO para volver al menú principal...");
+			entrada.nextLine();
+			return;
+		}
+
+		Contacto contacto = agenda.getContacto(pos);
+
+		System.out.println("\nLos datos del contacto elegido son:\n" + contacto);
+
+		System.out.println("\n¿Está seguro de querer eliminarlo de la agenda (s/n)?");
+		String confirma = entrada.nextLine();
+
+		if (confirma.equalsIgnoreCase("s")) {
+			agenda.eliminarContacto(id);
+			System.out.println("\nSe ha eliminado el contacto.");
+		} else {
+			System.out.println("\nNo se ha eliminado el contacto.");
+		}
+
+		System.out.println("\nPulse INTRO para volver al menú principal...");
+		entrada.nextLine();
 
 	}
 
