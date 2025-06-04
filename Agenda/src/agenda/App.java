@@ -12,6 +12,7 @@ public class App {
 
 		Agenda agenda = new Agenda(100);
 
+		agenda.cargarAgenda();
 		menuPrincipal(agenda);
 
 		System.out.println("\nGracias por usar la agenda.");
@@ -226,5 +227,7 @@ public class App {
 		entrada.nextLine();
 
 	}
+
+	
 
 }

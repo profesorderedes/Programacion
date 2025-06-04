@@ -3,7 +3,10 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<section name="java.lang.Class">
+		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
+			<item value="filere"/>
+			<item value="leerda"/>
 			<item value="print"/>
 		</list>
 	</section>

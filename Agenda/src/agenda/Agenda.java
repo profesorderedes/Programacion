@@ -1,5 +1,11 @@
 package agenda;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Agenda {
 
 	private Contacto[] contactos;
@@ -104,6 +110,39 @@ public class Agenda {
 		limite--;
 
 		return true;
+
+	}
+
+	public void cargarAgenda() {
+
+		File archivo = new File("contactos.txt");
+		try {
+			FileReader lector = new FileReader(archivo);
+			BufferedReader buffer = new BufferedReader(lector);
+
+			String linea = buffer.readLine();
+
+			while (linea != null) {
+				String[] partes = linea.split(",");
+
+				String apellidos = partes[0];
+				String nombre = partes[1];
+				String tel = partes[2];
+
+				Contacto contacto = new Contacto(apellidos, nombre, tel);
+				anyadirContacto(contacto);
+				linea = buffer.readLine();
+			}
+
+			buffer.close();
+
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
 
 	}
 
