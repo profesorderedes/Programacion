@@ -154,13 +154,12 @@ public class Agenda {
 
 		try {
 
-			FileWriter archivo = new FileWriter(NOMBRE_ARCHIVO, true);
+			FileWriter archivo = new FileWriter(NOMBRE_ARCHIVO);
 			BufferedWriter buffer = new BufferedWriter(archivo);
 
-			for (Contacto contacto : contactos) {
-				buffer.write(contacto.getApellidos() + "," 
-						+ contacto.getNombre() + "," + contacto.getTel() 
-						+ "\n");
+			for (int i = 0; i < limite; i++) {
+				buffer.write(contactos[i].getApellidos() + "," 
+						+ contactos[i].getNombre() + "," + contactos[i].getTel() + "\n");
 			}
 
 			buffer.close();

@@ -14,7 +14,7 @@ public class App {
 
 		agenda.cargarAgenda();
 		menuPrincipal(agenda);
-		
+
 		agenda.guardarAgenda();
 
 		System.out.println("\nGracias por usar la agenda.");
@@ -87,7 +87,6 @@ public class App {
 			}
 
 		} while (opcion != 5);
-		
 
 	}
 
@@ -230,7 +229,5 @@ public class App {
 		entrada.nextLine();
 
 	}
-
-	
 
 }

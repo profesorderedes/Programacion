@@ -1,1 +1,1 @@
-martínez,luis,555 10 10 10
+Tamas,Manue,555 20 20 20
