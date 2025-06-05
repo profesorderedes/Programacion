@@ -4,21 +4,21 @@ public class Ejer10 {
 
 	public static void main(String[] args) {
 
-		int[] nums = { 5, 2, 8 };
-		int cantidad = nums.length;
+		int[] nums = { 5, 2, 8, 3 };
 
-		int resultado = multiplicar(nums, cantidad);
+		int resultado = multiplicar(nums, nums.length);
 
-		System.out.println("La multiplicacion de los números es " + resultado);
+		System.out.println("La multiplicación de los números es " 
+				+ resultado);
 
 	}
 
 	public static int multiplicar(int[] lista, int n) {
 
-		// Caso base.
-		if (n == 0) {
-
-			return 1;
+		
+		if (n == 1) {
+			// Caso base.
+			return lista[0];
 
 		} else {
 
