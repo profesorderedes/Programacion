@@ -1,12 +1,16 @@
 package agenda;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Agenda {
+
+	private final String NOMBRE_ARCHIVO = "contactos.txt";
 
 	private Contacto[] contactos;
 	private int limite;
@@ -115,7 +119,7 @@ public class Agenda {
 
 	public void cargarAgenda() {
 
-		File archivo = new File("contactos.txt");
+		File archivo = new File(NOMBRE_ARCHIVO);
 		try {
 			FileReader lector = new FileReader(archivo);
 			BufferedReader buffer = new BufferedReader(lector);
@@ -137,11 +141,36 @@ public class Agenda {
 			buffer.close();
 
 		} catch (FileNotFoundException e) {
-			
+
 			e.printStackTrace();
 		} catch (IOException e) {
-			
+
 			e.printStackTrace();
+		}
+
+	}
+
+	public void guardarAgenda() {
+
+		try {
+
+			FileWriter archivo = new FileWriter(NOMBRE_ARCHIVO, true);
+			BufferedWriter buffer = new BufferedWriter(archivo);
+
+			for (Contacto contacto : contactos) {
+				buffer.write(contacto.getApellidos() + "," 
+						+ contacto.getNombre() + "," + contacto.getTel() 
+						+ "\n");
+			}
+
+			buffer.close();
+
+		} catch (IOException e) {
+
+			System.out.println("Error");
+
+			e.printStackTrace();
+
 		}
 
 	}
