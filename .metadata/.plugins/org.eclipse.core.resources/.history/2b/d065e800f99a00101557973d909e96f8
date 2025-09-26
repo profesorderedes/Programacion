@@ -1,0 +1,26 @@
+
+public class Ejemplo10 {
+
+	public static void main(String[] args) {
+
+		// CONVERSIONES IMPLÍCITAS: Cuando guardamos un valor de tipo más pequeño
+		// en una variable de tipo más grande.
+
+		byte edad = 60;
+		int edadInt = edad; // Conversión implícita byte -> int
+
+		long cantidad = 90000000;
+		float cantidadFloat = cantidad; // Conversión implícita long -> float
+		double cantidadDouble = cantidadFloat; // Conversión implícita float -> double
+
+		// CONVERSIONES EXPLÍCITAS: Cuando guardamos un valor de tipo más grande 
+		// en una variable de tipo más pequeño.
+		
+		short precio = 100;
+		byte precioByte = (byte)precio;
+		
+		
+		
+	}
+
+}

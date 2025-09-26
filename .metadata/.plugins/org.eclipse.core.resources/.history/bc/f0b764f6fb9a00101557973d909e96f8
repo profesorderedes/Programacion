@@ -1,0 +1,27 @@
+
+public class Ejemplo12 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Esto es una frase que sigue");
+		System.out.println("en la línea de abajo.");
+		
+		System.out.print("Esto es otra frase que sigue ");
+		System.out.println("en la misma línea.");
+		
+		String frase1 = "Estamos en septiembre ";
+		String frase2 = "y empieza a refrescar.";
+		
+		String concatenacion = frase1 + frase2;
+		System.out.println(concatenacion);
+		
+		int num = 26;
+		System.out.println(frase1 + num);
+		
+		int num2 = 9;
+		System.out.println(frase1 + num + num2);
+		
+		
+	}
+
+}

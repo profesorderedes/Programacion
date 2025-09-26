@@ -1,0 +1,14 @@
+
+public class Ejemplo12 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Esto es una frase que sigue");
+		System.out.println("en la línea de abajo.");
+		
+		System.out.print("Esto es otra frase que sigue");
+		System.out.println("en la misma línea.");
+		
+	}
+
+}

@@ -8,7 +8,7 @@ public class Ejemplo05 {
 		// Al mostrar pi se ve que no se han almacenado todos los decimales.
 		System.out.println(pi);
 
-		float numeroEnorme = 81293412394712934132F;
+		float numeroEnorme = 81293412394712934132.12312F;
 
 		// Al mostrar numeroEnorme se ve que no se han almacenado todas las cifras.
 		System.out.println(numeroEnorme);
