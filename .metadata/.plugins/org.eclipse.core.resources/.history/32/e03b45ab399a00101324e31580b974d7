@@ -1,0 +1,13 @@
+
+public class Ejemplo07 {
+
+	public static void main(String[] args) {
+		
+		int num1 = 30;
+		int num2 = 4;
+		
+		
+		
+	}
+	
+}

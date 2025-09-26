@@ -1,0 +1,14 @@
+
+public class Ejemplo06 {
+	
+	public static void main(String[] args) {
+		
+		int numero = 2147483647;
+		
+		System.out.println(numero);
+		
+		numero = numero + 1;
+		
+	}
+
+}

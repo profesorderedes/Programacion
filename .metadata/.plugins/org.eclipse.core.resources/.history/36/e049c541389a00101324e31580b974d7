@@ -1,0 +1,21 @@
+
+public class Ejemplo06 {
+
+	public static void main(String[] args) {
+
+		// Guardamos el mayor número posible en una variable int.
+		int numero = 2147483647;
+
+		System.out.println(numero);
+
+		// Si sumamos 1 al número anterior, da un valor que excede del máximo
+		// que cabe en un int, y lo que se guardar realmente es el número
+		// -2147483648, que es como si se empezara a contar desde el menor
+		// valor posible.
+		numero = numero + 1;
+
+		System.out.println(numero);
+
+	}
+
+}

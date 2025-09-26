@@ -1,0 +1,16 @@
+
+public class Ejemplo03 {
+	
+	public static void main(String[] args) {
+		
+		// Habitualmente declaramos e incializamos en una sola línea.
+		String nombre = "Carlos";
+		
+		// Lo mismo podemos hacer para edad:
+		int edad = 20;
+		
+		nombre = "Pepito";
+		
+	}
+
+}
