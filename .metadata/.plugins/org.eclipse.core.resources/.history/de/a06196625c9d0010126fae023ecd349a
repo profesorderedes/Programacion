@@ -1,0 +1,21 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Ejer02 {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Dame un número: ");
+		int num1 = input.nextInt();
+
+		System.out.print("\nDame otro número: ");
+		int num2 = input.nextInt();
+
+		System.out.println("\n El resto de dividir " + num1 + " y " + num2 + " es " + (num1 % num2));
+
+	}
+
+}
