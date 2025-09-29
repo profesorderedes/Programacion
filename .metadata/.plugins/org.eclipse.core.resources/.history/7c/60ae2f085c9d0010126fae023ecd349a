@@ -1,0 +1,25 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Ejer01 {
+
+	public static void main(String[] args) {
+
+		// Crea un programa que pida dos números y los multiplique
+
+		Scanner entrada = new Scanner(System.in);
+
+		System.out.println("Inserte el primer número:");
+		int num1 = entrada.nextInt();
+
+		System.out.println("Inserte el segundo número:");
+		int num2 = entrada.nextInt();
+
+		int operacion = num1 * num2;
+
+		System.out.println("El resultado es:" + operacion + ".");
+
+	}
+
+}

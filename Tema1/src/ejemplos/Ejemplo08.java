@@ -1,0 +1,25 @@
+package ejemplos;
+
+public class Ejemplo08 {
+
+	public static void main(String[] args) {
+
+		// OPERACIONES LÓGICAS
+
+		// Operación AND
+		boolean a = true;
+		boolean b = false;
+
+		System.out.println("a AND b = " + (a && b));
+
+		// Operación OR
+
+		System.out.println("a OR b = " + (a || b));
+
+		// Operación NOT
+
+		System.out.println("NOT a = " + !a);
+
+	}
+
+}
