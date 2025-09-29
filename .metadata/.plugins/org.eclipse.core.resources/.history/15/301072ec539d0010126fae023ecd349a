@@ -1,0 +1,23 @@
+
+// Indicamos al compilador que vamos a usar la clase Scanner.
+import java.util.Scanner;
+
+public class Ejemplo14 {
+	
+	public static void main(String[] args) {
+		
+		// Declaramos una variable de tipo Scanner, indicándole que tiene que leer 
+		// de la terminal (System.in).
+		Scanner entrada = new Scanner(System.in);
+		
+		// Vamos usar la variable entrada para leer datos del usuario.
+		
+		System.out.println("¿Cómo te llamas?");
+		String nombre = entrada.nextLine();
+		System.out.println("Encantado de conocerte, " + nombre + ".");
+		
+		System.out.println("Gracias.");
+		
+	}
+
+}
