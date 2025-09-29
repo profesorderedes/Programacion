@@ -13,31 +13,35 @@ public class Ejemplo14 {
 		// Vamos usar la variable entrada para leer datos del usuario.
 
 		System.out.println("¿Cómo te llamas?");
-		// Para leer un String usamos el método nextLine() de Scanner.
 		String nombre = entrada.nextLine();
 		System.out.println("Encantado de conocerte, " + nombre + ".");
 
 		// Preguntar el color favorito.
-
 		System.out.print("\n¿Cuál es tu color favorito? ");
 		String color = entrada.nextLine();
 		System.out.println("¡El " + color + " también es mi color favorito!");
-
+		
 		// Preguntar la edad, y mostrarle su edad sumándole 10 años.
-
-		System.out.println("\n¿Cuántos años tienes?");
-		// Para leer un número entero usamos el método nextInt() de Scanner.
-		int edad = entrada.nextInt();
+		System.out.println("¿Cuántos años tienes?");
+		String edad = entrada.nextLine();
 		System.out.println("Sumando diez da " + (edad + 10));
 
-		// Preguntamos la altura en metros.
-		
-		System.out.println("\n¿Cuánto mides, en metros?");
-		float altura = entrada.nextFloat();
-		System.out.println("Mides " + altura + " metros.");
-		
 		System.out.println("Gracias.");
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

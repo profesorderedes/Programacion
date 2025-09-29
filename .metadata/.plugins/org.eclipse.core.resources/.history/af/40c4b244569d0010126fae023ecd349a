@@ -34,7 +34,6 @@ public class Ejemplo14 {
 		
 		System.out.println("\n¿Cuánto mides, en metros?");
 		float altura = entrada.nextFloat();
-		System.out.println("Mides " + altura + " metros.");
 		
 		System.out.println("Gracias.");
 

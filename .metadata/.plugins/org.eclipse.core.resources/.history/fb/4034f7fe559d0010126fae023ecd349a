@@ -25,17 +25,11 @@ public class Ejemplo14 {
 
 		// Preguntar la edad, y mostrarle su edad sumándole 10 años.
 
-		System.out.println("\n¿Cuántos años tienes?");
+		System.out.println("¿Cuántos años tienes?");
 		// Para leer un número entero usamos el método nextInt() de Scanner.
 		int edad = entrada.nextInt();
 		System.out.println("Sumando diez da " + (edad + 10));
 
-		// Preguntamos la altura en metros.
-		
-		System.out.println("\n¿Cuánto mides, en metros?");
-		float altura = entrada.nextFloat();
-		System.out.println("Mides " + altura + " metros.");
-		
 		System.out.println("Gracias.");
 
 	}
