@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+
+public class Ejercicio04 {
+
+
+public static void main(String[] args) {
+
+
+Scanner input = new Scanner(System.in);
+
+System.out.print("Dime tu nombre: ");
+
+String nombre = input.nextLine();
+
+System.out.print("\nDime tu nota en MATES: ");
+
+float mates = input.nextFloat();
+
+System.out.print("\nDime tu nota en CASTELLANO: ");
+
+float castellano = input.nextFloat();
+
+System.out.print("\nDime tu nota en CATALAN: ");
+
+float catalan = input.nextFloat();
+
+float media = (mates + castellano + catalan)/3;
+
+System.out.println("\n\n"+nombre+", de nota media, tienes un " + media);
+
+}
+
+
+}

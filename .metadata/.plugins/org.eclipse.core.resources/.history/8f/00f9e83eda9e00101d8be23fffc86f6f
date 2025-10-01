@@ -1,0 +1,24 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Ejer03 {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+
+		System.out.println("Dame 1 número");
+
+		int num1 = entrada.nextInt();
+
+		System.out.println("Dame otro número");
+
+		int num2 = entrada.nextInt();
+
+		System.out.println(
+				"El cociente de la división de estos números es " + (num1 / num2) + " y el resto es " + (num1 % num2));
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Ejer04 {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Dime tu nombre: ");
+		String nombre = input.nextLine();
+
+		System.out.print("\nDime tu nota en la primera evaluación: ");
+		float nota1 = input.nextFloat();
+
+		System.out.print("\nDime tu nota en la segunda evaluación: ");
+		float nota2 = input.nextFloat();
+
+		System.out.print("\nDime tu nota en la tercera evaluación: ");
+		float nota3 = input.nextFloat();
+
+		float media = (nota1 + nota2 + nota3) / 3;
+
+		System.out.println("\n\n" + nombre + ", de nota media, tienes un " + media);
+
+	}
+
+}
