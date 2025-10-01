@@ -1,0 +1,24 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Ejer05 {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+
+		System.out.print("Nombre del producto: ");
+		String nombre = entrada.nextLine();
+
+		System.out.print("Precio: ");
+		float precio = entrada.nextFloat();
+
+		System.out.print("Descuento: ");
+		int descuento = entrada.nextInt();
+		
+		
+
+	}
+
+}
