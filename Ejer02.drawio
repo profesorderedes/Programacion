@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:143.0) Gecko/20100101 Firefox/143.0" version="28.2.5">
+  <diagram name="Página-1" id="WVWnFDQEwnPoa3ZHE_O3">
+    <mxGraphModel dx="1360" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="RkrQ8Et8DCIM3R6IrIR6-1" target="RkrQ8Et8DCIM3R6IrIR6-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-1" value="Inicio" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="RkrQ8Et8DCIM3R6IrIR6-2" target="RkrQ8Et8DCIM3R6IrIR6-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-2" value="Iniciar contador en 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="RkrQ8Et8DCIM3R6IrIR6-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="RkrQ8Et8DCIM3R6IrIR6-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-4" value="contador =&amp;lt; 20?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="250" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-8" value="Si" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="376" y="348" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-10" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="471" y="258" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="RkrQ8Et8DCIM3R6IrIR6-11" target="RkrQ8Et8DCIM3R6IrIR6-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="500" />
+              <mxPoint x="320" y="295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-11" value="contador = contador + 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RkrQ8Et8DCIM3R6IrIR6-13" value="Fin" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="265" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pbCBMGU4gB_mVJE6SLAn-1" value="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="640" y="90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pbCBMGU4gB_mVJE6SLAn-2" value="contador" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="670" y="170" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IHnAyTIl_LUfHkCgWN9J-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IHnAyTIl_LUfHkCgWN9J-2" target="RkrQ8Et8DCIM3R6IrIR6-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IHnAyTIl_LUfHkCgWN9J-2" value="Mostrar contador" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="378" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
