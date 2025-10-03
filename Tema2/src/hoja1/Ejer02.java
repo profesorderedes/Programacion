@@ -21,9 +21,9 @@ public class Ejer02 {
 
 			float descuento = precio * 10 / 100;
 			precio = precio - descuento;
-		
+
 		}
-		
+
 		System.out.println("Tiene un descuento, el precio es de " + precio + "€.");
 
 	}
