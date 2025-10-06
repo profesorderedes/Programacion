@@ -1,7 +1,6 @@
 // Indicamos al compilador que vamos a usar la clase Scanner.
 package ejemplos;
 
-
 import java.util.Scanner;
 
 public class Ejemplo14 {
@@ -33,11 +32,11 @@ public class Ejemplo14 {
 		System.out.println("Sumando diez da " + (edad + 10));
 
 		// Preguntamos la altura en metros.
-		
+
 		System.out.println("\n¿Cuánto mides, en metros?");
 		float altura = entrada.nextFloat();
 		System.out.println("Mides " + altura + " metros.");
-		
+
 		System.out.println("Gracias.");
 
 	}

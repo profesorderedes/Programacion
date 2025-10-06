@@ -22,8 +22,7 @@ public class Ejer05 {
 
 		System.out.println("PRODUCTO\tPRECIO\t\tDESCUENTO\tTOTAL");
 
-		System.out.println(producto + "\t\t" + precio + "€" + "\t\t" + descuento + "%" + "\t\t" 
-				+ total + "€");
+		System.out.println(producto + "\t\t" + precio + "€" + "\t\t" + descuento + "%" + "\t\t" + total + "€");
 
 	}
 

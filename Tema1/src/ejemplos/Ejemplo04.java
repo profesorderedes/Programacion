@@ -25,8 +25,7 @@ public class Ejemplo04 {
 		// Los char se almacenan como números enteros (códigos UNICODE). Podemos sumar
 		// un char y un entero:
 		System.out.println(letraDni + 1); // Muestra el nº 73 (72 + 1)
-		
-		
+
 	}
 
 }

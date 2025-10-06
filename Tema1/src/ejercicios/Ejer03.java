@@ -15,8 +15,7 @@ public class Ejer03 {
 		int num2 = entrada.nextInt();
 
 		System.out.println(
-				"El cociente de la división de estos números es " + (num1 / num2) 
-				+ " y el resto es " + (num1 % num2));
+				"El cociente de la división de estos números es " + (num1 / num2) + " y el resto es " + (num1 % num2));
 
 	}
 

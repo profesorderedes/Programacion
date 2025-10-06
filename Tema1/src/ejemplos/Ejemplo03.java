@@ -17,7 +17,6 @@ public class Ejemplo03 {
 
 		edadCliente = 40;
 		System.out.println("Edad: " + edadCliente);
-		
 
 	}
 

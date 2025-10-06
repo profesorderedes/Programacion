@@ -34,14 +34,7 @@ public class Ejemplo07 {
 		// resultado en una variable booleana para utilizarlo más adelante.
 		boolean resultado = (num1 >= num2);
 		System.out.println("resultado: " + resultado);
-		
-		
 
 	}
 
 }
-
-
-
-
-

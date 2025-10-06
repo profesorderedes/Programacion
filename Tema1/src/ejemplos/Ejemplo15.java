@@ -1,4 +1,5 @@
 package ejemplos;
+
 import java.util.Scanner;
 
 public class Ejemplo15 {
