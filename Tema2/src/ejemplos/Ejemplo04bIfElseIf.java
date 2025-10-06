@@ -16,7 +16,9 @@ public class Ejemplo04bIfElseIf {
 		int edad = entrada.nextInt();
 
 		// Asumimos que el dato escrito puede no ser una edad correcta.
-		if (edad < 14) {
+		if (edad < 0) {
+			System.out.println("Edad incorrecta");
+		} else if (edad < 14) {
 			System.out.println("Tienes que pagar 0 euros.");
 		} else if (edad < 18) {
 			System.out.println("Tienes que pagar 5 euros.");
