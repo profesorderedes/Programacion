@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class Ejer07 {
 
 	public static void main(String[] args) {
-		
-		final int NUMERO_SECRETO = 7;
+
+		final int NUMERO_SECRETO = (int) (10 * Math.random() + 1);
+		System.out.println(NUMERO_SECRETO);
 
 		Scanner input = new Scanner(System.in);
 
