@@ -27,7 +27,7 @@ public class Ejer18 {
 			System.out.println("Ese mes tiene 31 días");
 			break;
 		case 2:
-			
+
 			System.out.println("Ese mes tiene 28 días");
 			break;
 		default:
