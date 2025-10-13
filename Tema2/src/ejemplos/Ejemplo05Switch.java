@@ -2,7 +2,7 @@ package ejemplos;
 
 import java.util.Scanner;
 
-public class Ejemplo5Switch {
+public class Ejemplo05Switch {
 
 	public static void main(String[] args) {
 
