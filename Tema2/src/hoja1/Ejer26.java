@@ -11,21 +11,21 @@ public class Ejer26 {
 //        será "20:00". En otro caso, la hora de cierre será "14:00".
 
 		Scanner entrada = new Scanner(System.in);
-		
+
 		System.out.println("¿Qué día es?");
 		String dia = entrada.nextLine();
 
 		String horaCierre;
 
-		if (dia.equals("entre semana")) {
-			horaCierre = "20:00";
-		} else {
-			horaCierre = "14:00";
-		}
-		
+//		if (dia.equals("entre semana")) {
+//			horaCierre = "20:00";
+//		} else {
+//			horaCierre = "14:00";
+//		}
+
 		// Sintaxis del operador ternario:
 		// variable = condición ? valor si true : valor si false;
-		horaCierre = 
+		horaCierre = dia.equals("entre semana") ? "20:00" : "14:00";
 
 		System.out.println("Hora de cierre: " + horaCierre);
 

@@ -11,8 +11,8 @@ public class Ejer27 {
 //        el resultado y mostrando después esta variable.
 
 		Scanner entrada = new Scanner(System.in);
-		System.out.println("Introduzca un número: ");
 
+		System.out.println("Introduzca un número: ");
 		int numero = entrada.nextInt();
 
 		String resultado = numero % 2 == 0 ? "Es par" : "Es impar";
