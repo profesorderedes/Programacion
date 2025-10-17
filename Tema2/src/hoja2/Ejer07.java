@@ -4,15 +4,15 @@ public class Ejer07 {
 
 	public static void main(String[] args) {
 
-		int i = 1;
-		int j = 1;
+		int i = 2;
+		int numPares = 1;
 
-		while (j < 50) {
+		while (numPares <= 50) {
 
-			System.out.println(i);
+			System.out.println(numPares + ") " + i);
 
 			i = i + 2;
-			j++;
+			numPares++;
 
 		}
 
