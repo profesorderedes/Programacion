@@ -21,12 +21,12 @@ public class Ejer10b {
 		Scanner input = new Scanner(System.in);
 
 		// Preguntamos al usuario y leemos su respuesta.
-		
+
 		System.out.println("¿Cómo se escribe 30 en hexadecimal?");
 		System.out.println("\t1) 1E\n\t2) 2F\n\t3) 33\n\t4) Ninguno de los anteriores");
-		
+
 		int choice = 0;
-		
+
 		// Repetimos la pregunta mientras no escriba un número válido (entre 1 y 4).
 		while (choice < 1 || choice > 4) {
 
