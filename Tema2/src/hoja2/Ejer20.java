@@ -9,9 +9,9 @@ public class Ejer20 {
 
 		System.out.println("Las diez primeras potencias de 2 son :");
 		for (int i = 1; i <= 10; i++) {
-			
+
 			System.out.println(i + ") " + Math.pow(2, i));
-			
+
 		}
 
 	}

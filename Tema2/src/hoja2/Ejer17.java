@@ -14,18 +14,17 @@ public class Ejer17 {
 		System.out.println("TABLAS DE MULTIPLICAR");
 		System.out.println("===========================");
 
-		while(true) {
+		while (true) {
 			System.out.print("\nDime un número: ");
 			int num = entrada.nextInt();
 
 			System.out.println("\nTabla del " + num + ":");
 			for (int i = 1; i <= 10; i++) {
-				
+
 				System.out.println(num + " x " + i + " = " + num * i);
-				
+
 			}
 		}
-		
 
 	}
 
