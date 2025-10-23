@@ -9,7 +9,22 @@ public class Ejemplo15For {
 		// en el propio bucle.
 
 		// Programa que muestra los números del 1 al 20.
+//		int i = 1;
+//
+//		while (i <= 20) {
+//			System.out.println(i);
+//			i++;
+//		}
 
+		// for(inicializar variables; condición; actualizar variables)
+
+		for (int i = 1; i <= 20; i++) {
+
+			System.out.println(i);
+
+		}
+
+		System.out.println("De nada.");
 	}
 
 }
