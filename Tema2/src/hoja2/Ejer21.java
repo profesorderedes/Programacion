@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 // 21.- Utiliza un bucle for para preguntar 5 veces por un número entero, 
 // y al final devolver la frase "Has fallado".
+
 public class Ejer21 {
 
 	public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class Ejer21 {
 			int num = entrada.nextInt();
 		}
 		
-		System.out.println("¡Has fallado!");
+		System.out.println("\n¡Has fallado!");
 		
 	}
 
