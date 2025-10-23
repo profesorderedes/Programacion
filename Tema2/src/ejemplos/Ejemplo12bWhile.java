@@ -16,7 +16,7 @@ public class Ejemplo12bWhile {
 		// Si no ha escrito bien el password se le va a repetir la pregunta hasta que
 		// acierte.
 		String password = "";
-		
+
 		while (!password.equals(PASSWORD_CORRECTO)) {
 			System.out.print("Escribe la contraseña, por favor: ");
 			password = entrada.nextLine();
