@@ -13,6 +13,7 @@ public class Ejer20b {
 		for (int i = 1; i <= 10; i++) {
 
 			System.out.println(i + ") " + potencia);
+			potencia = potencia * 2;
 
 		}
 
