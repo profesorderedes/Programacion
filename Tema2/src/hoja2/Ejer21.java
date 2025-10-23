@@ -10,16 +10,16 @@ public class Ejer21 {
 	public static void main(String[] args) {
 
 		Scanner entrada = new Scanner(System.in);
-		
+
 		System.out.println("¡Adivina el número! Tienes cinco intentos.\n");
-		
-		for() {
-			System.out.print("Escribe un número: ");
+
+		for (int i = 1; i <= 5; i++) {
+			System.out.print("Dime el número: ");
 			int num = entrada.nextInt();
 		}
-		
+
 		System.out.println("\n¡Has fallado!");
-		
+
 	}
 
 }
