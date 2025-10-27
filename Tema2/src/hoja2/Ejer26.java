@@ -29,7 +29,8 @@ public class Ejer26 {
 
 			}
 
-			System.out.println("\nTabla " + i + ". Tabla de multiplicación del número " + num + ".");
+			System.out.println("\nTabla " + i 
+					+ ". Tabla de multiplicación del número " + num + ".");
 
 			for (int j = 1; j <= 10; j++) {
 
