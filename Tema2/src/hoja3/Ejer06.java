@@ -6,9 +6,9 @@ public class Ejer06 {
 
 	public static void main(String[] args) {
 
-// 6.- Añade al programa anterior una comprobación del número introducido, de manera que si el
-// usuario escribe "1", el programa le responda "No seas tonto" y vuelva a empezar el bucle, sin
-// mostrar la tabla. Utiliza la palabra clave continue.
+// 6.- Añade al programa anterior una comprobación del número introducido, de manera 
+// que si el usuario escribe "1", el programa le responda "No seas tonto" y vuelva a 
+// empezar el bucle, sin mostrar la tabla. Utiliza la palabra clave continue.
 
 		Scanner input = new Scanner(System.in);
 
