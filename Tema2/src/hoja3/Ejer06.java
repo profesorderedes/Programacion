@@ -24,7 +24,6 @@ public class Ejer06 {
 
 				System.out.println("No seas tonto");
 				continue;
-
 			}
 
 			System.out.println("\nTabla del número " + num + ":");
@@ -32,7 +31,6 @@ public class Ejer06 {
 			for (int i = 1; i <= 10; i++) {
 
 				System.out.println("\t" + num + " x " + i + " = " + num * i);
-
 			}
 
 		} while (num != 0);
