@@ -8,7 +8,7 @@ import java.util.Scanner;
 // se le indicará si ha acertado o no. 
 // Estas acciones se repetirán indefinidamente mediante un bucle while.
 
-public class Ejer03 {
+public class Ejer04 {
 
 	public static void main(String[] args) {
 
@@ -30,7 +30,18 @@ public class Ejer03 {
 				System.out.println("Has fallado. La respuesta era: " + (num1 + num2));
 			}
 
+			// Preguntamos al usuario si quiere continuar. Si no, terminamos el bucle.
+			entrada.nextLine();
+			System.out.println("¿Quieres seguir jugando?");
+			char respuesta = entrada.nextLine().charAt(0);
+
+			if (respuesta != 's') {
+				break;
+			}
+
 		}
+
+		System.out.println("Gracias por jugar.");
 
 	}
 
