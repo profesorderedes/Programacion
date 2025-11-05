@@ -28,7 +28,7 @@ public class Ejer23 {
 			}
 
 		}
-		
+
 	}
 
 }

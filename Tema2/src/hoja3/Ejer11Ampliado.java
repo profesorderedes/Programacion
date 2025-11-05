@@ -28,7 +28,7 @@ public class Ejer11Ampliado {
 			}
 
 		} while (num != 500);
-		
+
 		// Mostramos el 500, que no se muestra en el bucle.
 		System.out.println(500);
 

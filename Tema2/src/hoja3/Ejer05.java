@@ -27,8 +27,6 @@ public class Ejer05 {
 			}
 
 		} while (num != 0);
-		
-		
 
 	}
 
