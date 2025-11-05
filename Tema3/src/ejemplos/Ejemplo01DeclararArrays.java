@@ -20,7 +20,7 @@ public class Ejemplo01DeclararArrays {
 		// Leemos una posición y mostramos su valor.
 		System.out.println("En la posición 0 tenemos el precio " + precios[0] + " euros.");
 		System.out.println("En la posición 0 del array precios2 tenemos el valor " + precios2[0]);
-		
+
 	}
 
 }

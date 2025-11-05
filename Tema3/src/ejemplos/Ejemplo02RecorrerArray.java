@@ -8,7 +8,9 @@ public class Ejemplo02RecorrerArray {
 
 		// Recorremos el array mostrando cada precio.
 
-		for (int i = 0; i < 5; i++) {
+		System.out.println("Tamaño del array: " + precios.length);
+
+		for (int i = 0; i < precios.length; i++) {
 			System.out.println(precios[i]);
 		}
 
