@@ -2,7 +2,7 @@ package ejemplos;
 
 import java.util.Scanner;
 
-public class Ejemplo03 {
+public class Ejemplo03LeerDesdeConsola {
 
 	public static void main(String[] args) {
 
