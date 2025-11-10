@@ -22,12 +22,15 @@ public class Ejer16 {
 
 			// Miramos si temperaturas[i] pasa de 12º y si es así sumamos 1 al contador de
 			// temperaturas altas.
-			
+			if(temperaturas[i] > 12) {
+				temperaturasAltas++;
+			}
 
 		}
 
 		System.out
 				.println("La temperatura media de la semana ha sido " + temperaturaTotal / temperaturas.length + "ºC.");
+		System.out.println("Hay " + temperaturasAltas + " temperaturas mayores de 12ºC.");
 
 	}
 
