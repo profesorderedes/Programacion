@@ -19,8 +19,8 @@ public class Ejer15 {
 
 		}
 
-		System.out.println("La temperatura media de la semana ha sido " 
-				+ temperaturaTotal / temperaturas.length + "ºC.");
+		System.out
+				.println("La temperatura media de la semana ha sido " + temperaturaTotal / temperaturas.length + "ºC.");
 
 	}
 

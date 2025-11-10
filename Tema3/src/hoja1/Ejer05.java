@@ -19,7 +19,7 @@ public class Ejer05 {
 
 			System.out.println("Nota " + (i + 1) + ": " + notas[i]);
 			i++;
-			
+
 		}
 
 	}
