@@ -20,6 +20,23 @@ public class Ejer14b {
 
 	public static void main(String[] args) {
 
+		for (int num = 2; num <= 1_000_000; num++) {
+
+			boolean esPrimo = true;
+
+			for (int i = 2; i < num; i++) {
+				if (num % i == 0) {
+					esPrimo = false;
+					break;
+				}
+			}
+			if (esPrimo) {
+				System.out.println(num + " es primo");
+			} else {
+				System.out.println(num + " no es primo");
+			}
+		}
+
 	}
 
 }
