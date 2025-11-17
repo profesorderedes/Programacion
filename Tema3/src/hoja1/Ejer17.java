@@ -11,7 +11,7 @@ public class Ejer17 {
 		Scanner entrada = new Scanner(System.in);
 
 		System.out.println("Introduzca 10 precios.");
-		
+
 		double total = 0;
 
 		int precio10 = 0;

@@ -22,8 +22,8 @@ public class Ejemplo06MinimoCadenas {
 
 		}
 
-		System.out.println("La primera palabra alfabéticamente es " + nombres[posMin] 
-				+ ". Y está en la posición " + posMin + ".");
+		System.out.println(
+				"La primera palabra alfabéticamente es " + nombres[posMin] + ". Y está en la posición " + posMin + ".");
 
 	}
 

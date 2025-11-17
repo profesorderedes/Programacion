@@ -18,21 +18,20 @@ public class Ejer02 {
 			alturas[i] = entrada.nextDouble();
 
 		}
-		
+
 		for (int i = 0; i < alturas.length; i++) {
-			
-			if(alturas[i] > 1.90) {
+
+			if (alturas[i] > 1.90) {
 				System.out.println("Hay al menos una altura mayor de 1.90 metros.");
 				encontrado = true;
 				break;
 			}
-			
+
 		}
 
-		if(!encontrado) {
+		if (!encontrado) {
 			System.out.println("No se ha encontrado a nadie que mida más de 1.90 m.");
 		}
-		
 
 	}
 

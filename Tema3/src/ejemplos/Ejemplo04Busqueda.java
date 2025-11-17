@@ -20,11 +20,11 @@ public class Ejemplo04Busqueda {
 			}
 
 		}
-		
-		if(!encontrado) {
+
+		if (!encontrado) {
 			System.out.println("No se ha encontrado.");
 		}
-		
+
 	}
 
 }
