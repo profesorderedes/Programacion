@@ -10,12 +10,12 @@ public class Ejemplo09Tablas {
 
 		// Esquema de cada fila:
 		// [Nombre] [Teléfono] [Código postal]
-		
+
 		// Rellenamos la primera fila.
 		personal[0][0] = "Pedro";
 		personal[0][1] = "971001122";
 		personal[0][2] = "07001";
-		
+
 	}
 
 }

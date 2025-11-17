@@ -23,20 +23,20 @@ public class Ejer10 {
 
 			posMin = i;
 
-			for (int j = i+1; j < temperaturas.length; j++) {
+			for (int j = i + 1; j < temperaturas.length; j++) {
 
 				if (temperaturas[j] < temperaturas[posMin]) {
 					posMin = j;
 				}
 
 			}
-			
+
 			float temp = temperaturas[posMin];
 			temperaturas[posMin] = temperaturas[i];
 			temperaturas[i] = temp;
-			
+
 			System.out.println(Arrays.toString(temperaturas));
-			
+
 		}
 
 		System.out.println("\nTemperatura más alta registrada: " + temperaturas[7] + " ºC.");
