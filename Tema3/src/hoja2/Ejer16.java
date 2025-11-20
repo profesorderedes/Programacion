@@ -4,13 +4,8 @@ public class Ejer16 {
 
 	public static void main(String[] args) {
 
-		String[][] alumnos = {
-				{ "Jose Luis Martínez", "7" },
-				{ "Antonia Ruiz", "9" },
-				{ "Marcos Ramírez", "10" },
-				{ "Juana Herranz", "4" },
-				{ "Alberto López", "7" }
-		};
+		String[][] alumnos = { { "Jose Luis Martínez", "7" }, { "Antonia Ruiz", "9" }, { "Marcos Ramírez", "10" },
+				{ "Juana Herranz", "4" }, { "Alberto López", "7" } };
 
 		for (int i = 0; i < alumnos.length; i++) {
 

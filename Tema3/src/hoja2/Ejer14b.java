@@ -4,12 +4,8 @@ public class Ejer14b {
 
 	public static void main(String[] args) {
 
-		String[][] articulos = {
-				{ "Tablet Samsung", "120" },
-				{ "Móvil Sony", "115" },
-				{ "Ipad Mini", "290" },
-				{ "Móvil HTC", "95" }
-		};
+		String[][] articulos = { { "Tablet Samsung", "120" }, { "Móvil Sony", "115" }, { "Ipad Mini", "290" },
+				{ "Móvil HTC", "95" } };
 
 		System.out.println("Artículos\n===============================");
 
@@ -26,7 +22,7 @@ public class Ejer14b {
 		}
 
 		// Creamos un array unidimensional con los precios.
-		
+
 		int[] precios = new int[articulos.length];
 
 		for (int i = 0; i < articulos.length; i++) {
@@ -38,7 +34,7 @@ public class Ejer14b {
 		int total = 0;
 
 		// Usamos el array que sólo tiene precios para sumar todas las cantidades.
-		
+
 		for (int i = 0; i < precios.length; i++) {
 
 			total = total + precios[i];

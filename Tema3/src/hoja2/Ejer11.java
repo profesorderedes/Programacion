@@ -8,7 +8,7 @@ public class Ejer11 {
 	public static void main(String[] args) {
 
 		Scanner entrada = new Scanner(System.in);
-		
+
 		int[] edades = new int[10];
 		int posMin;
 		int aux;

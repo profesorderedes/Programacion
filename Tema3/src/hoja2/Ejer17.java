@@ -10,13 +10,8 @@ public class Ejer17 {
 		 * "Juana Herranz tiene la nota más baja, un 4".
 		 */
 
-		String[][] calificaciones = { 
-				{ "Jose Luis Martínez", "7" }, 
-				{ "Antonia Ruiz", "9" }, 
-				{ "Juana Herranz ", "4" },
-				{ "Marcos Ramírez", "10" }, 
-				{ "Alberto López", "7" } 
-				};
+		String[][] calificaciones = { { "Jose Luis Martínez", "7" }, { "Antonia Ruiz", "9" }, { "Juana Herranz ", "4" },
+				{ "Marcos Ramírez", "10" }, { "Alberto López", "7" } };
 
 		int suma = 0;
 		int posMin = 0;
@@ -34,7 +29,7 @@ public class Ejer17 {
 		}
 
 		for (int fila = 0; fila < calificaciones.length; fila++) {
-			
+
 			if (Integer.parseInt(calificaciones[fila][1]) < Integer.parseInt(calificaciones[posMin][1])) {
 				posMin = fila;
 			}

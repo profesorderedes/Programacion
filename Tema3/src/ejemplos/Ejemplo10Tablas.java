@@ -6,12 +6,8 @@ public class Ejemplo10Tablas {
 
 		// Declaramos un array bidimensional dando directamente sus valores:
 
-		String[][] personal = { 
-				{ "Pedro", "971001122", "07001" }, 
-				{ "María", "971555555", "07009" },
-				{ "Juan", "971222200", "07005" }, 
-				{ "Paula", "971110066", "07002" } 
-		};
+		String[][] personal = { { "Pedro", "971001122", "07001" }, { "María", "971555555", "07009" },
+				{ "Juan", "971222200", "07005" }, { "Paula", "971110066", "07002" } };
 
 		// Datos de la primera fila.
 		System.out.println("Nombre: " + personal[0][0]);
