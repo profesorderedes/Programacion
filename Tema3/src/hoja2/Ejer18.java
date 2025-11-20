@@ -1,6 +1,6 @@
 package hoja2;
 
-public class Ejer17 {
+public class Ejer18 {
 
 	public static void main(String[] args) {
 
@@ -10,11 +10,12 @@ public class Ejer17 {
 		 * "Juana Herranz tiene la nota más baja, un 4".
 		 */
 
-		String[][] calificaciones = { { "Jose Luis Martínez", "7" }, { "Antonia Ruiz", "9" }, { "Juana Herranz", "4" },
+		String[][] calificaciones = { { "Jose Luis Martínez", "7" }, { "Antonia Ruiz", "9" }, 
+				{ "Juana Herranz", "4" },
 				{ "Marcos Ramírez", "10" }, { "Alberto López", "7" } };
 
 		int suma = 0;
-		int posMin = 0;
+		int posMin = 0, posMax = 0;
 
 		for (int fila = 0; fila < calificaciones.length; fila++) {
 
@@ -39,6 +40,17 @@ public class Ejer17 {
 		System.out.println("La nota media es de: " + (double) suma / calificaciones.length);
 		System.out.println("La nota más baja la tiene " + calificaciones[posMin][0] + " con una nota de "
 				+ calificaciones[posMin][1]);
+
+		for (int fila = 0; fila < calificaciones.length; fila++) {
+
+			if (Integer.parseInt(calificaciones[fila][1]) > Integer.parseInt(calificaciones[posMax][1])) {
+				posMax = fila;
+			}
+
+		}
+
+		System.out.println("La nota más alta la tiene " + calificaciones[posMax][0] + " con una nota de "
+				+ calificaciones[posMax][1]);
 
 	}
 
