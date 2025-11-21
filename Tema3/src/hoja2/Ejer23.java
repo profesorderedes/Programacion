@@ -15,6 +15,8 @@ public class Ejer23 {
 				{ 7, 1023, 50 }, 
 		};
 		
+	
+		
 		
 		
 		
