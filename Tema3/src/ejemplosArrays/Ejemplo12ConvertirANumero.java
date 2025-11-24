@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosArrays;
 
 public class Ejemplo12ConvertirANumero {
 
