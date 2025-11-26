@@ -10,7 +10,7 @@ public class Ejer07 {
 // de si contiene algunda palabra malsonante. Las palabras
 // malsonantes las buscará en un array llamado palabrotas.
 
-		String[] palabrotas = { "mierda", "joder", "cabron" };
+		String[] palabrotas = { "botarate", "mentecato", "rufián" };
 
 		Scanner input = new Scanner(System.in);
 
