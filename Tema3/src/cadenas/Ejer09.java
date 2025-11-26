@@ -19,10 +19,15 @@ public class Ejer09 {
 		// Recorremos la frase letra a letra.
 		for (int i = 0; i < frase.length(); i++) {
 
-			// 
+			// Si hemos pasado la primera palabra, mostramos el carácter.
 			if (primeraPalabraFuera) {
 				System.out.print(frase.charAt(i));
+				
 			} else if (frase.charAt(i) == ' ') {
+				
+				// Al encontrar el primer espacio, cambiamos el valor
+				// de primeraPalabraFuera para indicar que ya hemos dejado 
+				// atrás la primera palabra.
 				primeraPalabraFuera = true;
 			}
 
