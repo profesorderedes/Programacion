@@ -13,7 +13,7 @@ public class Ejer22 {
 		for (int fila = 0; fila < alumnos.length; fila++) {
 
 			System.out.println();
-			
+
 			System.out.print("Nombre: ");
 			alumnos[fila][0] = entrada.nextLine();
 
@@ -43,8 +43,7 @@ public class Ejer22 {
 
 			double notaFinal = (examen * 0.6) + (trabajo * 0.3) + (actitud * 0.1);
 
-			System.out.println("La nota final de " + nombre + " es un " + notaFinal 
-					+ ".");
+			System.out.println("La nota final de " + nombre + " es un " + notaFinal + ".");
 
 		}
 

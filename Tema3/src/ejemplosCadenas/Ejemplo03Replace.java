@@ -9,7 +9,7 @@ public class Ejemplo03Replace {
 		String nuevoDicho = dicho.replace("perro", "gato");
 
 		System.out.println(nuevoDicho);
-		
+
 		System.out.println("Frase original: " + dicho);
 
 	}

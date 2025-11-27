@@ -16,10 +16,10 @@ public class Ejer19 {
 
 			System.out.print("Introduce el nombre: ");
 			nominas[fila][0] = sc.nextLine();
-			
+
 			System.out.print("Introduce el apellidos: ");
 			nominas[fila][1] = sc.nextLine();
-			
+
 			System.out.print("Introduce el sueldo: ");
 			nominas[fila][2] = sc.nextLine();
 

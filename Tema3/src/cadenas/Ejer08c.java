@@ -18,7 +18,7 @@ public class Ejer08c {
 
 		// Recorremos la cadena letra a letra.
 		for (int i = 0; i < frase.indexOf(" "); i++) {
-			
+
 			// A la variable palabra le añadimos el caracter de la posición i.
 			palabra = palabra + frase.charAt(i);
 

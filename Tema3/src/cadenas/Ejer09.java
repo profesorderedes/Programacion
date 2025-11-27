@@ -22,11 +22,11 @@ public class Ejer09 {
 			// Si hemos pasado la primera palabra, mostramos el carácter.
 			if (primeraPalabraFuera) {
 				System.out.print(frase.charAt(i));
-				
+
 			} else if (frase.charAt(i) == ' ') {
-				
+
 				// Al encontrar el primer espacio, cambiamos el valor
-				// de primeraPalabraFuera para indicar que ya hemos dejado 
+				// de primeraPalabraFuera para indicar que ya hemos dejado
 				// atrás la primera palabra.
 				primeraPalabraFuera = true;
 			}

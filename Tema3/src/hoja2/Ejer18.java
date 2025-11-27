@@ -10,8 +10,7 @@ public class Ejer18 {
 		 * "Juana Herranz tiene la nota más baja, un 4".
 		 */
 
-		String[][] calificaciones = { { "Jose Luis Martínez", "7" }, { "Antonia Ruiz", "9" }, 
-				{ "Juana Herranz", "4" },
+		String[][] calificaciones = { { "Jose Luis Martínez", "7" }, { "Antonia Ruiz", "9" }, { "Juana Herranz", "4" },
 				{ "Marcos Ramírez", "10" }, { "Alberto López", "7" } };
 
 		int suma = 0;

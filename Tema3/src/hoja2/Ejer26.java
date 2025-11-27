@@ -32,9 +32,9 @@ public class Ejer26 {
 		}
 
 		System.out.println("La tabla, ordenada por nombre de producto, queda:\n");
-		
+
 //		System.out.println(Arrays.deepToString(articulos));
-		
+
 		for (int fila = 0; fila < articulos.length; fila++) {
 			System.out.println(articulos[fila][0] + "\t" + articulos[fila][1]);
 		}

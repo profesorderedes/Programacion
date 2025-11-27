@@ -9,7 +9,7 @@ public class Ejer04 {
 // Programa que pide una frase y luego muestra la primera palabra.
 
 		Scanner input = new Scanner(System.in);
-		
+
 		System.out.println("Dime una frase: ");
 		String frase = input.nextLine();
 

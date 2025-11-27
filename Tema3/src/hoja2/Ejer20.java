@@ -58,14 +58,9 @@ public class Ejer20 {
 
 		System.out.println("La suma de todas las nóminas es de: " + suma);
 
-		System.out.println("El salario más bajo pertenece a " + nominas[posMin][1] + " " 
-				+ nominas[posMin][0] + " y son " + nominas[posMin][2] + "€");
+		System.out.println("El salario más bajo pertenece a " + nominas[posMin][1] + " " + nominas[posMin][0]
+				+ " y son " + nominas[posMin][2] + "€");
 
 	}
 
 }
-
-
-
-
-
