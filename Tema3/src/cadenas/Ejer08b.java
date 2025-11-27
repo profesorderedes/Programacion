@@ -2,15 +2,12 @@ package cadenas;
 
 import java.util.Scanner;
 
-//Programa que lee una frase desde el teclado y nos muestra
-//la primera palabra.
+// Programa que lee una frase desde el teclado y nos muestra
+// la primera palabra.
 
 public class Ejer08b {
 
 	public static void main(String[] args) {
-
-// Programa que lee una frase desde el teclado y nos muestra
-// la primera palabra.
 
 		Scanner input = new Scanner(System.in);
 

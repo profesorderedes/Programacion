@@ -2,13 +2,12 @@ package cadenas;
 
 import java.util.Scanner;
 
+// Programa que pide una frase y dos letras. A continuación
+// muestra la frase sustituyendo la primera letra por la segunda.
+
 public class Ejer06 {
 
 	public static void main(String[] args) {
-
-// Programa que pide una frase y dos letras. A continuación
-// muestra la frase sustituyendo la primera letra por la
-// segunda.
 
 		Scanner input = new Scanner(System.in);
 

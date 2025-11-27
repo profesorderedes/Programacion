@@ -2,13 +2,12 @@ package cadenas;
 
 import java.util.Scanner;
 
+// Programa que lea una palabra desde la terminal y te diga cuántas letras
+// tiene.
+
 public class Ejer01 {
 
 	public static void main(String[] args) {
-
-// Programa que lea una palabra desde la terminal y te diga cuántas letras
-
-// tiene.
 
 		Scanner input = new Scanner(System.in);
 

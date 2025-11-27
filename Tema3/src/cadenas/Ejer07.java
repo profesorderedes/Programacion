@@ -2,13 +2,13 @@ package cadenas;
 
 import java.util.Scanner;
 
-public class Ejer07 {
-
-	public static void main(String[] args) {
-
 // Programa que lee una frase desde el teclado y nos alerta
 // de si contiene algunda palabra malsonante. Las palabras
 // malsonantes las buscará en un array llamado palabrotas.
+
+public class Ejer07 {
+
+	public static void main(String[] args) {
 
 		String[] palabrotas = { "botarate", "mentecato", "rufián" };
 

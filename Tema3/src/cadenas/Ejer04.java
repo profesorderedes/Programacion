@@ -2,11 +2,11 @@ package cadenas;
 
 import java.util.Scanner;
 
+//Programa que pide una frase y luego muestra la primera palabra.
+
 public class Ejer04 {
 
 	public static void main(String[] args) {
-
-// Programa que pide una frase y luego muestra la primera palabra.
 
 		Scanner input = new Scanner(System.in);
 
