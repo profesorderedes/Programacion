@@ -2,6 +2,9 @@ package cadenas;
 
 import java.util.Scanner;
 
+// Actividad 11: Programa que lee una frase y luego muestra las palabras sueltas 
+// (una en cada línea).
+
 public class Ejer11 {
 
 	public static void main(String[] args) {

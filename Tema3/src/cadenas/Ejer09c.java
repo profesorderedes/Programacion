@@ -2,6 +2,9 @@ package cadenas;
 
 import java.util.Scanner;
 
+//Programa que lee una frase desde el teclado y la muestra
+//quitando la primera palabra.
+
 public class Ejer09c {
 
 	public static void main(String[] args) {

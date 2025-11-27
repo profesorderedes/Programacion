@@ -2,6 +2,9 @@ package cadenas;
 
 import java.util.Scanner;
 
+// Actividad 12: Programa que lee una frase y crea un array donde cada posición 
+// contiene una palabra.
+
 public class Ejer12 {
 
 	public static void main(String[] args) {
