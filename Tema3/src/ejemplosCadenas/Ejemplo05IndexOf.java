@@ -8,7 +8,7 @@ public class Ejemplo05IndexOf {
 		
 		System.out.println("Apariciones de la palabra 'el': ");
 		
-		System.out.println("Primera: " + frase.indexOf("el"));
+		System.out.println("Primera: " + frase.indexOf("el", 0));
 		
 		// Podemos pedirle a indexOf que busque a partir de la posición 2, por ejemplo:
 		System.out.println("Segunda: " + frase.indexOf("el", 2));
