@@ -11,14 +11,11 @@ public class Ejer09d {
 		System.out.println("Introduzca una frase.");
 		String frase = entrada.nextLine();
 
-		String nuevaFrase = "";
+		String nuevaFrase = frase.substring(frase.indexOf(" ") + 1);
 
-		// Recorremos la cadena letra a letra.
-		for (int i = frase.indexOf(" ") + 1; i < frase.length(); i++) {
-
-			// A la variable palabra le añadimos el caracter de la posición i.
-			nuevaFrase = nuevaFrase + frase.charAt(i);
-
+		// Caso particular de que la frase sólo tiene una palabra.
+		if (frase.equals(nuevaFrase)) {
+			nuevaFrase = "";
 		}
 
 		System.out.println(nuevaFrase);
