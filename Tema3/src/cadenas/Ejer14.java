@@ -8,8 +8,8 @@ public class Ejer14 {
 
 	public static void main(String[] args) {
 
-// Programa que te pide cinco palabras, las guarda en un
-// array, y ordena el array alfabéticamente.
+		// Programa que te pide cinco palabras, las guarda en un
+		// array, y ordena el array alfabéticamente.
 
 		Scanner input = new Scanner(System.in);
 
