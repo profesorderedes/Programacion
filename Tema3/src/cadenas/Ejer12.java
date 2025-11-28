@@ -25,7 +25,7 @@ public class Ejer12 {
 				numPalabras = numPalabras + 1;
 			}
 		}
-		
+
 		// Creamos un array con tantas posiciones como palabras.
 		String[] palabras = new String[numPalabras];
 
