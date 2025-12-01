@@ -26,27 +26,43 @@ public class Ejer07b {
 
 		/*
 		 * Extra: modificar el ejercicio para que el número de pedidos a introducir sea
-		 * hasta 15.
+		 * hasta 15. Condición de parada: 0.
+		 * 
 		 */
 
 		Scanner entrada = new Scanner(System.in);
 
-		int pedidosFallidos = 0;
-		double[] pedidos = new double[15];
+		int pedidosFallidos = 0; 
+		double[] pedidos = new double[5];
 
+		// Indica el número de pedidos válidos.
+		int numPedidos = 0;
+		
 		for (int i = 0; i < pedidos.length; i++) {
 
 			System.out.println("Introduzca el tiempo de cada pedido: ");
 			pedidos[i] = entrada.nextInt();
-
+			
+			// Miramos si el usuario ha escrito un 0 para parar.
+			if (pedidos[i] == 0) {
+				break;
+			}
+			
+			numPedidos++;
+			
 			if (pedidos[i] > 30) {
 				pedidosFallidos++;
 			}
 
 		}
 
+		if(numPedidos == 0) {
+			return;
+		}
+		
 		System.out.println("Pedidos que superan los 30 minutos: " + pedidosFallidos);
-		System.out.println("Porcentaje de pedidos fallidos: " + (pedidosFallidos * 100 / pedidos.length));
+		System.out.println("Porcentaje de pedidos fallidos: " 
+				+ (pedidosFallidos * 100 / numPedidos) + "%");
 
 	}
 
