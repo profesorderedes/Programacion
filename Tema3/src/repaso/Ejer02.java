@@ -23,6 +23,13 @@ public class Ejer02 {
 				{6, 6, 5, 9},
 		};
 		
+		// Muestra el array en forma de tabla.
+		
+		double num = 10.67261;
+		
+		System.out.println(Math.round(num * 10)/10.0);
+		
+		
 	}
 
 }
