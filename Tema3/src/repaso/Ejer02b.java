@@ -10,7 +10,10 @@ import java.util.Iterator;
 	e) Cuenta cuántas evaluaciones suspendidas hay.
 	f) Ordena el array por la nota de la tercera evaluación.
 */
-public class Ejer02 {
+/*
+ * Versión haciendo el intercambio de filas en el último apartado celda a celda.
+ */
+public class Ejer02b {
 
 	public static void main(String[] args) {
 
@@ -94,33 +97,42 @@ public class Ejer02 {
 			}
 
 		}
-		
+
 		System.out.println("\nEn total hay " + evalSuspendidas + " evaluaciones suspendidas.");
 
 		// Ordena el array por la nota de la tercera evaluación.
 		int posMin;
-		int[] aux;
-		
+//		int[] aux;
+
 		for (int i = 0; i < notas.length - 1; i++) {
-			
+
 			// Buscamos en qué fila a partir de la fila i se encuentra la nota de la
 			// tercer evaluación más baja.
 			posMin = i;
-			for (int j = i+1; j < notas.length; j++) {
+			for (int j = i + 1; j < notas.length; j++) {
 				// Si en la fila j hay una nota (de la tercer evaluación) más pequeña que
 				// en la fila posMin, actualizamos posMin.
-				if(notas[j][3] < notas[posMin][3]) {
+				if (notas[j][3] < notas[posMin][3]) {
 					posMin = j;
 				}
 			}
-			
+
 			// Intercambiamos la fila i con la fila posMin.
-			aux = notas[i];
-			notas[i] = notas[posMin];
-			notas[posMin] = aux;
-			
+			int aux;
+			for (int j = 0; j < notas[0].length; j++) {
+
+				aux = notas[i][j];
+				notas[i][j] = notas[posMin][j];
+				notas[posMin][j] = aux;
+
+			}
+
+//			aux = notas[i];
+//			notas[i] = notas[posMin];
+//			notas[posMin] = aux;
+
 		}
-		
+
 		System.out.println("ID_ALUMNO\t1ª EVAL\t\t2ª EVAL\t\t3ª EVAL");
 		System.out.println("=========\t=======\t\t=======\t\t=======");
 		for (int fila = 0; fila < notas.length; fila++) {
