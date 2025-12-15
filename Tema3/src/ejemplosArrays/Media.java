@@ -8,7 +8,7 @@ public class Media {
 
 		// Media 5 10 3
 		// La media es 6
-		//String[] args2 = { "5", "10", "3", "6" };
+		// String[] args2 = { "5", "10", "3", "6" };
 
 		double suma = 0;
 

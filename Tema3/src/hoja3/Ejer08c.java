@@ -53,15 +53,15 @@ public class Ejer08c {
 
 			System.out.println("¡Ha ganado la máquina!");
 
-		}else if (jugador == 3 && maquina == 1) {
+		} else if (jugador == 3 && maquina == 1) {
 
 			System.out.println("¡Ha ganado la máquina!");
 
-		}else if (jugador == 3 && maquina == 2) {
+		} else if (jugador == 3 && maquina == 2) {
 
 			System.out.println("¡Ha ganado el jugador!");
 
-		}else if (jugador == 1 && maquina == 3) {
+		} else if (jugador == 1 && maquina == 3) {
 
 			System.out.println("¡Ha ganado el jugador!");
 

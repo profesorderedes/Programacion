@@ -19,12 +19,7 @@ public class Ejer02b {
 
 		// Estructura del array:
 		// id_alumno, nota 1ª eval, nota 2ª eval, nota 3ª eval
-		int[][] notas = { 
-				{ 1, 9, 7, 8 }, 
-				{ 2, 4, 5, 6 }, 
-				{ 3, 8, 5, 5 }, 
-				{ 4, 10, 9, 10 }, 
-				{ 5, 6, 3, 4 },
+		int[][] notas = { { 1, 9, 7, 8 }, { 2, 4, 5, 6 }, { 3, 8, 5, 5 }, { 4, 10, 9, 10 }, { 5, 6, 3, 4 },
 				{ 6, 6, 5, 9 }, };
 
 		// Muestra el array en forma de tabla.

@@ -32,37 +32,36 @@ public class Ejer07b {
 
 		Scanner entrada = new Scanner(System.in);
 
-		int pedidosFallidos = 0; 
+		int pedidosFallidos = 0;
 		double[] pedidos = new double[5];
 
 		// Indica el número de pedidos válidos.
 		int numPedidos = 0;
-		
+
 		for (int i = 0; i < pedidos.length; i++) {
 
 			System.out.println("Introduzca el tiempo de cada pedido: ");
 			pedidos[i] = entrada.nextInt();
-			
+
 			// Miramos si el usuario ha escrito un 0 para parar.
 			if (pedidos[i] == 0) {
 				break;
 			}
-			
+
 			numPedidos++;
-			
+
 			if (pedidos[i] > 30) {
 				pedidosFallidos++;
 			}
 
 		}
 
-		if(numPedidos == 0) {
+		if (numPedidos == 0) {
 			return;
 		}
-		
+
 		System.out.println("Pedidos que superan los 30 minutos: " + pedidosFallidos);
-		System.out.println("Porcentaje de pedidos fallidos: " 
-				+ (pedidosFallidos * 100 / numPedidos) + "%");
+		System.out.println("Porcentaje de pedidos fallidos: " + (pedidosFallidos * 100 / numPedidos) + "%");
 
 	}
 

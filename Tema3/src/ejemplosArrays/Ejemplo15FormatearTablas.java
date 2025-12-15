@@ -16,7 +16,7 @@ public class Ejemplo15FormatearTablas {
 
 		System.out.printf("%-26s %4s   %-19s\n", "Nombre", "Nota", "Curso");
 		System.out.printf("%-26s %4s   %-19s\n", "==========================", "====", "===================");
-		
+
 		for (int fila = 0; fila < alumnos.length; fila++) {
 			System.out.printf("%-26s %4s   %-19s\n", alumnos[fila][0], alumnos[fila][1], alumnos[fila][2]);
 		}

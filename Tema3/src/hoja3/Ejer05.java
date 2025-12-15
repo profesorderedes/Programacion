@@ -9,7 +9,7 @@ public class Ejer05 {
 		Scanner entrada = new Scanner(System.in);
 
 		final double LIMITE_PARA_DESCUENTO = 50;
-		
+
 		double[] precios = new double[10];
 		double precio, suma = 0;
 		int posFinDatos = precios.length;

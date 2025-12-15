@@ -16,12 +16,7 @@ public class Ejer02 {
 
 		// Estructura del array:
 		// id_alumno, nota 1ª eval, nota 2ª eval, nota 3ª eval
-		int[][] notas = { 
-				{ 1, 9, 7, 8 }, 
-				{ 2, 4, 5, 6 }, 
-				{ 3, 8, 5, 5 }, 
-				{ 4, 10, 9, 10 }, 
-				{ 5, 6, 3, 4 },
+		int[][] notas = { { 1, 9, 7, 8 }, { 2, 4, 5, 6 }, { 3, 8, 5, 5 }, { 4, 10, 9, 10 }, { 5, 6, 3, 4 },
 				{ 6, 6, 5, 9 }, };
 
 		// Muestra el array en forma de tabla.
@@ -94,33 +89,33 @@ public class Ejer02 {
 			}
 
 		}
-		
+
 		System.out.println("\nEn total hay " + evalSuspendidas + " evaluaciones suspendidas.");
 
 		// Ordena el array por la nota de la tercera evaluación.
 		int posMin;
 		int[] aux;
-		
+
 		for (int i = 0; i < notas.length - 1; i++) {
-			
+
 			// Buscamos en qué fila a partir de la fila i se encuentra la nota de la
 			// tercer evaluación más baja.
 			posMin = i;
-			for (int j = i+1; j < notas.length; j++) {
+			for (int j = i + 1; j < notas.length; j++) {
 				// Si en la fila j hay una nota (de la tercer evaluación) más pequeña que
 				// en la fila posMin, actualizamos posMin.
-				if(notas[j][3] < notas[posMin][3]) {
+				if (notas[j][3] < notas[posMin][3]) {
 					posMin = j;
 				}
 			}
-			
+
 			// Intercambiamos la fila i con la fila posMin.
 			aux = notas[i];
 			notas[i] = notas[posMin];
 			notas[posMin] = aux;
-			
+
 		}
-		
+
 		System.out.println("ID_ALUMNO\t1ª EVAL\t\t2ª EVAL\t\t3ª EVAL");
 		System.out.println("=========\t=======\t\t=======\t\t=======");
 		for (int fila = 0; fila < notas.length; fila++) {
