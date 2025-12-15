@@ -4,10 +4,12 @@ public class Ejemplo03 {
 
 	public static void main(String[] args) {
 
+		// Llamamos al método sumar() pasándole dos argumentos: 2 y 7. Estos valores se
+		// copiarán en los parámetros a y b del método.
 		sumar(2, 7);
 
 		multiplicar(2, 7, 8);
-		
+
 		saludar("María", 30);
 
 	}

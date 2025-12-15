@@ -7,7 +7,8 @@ public class Ejemplo01 {
 		System.out.println("¡Mayordomo!");
 
 		// Llamamos (invocamos) al método mayordomo. El flujo del programa hace una
-		// parada aquí y salta al método. Cuando el contenido del método termina, el programa
+		// parada aquí y salta al método. Cuando el contenido del método termina, el
+		// programa
 		// continúa en la siguiente línea del main().
 		mayordomo();
 
