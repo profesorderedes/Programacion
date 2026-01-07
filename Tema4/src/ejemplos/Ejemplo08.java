@@ -19,6 +19,13 @@ public class Ejemplo08 {
 
 	}
 
+	/**
+	 * Recibe un String y devuelve el primer carácter de ese String.
+	 * 
+	 * @param palabra Cadena de caracteres de la que se va a obtener la primera
+	 *                letra.
+	 * @return La inicial de la palabra recibida.
+	 */
 	static char inicial(String palabra) {
 
 		char letraInicial = palabra.charAt(0);
@@ -27,12 +34,26 @@ public class Ejemplo08 {
 
 	}
 
+	/**
+	 * Recibe el radio de una esfera y devuelve su volumen.
+	 * 
+	 * @param r Radio de la esfera
+	 * @return Volumen de la esferea de radio r
+	 */
 	static double volumenEsfera(double r) {
 
 		return 4.0 / 3 * Math.PI * Math.pow(r, 3);
 
 	}
 
+	/**
+	 * Calcula el precio de venta de un producto.
+	 * 
+	 * @param precio    Precio original del producto.
+	 * @param descuento Descuento a aplicar al producto.
+	 * @param iva       IVA aplicable.
+	 * @return Precio final del producto.
+	 */
 	static double precioVenta(double precio, double descuento, int iva) {
 
 		// Sumamos el IVA.
@@ -45,6 +66,13 @@ public class Ejemplo08 {
 
 	}
 
+	/**
+	 * Calcula el área de un triángulo.
+	 * 
+	 * @param base   Base del triángulo
+	 * @param altura Altura del triángulo.
+	 * @return Área del triángulo
+	 */
 	static double areaTriangulo(double base, double altura) {
 
 		return base * altura / 2;
