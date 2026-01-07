@@ -2,24 +2,25 @@ package ejercicios;
 
 import java.util.Arrays;
 
-public class Ejer12 {
+public class Ejer13 {
 
 	public static void main(String[] args) {
 
 		int[] edades = { 85, 30, 92, 95, 40, 26 };
 
-		arrayOrdenado(edades);
+		edades = arrayOrdenado(edades);
 
 		System.out.println(Arrays.toString(edades));
-		
+
 	}
 
 	/**
-	 * Ordena un array de números enteros recibido como parámetro y lo muestra.
+	 * Ordena un array de números enteros recibido como parámetro y lo devuelve.
 	 * 
 	 * @param numeros Array de números que hay que ordenar.
+	 * @return El array ordenado.
 	 */
-	static void arrayOrdenado(int[] numeros) {
+	static int[] arrayOrdenado(int[] numeros) {
 
 		int posMin, aux;
 
@@ -41,7 +42,7 @@ public class Ejer12 {
 
 		}
 
-		System.out.println(Arrays.toString(numeros));
+		return numeros;
 
 	}
 
