@@ -7,9 +7,12 @@ public class Ejer15 {
 
 	public static void main(String[] args) {
 
-		int[] numeros = new int[5];
+//		int[] numeros = new int[5];
+//
+//		leerNumeros(numeros);
 
-		leerNumeros(numeros);
+		int[] numeros = { 10, 5, 8, 1, 4 };
+		ordenarNumeros(numeros);
 
 		System.out.println(Arrays.toString(numeros));
 
