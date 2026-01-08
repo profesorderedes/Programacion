@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosMetodos;
 
 // Algunas actividades-ejemplo extra.
 

@@ -1,20 +1,18 @@
-package ejercicios;
+package ejerciciosMetodos;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejer15 {
 
 	public static void main(String[] args) {
 
-//		int[] numeros = new int[5];
-//
-//		leerNumeros(numeros);
+		int[] numeros = new int[5];
 
-		int[] numeros = { 10, 5, 8, 1, 4 };
+		leerNumeros(numeros);
+
 		ordenarNumeros(numeros);
 
-		System.out.println(Arrays.toString(numeros));
+		mostrarNumeros(numeros);
 
 	}
 
@@ -74,6 +72,11 @@ public class Ejer15 {
 	 * @param nums Array que tenemos que mostrar en la terminal.
 	 */
 	static void mostrarNumeros(int[] nums) {
+
+		System.out.println("\nLos cinco números, ordenados, quedan así:");
+		for (int i = 0; i < nums.length; i++) {
+			System.out.print(nums[i] + " ");
+		}
 
 	}
 

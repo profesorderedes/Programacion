@@ -1,8 +1,8 @@
-package ejercicios;
+package ejerciciosMetodos;
 
 import java.util.Scanner;
 
-public class Ejer04 {
+public class Ejer05 {
 
 	public static void main(String[] args) {
 
@@ -11,13 +11,13 @@ public class Ejer04 {
 		System.out.println("Dame cualquier número: ");
 		double num = entrada.nextDouble();
 
-		System.out.println("El cuadrado de " + num + " es " + cuadradoDeNum(num));
+		System.out.println("El cubo de " + num + " es " + cuboDeNum(num));
 
 	}
 
-	static double cuadradoDeNum(double num) {
+	static double cuboDeNum(double num) {
 
-		return num * num;
+		return num * num * num;
 
 	}
 

@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosMetodos;
 
 // Ejemplo de uso de return en un método void.
 

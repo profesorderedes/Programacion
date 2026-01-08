@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosMetodos;
 
 public class Ejemplo01 {
 
