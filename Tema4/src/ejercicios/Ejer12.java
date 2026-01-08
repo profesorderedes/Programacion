@@ -11,7 +11,7 @@ public class Ejer12 {
 		arrayOrdenado(edades);
 
 		System.out.println(Arrays.toString(edades));
-		
+
 	}
 
 	/**

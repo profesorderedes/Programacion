@@ -34,7 +34,7 @@ public class Ejer09 {
 		if (x <= y) {
 			return x;
 		}
-		
+
 		return y;
 
 	}
