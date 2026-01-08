@@ -46,6 +46,26 @@ public class Ejer15 {
 	 */
 	static void ordenarNumeros(int[] nums) {
 
+		int posMin, aux;
+
+		for (int i = 0; i < nums.length - 1; i++) {
+
+			// Buscamos el mínimo entre la posición i y el final del array.
+			posMin = i;
+
+			for (int j = i + 1; j < nums.length; j++) {
+				if (nums[j] < nums[posMin]) {
+					posMin = j;
+				}
+			}
+
+			// Intercambiamos las posiciones i y posMin.
+			aux = nums[i];
+			nums[i] = nums[posMin];
+			nums[posMin] = aux;
+
+		}
+
 	}
 
 	/**
