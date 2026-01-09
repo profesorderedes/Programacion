@@ -21,6 +21,10 @@ public class Punto {
 	}
 	
 	void moverY(int dy) {
+		y = y + dy;
+	}
+	
+	void moverXY(int dx, int dy) {
 		
 	}
 
