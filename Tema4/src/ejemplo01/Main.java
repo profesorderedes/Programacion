@@ -15,7 +15,29 @@ public class Main {
 		perso1.apellidos = "Ovalle";
 		perso1.edad = 27;
 		perso1.dni = "27800100Y";
+		
+		// Creamos otro objeto Persona:
+		Persona perso2 = new Persona();
+		
+		// Asignar valores a los atributos de perso2.
+		perso2.nombre = "Óliver";
+		perso2.apellidos = "Isern";
+		perso2.edad = 21;
+		perso2.dni = "12000200T";
+		
+		// Mostramos el nombre y apellidos de la primera persona:
+		System.out.println(perso1.nombre + " " + perso1.apellidos);
+		
+		// Mostramos nombre y edad de la segunda persona:
+		
 
 	}
 
 }
+
+
+
+
+
+
+
