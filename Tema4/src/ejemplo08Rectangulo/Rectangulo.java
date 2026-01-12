@@ -6,8 +6,24 @@ public class Rectangulo {
 	int x, y;
 	int base, altura;
 	String color;
-	
-	
+
+	Rectangulo(int x, int y, int base, int altura, String color) {
+
+		this.x = x;
+		this.y = y;
+		this.base = base;
+		this.altura = altura;
+		this.color = color;
+
+	}
+
+	Rectangulo(int base, int altura, String color) {
+
+		this.base = base;
+		this.altura = altura;
+		this.color = color;
+
+	}
 
 	void mostrar() {
 
@@ -27,13 +43,13 @@ public class Rectangulo {
 	}
 
 	boolean contiene(int a, int b) {
-		
-		if(a >= x && a <= x + base && b >= y && b <= y + altura) {
+
+		if (a >= x && a <= x + base && b >= y && b <= y + altura) {
 			return true;
 		}
-		
+
 		return false;
-		
+
 	}
 
 }
