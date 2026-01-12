@@ -25,13 +25,13 @@ public class Rectangulo {
 	}
 
 	boolean contiene(int a, int b) {
-		
-		if(a >= x && a <= x + base && b >= y && b <= y + altura) {
+
+		if (a >= x && a <= x + base && b >= y && b <= y + altura) {
 			return true;
 		}
-		
+
 		return false;
-		
+
 	}
 
 }

@@ -9,12 +9,12 @@ public class Main {
 
 		// Llamamos al método mostrar() de perso2:
 		perso1.mostrar();
-		
+
 		// Creamos otro objeto Persona usando el constructor implícito.
 		Persona perso2 = new Persona();
-		
+
 		perso2.mostrar();
-		
+
 		Persona perso3 = new Persona("Rafa", "Crespí");
 		perso3.mostrar();
 

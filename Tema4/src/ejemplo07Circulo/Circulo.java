@@ -6,21 +6,21 @@ public class Circulo {
 	int y;
 	int radio;
 	String color;
-	
-	Circulo(int x, int y, int radio, String color){
-		
+
+	Circulo(int x, int y, int radio, String color) {
+
 		this.x = x;
 		this.y = y;
 		this.radio = radio;
 		this.color = color;
-		
+
 	}
-	
-	Circulo(int radio){
-		
+
+	Circulo(int radio) {
+
 		this.radio = radio;
 		color = "negro";
-		
+
 	}
 
 	void mostrar() {

@@ -17,15 +17,13 @@ public class Punto {
 		this.color = color;
 
 	}
-	
-	Punto(int x, int y){
-		
+
+	Punto(int x, int y) {
+
 		this.x = x;
 		this.y = y;
-		
+
 	}
-	
-	
 
 	void mostrar() {
 
