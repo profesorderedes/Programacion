@@ -19,13 +19,14 @@ public class Punto {
 	void moverX(int dx) {
 		x = x + dx;
 	}
-	
+
 	void moverY(int dy) {
 		y = y + dy;
 	}
-	
+
 	void moverXY(int dx, int dy) {
-		
+		moverX(dx);
+		moverY(dy);
 	}
 
 }

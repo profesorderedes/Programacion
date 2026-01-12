@@ -8,7 +8,6 @@ public class Main {
 
 		Punto punto1 = new Punto();
 		Punto punto2 = new Punto();
-		Punto punto3 = new Punto();
 
 		// Asignamos valores a los objetos Punto.
 
@@ -41,6 +40,10 @@ public class Main {
 
 		punto1.mostrar();
 		punto2.mostrar();
+
+		// Movemos el punto 1 dos unidades arriba y cinco a la derecha.
+		punto1.moverXY(5, -2);
+		punto1.mostrar();
 
 	}
 }
