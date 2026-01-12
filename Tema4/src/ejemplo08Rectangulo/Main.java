@@ -1,4 +1,4 @@
-package ejemplo04Rectangulo;
+package ejemplo08Rectangulo;
 
 public class Main {
 

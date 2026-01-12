@@ -1,4 +1,4 @@
-package ejemplo04Rectangulo;
+package ejemplo08Rectangulo;
 
 public class Rectangulo {
 
@@ -6,6 +6,8 @@ public class Rectangulo {
 	int x, y;
 	int base, altura;
 	String color;
+	
+	
 
 	void mostrar() {
 
