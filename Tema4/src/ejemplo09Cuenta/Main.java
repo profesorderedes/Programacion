@@ -18,6 +18,12 @@ public class Main {
 			System.out.println("No hay suficientes fondos.");
 		}
 
+		CuentaBancaria cuenta2 = new CuentaBancaria(-500);
+		System.out.println("El saldo de la cuenta 2 es " + cuenta2.obtenerSaldo() + " euros.");
+
+		cuenta2.depositar(-1000);
+		System.out.println("El saldo de la cuenta 2 es " + cuenta2.obtenerSaldo() + " euros.");
+
 	}
 
 }
