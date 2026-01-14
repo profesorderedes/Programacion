@@ -19,11 +19,13 @@ public class Rectangulo {
 
 	Rectangulo(int base, int altura, String color) {
 
-		this();
-		
-		this.base = base;
-		this.altura = altura;
-		this.color = color;
+		this(0, 0, base, altura, color);
+
+	}
+
+	Rectangulo(int base, int altura) {
+
+		this(0, 0, base, altura, "negro");
 
 	}
 
