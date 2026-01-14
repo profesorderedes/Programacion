@@ -30,10 +30,14 @@ public class Persona {
 	// Constructor que nos permite inicializar sólo el nombre y apellidos.
 	Persona(String nombre, String apellidos) {
 
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-
-		dni = "desconocido";
+		// Llamamos al constructor que hemos escrito más arriba y acepta 
+		// cuatro parámetros.
+		this(nombre, apellidos, 0, "desconocido");
+		
+		// La línea anterior hace lo mismo que las siguientes instrucciones:
+		// this.nombre = nombre;
+		// this.apellidos = apellidos;
+		// dni = "desconocido";
 
 	}
 

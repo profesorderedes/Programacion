@@ -20,8 +20,7 @@ public class Punto {
 
 	Punto(int x, int y) {
 
-		this.x = x;
-		this.y = y;
+		this(x, y, "negro");
 
 	}
 

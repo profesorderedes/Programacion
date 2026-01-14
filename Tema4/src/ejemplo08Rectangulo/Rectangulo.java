@@ -19,6 +19,8 @@ public class Rectangulo {
 
 	Rectangulo(int base, int altura, String color) {
 
+		this();
+		
 		this.base = base;
 		this.altura = altura;
 		this.color = color;

@@ -18,8 +18,7 @@ public class Circulo {
 
 	Circulo(int radio) {
 
-		this.radio = radio;
-		color = "negro";
+		this(0, 0, radio, "negro");
 
 	}
 
