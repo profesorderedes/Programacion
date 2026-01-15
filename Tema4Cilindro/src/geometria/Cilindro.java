@@ -2,7 +2,7 @@ package geometria;
 
 public class Cilindro {
 
-	private int altura;
+	private static int altura;
 	private int radio;
 
 	private final double PI = 3.141592;
