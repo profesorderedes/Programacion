@@ -4,7 +4,7 @@ public class Persona {
 
 	// Atributos de la clase Persona.
 
-	private String nombre;
+	public String nombre;
 	private String apellidos;
 	private int edad;
 	private String dni;

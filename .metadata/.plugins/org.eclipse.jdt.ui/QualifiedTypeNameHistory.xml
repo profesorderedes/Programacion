@@ -9,4 +9,6 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="ejemplo04Rectangulo.Rectangulo"/>
     <fullyQualifiedTypeName name="ejemplo08Rectangulo.Rectangulo"/>
+    <fullyQualifiedTypeName name="ejemplo09Cuenta.CuentaBancaria"/>
+    <fullyQualifiedTypeName name="paqueteA.ClaseA1"/>
 </qualifiedTypeNameHistroy>
