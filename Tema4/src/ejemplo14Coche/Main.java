@@ -7,13 +7,13 @@ public class Main {
 		Coche coche1 = new Coche("Seat", "Ibiza", "2000ABC");
 		Coche coche2 = new Coche("Renault", "Clio", "1882DEF");
 
-		coche1.setDescuento(10);
+		Coche.setDescuento(10);
 
-		System.out.println(coche2.getDescuento());
+		System.out.println(Coche.getDescuento());
 
-		coche2.setDescuento(25);
+		Coche.setDescuento(25);
 
-		System.out.println(coche1.getDescuento());
+		System.out.println(Coche.getDescuento());
 
 	}
 
