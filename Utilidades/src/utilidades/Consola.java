@@ -2,10 +2,28 @@ package utilidades;
 
 import java.util.Scanner;
 
+/**
+ * Clase que contiene métodos útiles para leer datos de la terminal.
+ * 
+ * @author Primero de DAW
+ * @version 0.1
+ */
 public class Consola {
 
+	/**
+	 * Variable que nos sirve para leer desde la terminal.
+	 */
 	private static Scanner entrada = new Scanner(System.in);
 
+	/**
+	 * Lee un número entero escrito por terminal. Muestra el mensaje de error
+	 * recibido como parámetro, y repite el proceso, mientras el usuario no escriba
+	 * un número entero.
+	 * 
+	 * @param mensajeError Mensaje que aparece cuando el usuario escribe algo
+	 *                     distinto a un número entero.
+	 * @return El número introducido por el usuario.
+	 */
 	public static int leerInt(String mensajeError) {
 
 		while (!entrada.hasNextInt()) {
@@ -22,11 +40,31 @@ public class Consola {
 		return num;
 	}
 
+	/**
+	 * Lee un número entero escrito por terminal. Muestra un mensaje de error
+	 * predeterminado, y repite el proceso, mientras el usuario no escriba un número
+	 * entero.
+	 * 
+	 * @return El número introducido por el usuario.
+	 */
 	public static int leerInt() {
 
 		return leerInt("Entrada incorrecta: se esperaba un número entero.");
 	}
 
+	/**
+	 * Lee un número entero escrito por terminal. Muestra el mensaje de error
+	 * recibido como parámetro, y repite el proceso, mientras el usuario no escriba
+	 * un número entero comprendido entre los valores min y max (recibidos como
+	 * parámetros).
+	 * 
+	 * @param mensajeError Mensaje que aparece cuando el usuario escribe algo
+	 *                     distinto a un número entero comprendido entre los valores
+	 *                     min y max.
+	 * @param min          Valor mínimo que puede tomar el número leído.
+	 * @param max          Valor máximo que puede tomar el número leído.
+	 * @return El número introducido por el usuario.
+	 */
 	public static int leerInt(String mensajeError, int min, int max) {
 
 		int num;
@@ -44,6 +82,14 @@ public class Consola {
 		return num;
 	}
 
+	/**
+	 * Lee un número escrito por terminal. Muestra el mensaje de error recibido como
+	 * parámetro, y repite el proceso, mientras el usuario no escriba un número.
+	 * 
+	 * @param mensajeError Mensaje que aparece cuando el usuario escribe algo
+	 *                     distinto a un número.
+	 * @return El número introducido por el usuario.
+	 */
 	public static double leerDouble(String mensajeError) {
 
 		while (true) {
@@ -61,37 +107,35 @@ public class Consola {
 		}
 	}
 
+	/**
+	 * Lee un número escrito por terminal. Muestra un mensaje de error
+	 * predeterminado, y repite el proceso, mientras el usuario no escriba un
+	 * número.
+	 * 
+	 * @return El número introducido por el usuario.
+	 */
 	public static double leerDouble() {
 
 		return leerDouble("Entrada incorrecta: se esperaba un número.");
 	}
 
-	// Comprobar que la cadena leída no esté vacía ni conste sólo de espacios.
-	// trim(): quita de una cadena los espacios que haya al principio y al final.
+	/**
+	 * Lee una cadena escrita por terminal. Muestra un mensaje de error
+	 * predeterminado, y repite el proceso, mientras el usuario no escriba nada o
+	 * sólo escriba espacios.
+	 * 
+	 * @return La cadena introducida por el usuario.
+	 */
 	public static String leerString() {
-		
-		
-		return entrada.nextLine();
+
+		String cadena = entrada.nextLine();
+
+		while (cadena.trim().equals("")) {
+			System.out.println("Entrada incorrecta: se esperaba alguna cadena no vacía.");
+			cadena = entrada.nextLine();
+		}
+
+		return cadena;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
