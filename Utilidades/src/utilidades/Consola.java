@@ -66,7 +66,10 @@ public class Consola {
 		return leerDouble("Entrada incorrecta: se esperaba un número.");
 	}
 
+	// Comprobar que la cadena leída no esté vacía ni conste sólo de espacios.
+	// trim(): quita de una cadena los espacios que haya al principio y al final.
 	public static String leerString() {
+		
 		
 		return entrada.nextLine();
 	}
