@@ -1,10 +1,14 @@
 package inicio;
 
 import geometria.Cilindro;
+import utilidades.Consola;
 
 public class Inicio {
 
 	public static void main(String[] args) {
+		
+		System.out.println("Escribe un número del 1 al 5:");
+		int num = Consola.leerInt("Tienes que escribir un número entero entre 1 y 5", 1, 5);
 		
 		Cilindro cil1 = new Cilindro();
 		
