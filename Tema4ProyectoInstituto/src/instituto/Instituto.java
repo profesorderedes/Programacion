@@ -37,9 +37,9 @@ public class Instituto {
 
 	public void delAlumno(int numExp) {
 
-		// Posición en el array del alumno cuyo número 
+		// Posición en el array del alumno cuyo número
 		// de expediente es numExp.
-		int pos;
+		int pos = -1;
 
 		// Encontramos la posición del alumno con ese número de expediente.
 		for (int i = 0; i < fin; i++) {
@@ -49,11 +49,19 @@ public class Instituto {
 			}
 		}
 
+		if (pos == -1) {
+			System.out.println("No hay ningún alumno con este expediente.");
+			return;
+		}
+
 		// Subimos los alumnos que hubiera por debajo de esa posición,
 		// un lugar hacia arriba.
-		
-		
-		
+
+		for (int i = pos; i <= fin - 2; i++) {
+			alumnos[i] = alumnos[i + 1];
+		}
+
+		fin--;
 
 	}
 

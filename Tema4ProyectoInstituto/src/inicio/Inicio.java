@@ -42,6 +42,7 @@ public class Inicio {
 		insti.mostrarAlumnos();
 		
 		insti.delAlumno(102);
+		insti.mostrarAlumnos();
 		
 		
 	}
