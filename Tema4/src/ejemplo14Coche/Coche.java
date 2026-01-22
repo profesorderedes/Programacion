@@ -5,7 +5,7 @@ public class Coche {
 	private String marca;
 	private String modelo;
 	private String matricula;
-	
+
 	// La variable descuento es estática, lo que significa que su valor
 	// va a ser el mismo siempre para cualquier objeto Coche.
 	private static int descuento;
@@ -54,11 +54,3 @@ public class Coche {
 	}
 
 }
-
-
-
-
-
-
-
-

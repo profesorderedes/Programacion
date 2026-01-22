@@ -46,4 +46,38 @@ public class Alumno {
 
 	}
 
+	public int getNumExpediente() {
+		return numExpediente;
+	}
+
+	public void setNumExpediente(int numExpediente) {
+		this.numExpediente = numExpediente;
+	}
+
+	public String getApellidos() {
+		return apellidos;
+	}
+
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Grupo getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(Grupo grupo) {
+		this.grupo = grupo;
+	}
+	
+	
+
 }

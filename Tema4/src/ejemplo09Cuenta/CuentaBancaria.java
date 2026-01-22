@@ -39,7 +39,5 @@ public class CuentaBancaria {
 	double obtenerSaldo() {
 		return saldo;
 	}
-	
-	
 
 }

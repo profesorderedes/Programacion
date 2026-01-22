@@ -31,11 +31,17 @@ public class Inicio {
 		Instituto insti = new Instituto();
 		
 		Alumno alu3 = new Alumno(101, "Rodríguez Cobas", "Juana", grupo1);
+		Alumno alu4 = new Alumno(102, "Mas García", "Francisco", grupo1);
+		Alumno alu5 = new Alumno(103, "Garat Domínguez", "Rafael", grupo1);
 		
 		insti.addAlumno(alu1);
-		insti.addAlumno(alu2);
 		insti.addAlumno(alu3);
-		insti.addAlumno(alu3);
+		insti.addAlumno(alu4);
+		insti.addAlumno(alu5);
+		
+		insti.mostrarAlumnos();
+		
+		insti.delAlumno(102);
 		
 		
 	}
