@@ -51,8 +51,7 @@ public class Instituto {
 		}
 
 		if (pos == -1) {
-			System.out.println("No hay ningún alumno con este expediente.");
-			return;
+			return false;
 		}
 
 		// Subimos los alumnos que hubiera por debajo de esa posición,
@@ -63,6 +62,8 @@ public class Instituto {
 		}
 
 		fin--;
+		
+		return true;
 
 	}
 

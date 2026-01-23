@@ -38,7 +38,7 @@ public class Inicio {
 		insti.addAlumno(alu3);
 		insti.addAlumno(alu4);
 		boolean anyadido = insti.addAlumno(alu5);
-		
+
 		if (anyadido) {
 			System.out.println("Alumno añadido.");
 		} else {
@@ -47,7 +47,13 @@ public class Inicio {
 
 		insti.mostrarAlumnos();
 
-		insti.delAlumno(102);
+		boolean borrado = insti.delAlumno(50);
+		if (borrado) {
+			System.out.println("Alumno eliminado.");
+		} else {
+			System.out.println("No se ha encontrado al alumno.");
+		}
+
 		insti.mostrarAlumnos();
 
 	}
