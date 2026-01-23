@@ -4,24 +4,25 @@ import auxiliar.Alumno;
 
 public class Instituto {
 
-	// El instituto puede contener hasta mil alumnos.
-	private final int MAX_ALUMNOS = 10;
 	private Alumno[] alumnos;
 	private int fin;
 
-	public Instituto() {
-		alumnos = new Alumno[MAX_ALUMNOS];
+	public Instituto(int maxAlumnos) {
+
+		// Inicializamos el array alumnos con la cantidad que nos pasan como parámetro.
+		alumnos = new Alumno[maxAlumnos];
 		fin = 0;
 	}
 
-	public void addAlumno(Alumno alu) {
+	public boolean addAlumno(Alumno alu) {
 
 		if (fin < alumnos.length) {
 			alumnos[fin] = alu;
 			fin++;
-		} else {
-			System.out.println("No hay espacio en el array.");
+			return true;
 		}
+
+		return false;
 
 	}
 
@@ -35,11 +36,19 @@ public class Instituto {
 
 	}
 
-	public void delAlumno(int numExp) {
+	public boolean delAlumno(int numExp) {
 
 		// Posición en el array del alumno cuyo número
 		// de expediente es numExp.
-		int pos = buscaAlumno(numExp);
+		int pos = -1;
+
+		// Encontramos la posición del alumno con ese número de expediente.
+		for (int i = 0; i < fin; i++) {
+			if (alumnos[i].getNumExpediente() == numExp) {
+				pos = i;
+				break;
+			}
+		}
 
 		if (pos == -1) {
 			System.out.println("No hay ningún alumno con este expediente.");
@@ -65,15 +74,17 @@ public class Instituto {
 
 	public int buscaAlumno(int numExp) {
 
-		for (int i = 0; i < fin; i++) {
+		int pos = -1;
 
-			if (alumnos[i].getNumExpediente() == numExp) {
-				return i;
+		for (int alumno = 0; alumno < fin; alumno++) {
+
+			if (alumnos[alumno].getNumExpediente() == numExp) {
+				pos = alumno;
 			}
 
 		}
 
-		return -1;
+		return pos;
 
 	}
 

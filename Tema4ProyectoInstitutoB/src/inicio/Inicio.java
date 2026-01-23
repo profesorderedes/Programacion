@@ -28,7 +28,7 @@ public class Inicio {
 
 		// Pruebas de la clase Instituto.
 
-		Instituto insti = new Instituto();
+		Instituto insti = new Instituto(3);
 
 		Alumno alu3 = new Alumno(101, "Rodríguez Cobas", "Juana", grupo1);
 		Alumno alu4 = new Alumno(102, "Mas García", "Francisco", grupo1);
@@ -37,18 +37,18 @@ public class Inicio {
 		insti.addAlumno(alu1);
 		insti.addAlumno(alu3);
 		insti.addAlumno(alu4);
-		insti.addAlumno(alu5);
+		boolean anyadido = insti.addAlumno(alu5);
+		
+		if (anyadido) {
+			System.out.println("Alumno añadido.");
+		} else {
+			System.out.println("No se ha podido añadir el alumno por falta de sitio.");
+		}
 
 		insti.mostrarAlumnos();
 
 		insti.delAlumno(102);
 		insti.mostrarAlumnos();
-
-		System.out.println("Hay " + insti.numAlumnos() + " alumnos.");
-
-		System.out.println("El alumno con número de expediente 101 está en la posición " + insti.buscaAlumno(101));
-
-		System.out.println("El alumno con número de expediente 50 está en la posición " + insti.buscaAlumno(50));
 
 	}
 }
