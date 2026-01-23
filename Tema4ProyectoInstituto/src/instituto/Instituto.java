@@ -65,4 +65,26 @@ public class Instituto {
 
 	}
 
+	public int numAlumnos() {
+
+		return fin;
+
+	}
+
+	public int buscaAlumno(int numExp) {
+
+		int pos = -1;
+
+		for (int alumno = 0; alumno < fin; alumno++) {
+
+			if (alumnos[alumno].getNumExpediente() == numExp) {
+				pos = alumno;
+			}
+
+		}
+
+		return pos;
+
+	}
+
 }
