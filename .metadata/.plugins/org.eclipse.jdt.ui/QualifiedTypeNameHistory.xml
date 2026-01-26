@@ -19,4 +19,6 @@
     <fullyQualifiedTypeName name="auxiliar.Grupo"/>
     <fullyQualifiedTypeName name="auxiliar.Alumno"/>
     <fullyQualifiedTypeName name="instituto.Instituto"/>
+    <fullyQualifiedTypeName name="taller.Lavadora"/>
+    <fullyQualifiedTypeName name="taller.Taller"/>
 </qualifiedTypeNameHistroy>
