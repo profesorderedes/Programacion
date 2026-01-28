@@ -142,10 +142,18 @@ public class Instituto {
 		System.out.println("\nListado de grupos del instituto");
 		System.out.println("===============================================================");
 
+		String gruposId = "";
+
 		for (int i = 0; i < fin; i++) {
 
 			if (alumnos[i].getGrupo() != null) {
-				System.out.println(alumnos[i].getGrupo());
+
+				int idGrupo = alumnos[i].getGrupo().getId();
+
+				if (!gruposId.contains("," + idGrupo)) {
+					System.out.println("- " + alumnos[i].getGrupo().toString());
+					gruposId = gruposId + "," + idGrupo;
+				}
 			}
 
 		}
@@ -159,7 +167,16 @@ public class Instituto {
 	 */
 	public boolean delAlumnosEnBlanco() {
 
-		return false;
+		boolean alumnoBorrado = false;
+
+		for (int i = 0; i < fin; i++) {
+			if (alumnos[i].getNumExpediente() == 0) {
+				delAlumno(alumnos[i].getNumExpediente());
+				alumnoBorrado = true;
+			}
+		}
+
+		return alumnoBorrado;
 	}
 
 	/**
@@ -169,7 +186,16 @@ public class Instituto {
 	 * @return Número de alumnos presentes en ese grupo.
 	 */
 	public int numAlumnos(int idGrupo) {
-		return 0;
+
+		int numAlumnos = 0;
+		for (int i = 0; i < fin; i++) {
+			if (alumnos[i].getGrupo() != null && alumnos[i].getGrupo().getId() == idGrupo) {
+				numAlumnos++;
+			}
+		}
+
+		return numAlumnos;
+
 	}
 
 }

@@ -17,7 +17,7 @@ public class Inicio {
 		Instituto insti = new Instituto(10);
 
 		Alumno alu3 = new Alumno(101, "Rodríguez Cobas", "Juana", grupo1);
-		Alumno alu4 = new Alumno(102, "Mas García", "Francisco", grupo2);
+		Alumno alu4 = new Alumno(102, "Mas García", "Francisco", grupo1);
 		Alumno alu5 = new Alumno(103, "Garat Domínguez", "Rafael", grupo2);
 
 		insti.addAlumno(alu1);
@@ -26,9 +26,7 @@ public class Inicio {
 		insti.addAlumno(alu4);
 		insti.addAlumno(alu5);
 
-		System.out.println("Antes de la limpieza hay " + insti.numAlumnos() + " alumnos.");
-		insti.delAlumnosEnBlanco();
-		System.out.println("Después de la limpieza hay " + insti.numAlumnos() + " alumnos.");
+		insti.mostrarGrupos();
 
 	}
 }
