@@ -21,11 +21,8 @@ public class Ejemplo03 {
 	// hh:mm
 	private static String formatearHora(LocalTime hora) {
 		
-		if() {
-			return hora.getHour() + ":0" + hora.getMinute();
-		}
-
-		return hora.getHour() + ":" + hora.getMinute();
+		return hora.getHour() + ":" + (hora.getMinute() < 10 ? "0":"") 
+				+ hora.getMinute();
 		
 	}
 
