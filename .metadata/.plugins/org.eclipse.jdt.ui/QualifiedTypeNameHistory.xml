@@ -22,4 +22,6 @@
     <fullyQualifiedTypeName name="taller.Lavadora"/>
     <fullyQualifiedTypeName name="taller.Taller"/>
     <fullyQualifiedTypeName name="juzgado.Juzgado"/>
+    <fullyQualifiedTypeName name="fechasYHoras.Evento"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>
