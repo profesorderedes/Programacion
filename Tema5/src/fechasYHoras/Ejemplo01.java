@@ -9,6 +9,7 @@ public class Ejemplo01 {
 
 		LocalDate fecha = LocalDate.parse("1980-02-01");
 		System.out.println(fecha);
+		System.out.println("Día de la semana: " + fecha.getDayOfWeek().getValue());
 
 		LocalDate fecha2 = LocalDate.of(1980, 2, 1);
 		System.out.println(fecha2);

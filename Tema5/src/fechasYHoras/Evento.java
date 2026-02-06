@@ -4,8 +4,6 @@ import java.time.LocalDate;
 
 public class Evento {
 
-	// fecha, descripción
-	// 9 de septiembre de 1939 -> Inicio de la segunda guerra mundial
 	private LocalDate fecha;
 	private String descripcion;
 
@@ -13,7 +11,7 @@ public class Evento {
 		this.fecha = fecha;
 		this.descripcion = descripcion;
 	}
-	
+
 	public String toString() {
 		return fecha + " - " + descripcion;
 	}
