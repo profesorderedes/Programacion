@@ -10,5 +10,13 @@ public class Coche extends Vehiculo {
 		this.potencia = potencia;
 
 	}
+	
+	@Override
+	public void mostrar() {
+		
+		super.mostrar();
+		System.out.println("Potencia: " + potencia);
+		
+	}
 
 }

@@ -11,4 +11,11 @@ public class Moto extends Vehiculo {
 
 	}
 
+	@Override
+	public void mostrar() {
+		
+		super.mostrar();
+		System.out.println("Cilindrada: " + cilindrada);
+		
+	}
 }

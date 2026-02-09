@@ -14,4 +14,10 @@ public class Vehiculo {
 
 	}
 
+	public void mostrar() {
+
+		System.out.println("\n" + marca + " " + modelo + ", matrícula " + matricula);
+
+	}
+
 }
