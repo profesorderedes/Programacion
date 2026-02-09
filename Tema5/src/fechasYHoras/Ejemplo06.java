@@ -19,11 +19,9 @@ public class Ejemplo06 {
 
 	private static String formatear(LocalDateTime fechaYHora) {
 
-		return "Fecha: " + fechaYHora.getDayOfMonth() + "/" + fechaYHora.getMonthValue() 
-			+ "/" + fechaYHora.getYear() + "\nHora: " 
-			+ rellenarConCero(fechaYHora.getHour()) + ":" 
-			+ rellenarConCero(fechaYHora.getMinute())
-			+ ":" + rellenarConCero(fechaYHora.getSecond());
+		return "Fecha: " + fechaYHora.getDayOfMonth() + "/" + fechaYHora.getMonthValue() + "/" + fechaYHora.getYear()
+				+ "\nHora: " + rellenarConCero(fechaYHora.getHour()) + ":" + rellenarConCero(fechaYHora.getMinute())
+				+ ":" + rellenarConCero(fechaYHora.getSecond());
 
 	}
 

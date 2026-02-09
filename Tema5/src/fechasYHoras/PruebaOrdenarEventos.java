@@ -32,13 +32,13 @@ public class PruebaOrdenarEventos {
 			// Buscamos el mínimo del array entre la posición i y el final.
 			posMin = i;
 			for (int j = i + 1; j < eventos.length; j++) {
-				
-				if(eventos[j].getFecha().isBefore(eventos[posMin].getFecha())) {
+
+				if (eventos[j].getFecha().isBefore(eventos[posMin].getFecha())) {
 					posMin = j;
 				}
-				
+
 			}
-			
+
 			// Intercambiamos las posiciones i y posMin.
 			aux = eventos[i];
 			eventos[i] = eventos[posMin];
