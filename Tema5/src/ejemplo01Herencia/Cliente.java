@@ -23,5 +23,10 @@ public class Cliente extends Persona {
 		System.out.println("Tarjeta VISA: " + visa);
 
 	}
+	
+	@Override
+	public void darDeAlta() {
+		System.out.println("Cliente añadido a la BD.");
+	}
 
 }

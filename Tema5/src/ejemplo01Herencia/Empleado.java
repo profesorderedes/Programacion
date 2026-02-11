@@ -20,10 +20,9 @@ public class Empleado extends Persona {
 		System.out.println("Número de la seguridad social: " + numSegSocial);
 
 	}
+
+	@Override
+	public void darDeAlta() {
+		System.out.println("Cliente añadido a la BD.");
+	}
 }
-
-
-
-
-
-

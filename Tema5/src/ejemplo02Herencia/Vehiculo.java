@@ -1,6 +1,6 @@
 package ejemplo02Herencia;
 
-public class Vehiculo {
+public abstract class Vehiculo {
 
 	private String matricula;
 	private String marca;

@@ -20,4 +20,9 @@ public class Proveedor extends Persona {
 
 	}
 
+	@Override
+	public void darDeAlta() {
+		System.out.println("Proveedor añadido a la BD.");
+	}
+
 }

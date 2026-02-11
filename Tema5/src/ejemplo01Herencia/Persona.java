@@ -1,6 +1,10 @@
 package ejemplo01Herencia;
 
-public class Persona {
+// Declaramos esta clase como abstracta porque sólo nos interesa
+// para que otras clases (Cliente, Empleado, Proveedor) hereden
+// de ella.
+// Al ser abstracta no se pueden crear objetos de esta clase.
+public abstract class Persona {
 
 	private String nombre;
 	private String apellidos;
@@ -17,6 +21,8 @@ public class Persona {
 		System.out.println("Apellidos: " + apellidos);
 		System.out.println("DNI: " + dni);
 	}
+	
+	public abstract void darDeAlta();
 
 	public String getNombre() {
 		return nombre;

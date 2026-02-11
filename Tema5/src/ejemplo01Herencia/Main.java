@@ -12,6 +12,10 @@ public class Main {
 		e1.mostrar();
 		p1.mostrar();
 
+		// Al declarar la clase Persona como abstracta, no podemos
+		// crear objetos de esa clase. La siguiente línea daría error:
+		// Persona persona = new Persona();
+
 	}
 
 }
