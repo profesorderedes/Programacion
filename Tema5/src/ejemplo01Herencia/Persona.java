@@ -21,7 +21,7 @@ public abstract class Persona {
 		System.out.println("Apellidos: " + apellidos);
 		System.out.println("DNI: " + dni);
 	}
-	
+
 	public abstract void darDeAlta();
 
 	public String getNombre() {

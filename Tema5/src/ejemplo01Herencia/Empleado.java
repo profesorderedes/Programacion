@@ -1,6 +1,6 @@
 package ejemplo01Herencia;
 
-public class Empleado extends Persona {
+public final class Empleado extends Persona {
 
 	private String numSegSocial;
 

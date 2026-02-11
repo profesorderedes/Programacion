@@ -1,6 +1,6 @@
 package ejemplo02Herencia;
 
-public class Moto extends Vehiculo {
+public final class Moto extends Vehiculo {
 
 	private double cilindrada;
 

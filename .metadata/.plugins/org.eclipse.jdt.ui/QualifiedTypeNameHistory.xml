@@ -24,4 +24,10 @@
     <fullyQualifiedTypeName name="juzgado.Juzgado"/>
     <fullyQualifiedTypeName name="fechasYHoras.Evento"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="prac1.Mp3"/>
+    <fullyQualifiedTypeName name="prac1.Ogg"/>
+    <fullyQualifiedTypeName name="ejemplo01Herencia.Persona"/>
+    <fullyQualifiedTypeName name="prac2.Componente"/>
+    <fullyQualifiedTypeName name="prac2.Condensador"/>
+    <fullyQualifiedTypeName name="prac2.Led"/>
 </qualifiedTypeNameHistroy>

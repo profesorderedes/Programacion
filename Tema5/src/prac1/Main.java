@@ -10,6 +10,9 @@ public class Main {
 
 		Ogg o1 = new Ogg();
 
+		mp1.reproducir();
+		o1.reproducir();
+
 	}
 
 }

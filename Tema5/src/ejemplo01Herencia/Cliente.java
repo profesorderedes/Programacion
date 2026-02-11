@@ -1,6 +1,8 @@
 package ejemplo01Herencia;
 
-public class Cliente extends Persona {
+// Hacemos la clase Cliente de tipo final para que no se 
+// puedan crear clases hijas.
+public final class Cliente extends Persona {
 
 	private String visa;
 
@@ -23,7 +25,7 @@ public class Cliente extends Persona {
 		System.out.println("Tarjeta VISA: " + visa);
 
 	}
-	
+
 	@Override
 	public void darDeAlta() {
 		System.out.println("Cliente añadido a la BD.");
