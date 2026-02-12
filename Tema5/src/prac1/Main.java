@@ -13,6 +13,10 @@ public class Main {
 		mp1.reproducir();
 		o1.reproducir();
 
+		Medio m1 = new Mp3();
+		m1.reproducir();
+		m1.guardar();
+
 	}
 
 }
