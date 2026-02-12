@@ -14,7 +14,6 @@
     <fullyQualifiedTypeName name="javax.sound.sampled.AudioFileFormat"/>
     <fullyQualifiedTypeName name="biblioteca.Autor"/>
     <fullyQualifiedTypeName name="biblioteca.Libro"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="utilidades.Consola"/>
     <fullyQualifiedTypeName name="auxiliar.Grupo"/>
     <fullyQualifiedTypeName name="auxiliar.Alumno"/>
@@ -30,4 +29,10 @@
     <fullyQualifiedTypeName name="prac2.Componente"/>
     <fullyQualifiedTypeName name="prac2.Condensador"/>
     <fullyQualifiedTypeName name="prac2.Led"/>
+    <fullyQualifiedTypeName name="ejemplo04Interfaces.Figura2D"/>
+    <fullyQualifiedTypeName name="ejemplo04Interfaces.Rectangulo"/>
+    <fullyQualifiedTypeName name="ejemplo04Interfaces.DiaSemana"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="prac1.Guardable"/>
+    <fullyQualifiedTypeName name="prac2.Invertible"/>
 </qualifiedTypeNameHistroy>
