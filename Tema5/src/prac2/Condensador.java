@@ -1,6 +1,6 @@
 package prac2;
 
-public class Condensador extends Componente {
+public class Condensador extends Componente implements Invertible {
 
 	private double capacidad;
 
@@ -14,6 +14,11 @@ public class Condensador extends Componente {
 	@Override
 	public void conectar() {
 		System.out.println("Componente conectado.");
+	}
+
+	@Override
+	public void girar() {
+		System.out.println("Componente girado.");
 	}
 
 }
