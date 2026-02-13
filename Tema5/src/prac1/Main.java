@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-//		Medio me1 = new Medio();
+//		Medio me1 = new Medio(); <- ERROR
 
 		Mp3 mp1 = new Mp3("Highway to hell", 240, "AC/DC", "Rock", 2);
 
@@ -15,7 +15,7 @@ public class Main {
 
 		Medio m1 = new Mp3("Highway to hell", 240, "AC/DC", "Rock", 2);
 		m1.reproducir();
-//		m1.guardar();
+//		m1.guardar();	<- ERROR
 
 		((Guardable) m1).guardar();
 
