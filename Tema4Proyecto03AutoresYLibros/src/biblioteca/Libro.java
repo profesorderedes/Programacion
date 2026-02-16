@@ -23,10 +23,10 @@ public class Libro {
 			return "\nTítulo: " + titulo + "\nISBN: " + isbn + "\nAutor: " + autor.getNombre() + " ("
 					+ autor.getFechaNacimiento() + ")";
 		}
-		
+
 		return "\nTítulo: " + titulo + "\nISBN: " + isbn + "\nAutor: Anónimo";
 	}
-	
+
 	public static void setAnyoActual(int anyoActual) {
 		Libro.anyoActual = anyoActual;
 	}

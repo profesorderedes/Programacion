@@ -15,8 +15,7 @@ public class Sentencia {
 	}
 
 	public String toString() {
-		return numSentencia + "\t" + titulo + "\t" + juez.getApellidos() + ", " 
-				+ juez.getNombre();
+		return numSentencia + "\t" + titulo + "\t" + juez.getApellidos() + ", " + juez.getNombre();
 	}
 
 	public int getNumSentencia() {

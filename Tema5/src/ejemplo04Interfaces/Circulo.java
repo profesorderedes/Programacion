@@ -5,7 +5,7 @@ public class Circulo implements Figura2D, Mostrable {
 	private int x;
 	private int y;
 	private int radio;
-	
+
 	public Circulo(int x, int y, int radio) {
 		this.x = x;
 		this.y = y;
@@ -24,7 +24,7 @@ public class Circulo implements Figura2D, Mostrable {
 
 	@Override
 	public void mostrar() {
-		System.out.println("Círculo de radio " + radio);		
+		System.out.println("Círculo de radio " + radio);
 	}
 
 }

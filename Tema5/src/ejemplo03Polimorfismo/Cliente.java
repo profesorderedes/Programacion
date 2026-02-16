@@ -34,12 +34,12 @@ public final class Cliente extends Persona {
 	public void cobrar() {
 		System.out.println("Se ha cobrado al cliente.");
 	}
-	
+
 	@Override
 	public String toString() {
-		
+
 		return "Nombre: " + getNombre() + "\n" + "Apellidos: " + getApellidos();
-		
+
 	}
 
 }

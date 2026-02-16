@@ -27,7 +27,7 @@ public class Cilindro {
 	public String toString() {
 		return "Altura: " + altura + "\nRadio: " + radio;
 	}
-	
+
 	protected void finalize() throws Throwable {
 		System.out.println("El Garbage collector me ha eliminado.");
 	}

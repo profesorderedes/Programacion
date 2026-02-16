@@ -1,6 +1,6 @@
 INDEX VERSION 1.134+/home/csogorb/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
 3627123046.index
-2601422426.index
+1962995574.index
 90840057.index
 2574269245.index
 3960061644.index
@@ -8,7 +8,6 @@ INDEX VERSION 1.134+/home/csogorb/eclipse-workspace/.metadata/.plugins/org.eclip
 1735733471.index
 3528033420.index
 1979774823.index
-2567467902.index
 87897227.index
 1919757167.index
 1564596359.index

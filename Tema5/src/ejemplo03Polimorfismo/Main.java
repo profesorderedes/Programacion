@@ -28,8 +28,8 @@ public class Main {
 
 		// Una manera de saltarnos esta restricción es hacer un cast de la variable.
 		((Cliente) per1).cobrar();
-		
-		System.out.println(per1.toString()); 
+
+		System.out.println(per1.toString());
 
 	}
 

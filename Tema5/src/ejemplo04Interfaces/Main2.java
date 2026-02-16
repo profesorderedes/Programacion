@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Main2 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner entrada = new Scanner(System.in);
-		
+
 		System.out.println("Escribe el número del día de la semana en que estamos:");
 		int num = entrada.nextInt();
-		
+
 		nombreDia(num);
-		
+
 	}
 
 	public static void nombreDia(int numDia) {

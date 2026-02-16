@@ -23,7 +23,7 @@ public abstract class Persona {
 	}
 
 	public abstract void darDeAlta();
-	
+
 	public String getNombre() {
 		return nombre;
 	}

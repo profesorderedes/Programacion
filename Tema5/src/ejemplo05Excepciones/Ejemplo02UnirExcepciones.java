@@ -26,7 +26,7 @@ public class Ejemplo02UnirExcepciones {
 			System.out.println("Se ha producido un error y la aplicación se cerrará.");
 
 		}
-		
+
 		System.out.println("El programa continúa...");
 
 	}
