@@ -12,15 +12,15 @@ public class Ejemplo01 extends JFrame {
 		super("Mi primera ventana");
 		setSize(800, 600);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+
 		// Configuramos un layout en la ventana.
 		FlowLayout layout = new FlowLayout();
 		setLayout(layout);
-		
+
 		// Creamos los componentes a la ventana.
 		JButton btnAceptar = new JButton("Aceptar");
 		JButton btnCancelar = new JButton("Cancelar");
-		
+
 		// Añadimos los componentes a la ventana.
 		add(btnAceptar);
 		add(btnCancelar);
