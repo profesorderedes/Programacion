@@ -36,4 +36,13 @@
     <fullyQualifiedTypeName name="prac1.Guardable"/>
     <fullyQualifiedTypeName name="prac2.Invertible"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo02"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo03"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo04"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
+    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
 </qualifiedTypeNameHistroy>
