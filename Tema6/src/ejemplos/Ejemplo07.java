@@ -1,9 +1,11 @@
 package ejemplos;
 
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class Ejemplo07 extends JFrame {
@@ -18,10 +20,16 @@ public class Ejemplo07 extends JFrame {
 
 		JLabel lblComentario = new JLabel("Deja tu comentario:");
 
-		JTextArea txtComentario = new JTextArea(10,20);
+		JTextArea txtComentario = new JTextArea();
+		txtComentario.setLineWrap(true);
+		txtComentario.setWrapStyleWord(true);
 
+		JScrollPane scrComentario = new JScrollPane(txtComentario);
+
+		scrComentario.setPreferredSize(new Dimension(390, 220));
+		
 		add(lblComentario);
-		add(txtComentario);
+		add(scrComentario);
 
 		setVisible(true);
 	}
