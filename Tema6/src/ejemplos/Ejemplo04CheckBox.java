@@ -6,9 +6,9 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo04 extends JFrame {
+public class Ejemplo04CheckBox extends JFrame {
 
-	public Ejemplo04() {
+	public Ejemplo04CheckBox() {
 
 		super("Hobbies");
 		setSize(200, 200);
@@ -39,6 +39,6 @@ public class Ejemplo04 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo04 ventana = new Ejemplo04();
+		Ejemplo04CheckBox ventana = new Ejemplo04CheckBox();
 	}
 }

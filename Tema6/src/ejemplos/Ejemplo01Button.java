@@ -5,9 +5,9 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class Ejemplo01 extends JFrame {
+public class Ejemplo01Button extends JFrame {
 
-	public Ejemplo01() {
+	public Ejemplo01Button() {
 
 		super("Mi primera ventana");
 		setSize(800, 600);
@@ -30,7 +30,7 @@ public class Ejemplo01 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo01 miVentana = new Ejemplo01();
+		Ejemplo01Button miVentana = new Ejemplo01Button();
 	}
 
 }

@@ -6,9 +6,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo02 extends JFrame {
+public class Ejemplo02Button extends JFrame {
 
-	public Ejemplo02() {
+	public Ejemplo02Button() {
 
 		super("Playback");
 		setSize(350, 100);
@@ -31,7 +31,7 @@ public class Ejemplo02 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo02 miVentana = new Ejemplo02();
+		Ejemplo02Button miVentana = new Ejemplo02Button();
 
 	}
 

@@ -6,9 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class Ejemplo03 extends JFrame {
+public class Ejemplo03Texto extends JFrame {
 
-	public Ejemplo03() {
+	public Ejemplo03Texto() {
 
 		super("Etiquetas");
 		setSize(200, 300);
@@ -28,7 +28,7 @@ public class Ejemplo03 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo03 ejemplo = new Ejemplo03();
+		Ejemplo03Texto ejemplo = new Ejemplo03Texto();
 	}
 
 }
