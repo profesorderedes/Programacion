@@ -6,9 +6,9 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo06 extends JFrame {
+public class Ejemplo06ComboBox extends JFrame {
 
-	public Ejemplo06() {
+	public Ejemplo06ComboBox() {
 		super("Países");
 		setSize(300, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -49,7 +49,7 @@ public class Ejemplo06 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo06 plantilla = new Ejemplo06();
+		Ejemplo06ComboBox plantilla = new Ejemplo06ComboBox();
 	}
 
 }

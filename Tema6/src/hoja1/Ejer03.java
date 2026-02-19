@@ -1,29 +1,29 @@
-package ejemplos;
+package hoja1;
 
 import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class Ejemplo09 extends JFrame {
+public class Ejer03 extends JFrame {
 
-	public Ejemplo09() {
-		super("Paneles de diálogo");
+	public Ejer03() {
+		super("Diálogos");
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		FlowLayout layout = new FlowLayout(FlowLayout.LEFT);
 		setLayout(layout);
-
+		
 		setLocationRelativeTo(null);
 
 		setVisible(true);
-
-		JOptionPane.showMessageDialog(this, "El equipo va a estallar.");
+		
+		JOptionPane.showMessageDialog();
 	}
 
 	public static void main(String[] args) {
-		Ejemplo09 plantilla = new Ejemplo09();
+		Ejer03 plantilla = new Ejer03();
 	}
 
 }

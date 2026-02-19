@@ -13,9 +13,9 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-public class Ejemplo08 extends JFrame {
+public class Ejemplo08LookAndFeel extends JFrame {
 
-	public Ejemplo08() {
+	public Ejemplo08LookAndFeel() {
 		super("Comentarios");
 		setSize(400, 350);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -65,7 +65,7 @@ public class Ejemplo08 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo08 plantilla = new Ejemplo08();
+		Ejemplo08LookAndFeel plantilla = new Ejemplo08LookAndFeel();
 	}
 
 }

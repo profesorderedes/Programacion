@@ -8,9 +8,9 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-public class Ejemplo07 extends JFrame {
+public class Ejemplo07TextArea extends JFrame {
 
-	public Ejemplo07() {
+	public Ejemplo07TextArea() {
 		super("Comentarios");
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -35,7 +35,7 @@ public class Ejemplo07 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo07 plantilla = new Ejemplo07();
+		Ejemplo07TextArea plantilla = new Ejemplo07TextArea();
 	}
 
 }
