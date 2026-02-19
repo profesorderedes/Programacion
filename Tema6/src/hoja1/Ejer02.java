@@ -20,7 +20,11 @@ public class Ejer02 extends JFrame {
 
 		setVisible(true);
 
-		JOptionPane.showInputDialog();
+		String dni = JOptionPane.showInputDialog(this, "Escribe tu DNI:", "Confirmación de identidad",
+				JOptionPane.QUESTION_MESSAGE);
+
+		JOptionPane.showMessageDialog(this, "Tu DNI es " + dni + ".", "Confirmación de identidad",
+				JOptionPane.INFORMATION_MESSAGE);
 
 	}
 
@@ -29,10 +33,3 @@ public class Ejer02 extends JFrame {
 	}
 
 }
-
-
-
-
-
-
-
