@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 public class Ejer03 extends JFrame {
 
 	public Ejer03() {
+		
 		super("Diálogos");
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -20,6 +21,7 @@ public class Ejer03 extends JFrame {
 		setVisible(true);
 		
 		JOptionPane.showMessageDialog();
+		
 	}
 
 	public static void main(String[] args) {
