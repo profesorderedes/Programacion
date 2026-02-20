@@ -9,9 +9,9 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-public class Ejemplo13 extends JFrame {
+public class Ejemplo13ImageIcons extends JFrame {
 
-	public Ejemplo13() {
+	public Ejemplo13ImageIcons() {
 
 		super("Iconos");
 		setSize(400, 300);
@@ -53,7 +53,7 @@ public class Ejemplo13 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo13 plantilla = new Ejemplo13();
+		Ejemplo13ImageIcons plantilla = new Ejemplo13ImageIcons();
 	}
 
 }

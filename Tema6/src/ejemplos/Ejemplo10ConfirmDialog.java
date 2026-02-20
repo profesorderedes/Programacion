@@ -5,9 +5,9 @@ import java.awt.FlowLayout;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class Ejemplo10 extends JFrame {
+public class Ejemplo10ConfirmDialog extends JFrame {
 
-	public Ejemplo10() {
+	public Ejemplo10ConfirmDialog() {
 
 		super("Diálogos");
 		setSize(400, 300);
@@ -36,7 +36,7 @@ public class Ejemplo10 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo10 plantilla = new Ejemplo10();
+		Ejemplo10ConfirmDialog plantilla = new Ejemplo10ConfirmDialog();
 	}
 
 }

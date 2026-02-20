@@ -7,9 +7,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JSlider;
 
-public class Ejemplo12 extends JFrame {
+public class Ejemplo12Slider extends JFrame {
 
-	public Ejemplo12() {
+	public Ejemplo12Slider() {
 		super("Sliders");
 		setSize(400, 320);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -46,7 +46,7 @@ public class Ejemplo12 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo12 plantilla = new Ejemplo12();
+		Ejemplo12Slider plantilla = new Ejemplo12Slider();
 	}
 
 }

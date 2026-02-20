@@ -8,9 +8,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JToolBar;
 
-public class Ejemplo14 extends JFrame {
+public class Ejemplo14ToolBar extends JFrame {
 
-	public Ejemplo14() {
+	public Ejemplo14ToolBar() {
 		super("Barra de herramientas");
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -39,7 +39,7 @@ public class Ejemplo14 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo14 plantilla = new Ejemplo14();
+		Ejemplo14ToolBar plantilla = new Ejemplo14ToolBar();
 	}
 
 }
