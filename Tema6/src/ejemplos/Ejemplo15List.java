@@ -8,9 +8,9 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 
-public class Ejemplo15 extends JFrame {
+public class Ejemplo15List extends JFrame {
 
-	public Ejemplo15() {
+	public Ejemplo15List() {
 
 		super("Listas");
 		setSize(400, 300);
@@ -37,7 +37,7 @@ public class Ejemplo15 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo15 plantilla = new Ejemplo15();
+		Ejemplo15List plantilla = new Ejemplo15List();
 	}
 
 }

@@ -9,9 +9,9 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 
-public class Ejemplo16 extends JFrame {
+public class Ejemplo16List extends JFrame {
 
-	public Ejemplo16() {
+	public Ejemplo16List() {
 
 		super("Listas");
 		setSize(400, 300);
@@ -36,6 +36,9 @@ public class Ejemplo16 extends JFrame {
 		// Añadimos al modelo cada elemento que queremos que se vea en la lista.
 		modelo.addElement("Austria");
 		modelo.addElement("Alemania");
+		
+		// Podemos eliminar un país con el siguiente código:
+		modelo.remove(0);
 
 		add(new JLabel("Elige un país:"));
 		add(scrPaises);
@@ -45,7 +48,7 @@ public class Ejemplo16 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo16 plantilla = new Ejemplo16();
+		Ejemplo16List plantilla = new Ejemplo16List();
 	}
 
 }
