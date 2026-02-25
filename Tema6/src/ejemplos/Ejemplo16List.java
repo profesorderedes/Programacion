@@ -36,7 +36,7 @@ public class Ejemplo16List extends JFrame {
 		// Añadimos al modelo cada elemento que queremos que se vea en la lista.
 		modelo.addElement("Austria");
 		modelo.addElement("Alemania");
-		
+
 		// Podemos eliminar un país con el siguiente código:
 		modelo.remove(0);
 

@@ -41,7 +41,7 @@ public class Ejemplo06ComboBox extends JFrame {
 
 		add(lblPaises);
 		add(cmbPaises);
-		
+
 		add(lblProvincias);
 		add(cmbProvincias);
 

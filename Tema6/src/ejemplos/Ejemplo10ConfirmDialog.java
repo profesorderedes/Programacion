@@ -32,7 +32,7 @@ public class Ejemplo10ConfirmDialog extends JFrame {
 
 		respuesta = JOptionPane.showConfirmDialog(this, "¿Quiere actualizar el programa?", "Actualizar",
 				JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-		
+
 	}
 
 	public static void main(String[] args) {

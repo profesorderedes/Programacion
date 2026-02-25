@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 public class Ejemplo09MessageDialog extends JFrame {
 
 	public Ejemplo09MessageDialog() {
-		
+
 		super("Paneles de diálogo");
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);

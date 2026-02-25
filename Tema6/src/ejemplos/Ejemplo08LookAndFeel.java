@@ -24,10 +24,10 @@ public class Ejemplo08LookAndFeel extends JFrame {
 		setLayout(layout);
 
 		try {
-			
+
 			UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
 			SwingUtilities.updateComponentTreeUI(this);
-			
+
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
 				| UnsupportedLookAndFeelException e) {
 			System.out.println("Error al cambiar el lookandfeel.");

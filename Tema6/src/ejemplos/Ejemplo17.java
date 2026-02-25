@@ -24,7 +24,7 @@ public class Ejemplo17 extends JFrame {
 		// Descargaremos un archivo de 3MB.
 		JProgressBar prgDescargado = new JProgressBar(0, 3072);
 		prgDescargado.setPreferredSize(new Dimension(300, 40));
-		prgDescargado.setForeground(new Color(255,220,40));
+		prgDescargado.setForeground(new Color(255, 220, 40));
 		prgDescargado.setStringPainted(true);
 
 		add(new JLabel("Progreso de la descarga"));
@@ -40,7 +40,7 @@ public class Ejemplo17 extends JFrame {
 				e.printStackTrace();
 			}
 		}
-		
+
 	}
 
 	public static void main(String[] args) {
