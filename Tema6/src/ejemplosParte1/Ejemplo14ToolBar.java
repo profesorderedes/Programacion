@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosParte1;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;

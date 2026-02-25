@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosParte1;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -8,9 +8,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 
-public class Ejemplo17 extends JFrame {
+public class Ejemplo17ProgressBar extends JFrame {
 
-	public Ejemplo17() {
+	public Ejemplo17ProgressBar() {
 
 		super("Descargas");
 		setSize(400, 300);
@@ -44,7 +44,7 @@ public class Ejemplo17 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo17 plantilla = new Ejemplo17();
+		Ejemplo17ProgressBar plantilla = new Ejemplo17ProgressBar();
 	}
 
 }

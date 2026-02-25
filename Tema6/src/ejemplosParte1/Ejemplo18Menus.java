@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosParte1;
 
 import java.awt.FlowLayout;
 
@@ -10,9 +10,9 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-public class Ejemplo18 extends JFrame {
+public class Ejemplo18Menus extends JFrame {
 
-	public Ejemplo18() {
+	public Ejemplo18Menus() {
 
 		super("Menús");
 		setSize(400, 300);
@@ -57,11 +57,21 @@ public class Ejemplo18 extends JFrame {
 		JMenuItem itemPegar = new JMenuItem("Pegar");
 		JMenuItem itemBorrar = new JMenuItem("Borrar");
 
+		// Podemos añadir un submenú al menú Edición
+		
+		JMenu submenuExpandSelectionTo = new JMenu("Expand selection to");
+		JMenuItem itemEnclosingElement = new JMenuItem("Enclosing element");
+		JMenuItem itemNextElement = new JMenuItem("Next element");
+
+		submenuExpandSelectionTo.add(itemEnclosingElement);
+		submenuExpandSelectionTo.add(itemNextElement);
+
 		menuEdicion.add(itemCortar);
 		menuEdicion.add(itemCopiar);
 		menuEdicion.add(itemPegar);
 		menuEdicion.addSeparator();
 		menuEdicion.add(itemBorrar);
+		menuEdicion.add(submenuExpandSelectionTo);
 
 		// Barra de menú.
 
@@ -79,7 +89,7 @@ public class Ejemplo18 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Ejemplo18 plantilla = new Ejemplo18();
+		Ejemplo18Menus plantilla = new Ejemplo18Menus();
 	}
 
 }

@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosParte2;
 
 import java.awt.FlowLayout;
 
@@ -12,8 +12,7 @@ public class Plantilla extends JFrame {
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-		FlowLayout layout = new FlowLayout(FlowLayout.LEFT);
-		setLayout(layout);
+		setLayout(new FlowLayout(FlowLayout.LEFT));
 
 		setLocationRelativeTo(null);
 
@@ -22,7 +21,7 @@ public class Plantilla extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		Plantilla plantilla = new Plantilla();
+		new Plantilla();
 	}
 
 }
