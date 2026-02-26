@@ -10,9 +10,9 @@ import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
 
-public class Ejemplo02 extends JFrame {
+public class Ejemplo02GridLayout extends JFrame {
 
-	public Ejemplo02() {
+	public Ejemplo02GridLayout() {
 
 		super("GridLayout");
 		setSize(450, 300);
@@ -52,7 +52,7 @@ public class Ejemplo02 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo02();
+		new Ejemplo02GridLayout();
 	}
 
 }

@@ -8,9 +8,9 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 
-public class Ejercicio02 extends JFrame {
+public class Ejer02 extends JFrame {
 
-	public Ejercicio02() {
+	public Ejer02() {
 		super("Selección de modelo");
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -33,7 +33,7 @@ public class Ejercicio02 extends JFrame {
 
 	public static void main(String[] args) {
 
-		Ejercicio02 ventana = new Ejercicio02();
+		Ejer02 ventana = new Ejer02();
 
 	}
 }
