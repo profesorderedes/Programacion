@@ -11,6 +11,7 @@ import javax.swing.JScrollPane;
 public class Ejer02 extends JFrame {
 
 	public Ejer02() {
+		
 		super("Selección de modelo");
 		setSize(400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);

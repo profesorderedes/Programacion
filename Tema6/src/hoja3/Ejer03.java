@@ -8,9 +8,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 
-public class Ejercicio03 extends JFrame {
+public class Ejer03 extends JFrame {
 
-	public Ejercicio03() {
+	public Ejer03() {
 
 		super("Parámetros críticos");
 		setSize(290, 150);
@@ -51,7 +51,7 @@ public class Ejercicio03 extends JFrame {
 
 	public static void main(String[] args) {
 
-		Ejercicio03 ventana = new Ejercicio03();
+		Ejer03 ventana = new Ejer03();
 
 		boolean timer = true;
 
