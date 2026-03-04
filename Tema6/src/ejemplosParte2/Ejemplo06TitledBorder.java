@@ -10,12 +10,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Ejemplo06 extends JFrame {
+public class Ejemplo06TitledBorder extends JFrame {
 	public static void main(String[] args) {
-		new Ejemplo06();
+		new Ejemplo06TitledBorder();
 	}
 
-	public Ejemplo06() {
+	public Ejemplo06TitledBorder() {
 		super("Bordes título");
 		setSize(260, 150);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

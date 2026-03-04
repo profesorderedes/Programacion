@@ -8,12 +8,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Ejemplo04 extends JFrame {
+public class Ejemplo04EmptyBorder extends JFrame {
 	public static void main(String[] args) {
-		new Ejemplo04();
+		new Ejemplo04EmptyBorder();
 	}
 
-	public Ejemplo04() {
+	public Ejemplo04EmptyBorder() {
 		
 		super("Bordes vacíos");
 		setSize(270, 200);

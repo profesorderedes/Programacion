@@ -8,13 +8,13 @@ import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Ejemplo05 extends JFrame {
+public class Ejemplo05LineBorder extends JFrame {
 	
 	public static void main(String[] args) {
-		new Ejemplo05();
+		new Ejemplo05LineBorder();
 	}
 
-	public Ejemplo05() {
+	public Ejemplo05LineBorder() {
 		
 		super("Bordes");
 		setSize(400, 300);
