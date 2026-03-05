@@ -42,7 +42,7 @@ public class Ejemplo03GridLayout extends JFrame {
 		panelBotones.setLayout(new GridLayout(2, 1));
 
 		// CASILLA DERECHA ARRIBA
-		
+
 		JPanel panelAlta = new JPanel();
 
 		JButton btnAlta = new JButton("Alta");
@@ -50,7 +50,7 @@ public class Ejemplo03GridLayout extends JFrame {
 		panelAlta.add(btnAlta);
 
 		// CASILLA DERECHA ABAJO
-		
+
 		JPanel panelBaja = new JPanel();
 
 		JButton btnBaja = new JButton("Baja");

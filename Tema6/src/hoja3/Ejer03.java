@@ -56,7 +56,7 @@ public class Ejer03 extends JFrame {
 		boolean timer = true;
 
 		if (timer) {
-			
+
 			for (int i = 10; i >= 0; i--) {
 				if (i == 1) {
 					System.out.println("Closing window...");

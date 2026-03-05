@@ -45,19 +45,13 @@ public class Ejemplo03ActionListener extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
-		if(e.getSource() == btnAceptar) {
+
+		if (e.getSource() == btnAceptar) {
 			lblMensaje.setText("Has pulsado Aceptar");
-		}else {
+		} else {
 			lblMensaje.setText("Has pulsado Cancelar");
 		}
-		
+
 	}
 
 }
-
-
-
-
-
-

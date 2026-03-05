@@ -56,7 +56,7 @@ public class Ejer01 extends JFrame {
 		tlbBarra.add(btnAjustes);
 
 		add("North", tlbBarra);
-		
+
 		setVisible(true);
 
 	}

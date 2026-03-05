@@ -10,8 +10,7 @@ public class ManejadorClicBoton implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		JOptionPane.showMessageDialog(null, "¡Me has pulsado!", "Pulsación", 
-				JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "¡Me has pulsado!", "Pulsación", JOptionPane.INFORMATION_MESSAGE);
 
 	}
 

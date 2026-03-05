@@ -58,7 +58,7 @@ public class Ejemplo18Menus extends JFrame {
 		JMenuItem itemBorrar = new JMenuItem("Borrar");
 
 		// Podemos añadir un submenú al menú Edición
-		
+
 		JMenu submenuExpandSelectionTo = new JMenu("Expand selection to");
 		JMenuItem itemEnclosingElement = new JMenuItem("Enclosing element");
 		JMenuItem itemNextElement = new JMenuItem("Next element");
