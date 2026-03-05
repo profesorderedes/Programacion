@@ -9,12 +9,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejercicio1 extends JFrame implements ActionListener {
+public class Ejer01 extends JFrame implements ActionListener {
 
 	private JButton btnJDH, btnPR, btnLM, btnDG;
 	private JLabel lblImagen;
 
-	public Ejercicio1() {
+	public Ejer01() {
 
 		super("Películas");
 		setSize(650, 350);
@@ -50,7 +50,7 @@ public class Ejercicio1 extends JFrame implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-		new Ejercicio1();
+		new Ejer01();
 	}
 
 	@Override
