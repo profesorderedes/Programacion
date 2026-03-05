@@ -5,9 +5,9 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class Ejemplo01 extends JFrame {
+public class Ejemplo01ActionListener extends JFrame {
 
-	public Ejemplo01() {
+	public Ejemplo01ActionListener() {
 
 		super("ActionListener");
 		setSize(400, 300);
@@ -33,7 +33,7 @@ public class Ejemplo01 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo01();
+		new Ejemplo01ActionListener();
 	}
 
 }

@@ -8,11 +8,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo02 extends JFrame implements ActionListener {
+public class Ejemplo02ActionListener extends JFrame implements ActionListener {
 
 	private JLabel lblPulsado;
 
-	public Ejemplo02() {
+	public Ejemplo02ActionListener() {
 
 		super("ActionListener");
 		setSize(400, 300);
@@ -37,7 +37,7 @@ public class Ejemplo02 extends JFrame implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo02();
+		new Ejemplo02ActionListener();
 	}
 
 	@Override

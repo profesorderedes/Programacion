@@ -8,12 +8,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo03 extends JFrame implements ActionListener {
+public class Ejemplo03ActionListener extends JFrame implements ActionListener {
 
 	private JButton btnAceptar, btnCancelar;
 	private JLabel lblMensaje;
 
-	public Ejemplo03() {
+	public Ejemplo03ActionListener() {
 
 		super("ActionListener");
 		setSize(400, 300);
@@ -40,7 +40,7 @@ public class Ejemplo03 extends JFrame implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo03();
+		new Ejemplo03ActionListener();
 	}
 
 	@Override

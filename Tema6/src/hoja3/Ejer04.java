@@ -1,13 +1,18 @@
 package hoja3;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
-public class Ejer04 extends JFrame {
+public class Ejer04 extends JFrame implements ActionListener {
+
+	private JMenuItem itemSuma, itemResta;
 
 	public Ejer04() {
 
@@ -21,11 +26,15 @@ public class Ejer04 extends JFrame {
 
 		//
 
-		// Aritmetica
+		// Aritmética
 		JMenu menuAritmetica = new JMenu("Aritmética");
 
-		JMenuItem itemSuma = new JMenuItem("Suma");
-		JMenuItem itemResta = new JMenuItem("Resta");
+		itemSuma = new JMenuItem("Suma");
+		itemSuma.addActionListener(this);
+
+		itemResta = new JMenuItem("Resta");
+		itemResta.addActionListener(this);
+
 		JMenuItem itemMultiplicacion = new JMenuItem("Multiplicación");
 		JMenuItem itemDivision = new JMenuItem("División");
 		JMenuItem itemPorcentaje = new JMenuItem("Porcentaje");
@@ -67,20 +76,18 @@ public class Ejer04 extends JFrame {
 	public static void main(String[] args) {
 		Ejer04 ventana = new Ejer04();
 
-//        boolean timer = false;
-//        if (timer) {
-//            for (int i = 10; i >= 0; i--) {
-//                if (i == 1) {
-//                    System.out.println("Closing window...");
-//                }
-//                try {
-//                    Thread.sleep(1000);
-//                } catch (Exception e) {
-//                }
-//            }
-//
-//            ventana.dispose();
-//            System.out.println("Window closed.");
-//        }
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		if (e.getSource() == itemSuma) {
+			JOptionPane.showMessageDialog(this, "Has seleccionado la operación Suma.", "Asistente matemático",
+					JOptionPane.INFORMATION_MESSAGE);
+		} else if (e.getSource() == itemResta) {
+			JOptionPane.showMessageDialog(this, "Has seleccionado la operación Resta.", "Asistente matemático",
+					JOptionPane.INFORMATION_MESSAGE);
+		}
+
 	}
 }
