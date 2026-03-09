@@ -9,12 +9,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class Ejemplo04 extends JFrame implements FocusListener {
+public class Ejemplo04FocusListener extends JFrame implements FocusListener {
 
 	private JTextField txtNum1, txtNum2, txtNum3;
 	private JLabel lblMedia;
 
-	public Ejemplo04() {
+	public Ejemplo04FocusListener() {
 
 		super("Media aritmética");
 		setSize(270, 100);
@@ -45,7 +45,7 @@ public class Ejemplo04 extends JFrame implements FocusListener {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo04();
+		new Ejemplo04FocusListener();
 	}
 
 	@Override

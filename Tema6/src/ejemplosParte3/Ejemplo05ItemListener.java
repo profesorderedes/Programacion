@@ -8,12 +8,12 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo05 extends JFrame implements ItemListener {
+public class Ejemplo05ItemListener extends JFrame implements ItemListener {
 
 	private JComboBox<String> cmbProvincias;
 	private JLabel lblProvincia;
 
-	public Ejemplo05() {
+	public Ejemplo05ItemListener() {
 
 		super("Provincias");
 		setSize(400, 300);
@@ -38,7 +38,7 @@ public class Ejemplo05 extends JFrame implements ItemListener {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo05();
+		new Ejemplo05ItemListener();
 	}
 
 	@Override
@@ -49,7 +49,8 @@ public class Ejemplo05 extends JFrame implements ItemListener {
 		// Forma alternativa:
 		// String provincia = provincias[cmbProvincias.getSelectedIndex()];
 
-		lblProvincia.setText(provincia);
+		lblProvincia.setText("Seleccionada: " + provincia);
+		System.out.println("ItemListener");
 
 	}
 
