@@ -8,11 +8,11 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo06 extends JFrame implements KeyListener {
+public class Ejemplo07KeyListener extends JFrame implements KeyListener {
 
 	private JLabel lblMensaje;
 
-	public Ejemplo06() {
+	public Ejemplo07KeyListener() {
 
 		super("KeyListener");
 		setSize(400, 300);
@@ -34,33 +34,26 @@ public class Ejemplo06 extends JFrame implements KeyListener {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo06();
+		new Ejemplo07KeyListener();
 	}
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-
-		// Pasamos la letra a minúsculas.
-		char letra = e.getKeyChar();
-		String cadena = letra + "";
-		cadena = cadena.toLowerCase();
-		letra = cadena.charAt(0);
-		
-		// Según qué letra sea, indicamos un movimiento.
-		if (letra == 'w' ) {
-			lblMensaje.setText("Arriba");
-		} else if (letra == 's') {
-			lblMensaje.setText("Abajo");
-		} else if (letra == 'a') {
-			lblMensaje.setText("Izquierda");
-		} else if (letra == 'd') {
-			lblMensaje.setText("Derecha");
-		}
-
+		System.out.println("Pulsado");
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+
+		if (e.getKeyCode() == KeyEvent.VK_UP) {
+			lblMensaje.setText("Arriba");
+		} else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+			lblMensaje.setText("Abajo");
+		} else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+			lblMensaje.setText("Izquierda");
+		} else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			lblMensaje.setText("Derecha");
+		}
 
 	}
 

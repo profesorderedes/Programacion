@@ -7,12 +7,12 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo08 extends JFrame implements KeyListener {
+public class Ejemplo08KeyListener extends JFrame implements KeyListener {
 
 	private int x = 50, y = 50; // Coordenadas de la imagen.
 	private JLabel lblMovil; // Etiqueta que contiene la imagen.
 
-	public Ejemplo08() {
+	public Ejemplo08KeyListener() {
 
 		super("StarTV");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,7 +33,7 @@ public class Ejemplo08 extends JFrame implements KeyListener {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo08();
+		new Ejemplo08KeyListener();
 	}
 
 	@Override
