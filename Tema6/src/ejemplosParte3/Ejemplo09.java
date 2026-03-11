@@ -1,5 +1,6 @@
 package ejemplosParte3;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -39,17 +40,17 @@ public class Ejemplo09 extends JFrame implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		
+
 		lblCoordenadas.setText("x = " + e.getX() + ", y = " + e.getY());
-		
-		if(e.getButton() == MouseEvent.BUTTON1) {
-			lblBoton.setText("Botón = izquierdo");
-		}else if(){
-			
-		}else if() {
-			
+
+		if (e.getButton() == 1) {
+			lblBoton.setText("Botón izquierdo");
+		} else if (e.getButton() == 2) {
+			lblBoton.setText("Botón rueda");
+		} else if (e.getButton() == 3) {
+			lblBoton.setText("Botón derecho");
 		}
-		
+
 	}
 
 	@Override
@@ -64,12 +65,16 @@ public class Ejemplo09 extends JFrame implements MouseListener {
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-
+		
+		getContentPane().setBackground(Color.RED);
+		
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 
+		getContentPane().setBackground(Color.GREEN);
+		
 	}
 
 }
