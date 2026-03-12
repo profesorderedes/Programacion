@@ -16,9 +16,9 @@ public class Ejer02 extends JFrame implements KeyListener {
 		super("Letras - Colores");
 		setSize(250, 100);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+
 		setLayout(new FlowLayout(FlowLayout.CENTER));
-		
+
 		setLocationRelativeTo(null);
 
 		lblColor = new JLabel("COLOR");

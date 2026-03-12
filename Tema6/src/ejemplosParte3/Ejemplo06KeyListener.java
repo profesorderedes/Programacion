@@ -45,9 +45,9 @@ public class Ejemplo06KeyListener extends JFrame implements KeyListener {
 		String cadena = letra + "";
 		cadena = cadena.toLowerCase();
 		letra = cadena.charAt(0);
-		
+
 		// Según qué letra sea, indicamos un movimiento.
-		if (letra == 'w' ) {
+		if (letra == 'w') {
 			lblMensaje.setText("Arriba");
 		} else if (letra == 's') {
 			lblMensaje.setText("Abajo");

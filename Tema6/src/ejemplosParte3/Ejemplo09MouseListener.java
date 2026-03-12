@@ -65,16 +65,16 @@ public class Ejemplo09MouseListener extends JFrame implements MouseListener {
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		
+
 		getContentPane().setBackground(Color.RED);
-		
+
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 
 		getContentPane().setBackground(Color.GREEN);
-		
+
 	}
 
 }

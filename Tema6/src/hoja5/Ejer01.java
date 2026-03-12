@@ -52,7 +52,7 @@ public class Ejer01 extends JFrame implements FocusListener {
 	public void focusGained(FocusEvent e) {
 
 		JTextField txtCasilla = (JTextField) e.getSource();
-		
+
 		txtCasilla.setBackground(Color.YELLOW);
 
 	}

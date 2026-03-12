@@ -87,7 +87,7 @@ public class Ejer03 extends JFrame implements ActionListener {
 			nfe.printStackTrace();
 			txtResultado.setText("ERROR");
 
-		} 
+		}
 
 	}
 
