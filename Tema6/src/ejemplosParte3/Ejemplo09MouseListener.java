@@ -8,11 +8,11 @@ import java.awt.event.MouseListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo09 extends JFrame implements MouseListener {
+public class Ejemplo09MouseListener extends JFrame implements MouseListener {
 
 	private JLabel lblCoordenadas, lblBoton;
 
-	public Ejemplo09() {
+	public Ejemplo09MouseListener() {
 
 		super("MouseListener");
 		setSize(400, 300);
@@ -35,7 +35,7 @@ public class Ejemplo09 extends JFrame implements MouseListener {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo09();
+		new Ejemplo09MouseListener();
 	}
 
 	@Override
