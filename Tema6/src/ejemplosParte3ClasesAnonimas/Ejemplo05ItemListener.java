@@ -8,7 +8,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo05ItemListener extends JFrame implements ItemListener {
+public class Ejemplo05ItemListener extends JFrame {
 
 	private JComboBox<String> cmbProvincias;
 	private JLabel lblProvincia;
@@ -26,7 +26,14 @@ public class Ejemplo05ItemListener extends JFrame implements ItemListener {
 		String[] provincias = { "Baleares", "Alicante", "Murcia", "Jaén", "Albacete" };
 
 		cmbProvincias = new JComboBox<String>(provincias);
-		cmbProvincias.addItemListener(this);
+		cmbProvincias.addItemListener(new ItemListener() {
+
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				String provincia = (String) cmbProvincias.getSelectedItem();
+				lblProvincia.setText("Seleccionada: " + provincia);
+			}
+		});
 
 		lblProvincia = new JLabel("Seleccionada: Baleares");
 
@@ -41,17 +48,17 @@ public class Ejemplo05ItemListener extends JFrame implements ItemListener {
 		new Ejemplo05ItemListener();
 	}
 
-	@Override
-	public void itemStateChanged(ItemEvent e) {
-
-		String provincia = (String) cmbProvincias.getSelectedItem();
-
-		// Forma alternativa:
-		// String provincia = provincias[cmbProvincias.getSelectedIndex()];
-
-		lblProvincia.setText("Seleccionada: " + provincia);
-		System.out.println("ItemListener");
-
-	}
+//	@Override
+//	public void itemStateChanged(ItemEvent e) {
+//
+//		String provincia = (String) cmbProvincias.getSelectedItem();
+//
+//		// Forma alternativa:
+//		// String provincia = provincias[cmbProvincias.getSelectedIndex()];
+//
+//		lblProvincia.setText("Seleccionada: " + provincia);
+//		System.out.println("ItemListener");
+//
+//	}
 
 }

@@ -8,7 +8,7 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo06KeyListener extends JFrame implements KeyListener {
+public class Ejemplo06KeyListener extends JFrame{
 
 	private JLabel lblMensaje;
 
