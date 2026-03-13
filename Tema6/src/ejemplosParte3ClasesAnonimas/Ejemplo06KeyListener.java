@@ -8,7 +8,7 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo06KeyListener extends JFrame{
+public class Ejemplo06KeyListener extends JFrame {
 
 	private JLabel lblMensaje;
 
@@ -27,19 +27,30 @@ public class Ejemplo06KeyListener extends JFrame{
 
 		add(lblMensaje);
 
-		addKeyListener(this);
+		addKeyListener(new KeyListener() {
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+				letraPulsada(e);
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+
+			}
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+
+			}
+		});
 
 		setVisible(true);
 
 	}
-
-	public static void main(String[] args) {
-		new Ejemplo06KeyListener();
-	}
-
-	@Override
-	public void keyTyped(KeyEvent e) {
-
+	
+	public void letraPulsada(KeyEvent e) {
+		
 		// Pasamos la letra a minúsculas.
 		char letra = e.getKeyChar();
 		String cadena = letra + "";
@@ -56,17 +67,11 @@ public class Ejemplo06KeyListener extends JFrame{
 		} else if (letra == 'd') {
 			lblMensaje.setText("Derecha");
 		}
-
+		
 	}
 
-	@Override
-	public void keyPressed(KeyEvent e) {
-
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-
+	public static void main(String[] args) {
+		new Ejemplo06KeyListener();
 	}
 
 }

@@ -8,7 +8,7 @@ import java.awt.event.MouseListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Ejemplo09MouseListener extends JFrame implements MouseListener {
+public class Ejemplo09MouseListener extends JFrame {
 
 	private JLabel lblCoordenadas, lblBoton;
 
@@ -22,7 +22,43 @@ public class Ejemplo09MouseListener extends JFrame implements MouseListener {
 
 		setLocationRelativeTo(null);
 
-		addMouseListener(this);
+		addMouseListener(new MouseListener() {
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				getContentPane().setBackground(Color.GREEN);
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				getContentPane().setBackground(Color.RED);
+			}
+
+			@Override
+			public void mouseClicked(MouseEvent e) {
+
+				lblCoordenadas.setText("x = " + e.getX() + ", y = " + e.getY());
+
+				if (e.getButton() == 1) {
+					lblBoton.setText("Botón izquierdo");
+				} else if (e.getButton() == 2) {
+					lblBoton.setText("Botón rueda");
+				} else if (e.getButton() == 3) {
+					lblBoton.setText("Botón derecho");
+				}
+
+			}
+		});
 
 		lblCoordenadas = new JLabel("Haz clic en esta ventana");
 		lblBoton = new JLabel();
@@ -36,45 +72,6 @@ public class Ejemplo09MouseListener extends JFrame implements MouseListener {
 
 	public static void main(String[] args) {
 		new Ejemplo09MouseListener();
-	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-
-		lblCoordenadas.setText("x = " + e.getX() + ", y = " + e.getY());
-
-		if (e.getButton() == 1) {
-			lblBoton.setText("Botón izquierdo");
-		} else if (e.getButton() == 2) {
-			lblBoton.setText("Botón rueda");
-		} else if (e.getButton() == 3) {
-			lblBoton.setText("Botón derecho");
-		}
-
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-
-		getContentPane().setBackground(Color.RED);
-
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-
-		getContentPane().setBackground(Color.GREEN);
-
 	}
 
 }
