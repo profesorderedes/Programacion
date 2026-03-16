@@ -34,6 +34,30 @@ public class Persona {
 
 	}
 
+	@Override
+	public String toString() {
+		return nombre + " " + apellidos;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+
+		if (obj == null) {
+			return false;
+		} else if (this == obj) {
+			return true;
+		} else {
+			Persona otraPersona = (Persona) obj;
+
+			if (dni.equals(otraPersona.getDni())) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
