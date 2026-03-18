@@ -3,7 +3,7 @@ package ejemplosListas;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ejemplo02 {
+public class Ejemplo02ArrayList {
 
 	public static void main(String[] args) {
 

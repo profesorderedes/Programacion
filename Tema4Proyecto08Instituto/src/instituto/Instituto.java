@@ -5,7 +5,7 @@ import auxiliar.Alumno;
 public class Instituto {
 
 	// El instituto puede contener hasta mil alumnos.
-	private final int MAX_ALUMNOS = 10;
+	private final int MAX_ALUMNOS = 1000;
 	private Alumno[] alumnos;
 	private int fin;
 

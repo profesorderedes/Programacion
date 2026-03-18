@@ -46,14 +46,16 @@ public class Persona {
 			return false;
 		} else if (this == obj) {
 			return true;
-		} else {
-			Persona otraPersona = (Persona) obj;
+		} else if (getClass() != obj.getClass()) {
+			return false;
+		}
+		
+		Persona otraPersona = (Persona) obj;
 
-			if (dni.equals(otraPersona.getDni())) {
-				return true;
-			} else {
-				return false;
-			}
+		if (dni.equals(otraPersona.getDni())) {
+			return true;
+		} else {
+			return false;
 		}
 
 	}
