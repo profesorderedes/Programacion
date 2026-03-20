@@ -17,7 +17,7 @@ public class Ejemplo04ArrayList {
 		libros.add(2, new Libro("Skibidi toilet 2 La venganza", "Brainrot master", "05-05-05"));
 
 		verLista(libros);
-		
+
 		libros.remove(4);
 
 		verLista(libros);
@@ -26,11 +26,11 @@ public class Ejemplo04ArrayList {
 		libros.set(1, new Libro("Minecraft la guia de crafteo", "Mojang", "22-22-22"));
 
 		verLista(libros);
-		
+
 		libros.add(new Libro("Skibidi toilet", "Brainrot master", "67-67-67"));
 
 		verLista(libros);
-		
+
 		if (libros.isEmpty()) {
 			System.out.println("Lista de libros vacia.");
 		} else {

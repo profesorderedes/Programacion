@@ -20,7 +20,7 @@ public class Ejer02 extends JFrame {
 		super("Salpicadero");
 		setSize(450, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+
 		try {
 
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());

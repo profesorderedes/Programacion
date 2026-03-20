@@ -48,9 +48,9 @@ public class Ejemplo06KeyListener extends JFrame {
 		setVisible(true);
 
 	}
-	
+
 	public void letraPulsada(KeyEvent e) {
-		
+
 		// Pasamos la letra a minúsculas.
 		char letra = e.getKeyChar();
 		String cadena = letra + "";
@@ -67,7 +67,7 @@ public class Ejemplo06KeyListener extends JFrame {
 		} else if (letra == 'd') {
 			lblMensaje.setText("Derecha");
 		}
-		
+
 	}
 
 	public static void main(String[] args) {

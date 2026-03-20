@@ -33,8 +33,6 @@ public class Ejemplo09 {
 		String dni1 = "1000023000R";
 
 		System.out.println(clientes.containsKey(dni1));
-		
-		
 
 	}
 

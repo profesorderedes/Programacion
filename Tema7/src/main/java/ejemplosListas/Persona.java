@@ -49,7 +49,7 @@ public class Persona {
 		} else if (getClass() != obj.getClass()) {
 			return false;
 		}
-		
+
 		Persona otraPersona = (Persona) obj;
 
 		if (dni.equals(otraPersona.getDni())) {
