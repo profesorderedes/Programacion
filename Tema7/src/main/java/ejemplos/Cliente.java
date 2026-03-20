@@ -1,4 +1,4 @@
-package ejemplosListas;
+package ejemplos;
 
 import java.time.LocalDate;
 import java.util.Objects;

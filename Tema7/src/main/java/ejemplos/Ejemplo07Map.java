@@ -1,9 +1,9 @@
-package ejemplosListas;
+package ejemplos;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Ejemplo07 {
+public class Ejemplo07Map {
 
 	public static void main(String[] args) {
 

@@ -1,10 +1,10 @@
-package ejemplosListas;
+package ejemplos;
 
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Ejemplo09 {
+public class Ejemplo09Map {
 
 	public static void main(String[] args) {
 

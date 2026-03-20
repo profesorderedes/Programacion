@@ -1,4 +1,4 @@
-package ejemplosListas;
+package ejemplos;
 
 public class Libro {
 

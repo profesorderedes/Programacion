@@ -1,9 +1,9 @@
-package ejemplosListas;
+package ejemplos;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ejemplo05 {
+public class Ejemplo05ClasesAsociadas {
 
 	public static void main(String[] args) {
 
