@@ -38,20 +38,13 @@ public class Instituto {
 			return;
 		}
 
-		// Subimos los alumnos que hubiera por debajo de esa posición,
-		// un lugar hacia arriba.
-
-		for (int i = pos; i <= fin - 2; i++) {
-			alumnos[i] = alumnos[i + 1];
-		}
-
-		fin--;
+		alumnos.remove(pos);
 
 	}
 
 	public int numAlumnos() {
 
-		return fin;
+		return alumnos.size();
 
 	}
 
