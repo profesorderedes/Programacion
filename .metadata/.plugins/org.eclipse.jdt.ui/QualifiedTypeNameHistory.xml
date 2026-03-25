@@ -42,7 +42,6 @@
     <fullyQualifiedTypeName name="ejemplosParte3.ManejadorClicBoton"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.awt.Color"/>
     <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
     <fullyQualifiedTypeName name="java.awt.Font"/>
@@ -51,7 +50,6 @@
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
     <fullyQualifiedTypeName name="java.awt.event.MouseEvent"/>
     <fullyQualifiedTypeName name="javax.swing.JTextField"/>
-    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="java.awt.event.FocusListener"/>
     <fullyQualifiedTypeName name="java.awt.event.ItemListener"/>
     <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>
