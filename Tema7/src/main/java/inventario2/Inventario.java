@@ -1,4 +1,4 @@
-package inventario;
+package inventario2;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -16,9 +16,9 @@ import javax.swing.JToolBar;
 
 public class Inventario extends JFrame {
 
-	private List<String> articulos = new ArrayList<>();
-	private DefaultListModel<String> modelo;
-	private JList<String> inventario;
+	private List<Articulo> articulos = new ArrayList<>();
+	private DefaultListModel<Articulo> modelo;
+	private JList<Articulo> inventario;
 
 	public Inventario() {
 
@@ -89,20 +89,20 @@ public class Inventario extends JFrame {
 		barra.add(btnCalculadora);
 		barra.add(btnBorrarTodo);
 
-		articulos.add("HP con procesador i3");
-		articulos.add("HP con procesador i5");
-		articulos.add("HP con procesador i3");
-		articulos.add("Monitor ASUS 17\"");
+		articulos.add(new Articulo("HP con procesador i3", 500));
+		articulos.add(new Articulo("HP con procesador i5", 700));
+		articulos.add(new Articulo("HP con procesador i3", 500));
+		articulos.add(new Articulo("Monitor ASUS 17\"", 300));
 
 		modelo = new DefaultListModel<>();
 
-		for (String articulo : articulos) {
+		for (Articulo articulo : articulos) {
 
 			modelo.addElement(articulo);
 
 		}
 
-		inventario = new JList<String>(modelo);
+		inventario = new JList<>(modelo);
 
 		add(barra, BorderLayout.NORTH);
 		add(inventario, BorderLayout.CENTER);
@@ -120,9 +120,9 @@ public class Inventario extends JFrame {
 			return;
 		}
 
-		articulos.add(nuevoArticulo);
+		articulos.add(new Articulo(nuevoArticulo, 0));
 
-		modelo.addElement(nuevoArticulo);
+		modelo.addElement(new Articulo(nuevoArticulo, 0));
 
 	}
 
@@ -137,10 +137,11 @@ public class Inventario extends JFrame {
 		}
 
 		// Avisamos al usuario con un JOptionPane.
-		String articulo = modelo.get(indice);
+		Articulo articulo = modelo.get(indice);
 
-		int respuesta = JOptionPane.showConfirmDialog(null, "Va a eliminar el artículo " + articulo + ". ¿Está seguro?",
-				"Inventario", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+		int respuesta = JOptionPane.showConfirmDialog(null,
+				"Va a eliminar el artículo " + articulo.toString() + ". ¿Está seguro?", "Inventario",
+				JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 
 		if (respuesta != JOptionPane.YES_OPTION) {
 			return;
@@ -156,23 +157,23 @@ public class Inventario extends JFrame {
 
 	private void mostrarArrayList() {
 
-		for (String art : articulos) {
-			System.out.println(art);
+		for (Articulo art : articulos) {
+			System.out.println(art.toString());
 		}
 
 	}
 
 	private void buscar() {
 
-		String articulo = JOptionPane.showInputDialog(null, "¿Qué artículo quieres buscar?", "Inventario",
+		String nombreArticulo = JOptionPane.showInputDialog(null, "¿Qué artículo quieres buscar?", "Inventario",
 				JOptionPane.QUESTION_MESSAGE);
 
-		if (articulo == null || articulo.trim().equals("")) {
+		if (nombreArticulo == null || nombreArticulo.trim().equals("")) {
 			return;
 		}
 
 		// Posición en el ArrayList
-		int indice = articulos.indexOf(articulo);
+		int indice = articulos.indexOf(new Articulo(nombreArticulo, 0));
 
 		if (indice == -1) {
 			JOptionPane.showMessageDialog(null, "No se ha encontrado el artículo buscado.", "Inventario",
