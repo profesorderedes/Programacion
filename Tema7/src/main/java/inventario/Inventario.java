@@ -16,9 +16,10 @@ import javax.swing.JToolBar;
 
 public class Inventario extends JFrame {
 
-	private List<String> articulos = new ArrayList<String>();
+	private List<String> articulos = new ArrayList<>();
 	private DefaultListModel<String> modelo;
-	
+	private JList<String> inventario;
+
 	public Inventario() {
 
 		super("Inventario");
@@ -32,21 +33,21 @@ public class Inventario extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				
-				String nuevoArticulo = JOptionPane.showInputDialog(null, "Introduce artículo:", "Alta en el inventario", JOptionPane.QUESTION_MESSAGE);
+				anyadirArticulo();
 				
-				if(nuevoArticulo == null || nuevoArticulo.trim().equals("")) {
-					return;
-				}
+			}
+		});
+
+		JButton btnMenos = new JButton(new ImageIcon("iconos/14.png"));
+		btnMenos.addActionListener(new ActionListener() {	
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
 				
-				articulos.add(nuevoArticulo);
-				
-				modelo.addElement(nuevoArticulo);
+				eliminarArticulo();
 				
 			}
 		});
 		
-		
-		JButton btnMenos = new JButton(new ImageIcon("iconos/14.png"));
 		JButton btnLupa = new JButton(new ImageIcon("iconos/84.png"));
 		JButton btnCalculadora = new JButton(new ImageIcon("iconos/41.png"));
 		JButton btnFuego = new JButton(new ImageIcon("iconos/31.png"));
@@ -73,14 +74,47 @@ public class Inventario extends JFrame {
 
 		}
 
-		JList<String> lista = new JList<String>(modelo);
+		inventario = new JList<String>(modelo);
 
 		add(barra, BorderLayout.NORTH);
-
-		add(lista);
+		add(inventario, BorderLayout.CENTER);
 
 		setVisible(true);
 
+	}
+
+	private void anyadirArticulo() {
+
+		String nuevoArticulo = JOptionPane.showInputDialog(null, "Introduce artículo:", "Alta en el inventario",
+				JOptionPane.QUESTION_MESSAGE);
+
+		if (nuevoArticulo == null || nuevoArticulo.trim().equals("")) {
+			return;
+		}
+
+		articulos.add(nuevoArticulo);
+
+		modelo.addElement(nuevoArticulo);
+
+	}
+	
+	private void eliminarArticulo() {
+		
+		// Si no hay ninguna fila de la lista seleccionada, salimos
+		// sin hacer nada.
+		int indice = inventario.getSelectedIndex();
+		
+		if(indice == -1) {
+			return;
+		}
+		
+		// Avisamos al usuario con un JOptionPane.
+		String articulo = modelo.get(indice);
+		JOptionPane.showConfirmDialog(null, "Va a eliminar el artículo " + articulo + ". ¿Está seguro?", "Inventario", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+		
+		
+		
+		
 	}
 
 	public static void main(String[] args) {
