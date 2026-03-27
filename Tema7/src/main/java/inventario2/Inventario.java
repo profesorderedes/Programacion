@@ -90,9 +90,9 @@ public class Inventario extends JFrame {
 		barra.add(btnBorrarTodo);
 
 		articulos.add(new Articulo("HP con procesador i3", 500));
-		articulos.add(new Articulo("HP con procesador i5", 700));
+		articulos.add(new Articulo("HP con procesador i5", 600));
 		articulos.add(new Articulo("HP con procesador i3", 500));
-		articulos.add(new Articulo("Monitor ASUS 17\"", 300));
+		articulos.add(new Articulo("Monitor ASUS 17\"", 150));
 
 		modelo = new DefaultListModel<>();
 
@@ -172,8 +172,26 @@ public class Inventario extends JFrame {
 			return;
 		}
 
+		String precioArticulo = JOptionPane.showInputDialog(null, "¿Qué precio tiene el artículo?", "Inventario",
+				JOptionPane.QUESTION_MESSAGE);
+
+		if (precioArticulo == null || precioArticulo.trim().equals("")) {
+			return;
+		}
+
 		// Posición en el ArrayList
-		int indice = articulos.indexOf(new Articulo(nombreArticulo, 0));
+		int indice = -1;
+		try {
+
+			indice = articulos.indexOf(new Articulo(nombreArticulo, Double.parseDouble(precioArticulo)));
+
+		} catch (NumberFormatException e) {
+
+			JOptionPane.showMessageDialog(null, "El precio introducido no es un número.", "Inventario",
+					JOptionPane.ERROR_MESSAGE);
+			return;
+
+		}
 
 		if (indice == -1) {
 			JOptionPane.showMessageDialog(null, "No se ha encontrado el artículo buscado.", "Inventario",
