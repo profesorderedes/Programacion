@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="prac1.Ogg"/>
-    <fullyQualifiedTypeName name="ejemplo01Herencia.Persona"/>
-    <fullyQualifiedTypeName name="prac2.Componente"/>
     <fullyQualifiedTypeName name="prac2.Condensador"/>
     <fullyQualifiedTypeName name="prac2.Led"/>
     <fullyQualifiedTypeName name="ejemplo04Interfaces.Figura2D"/>
@@ -57,7 +54,10 @@
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ejemplos.ImpresoraEnteros"/>
+    <fullyQualifiedTypeName name="ejemplos.ImpresoraBooleanos"/>
+    <fullyQualifiedTypeName name="ejemplos.Impresora"/>
 </qualifiedTypeNameHistroy>
