@@ -1,7 +1,9 @@
 package ejemplos;
 
-public class Impresora <T> {
-	
+import java.awt.event.ActionListener;
+
+public class Impresora<T extends Number & ActionListener> {
+
 	private T dato;
 
 	public Impresora(T dato) {
