@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="prac2.Condensador"/>
-    <fullyQualifiedTypeName name="prac2.Led"/>
     <fullyQualifiedTypeName name="ejemplo04Interfaces.Figura2D"/>
     <fullyQualifiedTypeName name="ejemplo04Interfaces.Rectangulo"/>
     <fullyQualifiedTypeName name="ejemplo04Interfaces.DiaSemana"/>
@@ -54,10 +52,12 @@
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="ejemplos.ImpresoraEnteros"/>
     <fullyQualifiedTypeName name="ejemplos.ImpresoraBooleanos"/>
     <fullyQualifiedTypeName name="ejemplos.Impresora"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="ejemplos.TipoValido"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>
