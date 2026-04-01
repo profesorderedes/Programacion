@@ -31,9 +31,9 @@ public class Pruebas {
 		libro.nuevoAsiento(asiento8);
 
 		// Balance de tres meses.
-		libro.mostrarBalanceMes(LocalDate.parse("2026-01-01")); // Vacío
-		libro.mostrarBalanceMes(LocalDate.parse("2026-02-01"));
-		libro.mostrarBalanceMes(LocalDate.parse("2026-03-01"));
+		libro.mostrarBalanceAnyo(LocalDate.parse("2025-01-01")); // Vacío
+		libro.mostrarBalanceAnyo(LocalDate.parse("2026-02-01"));
+		libro.mostrarBalanceAnyo(LocalDate.parse("2026-03-01"));
 
 	}
 

@@ -43,7 +43,7 @@ public class Libro {
 
 		double gastos = 0, ingresos = 0;
 
-		// Falta la llamada a ordenarAsientos().
+		ordenarAsientos();
 
 		System.out.println("\nMostrando el balance de " + nombreMes(mes) + " de " + anyo + ":\n");
 
@@ -67,6 +67,64 @@ public class Libro {
 
 		System.out.printf("\n%9s %9.2f %s\n", "Ingresos:", ingresos, "€");
 		System.out.printf("%9s %9.2f %s\n", "Gastos:", gastos, "€");
+
+	}
+
+	public void mostrarBalanceAnyo(LocalDate fecha) {
+
+		int anyo = fecha.getYear();
+
+		double gastos = 0, ingresos = 0;
+
+		ordenarAsientos();
+
+		System.out.println("\nMostrando el balance del año " + anyo + ":\n");
+
+		System.out.printf("%-10s  %-30s  %8s\n", "Fecha", "Concepto", "Cantidad (€)");
+		System.out.printf("%-10s  %-30s  %8s\n", "==========", "==============================", "============");
+
+		for (int i = 0; i < finAsientos; i++) {
+			if (asientos[i].getDia().getYear() == anyo) {
+
+				System.out.println(asientos[i].toString());
+
+				if (asientos[i].getCantidad() < 0) {
+					gastos = gastos + asientos[i].getCantidad();
+				} else {
+					ingresos = ingresos + asientos[i].getCantidad();
+				}
+			}
+		}
+
+		System.out.printf("\n%9s %9.2f %s\n", "Ingresos:", ingresos, "€");
+		System.out.printf("%9s %9.2f %s\n", "Gastos:", gastos, "€");
+
+	}
+
+	private void ordenarAsientos() {
+
+		int posMin;
+		Asiento aux;
+		LocalDate fechaJ, fechaPosMin;
+
+		for (int i = 0; i < finAsientos - 1; i++) {
+
+			posMin = i;
+			for (int j = i + 1; j < finAsientos; j++) {
+
+				fechaJ = asientos[j].getDia();
+				fechaPosMin = asientos[posMin].getDia();
+
+				if (fechaJ.isBefore(fechaPosMin)) {
+					posMin = j;
+				}
+			}
+
+			aux = asientos[i];
+			asientos[i] = asientos[posMin];
+			asientos[posMin] = aux;
+
+		}
 
 	}
 
