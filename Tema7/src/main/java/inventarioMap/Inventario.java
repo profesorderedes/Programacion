@@ -148,7 +148,7 @@ public class Inventario extends JFrame {
 			return;
 		}
 
-		String itemSeleccionado = inventario.getSelectedValue();
+		String itemSeleccionado = modelo.get(indice);
 		String nombre = itemSeleccionado.substring(0, itemSeleccionado.lastIndexOf(" ("));
 
 		int respuesta = JOptionPane.showConfirmDialog(null,

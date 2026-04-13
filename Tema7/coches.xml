@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<coches>
+	<coche potencia="110" puertas="5">
+		<marca>Audi</marca>
+		<color>Negro</color>
+		<matricula>0000ABC</matricula>
+	</coche>
+
+	<coche potencia="120">
+		<marca>Seat</marca>
+		<color>Rojo</color>
+		<matricula>0001DEF</matricula>
+	</coche>
+
+	<coche potencia="550" puertas="2">
+		<marca>Lexus</marca>
+		<color>Blanco</color>
+		<matricula>0002GHI</matricula>
+	</coche>
+</coches>
