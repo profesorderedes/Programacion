@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ejemplo04Interfaces.Figura2D"/>
-    <fullyQualifiedTypeName name="ejemplo04Interfaces.Rectangulo"/>
-    <fullyQualifiedTypeName name="ejemplo04Interfaces.DiaSemana"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="prac1.Guardable"/>
-    <fullyQualifiedTypeName name="prac2.Invertible"/>
-    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
-    <fullyQualifiedTypeName name="ejemplos.Ejemplo02"/>
-    <fullyQualifiedTypeName name="ejemplos.Ejemplo03"/>
-    <fullyQualifiedTypeName name="ejemplos.Ejemplo04"/>
     <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo05"/>
@@ -52,12 +42,22 @@
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="ejemplos.ImpresoraEnteros"/>
     <fullyQualifiedTypeName name="ejemplos.ImpresoraBooleanos"/>
     <fullyQualifiedTypeName name="ejemplos.Impresora"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="ejemplos.TipoValido"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilder"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.Document"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.NodeList"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.Element"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="ejemplos.Ubicacion"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilderFactory"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.DOMImplementation"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.Text"/>
 </qualifiedTypeNameHistroy>
