@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ubicaciones>
+	<ubicacion horarioVerano="true">
+		<localidad>Palma</localidad>
+		<diferenciaHoraria>0</diferenciaHoraria>
+	</ubicacion>
+	<ubicacion horarioVerano="false">
+		<localidad>Bombay</localidad>
+		<diferenciaHoraria>3.5</diferenciaHoraria>
+	</ubicacion>
+	<ubicacion horarioVerano="false">
+		<localidad>Tokio</localidad>
+		<diferenciaHoraria>7</diferenciaHoraria>
+	</ubicacion>
+	<ubicacion horarioVerano="true">
+		<localidad>Nueva York</localidad>
+		<diferenciaHoraria>-6</diferenciaHoraria>
+	</ubicacion>
+</ubicaciones>

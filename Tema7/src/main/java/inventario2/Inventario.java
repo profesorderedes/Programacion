@@ -89,11 +89,6 @@ public class Inventario extends JFrame {
 		barra.add(btnCalculadora);
 		barra.add(btnBorrarTodo);
 
-		articulos.add(new Articulo("HP con procesador i3", 500));
-		articulos.add(new Articulo("HP con procesador i5", 600));
-		articulos.add(new Articulo("HP con procesador i3", 500));
-		articulos.add(new Articulo("Monitor ASUS 17\"", 150));
-
 		modelo = new DefaultListModel<>();
 
 		for (Articulo articulo : articulos) {

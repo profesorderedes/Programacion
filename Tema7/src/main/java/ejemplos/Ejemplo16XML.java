@@ -8,6 +8,15 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
@@ -29,10 +38,11 @@ public class Ejemplo16XML {
 		try {
 			leerUbicaciones();
 			guardarUbicaciones();
-		} catch (ParserConfigurationException | SAXException | IOException e) {
+		} catch (ParserConfigurationException | SAXException | IOException | TransformerFactoryConfigurationError
+				| TransformerException e) {
 			e.printStackTrace();
 		}
-		
+
 		for (Ubicacion ubicacion : ubicaciones) {
 			System.out.println("Localidad: " + ubicacion.getLocalidad());
 			System.out.println("Diferencia horaria: " + ubicacion.getDiferenciaHoraria());
@@ -64,7 +74,7 @@ public class Ejemplo16XML {
 
 			Ubicacion ubicacion = new Ubicacion(localidad, Double.parseDouble(diferenciaHoraria),
 					Boolean.parseBoolean(horarioVerano));
-			
+
 			ubicaciones.add(ubicacion);
 
 			System.out.println(ubicacion.toString());
@@ -72,30 +82,56 @@ public class Ejemplo16XML {
 		}
 
 	}
-	
-	private static void guardarUbicaciones() throws ParserConfigurationException {
-		
+
+	private static void guardarUbicaciones()
+			throws ParserConfigurationException, TransformerFactoryConfigurationError, TransformerException {
+
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		DOMImplementation domImplementation = builder.getDOMImplementation();
-		
+
 		Document doc = domImplementation.createDocument(null, "ubicaciones", null);
-		
-		for(Ubicacion ubicacion : ubicaciones) {
-			
+
+		for (Ubicacion ubicacion : ubicaciones) {
+
+			// Elemento ubicacion
 			Element elementoUbicacion = doc.createElement("ubicacion");
-			
+
+			// Elemento localidad
 			Element localidad = doc.createElement("localidad");
-			Text textoLocalidad =  doc.createTextNode(ubicacion.getLocalidad());
+			Text textoLocalidad = doc.createTextNode(ubicacion.getLocalidad());
 			localidad.appendChild(textoLocalidad);
 			elementoUbicacion.appendChild(localidad);
-			
+
+			// Elemento diferenciaHoraria
+			Element diferenciaHoraria = doc.createElement("diferenciaHoraria");
+			Text textoDiferenciaHoraria = doc.createTextNode("" + ubicacion.getDiferenciaHoraria());
+			diferenciaHoraria.appendChild(textoDiferenciaHoraria);
+			elementoUbicacion.appendChild(diferenciaHoraria);
+
+			// Atributo horarioVerano
+			elementoUbicacion.setAttribute("horarioVerano", "" + ubicacion.isHorarioVerano());
+
+			// Elemento ubicaciones.
+			doc.getDocumentElement().appendChild(elementoUbicacion);
+
 		}
-		
+
+		// Guardamos el documento doc en disco.
+
+		Source source = new DOMSource(doc);
+		Result result = new StreamResult(ARCHIVO);
+
+		Transformer transformer = TransformerFactory.newInstance().newTransformer();
+		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+		transformer.transform(source, result);
+
 	}
 
 }
 
+//@formatter:off
 
 
 
@@ -104,3 +140,13 @@ public class Ejemplo16XML {
 
 
 
+
+
+
+
+
+
+
+
+
+//@formatter:on
