@@ -3,6 +3,10 @@ package inventario2;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +17,29 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.DOMImplementation;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Text;
+import org.xml.sax.SAXException;
 
 public class Inventario extends JFrame {
+
+	private File ARCHIVO = new File("inventario.xml");
 
 	private List<Articulo> articulos = new ArrayList<>();
 	private DefaultListModel<Articulo> modelo;
@@ -80,6 +105,49 @@ public class Inventario extends JFrame {
 			}
 		});
 
+		addWindowListener(new WindowListener() {
+
+			@Override
+			public void windowOpened(WindowEvent e) {
+
+			}
+
+			@Override
+			public void windowIconified(WindowEvent e) {
+
+			}
+
+			@Override
+			public void windowDeiconified(WindowEvent e) {
+
+			}
+
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+
+			}
+
+			@Override
+			public void windowClosing(WindowEvent e) {
+				try {
+					guardarInventario();
+				} catch (ParserConfigurationException | TransformerFactoryConfigurationError
+						| TransformerException e1) {
+					System.out.println("Error al guardar los datos en disco.");
+				}
+			}
+
+			@Override
+			public void windowClosed(WindowEvent e) {
+
+			}
+
+			@Override
+			public void windowActivated(WindowEvent e) {
+
+			}
+		});
+
 		JToolBar barra = new JToolBar();
 
 		barra.add(btnMas);
@@ -102,22 +170,99 @@ public class Inventario extends JFrame {
 		add(barra, BorderLayout.NORTH);
 		add(inventario, BorderLayout.CENTER);
 
+		try {
+			leerInventario();
+		} catch (ParserConfigurationException | SAXException | IOException e) {
+			JOptionPane.showMessageDialog(null, "Error al leer el archivo de inventario", "Inventario",
+					JOptionPane.ERROR_MESSAGE);
+		}
+
 		setVisible(true);
+
+	}
+
+	// Lee el archivo inventario.xml y carga el JList y el ArrayList con esos datos.
+	private void leerInventario() throws ParserConfigurationException, SAXException, IOException {
+
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder = factory.newDocumentBuilder();
+		Document doc = builder.parse(ARCHIVO);
+
+		NodeList articulosXML = doc.getElementsByTagName("producto");
+
+		for (int i = 0; i < articulosXML.getLength(); i++) {
+
+			Element elementoArticulo = (Element) articulosXML.item(i);
+
+			String nombre = elementoArticulo.getTextContent();
+			double precio = Double.parseDouble(elementoArticulo.getAttribute("precio"));
+
+			Articulo articulo = new Articulo(nombre, precio);
+
+			modelo.addElement(articulo);
+			articulos.add(articulo);
+
+		}
+
+	}
+
+	// Guarda el inventario en el archivo inventario.xml
+	private void guardarInventario()
+			throws ParserConfigurationException, TransformerFactoryConfigurationError, TransformerException {
+
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder = factory.newDocumentBuilder();
+		DOMImplementation domImplementation = builder.getDOMImplementation();
+		Document doc = domImplementation.createDocument(null, "articulos", null);
+
+		for (Articulo articulo : articulos) {
+
+			Element articuloDoc = doc.createElement("producto");
+			Text articuloText = doc.createTextNode(articulo.getNombre());
+			articuloDoc.appendChild(articuloText);
+
+			articuloDoc.setAttribute("precio", Double.toString(articulo.getPrecio()));
+
+			doc.getDocumentElement().appendChild(articuloDoc);
+
+		}
+
+		Source source = new DOMSource(doc);
+		Result result = new StreamResult(ARCHIVO);
+
+		Transformer transformer = TransformerFactory.newInstance().newTransformer();
+		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+		transformer.transform(source, result);
 
 	}
 
 	private void anyadirArticulo() {
 
-		String nuevoArticulo = JOptionPane.showInputDialog(null, "Introduce artículo:", "Alta en el inventario",
+		String nombre = JOptionPane.showInputDialog(null, "Introduce el nombre del artículo:", "Alta en el inventario",
 				JOptionPane.QUESTION_MESSAGE);
 
-		if (nuevoArticulo == null || nuevoArticulo.trim().equals("")) {
+		if (nombre == null || nombre.trim().equals("")) {
 			return;
 		}
 
-		articulos.add(new Articulo(nuevoArticulo, 0));
+		String precioStr = JOptionPane.showInputDialog(null, "Introduce el precio del artículo:",
+				"Alta en el inventario", JOptionPane.QUESTION_MESSAGE);
 
-		modelo.addElement(new Articulo(nuevoArticulo, 0));
+		if (precioStr == null || precioStr.trim().equals("")) {
+			return;
+		}
+
+		try {
+			double precio = Double.parseDouble(precioStr);
+
+			articulos.add(new Articulo(nombre, precio));
+			modelo.addElement(new Articulo(nombre, precio));
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "No has escrito un precio válido", "Inventario",
+					JOptionPane.ERROR_MESSAGE);
+			return;
+		}
 
 	}
 

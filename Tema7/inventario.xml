@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <articulos>
-	<producto precio="500">HP con procesador i3</producto>
-	<producto precio="600">HP con procesador i5</producto>
-	<producto precio="700">HP con procesador i7</producto>
-	<producto precio="150">Monitor ASUS 17&quot;</producto>
+    <producto precio="500.0">HP con procesador i3</producto>
+    <producto precio="600.0">HP con procesador i5</producto>
+    <producto precio="700.0">HP con procesador i7</producto>
+    <producto precio="90.0">Teclado gaming</producto>
 </articulos>
