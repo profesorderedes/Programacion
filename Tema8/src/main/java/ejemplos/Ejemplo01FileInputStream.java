@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Ejemplo02 {
+public class Ejemplo01FileInputStream {
 
 	public static void main(String[] args) {
 
@@ -28,23 +28,13 @@ public class Ejemplo02 {
 
 			FileInputStream archivo = new FileInputStream("ficheros/" + nombreArchivo);
 
-			int byteLeido = archivo.read();
-			System.out.print(byteLeido + " ");
+			// Leemos los 20 primeros bytes del archivo para identificar el tipo de archivo.
 
-			// Usamos esta variable para mostrar 10 bytes en cada fila.
-			int bytesPorFila = 1;
-
-			while (byteLeido != -1) {
+			int byteLeido;
+			for (int i = 0; i < 20; i++) {
 
 				byteLeido = archivo.read();
-				System.out.print(byteLeido + " ");
-
-				if (bytesPorFila == 10) {
-					System.out.println();
-					bytesPorFila = 1;
-				} else {
-					bytesPorFila++;
-				}
+				System.out.print(Integer.toHexString(byteLeido));
 
 			}
 
