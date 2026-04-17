@@ -39,7 +39,7 @@ public class Ejemplo01 {
 			}
 
 			System.out.println();
-			
+
 			archivo.close();
 
 		} catch (FileNotFoundException e) {
