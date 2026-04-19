@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Libro {
 
-	private final int MAX_ASIENTOS = 20;
+	private final int MAX_ASIENTOS = 100;
 
 	private Asiento[] asientos;
 	private int finAsientos;

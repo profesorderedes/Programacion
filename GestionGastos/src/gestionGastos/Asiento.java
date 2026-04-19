@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class Asiento {
 
 	private int id;
-	private LocalDate dia;	
+	private LocalDate dia;
 	private String concepto;
 	private double cantidad;
 

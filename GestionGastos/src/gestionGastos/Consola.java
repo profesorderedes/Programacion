@@ -1,36 +1,26 @@
 package gestionGastos;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
- * Clase que contiene métodos útiles para leer datos de la terminal.
+ * Clase que contiene métodos estáticos para una lectura fácil de la terminal.
  * 
- * @author Primero de DAW
- * @version 0.1
+ * @author Carlos Sogorb
+ * @version 0.2
  */
 public class Consola {
 
-	/**
-	 * Variable que nos sirve para leer desde la terminal.
-	 */
-	private static Scanner entrada = new Scanner(System.in);
+	private static Scanner entrada = new Scanner(System.in, StandardCharsets.UTF_8);
 
-	/**
-	 * Lee un número entero escrito por terminal. Muestra el mensaje de error
-	 * recibido como parámetro, y repite el proceso, mientras el usuario no escriba
-	 * un número entero.
-	 * 
-	 * @param mensajeError Mensaje que aparece cuando el usuario escribe algo
-	 *                     distinto a un número entero.
-	 * @return El número introducido por el usuario.
-	 */
+	// Lee un número entero desde la terminal y lo devuelve. Si lo que se introduce
+	// no es un entero, muestra el mensaje de error que se le ha pasado como
+	// parámetro.
 	public static int leerInt(String mensajeError) {
 
 		while (!entrada.hasNextInt()) {
-
 			System.out.println(mensajeError);
 			entrada.nextLine();
-
 		}
 
 		int num = entrada.nextInt();
@@ -38,104 +28,96 @@ public class Consola {
 		entrada.nextLine();
 
 		return num;
+
 	}
 
-	/**
-	 * Lee un número entero escrito por terminal. Muestra un mensaje de error
-	 * predeterminado, y repite el proceso, mientras el usuario no escriba un número
-	 * entero.
-	 * 
-	 * @return El número introducido por el usuario.
-	 */
+	// Lee un número entero desde la terminal y lo devuelve. Si lo que se introduce
+	// no es un entero, muestra un mensaje de error estándar: "Entrada incorrecta:
+	// se esperaba un número entero.".
 	public static int leerInt() {
 
 		return leerInt("Entrada incorrecta: se esperaba un número entero.");
+
 	}
 
-	/**
-	 * Lee un número entero escrito por terminal. Muestra el mensaje de error
-	 * recibido como parámetro, y repite el proceso, mientras el usuario no escriba
-	 * un número entero comprendido entre los valores min y max (recibidos como
-	 * parámetros).
-	 * 
-	 * @param mensajeError Mensaje que aparece cuando el usuario escribe algo
-	 *                     distinto a un número entero comprendido entre los valores
-	 *                     min y max.
-	 * @param min          Valor mínimo que puede tomar el número leído.
-	 * @param max          Valor máximo que puede tomar el número leído.
-	 * @return El número introducido por el usuario.
-	 */
+	// Lee un número entero desde la terminal y lo devuelve. Si lo que se introduce
+	// no es un entero, o es un entero fuera del rango indicado [min, max], muestra
+	// el mensaje de error que se le ha pasado como parámetro.
 	public static int leerInt(String mensajeError, int min, int max) {
 
 		int num;
 
-		do {
-
-			num = leerInt(mensajeError);
-
-			if (num < min || num > max) {
-				System.out.println("El número no puede ser menor que " + min + " ni mayor que " + max + ".");
-			}
-
-		} while (num < min || num > max);
-
-		return num;
-	}
-
-	/**
-	 * Lee un número escrito por terminal. Muestra el mensaje de error recibido como
-	 * parámetro, y repite el proceso, mientras el usuario no escriba un número.
-	 * 
-	 * @param mensajeError Mensaje que aparece cuando el usuario escribe algo
-	 *                     distinto a un número.
-	 * @return El número introducido por el usuario.
-	 */
-	public static double leerDouble(String mensajeError) {
-
 		while (true) {
 
-			if (!entrada.hasNextDouble()) {
-
+			while (!entrada.hasNextInt()) {
 				System.out.println(mensajeError);
 				entrada.nextLine();
-			} else {
-
-				double num = entrada.nextDouble();
-				entrada.nextLine();
-				return num;
 			}
+
+			num = entrada.nextInt();
+
+			entrada.nextLine();
+
+			if (num >= min && num <= max) {
+				break;
+			}
+
+			System.out.println(mensajeError);
+
 		}
+
+		return num;
+
 	}
 
-	/**
-	 * Lee un número escrito por terminal. Muestra un mensaje de error
-	 * predeterminado, y repite el proceso, mientras el usuario no escriba un
-	 * número.
-	 * 
-	 * @return El número introducido por el usuario.
-	 */
+	// Lee un número decimal desde la terminal y lo devuelve. Si lo que se introduce
+	// no es un número, muestra el mensaje de error que se le ha pasado como
+	// parámetro.
+	public static double leerDouble(String mensajeError) {
+
+		while (!entrada.hasNextDouble()) {
+			System.out.println(mensajeError);
+			entrada.nextLine();
+		}
+
+		double num = entrada.nextDouble();
+
+		entrada.nextLine();
+
+		return num;
+
+	}
+
+	// Lee un número decimal desde la terminal y lo devuelve. Si lo que se introduce
+	// no es un número, muestra un mensaje de error estándar: "Entrada incorrecta:
+	// se esperaba un número.".
 	public static double leerDouble() {
 
 		return leerDouble("Entrada incorrecta: se esperaba un número.");
+
 	}
 
-	/**
-	 * Lee una cadena escrita por terminal. Muestra un mensaje de error
-	 * predeterminado, y repite el proceso, mientras el usuario no escriba nada o
-	 * sólo escriba espacios.
-	 * 
-	 * @return La cadena introducida por el usuario.
-	 */
-	public static String leerString() {
+	// Lee una cadena de texto (no vacía) desde la terminal y la devuelve. Si la
+	// cadena está vacía o sólo contiene espacios, muestra el mensaje de error que
+	// se le ha pasado como parámetro.
+	public static String leerString(String mensajeError) {
 
 		String cadena = entrada.nextLine();
 
 		while (cadena.trim().equals("")) {
-			System.out.println("Entrada incorrecta: se esperaba alguna cadena no vacía.");
+			System.out.println(mensajeError);
 			cadena = entrada.nextLine();
 		}
 
 		return cadena;
+
 	}
 
+	// Lee una cadena de texto (no vacía) desde la terminal y la devuelve. Si la
+	// cadena está vacía o sólo contiene espacios, muestra un mensaje de error
+	// estándar: "Entrada incorrecta: se esperaba algún carácter distinto de
+	// espacio.".
+	public static String leerString() {
+		return leerString("Entrada incorrecta: se esperaba algún carácter distinto de espacio.");
+	}
 }
