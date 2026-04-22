@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactoryConfigurationError;
 
 import org.xml.sax.SAXException;
 
@@ -45,7 +47,13 @@ public class Pruebas {
 			System.out.println(personajes.get(i).toString());
 		}
 		
-
+		try {
+			AccesoPersonajes.guardar(personajes);
+		} catch (ParserConfigurationException | TransformerFactoryConfigurationError | TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 }
