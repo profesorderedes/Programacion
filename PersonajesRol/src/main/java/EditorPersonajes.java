@@ -59,41 +59,43 @@ public class EditorPersonajes extends JFrame {
 		JButton btnAnterior = new JButton(new ImageIcon("imgsPersonajes/flecha_izq.png"));
 		btnAnterior.setEnabled(false);
 
-		txtNick = new JTextField(personajes.get(0).getNick());
+		txtNick = new JTextField();
 		txtNick.setPreferredSize(new Dimension(200, txtNick.getSize().height));
 
-		txtRol = new JTextField(personajes.get(0).getRol());
+		txtRol = new JTextField();
 		txtRol.setPreferredSize(new Dimension(200, txtRol.getSize().height));
 
-		txtInicio = new JTextField(personajes.get(0).getInicio().toString());
+		txtInicio = new JTextField();
 		txtInicio.setPreferredSize(new Dimension(200, txtInicio.getSize().height));
 
-		sldFuerza = new JSlider(JSlider.HORIZONTAL, 0, 10, personajes.get(0).getCaracteristicas().get("fuerza"));
+		sldFuerza = new JSlider(JSlider.HORIZONTAL, 0, 10, 0);
 		sldFuerza.setMajorTickSpacing(2);
 		sldFuerza.setMinorTickSpacing(1);
 		sldFuerza.setPaintLabels(true);
 		sldFuerza.setPaintTicks(true);
 
-		sldSalud = new JSlider(JSlider.HORIZONTAL, 0, 10, personajes.get(0).getCaracteristicas().get("salud"));
+		sldSalud = new JSlider(JSlider.HORIZONTAL, 0, 10, 0);
 		sldSalud.setMajorTickSpacing(2);
 		sldSalud.setMinorTickSpacing(1);
 		sldSalud.setPaintLabels(true);
 		sldSalud.setPaintTicks(true);
 
-		sldArmadura = new JSlider(JSlider.HORIZONTAL, 0, 10, personajes.get(0).getCaracteristicas().get("armadura"));
+		sldArmadura = new JSlider(JSlider.HORIZONTAL, 0, 10, 0);
 		sldArmadura.setMajorTickSpacing(2);
 		sldArmadura.setMinorTickSpacing(1);
 		sldArmadura.setPaintLabels(true);
 		sldArmadura.setPaintTicks(true);
 
-		sldMagia = new JSlider(JSlider.HORIZONTAL, 0, 10, personajes.get(0).getCaracteristicas().get("magia"));
+		sldMagia = new JSlider(JSlider.HORIZONTAL, 0, 10, 0);
 		sldMagia.setMajorTickSpacing(2);
 		sldMagia.setMinorTickSpacing(1);
 		sldMagia.setPaintLabels(true);
 		sldMagia.setPaintTicks(true);
 
-		lblAvatar = new JLabel(new ImageIcon("imgsPersonajes/" + personajes.get(0).getAvatar()));
+		lblAvatar = new JLabel();
 		lblAvatar.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+
+		actualizarVentana(0);
 
 		JButton btnSiguiente = new JButton(new ImageIcon("imgsPersonajes/flecha_der.png"));
 
@@ -133,7 +135,7 @@ public class EditorPersonajes extends JFrame {
 	}
 
 	// Actualiza todos los componentes de la ventana con los datos del personaje que
-	// se encuentra en la posición pos.
+	// se encuentra en la posición pos del ArrayList.
 	private void actualizarVentana(int pos) {
 
 		txtNick.setText(personajes.get(pos).getNick());
@@ -142,11 +144,11 @@ public class EditorPersonajes extends JFrame {
 
 		sldFuerza.setValue(personajes.get(pos).getCaracteristicas().get("fuerza"));
 		sldSalud.setValue(personajes.get(pos).getCaracteristicas().get("salud"));
-		sldArmadura.setValue(personajes.get(pos).getCaracteristicas().get("fuerza"));
-		sldFuerza.setValue(personajes.get(pos).getCaracteristicas().get("fuerza"));
+		sldArmadura.setValue(personajes.get(pos).getCaracteristicas().get("armadura"));
+		sldMagia.setValue(personajes.get(pos).getCaracteristicas().get("magia"));
 
-		// TODO Acabar el método.
-		
+		lblAvatar.setIcon(new ImageIcon("imgsPersonajes/" + personajes.get(pos).getAvatar()));
+
 	}
 
 	public static void main(String[] args) {
@@ -154,7 +156,3 @@ public class EditorPersonajes extends JFrame {
 	}
 
 }
-
-
-
-
