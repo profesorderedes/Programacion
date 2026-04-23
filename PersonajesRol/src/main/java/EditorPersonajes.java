@@ -141,6 +141,9 @@ public class EditorPersonajes extends JFrame {
 		txtInicio.setText(personajes.get(pos).getInicio().toString());
 
 		sldFuerza.setValue(personajes.get(pos).getCaracteristicas().get("fuerza"));
+		sldSalud.setValue(personajes.get(pos).getCaracteristicas().get("salud"));
+		sldArmadura.setValue(personajes.get(pos).getCaracteristicas().get("fuerza"));
+		sldFuerza.setValue(personajes.get(pos).getCaracteristicas().get("fuerza"));
 
 		// TODO Acabar el método.
 		
@@ -151,3 +154,7 @@ public class EditorPersonajes extends JFrame {
 	}
 
 }
+
+
+
+
