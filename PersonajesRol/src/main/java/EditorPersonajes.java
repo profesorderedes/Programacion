@@ -1,8 +1,15 @@
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -16,18 +23,23 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactoryConfigurationError;
 
 import org.xml.sax.SAXException;
 
 import net.miginfocom.swing.MigLayout;
 
-public class EditorPersonajes extends JFrame {
+public class EditorPersonajes extends JFrame implements ActionListener, WindowListener {
 
 	private List<Personaje> personajes;
 
 	private JTextField txtNick, txtRol, txtInicio;
 	private JSlider sldFuerza, sldSalud, sldArmadura, sldMagia;
 	private JLabel lblAvatar;
+	private JButton btnAnterior, btnSiguiente;
+
+	private int personajeSeleccionado;
 
 	public EditorPersonajes() {
 
@@ -56,8 +68,8 @@ public class EditorPersonajes extends JFrame {
 
 		setLayout(new MigLayout("insets 10"));
 
-		JButton btnAnterior = new JButton(new ImageIcon("imgsPersonajes/flecha_izq.png"));
-		btnAnterior.setEnabled(false);
+		btnAnterior = new JButton(new ImageIcon("imgsPersonajes/flecha_izq.png"));
+		btnAnterior.addActionListener(this);
 
 		txtNick = new JTextField();
 		txtNick.setPreferredSize(new Dimension(200, txtNick.getSize().height));
@@ -95,9 +107,11 @@ public class EditorPersonajes extends JFrame {
 		lblAvatar = new JLabel();
 		lblAvatar.setBorder(BorderFactory.createLineBorder(Color.GRAY));
 
-		actualizarVentana(0);
+		btnSiguiente = new JButton(new ImageIcon("imgsPersonajes/flecha_der.png"));
+		btnSiguiente.addActionListener(this);
 
-		JButton btnSiguiente = new JButton(new ImageIcon("imgsPersonajes/flecha_der.png"));
+		actualizarVentana(0);
+		actualizarBotones();
 
 		add(btnAnterior, "span 1 15, gap right 30");
 
@@ -127,6 +141,8 @@ public class EditorPersonajes extends JFrame {
 		add(sldMagia, "wrap, skip 1");
 
 		pack();
+		
+		addWindowListener(this);
 
 		setLocationRelativeTo(null);
 
@@ -151,8 +167,110 @@ public class EditorPersonajes extends JFrame {
 
 	}
 
+	private void actualizarBotones() {
+
+		if (personajeSeleccionado == 0) {
+			btnAnterior.setEnabled(false);
+		} else if (personajeSeleccionado == personajes.size() - 1) {
+			btnSiguiente.setEnabled(false);
+		} else {
+			btnAnterior.setEnabled(true);
+			btnSiguiente.setEnabled(true);
+		}
+
+	}
+
+	private void guardarDatos() {
+
+		personajes.get(personajeSeleccionado).setNick(txtNick.getText());
+		personajes.get(personajeSeleccionado).setRol(txtRol.getText());
+		personajes.get(personajeSeleccionado).setInicio(LocalDate.parse(txtInicio.getText()));
+
+		Map<String, Integer> caracteristicas = new HashMap<>();
+
+		caracteristicas.put("fuerza", sldFuerza.getValue());
+		caracteristicas.put("salud", sldSalud.getValue());
+		caracteristicas.put("armadura", sldArmadura.getValue());
+		caracteristicas.put("magia", sldMagia.getValue());
+
+		personajes.get(personajeSeleccionado).setCaracteristicas(caracteristicas);
+
+		try {
+			// Guardamos el ArrayList personajes en disco.
+			AccesoPersonajes.guardar(personajes);
+
+		} catch (ParserConfigurationException | TransformerFactoryConfigurationError | TransformerException e) {
+			JOptionPane.showMessageDialog(null, "Error al guardar datos del personaje", "Personajes del juego",
+					JOptionPane.ERROR_MESSAGE);
+		}
+
+	}
+	
+	private boolean datosVentanaValidos() {
+		
+		// Comprobamos que los TextFields no están en blanco.
+		
+		
+		// Comprobamos que la fecha de inicio del personaje es correcta.
+		
+		
+		return false;
+		
+	}
+
 	public static void main(String[] args) {
 		new EditorPersonajes();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		guardarDatos();
+
+		if (e.getSource() == btnAnterior) {
+			personajeSeleccionado--;
+		} else if (e.getSource() == btnSiguiente) {
+			personajeSeleccionado++;
+		}
+
+		actualizarBotones();
+		actualizarVentana(personajeSeleccionado);
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		guardarDatos();
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		
 	}
 
 }

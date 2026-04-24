@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <personajes>
-    <personaje inicio="2026-04-01" nick="Carolus">
-        <rol>Mago</rol>
+    <personaje inicio="2026-04-01" nick="">
+        <rol>Escudero</rol>
         <avatar>mago.png</avatar>
         <caracteristicas>
-            <fuerza>3</fuerza>
+            <fuerza>8</fuerza>
             <salud>4</salud>
-            <armadura>1</armadura>
-            <magia>7</magia>
+            <armadura>5</armadura>
+            <magia>0</magia>
         </caracteristicas>
     </personaje>
     <personaje inicio="2026-04-03" nick="Asuka">
         <rol>Guerrera</rol>
         <avatar>guerrera.png</avatar>
         <caracteristicas>
-            <fuerza>6</fuerza>
-            <salud>8</salud>
-            <armadura>6</armadura>
+            <fuerza>5</fuerza>
+            <salud>2</salud>
+            <armadura>10</armadura>
             <magia>6</magia>
         </caracteristicas>
     </personaje>
@@ -24,10 +24,10 @@
         <rol>Monje</rol>
         <avatar>monje.png</avatar>
         <caracteristicas>
-            <fuerza>4</fuerza>
+            <fuerza>5</fuerza>
             <salud>7</salud>
             <armadura>2</armadura>
-            <magia>2</magia>
+            <magia>8</magia>
         </caracteristicas>
     </personaje>
 </personajes>
