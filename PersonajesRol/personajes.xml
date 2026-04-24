@@ -4,7 +4,7 @@
         <rol>Escudero</rol>
         <avatar>mago.png</avatar>
         <caracteristicas>
-            <fuerza>8</fuerza>
+            <fuerza>3</fuerza>
             <salud>4</salud>
             <armadura>5</armadura>
             <magia>0</magia>

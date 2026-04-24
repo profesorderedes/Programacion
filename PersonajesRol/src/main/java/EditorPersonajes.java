@@ -1,6 +1,7 @@
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.JobAttributes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -141,7 +142,7 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 		add(sldMagia, "wrap, skip 1");
 
 		pack();
-		
+
 		addWindowListener(this);
 
 		setLocationRelativeTo(null);
@@ -205,17 +206,29 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 		}
 
 	}
-	
+
+	// TODO Corregir este método.
 	private boolean datosVentanaValidos() {
-		
+
 		// Comprobamos que los TextFields no están en blanco.
-		
-		
+		if (txtNick.getText().trim().equals("") || txtRol.getText().trim().equals("")) {
+			JOptionPane.showMessageDialog(null, "Las casillas de Nick y Rol no pueden estar vacías.",
+					"Personajes de rol", JOptionPane.WARNING_MESSAGE);
+			return false;
+		}
+
 		// Comprobamos que la fecha de inicio del personaje es correcta.
-		
-		
-		return false;
-		
+		try {
+			LocalDate.parse(txtInicio.getText());
+		} catch (Exception e) {
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "La fecha de inicio del personaje debe tener el formato aaaa-mm-dd.",
+					"Personajes de rol", JOptionPane.WARNING_MESSAGE);
+			return false;
+		}
+
+		return true;
+
 	}
 
 	public static void main(String[] args) {
@@ -240,7 +253,7 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 
 	@Override
 	public void windowOpened(WindowEvent e) {
-		
+
 	}
 
 	@Override
@@ -250,27 +263,27 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 
 	@Override
 	public void windowClosed(WindowEvent e) {
-		
+
 	}
 
 	@Override
 	public void windowIconified(WindowEvent e) {
-		
+
 	}
 
 	@Override
 	public void windowDeiconified(WindowEvent e) {
-		
+
 	}
 
 	@Override
 	public void windowActivated(WindowEvent e) {
-		
+
 	}
 
 	@Override
 	public void windowDeactivated(WindowEvent e) {
-		
+
 	}
 
 }
