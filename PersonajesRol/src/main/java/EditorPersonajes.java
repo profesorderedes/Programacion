@@ -1,13 +1,13 @@
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.JobAttributes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -183,9 +183,9 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 
 	private void guardarDatos() {
 
-		personajes.get(personajeSeleccionado).setNick(txtNick.getText());
-		personajes.get(personajeSeleccionado).setRol(txtRol.getText());
-		personajes.get(personajeSeleccionado).setInicio(LocalDate.parse(txtInicio.getText()));
+		personajes.get(personajeSeleccionado).setNick(txtNick.getText().trim());
+		personajes.get(personajeSeleccionado).setRol(txtRol.getText().trim());
+		personajes.get(personajeSeleccionado).setInicio(LocalDate.parse(txtInicio.getText().trim()));
 
 		Map<String, Integer> caracteristicas = new HashMap<>();
 
@@ -207,7 +207,6 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 
 	}
 
-	// TODO Corregir este método.
 	private boolean datosVentanaValidos() {
 
 		// Comprobamos que los TextFields no están en blanco.
@@ -219,9 +218,8 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 
 		// Comprobamos que la fecha de inicio del personaje es correcta.
 		try {
-			LocalDate.parse(txtInicio.getText());
-		} catch (Exception e) {
-			e.printStackTrace();
+			LocalDate.parse(txtInicio.getText().trim());
+		} catch (DateTimeParseException e) {
 			JOptionPane.showMessageDialog(null, "La fecha de inicio del personaje debe tener el formato aaaa-mm-dd.",
 					"Personajes de rol", JOptionPane.WARNING_MESSAGE);
 			return false;
@@ -237,6 +235,10 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+
+		if (!datosVentanaValidos()) {
+			return;
+		}
 
 		guardarDatos();
 
@@ -258,6 +260,9 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 
 	@Override
 	public void windowClosing(WindowEvent e) {
+		if (!datosVentanaValidos()) {
+			return;
+		}
 		guardarDatos();
 	}
 

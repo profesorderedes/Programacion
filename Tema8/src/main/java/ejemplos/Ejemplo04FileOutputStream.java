@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Ejemplo04 {
+public class Ejemplo04FileOutputStream {
 
 	public static void main(String[] args) {
 
@@ -23,7 +23,7 @@ public class Ejemplo04 {
 			// Abrimos el archivo de destino para escritura.
 			FileOutputStream archivoDestino = new FileOutputStream(nombreArchivoDestino);
 
-			// Leemos el primer byte
+			// Leemos el primer byte.
 			int byteLeido = archivoOrigen.read();
 
 			// Iremos leyendo cada byte del archivo de origen hasta que el byte leído sea

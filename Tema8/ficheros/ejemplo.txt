@@ -1,0 +1,4 @@
+Éste es un archivo de ejemplo
+de texto plano.
+
+Lo leeremos con BufferedReader.

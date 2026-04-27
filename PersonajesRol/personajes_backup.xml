@@ -1,33 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <personajes>
-    <personaje inicio="2026-04-01" nick="Carolus">
-        <rol>Mago</rol>
-        <avatar>mago.png</avatar>
-        <caracteristicas>
-            <fuerza>3</fuerza>
-            <salud>4</salud>
-            <armadura>1</armadura>
-            <magia>7</magia>
-        </caracteristicas>
-    </personaje>
-    <personaje inicio="2026-04-03" nick="Asuka">
-        <rol>Guerrera</rol>
-        <avatar>guerrera.png</avatar>
-        <caracteristicas>
-            <fuerza>6</fuerza>
-            <salud>8</salud>
-            <armadura>6</armadura>
-            <magia>6</magia>
-        </caracteristicas>
-    </personaje>
-    <personaje inicio="2026-04-02" nick="Finnian">
-        <rol>Monje</rol>
-        <avatar>monje.png</avatar>
-        <caracteristicas>
-            <fuerza>4</fuerza>
-            <salud>7</salud>
-            <armadura>2</armadura>
-            <magia>2</magia>
-        </caracteristicas>
-    </personaje>
+	<personaje inicio="2026-04-01" nick="Carolus">
+		<rol>Mago</rol>
+		<avatar>mago.png</avatar>
+		<caracteristicas>
+			<fuerza>3</fuerza>
+			<salud>4</salud>
+			<armadura>1</armadura>
+			<magia>7</magia>
+		</caracteristicas>
+	</personaje>
+	<personaje inicio="2026-04-03" nick="Asuka">
+		<rol>Guerrera</rol>
+		<avatar>guerrera.png</avatar>
+		<caracteristicas>
+			<fuerza>6</fuerza>
+			<salud>8</salud>
+			<armadura>6</armadura>
+			<magia>6</magia>
+		</caracteristicas>
+	</personaje>
+	<personaje inicio="2026-04-02" nick="Finnian">
+		<rol>Monje</rol>
+		<avatar>monje.png</avatar>
+		<caracteristicas>
+			<fuerza>4</fuerza>
+			<salud>7</salud>
+			<armadura>2</armadura>
+			<magia>2</magia>
+		</caracteristicas>
+	</personaje>
+	<personaje inicio="2026-04-27" nick="Damian">
+		<rol>Troll</rol>
+		<avatar>troll.png</avatar>
+		<caracteristicas>
+			<fuerza>8</fuerza>
+			<salud>6</salud>
+			<armadura>6</armadura>
+			<magia>1</magia>
+		</caracteristicas>
+	</personaje>
+	<personaje inicio="2026-05-05" nick="Mikel">
+		<rol>Bardo</rol>
+		<avatar>Bardo.png</avatar>
+		<caracteristicas>
+			<fuerza>3</fuerza>
+			<salud>5</salud>
+			<armadura>8</armadura>
+			<magia>9</magia>
+		</caracteristicas>
+	</personaje>
+
 </personajes>

@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Ejemplo05 {
+public class Ejemplo05Buffers {
 
 	public static void main(String[] args) {
 
@@ -41,8 +41,8 @@ public class Ejemplo05 {
 			}
 
 			// Cerramos los dos archivos.
-//			bufferOrigen.close();
-//			bufferDestino.close();
+			bufferOrigen.close();
+			bufferDestino.close();
 
 		} catch (FileNotFoundException e) {
 			System.out.println("Archivo no encontrado.");
