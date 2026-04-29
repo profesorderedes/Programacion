@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Ejemplo07 {
+public class Ejemplo07BufferedWriter {
 
 	public static void main(String[] args) {
 
