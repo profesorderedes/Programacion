@@ -1,8 +1,10 @@
-package gestionGastos;
+package completo.gestionGastos.parteF;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
+
+import completo.gestionGastos.Consola;
 
 /**
  * Programa para gestionar gastos personales. Se puede guardar cada gasto. Se
@@ -17,6 +19,17 @@ public class GestionGastos {
 	public static void main(String[] args) {
 
 		libro = new Libro();
+
+		// Datos de prueba
+		libro.nuevoAsiento(new Asiento(LocalDate.parse("2025-12-20"), "Bolígrafo Pilot tinta azul punta fina", -5));
+		libro.nuevoAsiento(new Asiento(LocalDate.parse("2025-12-23"), "Desayuno", -2.5));
+		libro.nuevoAsiento(new Asiento(LocalDate.parse("2025-12-20"), "Desayuno", -3.05));
+		libro.nuevoAsiento(new Asiento(LocalDate.parse("2025-12-15"), "Comida", -15));
+		libro.nuevoAsiento(new Asiento(LocalDate.parse("2025-11-01"), "Desayuno", -2.5));
+		libro.nuevoAsiento(new Asiento(LocalDate.parse("2025-09-01"), "Salario", 1400));
+		libro.nuevoAsiento(new Asiento(LocalDate.parse("2025-09-20"), "Cena", -25));
+		libro.nuevoAsiento(new Asiento(LocalDate.parse("2025-12-20"), "Salario", 1500));
+		libro.nuevoAsiento(new Asiento(LocalDate.parse("2025-12-20"), "Entrada cine", -10));
 
 		int operacion = mostrarMenuPrincipal();
 
@@ -43,6 +56,12 @@ public class GestionGastos {
 
 	}
 
+	/**
+	 * Muestra el menú principal de la aplicación y devuelve la acción elegida por
+	 * el usuario.
+	 * 
+	 * @return Acción Número entero que indica la acción elegida por el usuario.
+	 */
 	private static int mostrarMenuPrincipal() {
 
 		System.out.println("\n\n*************************************************");
@@ -61,6 +80,9 @@ public class GestionGastos {
 
 	}
 
+	/**
+	 * Solicita al usuario los datos de un nuevo asiento y lo añade al libro.
+	 */
 	private static void introducirAsiento() {
 
 		System.out.println("\n\n*************************************************");
@@ -90,6 +112,12 @@ public class GestionGastos {
 
 	}
 
+	/**
+	 * Lee de la terminal los datos de un nuevo asiento y los devuelve encapsulados
+	 * en un objeto Asiento.
+	 * 
+	 * @return Objeto Asiento con los datos leídos.
+	 */
 	private static Asiento leerAsiento() {
 
 		System.out.print("\nFecha (en formato dd-mm-aaaa) (ENTER para la fecha de hoy): ");
@@ -156,11 +184,92 @@ public class GestionGastos {
 
 	}
 
+	/**
+	 * Muestra el menú que permite elegir el tipo de balance que se quiere ver.
+	 * Luego muestra dicho balance.
+	 */
 	private static void verBalance() {
 
 		System.out.println("\n\n*************************************************");
 		System.out.println("*                 VER BALANCE                   *");
 		System.out.println("*************************************************");
+
+		System.out.println("\nElija una opción:");
+		System.out.println("  1) Balance mensual");
+		System.out.println("  2) Balance anual");
+		System.out.println("  3) Volver al menú principal");
+		System.out.print("> ");
+
+		int opcion = Consola.leerInt("Tiene que escribir un número entre 1 y 3. Vuelva a intentarlo.", 1, 3);
+
+		switch (opcion) {
+		case 1:
+			verBalanceMes();
+			break;
+		case 2:
+			verBalanceAnyo();
+			break;
+		case 3:
+			return;
+		}
+
+		System.out.println("\nPulse una tecla para volver al menú principal...");
+		entrada.nextLine();
+
+	}
+
+	/**
+	 * Genera una cadena que representa la fecha indicada en los parámetros de la
+	 * aplicación, en formato aaaa-mm-dd.
+	 * 
+	 * @param dia  Día del mes de la fecha que se quiere generar.
+	 * @param mes  Número de mes de la fecha que se quiere generar.
+	 * @param anyo Año de la fecha que se quiere obtener.
+	 * @return Cadena de texto representando la fecha proporcionada en los
+	 *         parámetros.
+	 */
+	private static String crearCadenaFecha(int dia, int mes, int anyo) {
+
+		String cadenaFecha = "" + anyo + "-";
+		cadenaFecha = cadenaFecha + (mes < 10 ? "0" + mes : "" + mes) + "-";
+		cadenaFecha = cadenaFecha + (dia < 10 ? "0" + dia : "" + dia);
+
+		return cadenaFecha;
+
+	}
+
+	/**
+	 * Muestra el balance de un mes.
+	 */
+	private static void verBalanceMes() {
+
+		System.out.print("\nIndique el mes: ");
+		int mes = Consola.leerInt("Tiene que escribir un número entero. Vuelva a intentarlo.", 1, 12);
+
+		System.out.print("Indique el año: ");
+		int anyo = Consola.leerInt("Tiene que escribir un año válido (2000-3000). Vuelva a intentarlo.", 2000, 3000);
+
+		String cadenaFecha = crearCadenaFecha(1, mes, anyo);
+
+		try {
+			libro.mostrarBalanceMes(LocalDate.parse(cadenaFecha));
+		} catch (DateTimeParseException ex) {
+			System.out.println("Se ha producido un error al parsear una fecha.");
+		}
+
+	}
+
+	/**
+	 * Muestra el balance de un año.
+	 */
+	private static void verBalanceAnyo() {
+
+		System.out.print("\nIndique el año: ");
+		int anyo = Consola.leerInt("Tiene que escribir un año válido (2000-3000). Vuelva a intentarlo.", 2000, 3000);
+
+		String cadenaFecha = crearCadenaFecha(1, 1, anyo);
+
+		libro.mostrarBalanceAnyo(LocalDate.parse(cadenaFecha));
 
 	}
 
