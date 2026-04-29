@@ -26,7 +26,6 @@
     <fullyQualifiedTypeName name="ejemplos.ImpresoraBooleanos"/>
     <fullyQualifiedTypeName name="ejemplos.Impresora"/>
     <fullyQualifiedTypeName name="ejemplos.TipoValido"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilder"/>
     <fullyQualifiedTypeName name="org.w3c.dom.NodeList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -57,7 +56,8 @@
     <fullyQualifiedTypeName name="java.awt.JobAttributes"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
 </qualifiedTypeNameHistroy>
