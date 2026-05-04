@@ -32,13 +32,8 @@ public class Ejercicio05d {
 			String linea = buffer.readLine();
 
 			while (linea != null) {
-				String[] palabrasEnLinea = linea.split("[ .,;:¡!¿?()\"-]+");
 
-				for (String palabra : palabrasEnLinea) {
-					if (palabra.toUpperCase().equals(palabraABuscar.toUpperCase())) {
-						n++;
-					}
-				}
+				n = n + contarPalabraEnLinea(linea, palabraABuscar);
 
 				linea = buffer.readLine();
 
@@ -59,6 +54,9 @@ public class Ejercicio05d {
 
 	private static int contarPalabraEnLinea(String linea, String palabraABuscar) {
 
+		linea = linea.toUpperCase();
+		palabraABuscar = palabraABuscar.toUpperCase();
+		
 		int numRepeticiones = 0;
 
 		int pos = linea.indexOf(palabraABuscar);
@@ -69,27 +67,9 @@ public class Ejercicio05d {
 			pos = linea.indexOf(palabraABuscar, pos + 1);
 
 		}
-		
+
 		return numRepeticiones;
 
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
