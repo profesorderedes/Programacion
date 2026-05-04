@@ -1,6 +1,7 @@
 package ejercicios;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -28,7 +29,12 @@ public class Ejercicio04 {
 	private static boolean crearArchivoHTML(String title, String h1, String p) {
 
 		try {
-			BufferedWriter html = new BufferedWriter(new FileWriter(System.getProperty("user.home") + "/index.html"));
+
+			File carpeta = new File(System.getProperty("user.home") + "/ejercicio4");
+			carpeta.mkdir();
+
+			BufferedWriter html = new BufferedWriter(
+					new FileWriter(System.getProperty("user.home") + "/ejercicio4/index.html"));
 
 			html.write(
 					"<!DOCTYPE html>\n<html lang=\"es\">\n\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t<title>"
