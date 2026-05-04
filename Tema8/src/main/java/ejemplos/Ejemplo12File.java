@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Ejemplo12 {
+public class Ejemplo12File {
 
 	public static void main(String[] args) {
 

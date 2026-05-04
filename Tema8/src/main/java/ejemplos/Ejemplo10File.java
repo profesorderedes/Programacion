@@ -2,7 +2,7 @@ package ejemplos;
 
 import java.io.File;
 
-public class Ejemplo10 {
+public class Ejemplo10File {
 
 	public static void main(String[] args) {
 

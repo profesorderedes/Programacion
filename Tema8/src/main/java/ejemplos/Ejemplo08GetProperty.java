@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Ejemplo08 {
+public class Ejemplo08GetProperty {
 
 	public static void main(String[] args) {
 
