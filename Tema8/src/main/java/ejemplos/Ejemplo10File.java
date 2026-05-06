@@ -15,7 +15,7 @@ public class Ejemplo10File {
 		// Borrar un fichero o directorio.
 
 		carpeta.delete(); // Borra la carpeta "loquesea"
-		
+
 	}
 
 }

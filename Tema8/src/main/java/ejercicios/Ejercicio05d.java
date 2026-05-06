@@ -56,7 +56,7 @@ public class Ejercicio05d {
 
 		linea = linea.toUpperCase();
 		palabraABuscar = palabraABuscar.toUpperCase();
-		
+
 		int numRepeticiones = 0;
 
 		int pos = linea.indexOf(palabraABuscar);

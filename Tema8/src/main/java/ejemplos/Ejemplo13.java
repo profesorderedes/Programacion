@@ -125,7 +125,7 @@ public class Ejemplo13 extends JFrame {
 			JOptionPane.showMessageDialog(this, "Error al leer el archivo.", "Editor", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
-		
+
 		setTitle("Editor - " + archivo);
 
 	}
@@ -159,7 +159,7 @@ public class Ejemplo13 extends JFrame {
 		}
 
 		setTitle("Editor - " + archivo);
-		
+
 		JOptionPane.showMessageDialog(null, "Archivo guardado correctamente", "Editor",
 				JOptionPane.INFORMATION_MESSAGE);
 
