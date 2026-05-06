@@ -20,8 +20,6 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import com.formdev.flatlaf.FlatLightLaf;
-
 public class Ejemplo13 extends JFrame {
 
 	private JTextArea txtTexto;
@@ -36,14 +34,15 @@ public class Ejemplo13 extends JFrame {
 
 		setLayout(new BorderLayout());
 
-		// UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
 		try {
+			// UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
 			UIManager.setLookAndFeel("com.formdev.flatlaf.themes.FlatMacLightLaf");
 			SwingUtilities.updateComponentTreeUI(this);
-		} catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException e) {
-			JOptionPane.showMessageDialog(this, "No se ha podido cambiar el look and feel.", "Editor", JOptionPane.ERROR_MESSAGE);
+		} catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException
+				| IllegalAccessException e) {
+			JOptionPane.showMessageDialog(this, "No se ha podido cambiar el look and feel.", "Editor",
+					JOptionPane.ERROR_MESSAGE);
 		}
-		
 
 		// Barra de herramientas.
 
