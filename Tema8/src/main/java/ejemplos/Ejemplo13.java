@@ -4,8 +4,11 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.ImageIcon;
@@ -23,6 +26,8 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class Ejemplo13 extends JFrame {
 
 	private JTextArea txtTexto;
+	private JFileChooser elegirArchivo = new JFileChooser();
+	private String archivo;
 
 	public Ejemplo13() {
 
@@ -55,6 +60,12 @@ public class Ejemplo13 extends JFrame {
 		});
 
 		JButton btnGuardar = new JButton(new ImageIcon("iconos/22.png"));
+		btnGuardar.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				guardarArchivo();
+			}
+		});
 
 		JToolBar barraHerramientas = new JToolBar();
 
@@ -78,15 +89,13 @@ public class Ejemplo13 extends JFrame {
 
 		// Abrimos el JFileChooser para elegir un archivo.
 
-		JFileChooser elegirArchivo = new JFileChooser();
-
 		int resultado = elegirArchivo.showOpenDialog(this);
 
 		if (resultado != JFileChooser.APPROVE_OPTION) {
 			return;
 		}
 
-		String archivo = elegirArchivo.getSelectedFile().toString();
+		archivo = elegirArchivo.getSelectedFile().toString();
 
 		try {
 
@@ -116,6 +125,43 @@ public class Ejemplo13 extends JFrame {
 			JOptionPane.showMessageDialog(this, "Error al leer el archivo.", "Editor", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
+		
+		setTitle("Editor - " + archivo);
+
+	}
+
+	private void guardarArchivo() {
+
+		if (archivo == null) {
+
+			int resultado = elegirArchivo.showSaveDialog(this);
+
+			if (resultado != JFileChooser.APPROVE_OPTION) {
+				return;
+			}
+
+		}
+
+		archivo = elegirArchivo.getSelectedFile().toString();
+
+		try {
+
+			BufferedWriter buffer = new BufferedWriter(new FileWriter(archivo));
+
+			buffer.write(txtTexto.getText());
+
+			buffer.close();
+
+		} catch (IOException e) {
+
+			JOptionPane.showMessageDialog(null, "Error al guardar archivo", "Editor", JOptionPane.ERROR_MESSAGE);
+
+		}
+
+		setTitle("Editor - " + archivo);
+		
+		JOptionPane.showMessageDialog(null, "Archivo guardado correctamente", "Editor",
+				JOptionPane.INFORMATION_MESSAGE);
 
 	}
 

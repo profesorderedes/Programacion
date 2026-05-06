@@ -1,10 +1,8 @@
-package completo.gestionGastos.parteF;
+package gestionGastos;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
-
-import completo.gestionGastos.Consola;
 
 /**
  * Programa para gestionar gastos personales. Se puede guardar cada gasto. Se

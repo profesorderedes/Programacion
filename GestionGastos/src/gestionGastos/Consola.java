@@ -1,4 +1,4 @@
-package completo.gestionGastos.parteF;
+package gestionGastos;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;

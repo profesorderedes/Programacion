@@ -1,4 +1,4 @@
-package completo.gestionGastos.parteF;
+package gestionGastos;
 
 import java.time.LocalDate;
 
