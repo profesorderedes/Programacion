@@ -30,7 +30,7 @@ public class Ejemplo17XML {
 
 	private static final File ARCHIVO = new File("coches.xml");
 	private static final File ARCHIVO2 = new File("coches2.xml");
-	
+
 	private static List<Coche> coches = new ArrayList<>();
 
 	public static void main(String[] args) {

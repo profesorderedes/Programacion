@@ -11,12 +11,12 @@ public class Ubicacion {
 		this.diferenciaHoraria = diferenciaHoraria;
 		this.horarioVerano = horarioVerano;
 	}
-	
+
 	@Override
 	public String toString() {
-		
+
 		return localidad + " - " + diferenciaHoraria + " - " + horarioVerano;
-		
+
 	}
 
 	public String getLocalidad() {

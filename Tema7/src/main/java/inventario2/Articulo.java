@@ -9,30 +9,30 @@ public class Articulo {
 		this.nombre = nombre;
 		this.precio = precio;
 	}
-	
+
 	@Override
 	public String toString() {
 		return nombre + " (" + precio + "€)";
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
-		
-		if(obj == null) {
+
+		if (obj == null) {
 			return false;
-		}else if(obj == this) {
+		} else if (obj == this) {
 			return true;
-		}else if(!obj.getClass().equals(this.getClass())) {
+		} else if (!obj.getClass().equals(this.getClass())) {
 			return false;
 		}
-		
+
 		Articulo otroArticulo = (Articulo) obj;
-		if(nombre.equals(otroArticulo.getNombre()) && precio == otroArticulo.getPrecio()) {
+		if (nombre.equals(otroArticulo.getNombre()) && precio == otroArticulo.getPrecio()) {
 			return true;
 		}
-		
+
 		return false;
-		
+
 	}
 
 	public String getNombre() {

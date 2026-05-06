@@ -9,7 +9,7 @@ public class Pareja<T, U> {
 		this.dato1 = dato1;
 		this.dato2 = dato2;
 	}
-	
+
 	public void mostrar() {
 		System.out.println(dato1 + " - " + dato2);
 	}
