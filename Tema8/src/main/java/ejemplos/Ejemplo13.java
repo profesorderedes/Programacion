@@ -1,27 +1,60 @@
 package ejemplos;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JToolBar;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+import com.formdev.flatlaf.FlatLightLaf;
 
 public class Ejemplo13 extends JFrame {
+
+	private JTextArea txtTexto;
 
 	public Ejemplo13() {
 
 		super("Editor");
-		setSize(400, 300);
+		setSize(600, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		setLocationRelativeTo(null);
 
 		setLayout(new BorderLayout());
 
+		// UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
+		try {
+			UIManager.setLookAndFeel("com.formdev.flatlaf.themes.FlatMacLightLaf");
+			SwingUtilities.updateComponentTreeUI(this);
+		} catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+			JOptionPane.showMessageDialog(this, "No se ha podido cambiar el look and feel.", "Editor", JOptionPane.ERROR_MESSAGE);
+		}
+		
+
 		// Barra de herramientas.
 
 		JButton btnAbrir = new JButton(new ImageIcon("iconos/52.png"));
+		btnAbrir.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				abrirArchivo();
+			}
+		});
+
 		JButton btnGuardar = new JButton(new ImageIcon("iconos/22.png"));
 
 		JToolBar barraHerramientas = new JToolBar();
@@ -29,11 +62,61 @@ public class Ejemplo13 extends JFrame {
 		barraHerramientas.add(btnAbrir);
 		barraHerramientas.add(btnGuardar);
 
+		// TextArea en el centro del BorderLayout.
+		txtTexto = new JTextArea();
+		JScrollPane scrTexto = new JScrollPane(txtTexto);
+
 		// Ventana general.
 
 		add(barraHerramientas, BorderLayout.NORTH);
+		add(scrTexto, BorderLayout.CENTER);
 
 		setVisible(true);
+
+	}
+
+	private void abrirArchivo() {
+
+		// Abrimos el JFileChooser para elegir un archivo.
+
+		JFileChooser elegirArchivo = new JFileChooser();
+
+		int resultado = elegirArchivo.showOpenDialog(this);
+
+		if (resultado != JFileChooser.APPROVE_OPTION) {
+			return;
+		}
+
+		String archivo = elegirArchivo.getSelectedFile().toString();
+
+		try {
+
+			// Abrimos en modo lectura el archivo elegido.
+			BufferedReader buffer = new BufferedReader(new FileReader(archivo));
+
+			// Mostramos las líneas de texto del archivo en el TextArea.
+			String linea = buffer.readLine();
+			String contenidoArchivo = "";
+
+			while (linea != null) {
+
+				contenidoArchivo += linea + "\n";
+				linea = buffer.readLine();
+
+			}
+
+			txtTexto.setText(contenidoArchivo);
+
+			// Cerramos el archivo.
+			buffer.close();
+
+		} catch (FileNotFoundException e) {
+			JOptionPane.showMessageDialog(this, "Archivo no encontrado.", "Editor", JOptionPane.ERROR_MESSAGE);
+			return;
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(this, "Error al leer el archivo.", "Editor", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
 
 	}
 
@@ -42,3 +125,36 @@ public class Ejemplo13 extends JFrame {
 	}
 
 }
+
+//@formatter:off
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//@formatter:on
