@@ -1,10 +1,12 @@
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
@@ -15,6 +17,7 @@ import java.util.Map;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -23,6 +26,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactoryConfigurationError;
@@ -38,9 +42,12 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 	private JTextField txtNick, txtRol, txtInicio;
 	private JSlider sldFuerza, sldSalud, sldArmadura, sldMagia;
 	private JLabel lblAvatar;
-	private JButton btnAnterior, btnSiguiente;
 
+	private JButton btnAnterior, btnSiguiente;
 	private int personajeSeleccionado;
+
+	private FileNameExtensionFilter filtro = new FileNameExtensionFilter("Imágenes PNG", "png");
+	private JFileChooser elegirArchivo = new JFileChooser(new File("imgsPersonajes"));
 
 	public EditorPersonajes() {
 
@@ -69,7 +76,12 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 
 		setLayout(new MigLayout("insets 10"));
 
-		btnAnterior = new JButton(new ImageIcon("imgsPersonajes/flecha_izq.png"));
+		addWindowListener(this);
+
+		elegirArchivo.setFileFilter(filtro);
+
+		btnAnterior = new JButton(new ImageIcon("imgsAuxiliares/flecha_izq.png"));
+		btnAnterior.setEnabled(false);
 		btnAnterior.addActionListener(this);
 
 		txtNick = new JTextField();
@@ -108,11 +120,40 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 		lblAvatar = new JLabel();
 		lblAvatar.setBorder(BorderFactory.createLineBorder(Color.GRAY));
 
-		btnSiguiente = new JButton(new ImageIcon("imgsPersonajes/flecha_der.png"));
-		btnSiguiente.addActionListener(this);
+		lblAvatar.addMouseListener(new MouseListener() {
+
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+
+			}
+
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+
+			}
+
+			@Override
+			public void mouseExited(MouseEvent arg0) {
+
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent arg0) {
+
+			}
+
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+
+				cambiarFoto();
+
+			}
+		});
 
 		actualizarVentana(0);
-		actualizarBotones();
+
+		btnSiguiente = new JButton(new ImageIcon("imgsAuxiliares/flecha_der.png"));
+		btnSiguiente.addActionListener(this);
 
 		add(btnAnterior, "span 1 15, gap right 30");
 
@@ -143,16 +184,31 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 
 		pack();
 
-		addWindowListener(this);
-
 		setLocationRelativeTo(null);
 
 		setVisible(true);
 
 	}
 
-	// Actualiza todos los componentes de la ventana con los datos del personaje que
-	// se encuentra en la posición pos del ArrayList.
+	private boolean datosVentanaValidos() {
+
+		boolean datosValidos = true;
+
+		if (txtNick.getText().strip().equals("")) {
+			datosValidos = false;
+		} else if (txtRol.getText().strip().equals("")) {
+			datosValidos = false;
+		}
+
+		try {
+			LocalDate.parse(txtInicio.getText().strip());
+		} catch (DateTimeParseException e) {
+			datosValidos = false;
+		}
+
+		return datosValidos;
+	}
+
 	private void actualizarVentana(int pos) {
 
 		txtNick.setText(personajes.get(pos).getNick());
@@ -169,7 +225,6 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 	}
 
 	private void actualizarBotones() {
-
 		if (personajeSeleccionado == 0) {
 			btnAnterior.setEnabled(false);
 		} else if (personajeSeleccionado == personajes.size() - 1) {
@@ -178,14 +233,20 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 			btnAnterior.setEnabled(true);
 			btnSiguiente.setEnabled(true);
 		}
-
 	}
 
-	private void guardarDatos() {
+	private boolean guardarDatos() {
 
-		personajes.get(personajeSeleccionado).setNick(txtNick.getText().trim());
-		personajes.get(personajeSeleccionado).setRol(txtRol.getText().trim());
-		personajes.get(personajeSeleccionado).setInicio(LocalDate.parse(txtInicio.getText().trim()));
+		if (!datosVentanaValidos()) {
+			JOptionPane.showMessageDialog(null,
+					"Error al guardar datos del personaje. Asegurate de que todos los datos sean válidos.",
+					"Personajes del juego", JOptionPane.ERROR_MESSAGE);
+			return false;
+		}
+
+		personajes.get(personajeSeleccionado).setNick(txtNick.getText().strip());
+		personajes.get(personajeSeleccionado).setRol(txtRol.getText().strip());
+		personajes.get(personajeSeleccionado).setInicio(LocalDate.parse(txtInicio.getText().strip()));
 
 		Map<String, Integer> caracteristicas = new HashMap<>();
 
@@ -197,7 +258,6 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 		personajes.get(personajeSeleccionado).setCaracteristicas(caracteristicas);
 
 		try {
-			// Guardamos el ArrayList personajes en disco.
 			AccesoPersonajes.guardar(personajes);
 
 		} catch (ParserConfigurationException | TransformerFactoryConfigurationError | TransformerException e) {
@@ -205,27 +265,47 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 					JOptionPane.ERROR_MESSAGE);
 		}
 
+		return true;
+
 	}
 
-	private boolean datosVentanaValidos() {
+	private void cambiarFoto() {
 
-		// Comprobamos que los TextFields no están en blanco.
-		if (txtNick.getText().trim().equals("") || txtRol.getText().trim().equals("")) {
-			JOptionPane.showMessageDialog(null, "Las casillas de Nick y Rol no pueden estar vacías.",
-					"Personajes de rol", JOptionPane.WARNING_MESSAGE);
-			return false;
+		int resultado = elegirArchivo.showOpenDialog(this);
+
+		if (resultado != JFileChooser.APPROVE_OPTION) {
+			return;
 		}
 
-		// Comprobamos que la fecha de inicio del personaje es correcta.
-		try {
-			LocalDate.parse(txtInicio.getText().trim());
-		} catch (DateTimeParseException e) {
-			JOptionPane.showMessageDialog(null, "La fecha de inicio del personaje debe tener el formato aaaa-mm-dd.",
-					"Personajes de rol", JOptionPane.WARNING_MESSAGE);
-			return false;
+		File archivo = elegirArchivo.getSelectedFile();
+		String archivoString = archivo.toString();
+
+		// Comprobar que el archivo este en la carpeta imgsPersonajes (solo el que
+		// realmente queremos, no uno que esté en otra carpeta)
+
+		String carpetaImagenes = System.getProperty("user.dir") + "/imgsPersonajes";
+		String carpetaArchivo = archivo.getParentFile().toString();
+
+		if (!carpetaArchivo.equals(carpetaImagenes)) {
+			JOptionPane.showMessageDialog(null, "Debe elegir un archivo PNG de la carpeta imgsPersonajes/", getTitle(),
+					JOptionPane.ERROR_MESSAGE);
+			return;
 		}
 
-		return true;
+		// Comprobar si la extensión del archivo es un .png
+
+		int ultimoPunto = archivoString.lastIndexOf(".");
+		String extension = archivoString.substring(ultimoPunto);
+
+		if (!".png".equals(extension)) {
+			JOptionPane.showMessageDialog(null, "Debe elegir un archivo PNG de la carpeta imgsPersonajes/", getTitle(),
+					JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+
+		lblAvatar.setIcon(new ImageIcon(archivoString));
+
+		personajes.get(personajeSeleccionado).setAvatar(archivo.getName());
 
 	}
 
@@ -234,17 +314,15 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent a) {
 
-		if (!datosVentanaValidos()) {
+		if (!guardarDatos()) {
 			return;
 		}
 
-		guardarDatos();
-
-		if (e.getSource() == btnAnterior) {
+		if (a.getSource() == btnAnterior) {
 			personajeSeleccionado--;
-		} else if (e.getSource() == btnSiguiente) {
+		} else if (a.getSource() == btnSiguiente) {
 			personajeSeleccionado++;
 		}
 
@@ -254,41 +332,33 @@ public class EditorPersonajes extends JFrame implements ActionListener, WindowLi
 	}
 
 	@Override
-	public void windowOpened(WindowEvent e) {
-
+	public void windowActivated(WindowEvent arg0) {
 	}
 
 	@Override
-	public void windowClosing(WindowEvent e) {
-		if (!datosVentanaValidos()) {
-			return;
-		}
+	public void windowClosed(WindowEvent arg0) {
+	}
+
+	@Override
+	public void windowClosing(WindowEvent arg0) {
 		guardarDatos();
-	}
-
-	@Override
-	public void windowClosed(WindowEvent e) {
 
 	}
 
 	@Override
-	public void windowIconified(WindowEvent e) {
-
+	public void windowDeactivated(WindowEvent arg0) {
 	}
 
 	@Override
-	public void windowDeiconified(WindowEvent e) {
-
+	public void windowDeiconified(WindowEvent arg0) {
 	}
 
 	@Override
-	public void windowActivated(WindowEvent e) {
-
+	public void windowIconified(WindowEvent arg0) {
 	}
 
 	@Override
-	public void windowDeactivated(WindowEvent e) {
-
+	public void windowOpened(WindowEvent arg0) {
 	}
 
 }

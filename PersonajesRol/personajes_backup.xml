@@ -42,7 +42,7 @@
 	</personaje>
 	<personaje inicio="2026-05-05" nick="Mikel">
 		<rol>Bardo</rol>
-		<avatar>Bardo.png</avatar>
+		<avatar>bardo.png</avatar>
 		<caracteristicas>
 			<fuerza>3</fuerza>
 			<salud>5</salud>

@@ -23,13 +23,13 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-public class Ejemplo13 extends JFrame {
+public class Ejemplo13FileChooser extends JFrame {
 
 	private JTextArea txtTexto;
 	private JFileChooser elegirArchivo = new JFileChooser();
 	private String archivo;
 
-	public Ejemplo13() {
+	public Ejemplo13FileChooser() {
 
 		super("Editor");
 		setSize(600, 400);
@@ -166,7 +166,7 @@ public class Ejemplo13 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo13();
+		new Ejemplo13FileChooser();
 	}
 
 }

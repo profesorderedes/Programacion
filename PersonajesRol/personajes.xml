@@ -2,7 +2,7 @@
 <personajes>
     <personaje inicio="2026-04-01" nick="Carolus">
         <rol>Mago</rol>
-        <avatar>mago.png</avatar>
+        <avatar>troll.png</avatar>
         <caracteristicas>
             <fuerza>3</fuerza>
             <salud>4</salud>
@@ -12,10 +12,10 @@
     </personaje>
     <personaje inicio="2026-04-03" nick="Asuka">
         <rol>Guerrera</rol>
-        <avatar>guerrera.png</avatar>
+        <avatar>bardo.png</avatar>
         <caracteristicas>
-            <fuerza>6</fuerza>
-            <salud>8</salud>
+            <fuerza>2</fuerza>
+            <salud>6</salud>
             <armadura>6</armadura>
             <magia>6</magia>
         </caracteristicas>

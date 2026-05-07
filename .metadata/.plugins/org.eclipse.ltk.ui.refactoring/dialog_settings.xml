@@ -24,4 +24,15 @@
 		<item key="DIALOG_HEIGHT" value="785"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 	</section>
+	<section name="RefactoringWizard.Externalize strings in &apos;Ejemplo07BufferedWriter.java&apos;">
+		<item key="width" value="600"/>
+		<item key="height" value="400"/>
+	</section>
+	<section name="ExternalizeWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="728"/>
+		<item key="DIALOG_HEIGHT" value="800"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
+	</section>
 </section>
