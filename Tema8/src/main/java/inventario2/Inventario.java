@@ -175,6 +175,7 @@ public class Inventario extends JFrame {
 			
 			// TODO Rellenar el modelo con el arraylist recibido.
 			
+			
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			JOptionPane.showMessageDialog(null, "Error al leer el archivo de inventario", "Inventario",
 					JOptionPane.ERROR_MESSAGE);
