@@ -27,7 +27,7 @@ import org.xml.sax.SAXException;
 
 public class AccesoDiscoXML {
 
-	// Lee el archivo inventario.xml y carga el JList y el ArrayList con esos datos.
+	// Lee el archivo inventario.txt y devuelve el ArrayList con esos datos.
 	public static List<Articulo> leerInventario(final File ARCHIVO)
 			throws ParserConfigurationException, SAXException, IOException {
 

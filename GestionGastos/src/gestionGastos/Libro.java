@@ -10,6 +10,9 @@ public class Libro {
 	private int finAsientos;
 	private int idSiguiente;
 
+	/**
+	 * Constructor de la clase.
+	 */
 	public Libro() {
 
 		asientos = new Asiento[MAX_ASIENTOS];
@@ -18,6 +21,13 @@ public class Libro {
 
 	}
 
+	/**
+	 * Añade un nuevo asiento al array asientos.
+	 * 
+	 * @param asiento Asiento que se quiere añadir al array asientos.
+	 * @return true si se ha podido añadir o false si no se ha podido porque no
+	 *         quedaba espacio en el array.
+	 */
 	public boolean nuevoAsiento(Asiento asiento) {
 
 		// Comprobamos que haya sitio.
@@ -36,6 +46,12 @@ public class Libro {
 
 	}
 
+	/**
+	 * Muestra en la terminal el balance de un mes.
+	 * 
+	 * @param fecha Fecha de la cual se extraerá el mes y el año para mostrar los
+	 *              asientos de ese mes y año.
+	 */
 	public void mostrarBalanceMes(LocalDate fecha) {
 
 		int anyo = fecha.getYear();
@@ -70,6 +86,12 @@ public class Libro {
 
 	}
 
+	/**
+	 * Muestra en la terminal el balance de un año.
+	 * 
+	 * @param fecha Fecha de la cual se extraerá el año para mostrar los asientos de
+	 *              ese año.
+	 */
 	public void mostrarBalanceAnyo(LocalDate fecha) {
 
 		int anyo = fecha.getYear();
@@ -134,6 +156,65 @@ public class Libro {
 				"Octubre", "Noviembre", "Diciembre", };
 
 		return nombres[mes - 1];
+
+	}
+
+	/**
+	 * Muestra en la terminal los asientos correspondientes a una fecha dada.
+	 * 
+	 * @param fecha Fecha de la que queremos mostrar sus asientos.
+	 */
+	public void mostrarAsientosDia(LocalDate fecha) {
+
+		System.out.println("\nMostrando los asientos del " + fecha.toString() + ":\n");
+
+		System.out.printf("%5s  %-10s  %-30s  %8s\n", "ID", "Fecha", "Concepto", "Cantidad (€)");
+		System.out.printf("%5s  %-10s  %-30s  %8s\n", "=====", "==========", "==============================",
+				"============");
+
+		for (int i = 0; i < finAsientos; i++) {
+
+			if (asientos[i].getDia().isEqual(fecha)) {
+				System.out.println(asientos[i].toStringConId());
+			}
+		}
+
+	}
+
+	/**
+	 * Dado un id de un asiento, devuelve la posición en el array asientos de ese
+	 * asiento.
+	 * 
+	 * @param id Id de un asiento.
+	 * @return Posición del asiento que tiene ese id en el array asientos, o -1 si
+	 *         no es encuentra.
+	 */
+	public int getPosAsientoPorId(int id) {
+
+		for (int i = 0; i < finAsientos; i++) {
+
+			if (asientos[i].getId() == id) {
+				return i;
+			}
+
+		}
+
+		return -1;
+	}
+
+	/**
+	 * Devuelve al asiento ubicado en la posición pos del array asientos.
+	 * 
+	 * @param pos Posición del asiento en el array.
+	 * @return Asiento contenido en esa posición, o null si no aparece.
+	 */
+	public Asiento getAsiento(int pos) {
+
+		if (pos >= finAsientos) {
+			return null;
+		}
+
+		return asientos[pos];
 
 	}
 

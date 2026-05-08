@@ -159,33 +159,26 @@ public class Inventario extends JFrame {
 
 		modelo = new DefaultListModel<>();
 
-		for (Articulo articulo : articulos) {
+		try {
+			articulos = AccesoDiscoXML.leerInventario(ARCHIVO);
 
-			modelo.addElement(articulo);
-
+			for (Articulo articulo : articulos) {
+				modelo.addElement(articulo);
+			}
+		} catch (ParserConfigurationException | SAXException | IOException | NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "Error al leer el archivo de inventario", "Inventario",
+					JOptionPane.ERROR_MESSAGE);
+			System.exit(0);
 		}
-
+		
 		inventario = new JList<>(modelo);
 
 		add(barra, BorderLayout.NORTH);
 		add(inventario, BorderLayout.CENTER);
-
-		try {
-			articulos = AccesoDiscoXML.leerInventario(ARCHIVO);
-			
-			// TODO Rellenar el modelo con el arraylist recibido.
-			
-			
-		} catch (ParserConfigurationException | SAXException | IOException e) {
-			JOptionPane.showMessageDialog(null, "Error al leer el archivo de inventario", "Inventario",
-					JOptionPane.ERROR_MESSAGE);
-		}
-
+		
 		setVisible(true);
 
 	}
-
-	
 
 	private void anyadirArticulo() {
 
