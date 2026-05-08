@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <articulos>
-    <producto precio="11.0">aaa</producto>
+	<producto precio="500">HP con procesador i3</producto>
+	<producto precio="600">HP con procesador i5</producto>
+	<producto precio="700">HP con procesador i7</producto>
+	<producto precio="150">Monitor ASUS 17&quot;</producto>
 </articulos>
