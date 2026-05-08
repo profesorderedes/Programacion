@@ -1,46 +1,52 @@
 package inventario2;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Result;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.TransformerFactoryConfigurationError;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-
-import org.w3c.dom.DOMImplementation;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Text;
-import org.xml.sax.SAXException;
-
 public class AccesoDiscoTexto {
 
 	// Lee el archivo inventario.txt y devuelve el ArrayList con esos datos.
-	public static List<Articulo> leerInventario(final File ARCHIVO) {
-		
-		
+	public static List<Articulo> leerInventario(final File ARCHIVO) throws IOException {
 
-		return null;
+		BufferedReader buffer = new BufferedReader(new FileReader(ARCHIVO));
+
+		String linea = buffer.readLine();
+		String nombre = "";
+		double precio = 0;
+		List<Articulo> articulos = new ArrayList<>();
+
+		while (linea != null) {
+
+			String[] lineaSeparada = linea.split(" = ");
+
+			if (lineaSeparada[0].equals("NOMBRE")) {
+
+				nombre = lineaSeparada[1];
+
+			} else if (lineaSeparada[0].equals("PRECIO")) {
+
+				precio = Double.parseDouble(lineaSeparada[1]);
+				articulos.add(new Articulo(nombre, precio));
+
+			}
+
+			linea = buffer.readLine();
+
+		}
+
+		buffer.close();
+
+		return articulos;
 
 	}
 
 	// Guarda el inventario en el archivo inventario.txt
 	public static void guardarInventario(List<Articulo> articulos, final File ARCHIVO) {
 
-		
-		
 	}
 
 }

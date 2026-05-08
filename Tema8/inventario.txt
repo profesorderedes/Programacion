@@ -1,10 +1,7 @@
-INVENTARIO
-
-NOMBRE = HP con procesador i3
-PRECIO = 500
-NOMBRE = HP con procesador i5
-PRECIO = 600
-NOMBRE = HP con procesador i7
-PRECIO = 700
-NOMBRE = Monitor ASUS 17"
-PRECIO = 150
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<articulos>
+    <producto precio="500.0">HP con procesador i3</producto>
+    <producto precio="600.0">HP con procesador i5</producto>
+    <producto precio="700.0">HP con procesador i7</producto>
+    <producto precio="150.0">Monitor ASUS 17"</producto>
+</articulos>

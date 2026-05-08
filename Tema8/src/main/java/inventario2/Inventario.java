@@ -39,7 +39,7 @@ import org.xml.sax.SAXException;
 
 public class Inventario extends JFrame {
 
-	private final File ARCHIVO = new File("inventario.xml");
+	private final File ARCHIVO = new File("inventario.txt");
 
 	private List<Articulo> articulos = new ArrayList<>();
 	private DefaultListModel<Articulo> modelo;
@@ -160,12 +160,12 @@ public class Inventario extends JFrame {
 		modelo = new DefaultListModel<>();
 
 		try {
-			articulos = AccesoDiscoXML.leerInventario(ARCHIVO);
+			articulos = AccesoDiscoTexto.leerInventario(ARCHIVO);
 
 			for (Articulo articulo : articulos) {
 				modelo.addElement(articulo);
 			}
-		} catch (ParserConfigurationException | SAXException | IOException | NumberFormatException e) {
+		} catch (IOException | NumberFormatException e) {
 			JOptionPane.showMessageDialog(null, "Error al leer el archivo de inventario", "Inventario",
 					JOptionPane.ERROR_MESSAGE);
 			System.exit(0);
