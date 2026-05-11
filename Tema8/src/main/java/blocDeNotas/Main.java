@@ -170,10 +170,9 @@ public class Main extends JFrame implements ListSelectionListener {
 
 		// Recorremos la libreta de notas y añadimos los títulos al JList.
 		for (int i = 0; i < libreta.getNumNotas(); i++) {
-			
-			if (libreta.getNota(i) != null) {
-				modeloLista.addElement(libreta.getNota(i).getTitulo());
-			}
+
+			modeloLista.addElement(libreta.getNota(i).getTitulo());
+
 		}
 
 	}
