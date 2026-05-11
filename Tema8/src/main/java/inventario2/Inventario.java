@@ -129,12 +129,14 @@ public class Inventario extends JFrame {
 
 			@Override
 			public void windowClosing(WindowEvent e) {
+
 				try {
-					AccesoDiscoXML.guardarInventario(articulos, ARCHIVO);
-				} catch (ParserConfigurationException | TransformerFactoryConfigurationError
-						| TransformerException e1) {
-					System.out.println("Error al guardar los datos en disco.");
+					AccesoDiscoTexto.guardarInventario(articulos, ARCHIVO);
+				} catch (IOException e1) {
+					JOptionPane.showMessageDialog(null, "Error al guardar en el archivo de inventario", "Inventario",
+							JOptionPane.ERROR_MESSAGE);
 				}
+
 			}
 
 			@Override
@@ -170,12 +172,12 @@ public class Inventario extends JFrame {
 					JOptionPane.ERROR_MESSAGE);
 			System.exit(0);
 		}
-		
+
 		inventario = new JList<>(modelo);
 
 		add(barra, BorderLayout.NORTH);
 		add(inventario, BorderLayout.CENTER);
-		
+
 		setVisible(true);
 
 	}

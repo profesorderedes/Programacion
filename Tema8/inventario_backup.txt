@@ -1,0 +1,14 @@
+INVENTARIO
+
+
+NOMBRE = HP con procesador i3
+PRECIO = 500
+
+NOMBRE = HP con procesador i5
+PRECIO = 600
+
+NOMBRE = HP con procesador i7
+PRECIO = 700
+
+NOMBRE = Monitor ASUS 17"
+PRECIO = 150

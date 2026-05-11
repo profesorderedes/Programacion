@@ -1,8 +1,10 @@
 package inventario2;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,8 +47,62 @@ public class AccesoDiscoTexto {
 	}
 
 	// Guarda el inventario en el archivo inventario.txt
-	public static void guardarInventario(List<Articulo> articulos, final File ARCHIVO) {
+	public static void guardarInventario(List<Articulo> articulos, File ARCHIVO) throws IOException {
+
+		BufferedWriter bufer = new BufferedWriter(new FileWriter(ARCHIVO));
+
+		bufer.write("INVENTARIO");
+		bufer.newLine();
+		bufer.newLine();
+
+		for (Articulo articulo : articulos) {
+
+			bufer.write("NOMBRE = " + articulo.getNombre());
+			bufer.newLine();
+
+			bufer.write("PRECIO = " + articulo.getPrecio() + "\n\n");
+
+		}
+
+		bufer.close();
 
 	}
 
 }
+
+//@formatter:off
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//@formatter:on
