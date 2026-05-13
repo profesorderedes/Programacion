@@ -170,9 +170,9 @@ public class Main extends JFrame implements ListSelectionListener {
 
 		// Recorremos la libreta de notas y añadimos los títulos al JList.
 		for (int i = 0; i < libreta.getNumNotas(); i++) {
-
-			modeloLista.addElement(libreta.getNota(i).getTitulo());
-
+			if (libreta.getNota(i) != null) {
+				modeloLista.addElement(libreta.getNota(i).getTitulo());
+			}
 		}
 
 	}
@@ -208,7 +208,7 @@ public class Main extends JFrame implements ListSelectionListener {
 		int notaSeleccionada = lstTitulos.getSelectedIndex();
 		libreta.setNota(notaSeleccionada, new Nota(txtTitulo.getText(), txtDescripcion.getText()));
 
-		// Actualizamos el JList.
+		// Actualizamos el JList
 		modeloLista.set(notaSeleccionada, txtTitulo.getText());
 
 		// Guardamos los cambios en el disco.
@@ -216,13 +216,28 @@ public class Main extends JFrame implements ListSelectionListener {
 
 	}
 
+	/*
+	 * Crea nueva nota, la añade a la libreta y muestra su título al final del
+	 * JList. Selecciona la nueva nota en el JList. Borra la casilla de título y le
+	 * pasa el foco a la casilla de título.
+	 */
 	private void crearNota() {
 
-		/*
-		 * TODO: Crear nueva nota, añadirla a la libreta y mostrar su título al final
-		 * del JList. Seleccionar la nueva nota en el JList. Borrar la casilla de título
-		 * y pasarle el foco a la casilla de título.
-		 */
+		txtTitulo.setEnabled(true);
+		txtDescripcion.setEnabled(true);
+		btnGuardar.setEnabled(true);
+
+		txtTitulo.setText("Nueva Nota");
+		txtTitulo.requestFocus();
+		txtTitulo.selectAll();
+
+		txtDescripcion.setText("Tu nota...");
+
+		modeloLista.addElement("Nueva Nota");
+
+		libreta.addNota(new Nota("Nueva Nota", "Tu nota..."));
+
+		lstTitulos.setSelectedIndex(lstTitulos.getLastVisibleIndex() != -1 ? lstTitulos.getLastVisibleIndex() : 0);
 
 	}
 
