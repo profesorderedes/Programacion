@@ -115,10 +115,10 @@ public class Main extends JFrame {
 		add(pnlBotones);
 
 		txtOutput = new JTextArea();
-		txtOutput.setPreferredSize(new Dimension(590, 293));
+		txtOutput.setPreferredSize(new Dimension(585, 280));
 		txtOutput.setLineWrap(true);
 		JScrollPane scrOutput = new JScrollPane(txtOutput);
-		
+
 		add(scrOutput);
 
 		setVisible(true);
@@ -152,6 +152,11 @@ public class Main extends JFrame {
 
 	private void generarArchivo() {
 
+		String cluster = generarTexto();
+		if (cluster.equals("")) {
+			return;
+		}
+
 		JFileChooser elegirArchivo = new JFileChooser(System.getProperty("user.home"));
 
 		int resultado = elegirArchivo.showSaveDialog(null);
@@ -161,8 +166,6 @@ public class Main extends JFrame {
 		}
 
 		File archivo = elegirArchivo.getSelectedFile();
-
-		String cluster = generarTexto();
 
 		try {
 			BufferedWriter buffer = new BufferedWriter(new FileWriter(archivo));
@@ -191,8 +194,9 @@ public class Main extends JFrame {
 			return false;
 		}
 
-		// Comprobamos que las IPs estén formadas por cuatro campos separados por puntos.
-		
+		// Comprobamos que las IPs estén formadas por cuatro campos separados por
+		// puntos.
+
 		String[] arrayIpInicial = ipInicial.split("\\.");
 		String[] arrayIpFinal = ipFinal.split("\\.");
 
@@ -203,8 +207,9 @@ public class Main extends JFrame {
 			return false;
 		}
 
-		// Comprobamos que las IPs están formadas por números enteros separados por puntos.
-		
+		// Comprobamos que las IPs están formadas por números enteros separados por
+		// puntos.
+
 		int[] intArrayIpInicial = new int[4];
 		int[] intArrayIpFinal = new int[4];
 
@@ -219,8 +224,9 @@ public class Main extends JFrame {
 			return false;
 		}
 
-		// Comprobamos que todos los números que forman las IPs están entre 1 y 254 (ambos inclusive).
-		
+		// Comprobamos que todos los números que forman las IPs están entre 1 y 254
+		// (ambos inclusive).
+
 		for (int i = 0; i < 4; i++) {
 
 			int intIpInicial = intArrayIpInicial[i];
@@ -234,7 +240,7 @@ public class Main extends JFrame {
 			}
 
 		}
-		
+
 		// Comprobamos que la IP final es mayor que la inicial.
 
 		if (intArrayIpInicial[3] >= intArrayIpFinal[3]) {
