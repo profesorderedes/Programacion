@@ -20,7 +20,7 @@ public class Ejemplo03 {
 
 		System.out.println("Escribe un autor: ");
 		String autor = entrada.nextLine();
-		
+
 		System.out.println("Escribe el mínimo de unidades que debe haber: ");
 		int unidades = entrada.nextInt();
 
@@ -40,7 +40,7 @@ public class Ejemplo03 {
 
 			stmt.setString(1, autor);
 			stmt.setInt(2, unidades);
-			
+
 			// Ejecutamos la consulta.
 			ResultSet resultado = stmt.executeQuery();
 
