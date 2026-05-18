@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class Ejemplo04 {
+public class Ejemplo05 {
 
 	public static void main(String[] args) {
 
@@ -17,25 +17,29 @@ public class Ejemplo04 {
 		String password = "Ageofempires2";
 		String url = "jdbc:mysql://localhost/Libreria";
 
-		System.out.println("Escribe un autor: ");
-		String autor = entrada.nextLine();
+		System.out.println("Escribe el id de un libro: ");
+		int id = entrada.nextInt();
 
-		borrar(usuario, password, url, autor);
+		System.out.println("¿Cuántos ejemplares acaban de llegar?");
+		int cantidad = entrada.nextInt();
+
+		actualizar(usuario, password, url, id, cantidad);
 
 	}
 
-	private static void borrar(String usuario, String password, String url, String autor) {
+	private static void actualizar(String usuario, String password, String url, int id, int cantidad) {
 
-		String sql = "delete from libros where autor=?";
+		String sql = "update libros set cantidad = cantidad + ? where id = ?";
 
 		try (Connection con = DriverManager.getConnection(url, usuario, password);
 				PreparedStatement stmt = con.prepareStatement(sql)) {
 
-			stmt.setString(1, autor);
+			stmt.setInt(1, cantidad);
+			stmt.setInt(2, id);
 
 			int numFilas = stmt.executeUpdate();
 
-			System.out.println("Se han borrado " + numFilas + " filas.");
+			System.out.println("Se han actualizado " + numFilas + " filas.");
 
 		} catch (SQLException e) {
 			System.out.println("Error accediendo a la base de datos.");
@@ -44,12 +48,6 @@ public class Ejemplo04 {
 	}
 
 }
-
-
-
-
-
-
 
 
 
