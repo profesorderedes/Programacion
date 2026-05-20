@@ -5,11 +5,18 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
+import java.util.Scanner;
 
-public class Ejer02 {
+public class Inversiones {
+
+	private static Scanner entrada = new Scanner(System.in);
 
 	public static void main(String[] args) {
+
+		// Inicializamos la base de datos.
+//		BD.crear();
 
 		String url = "jdbc:mysql://localhost/inversiones";
 		String usuario = "java";
@@ -19,7 +26,10 @@ public class Ejer02 {
 		addAcciones(url, usuario, password);
 
 //		listarEmpresas(url, usuario, password);
-		informe(url, usuario, password);
+//		informe(url, usuario, password);
+//		nuevaEmpresa(url, usuario, password);
+
+		nuevaAccion(url, usuario, password);
 
 	}
 
@@ -134,6 +144,68 @@ public class Ejer02 {
 
 			System.out.println("Error en la base de datos.");
 
+		}
+
+	}
+
+	private static void nuevaEmpresa(String url, String usuario, String password) {
+
+		System.out.println("\n*** NUEVA EMPRESA ***");
+		System.out.print("Nombre: ");
+		String nombre = entrada.nextLine();
+
+		System.out.print("Año de fundación: ");
+		String fundacion = entrada.nextLine();
+
+		String sql = "INSERT INTO empresas(nombre, fundacion) VALUES(?,?)";
+
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				PreparedStatement stmt = con.prepareStatement(sql)) {
+
+			stmt.setString(1, nombre);
+			stmt.setString(2, fundacion);
+
+			if (stmt.executeUpdate() == 1) {
+				System.out.println("Se ha añadido la nueva empresa.");
+			} else {
+				System.out.println("No se ha añadido la empresa.");
+			}
+
+		} catch (SQLException e) {
+			System.out.println("Error en la base de datos.");
+		}
+
+	}
+
+	private static void nuevaAccion(String url, String usuario, String password) {
+
+		System.out.println("\n*** NUEVA ACCIÓN ***");
+		System.out.print("Propietario: ");
+		String propietario = entrada.nextLine();
+
+		System.out.print("Id de la empresa: ");
+		int idEmpresa = entrada.nextInt();
+
+		System.out.print("Cantidad: ");
+		int cantidad = entrada.nextInt();
+
+		String sql = "INSERT INTO acciones(propietario, id_empresa, cantidad) VALUES(?,?,?)";
+
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				PreparedStatement stmt = con.prepareStatement(sql)) {
+
+			stmt.setString(1, propietario);
+			stmt.setInt(2, idEmpresa);
+			stmt.setInt(3, cantidad);
+
+			if (stmt.executeUpdate() == 1) {
+				System.out.println("Se ha añadido la nueva acción.");
+			}
+
+		} catch (SQLIntegrityConstraintViolationException e) {
+			System.out.println("No se ha podido añadir la acción porque incumple una restricción de la base de datos.");
+		} catch (SQLException e) {
+			System.out.println("Error en la base de datos.");
 		}
 
 	}
