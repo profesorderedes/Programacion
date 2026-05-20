@@ -17,8 +17,9 @@ public class Ejer02 {
 
 		addEmpresas(url, usuario, password);
 		addAcciones(url, usuario, password);
-		
-		listarEmpresas(url, usuario, password);
+
+//		listarEmpresas(url, usuario, password);
+		informe(url, usuario, password);
 
 	}
 
@@ -94,7 +95,8 @@ public class Ejer02 {
 
 			while (resultado.next()) {
 
-				// Como ejemplo, en lugar de indicar el nombre de la columna en los métodos get...,
+				// Como ejemplo, en lugar de indicar el nombre de la columna en los métodos
+				// get...,
 				// podemos indicar la posición de la misma.
 				System.out.printf("%-4d %-30s %-10s\n", resultado.getInt(1), resultado.getString(2),
 						resultado.getString(3));
@@ -103,6 +105,35 @@ public class Ejer02 {
 
 		} catch (SQLException e) {
 			System.out.println("Error en la base de datos.");
+		}
+
+	}
+
+	private static void informe(String url, String usuario, String password) {
+
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				Statement stmt = con.createStatement()) {
+
+			String sql = "SELECT a.propietario, e.nombre, a.cantidad FROM acciones a JOIN empresas e ON e.id = a.id_empresa ORDER BY a.propietario";
+
+			System.out.println("\nInforme de acciones");
+			System.out.println("---------------------------------------------------------");
+			System.out.printf("%-20s %-30s %-4s\n", "PROPIETARIO", "NOMBRE", "CANT");
+			System.out.printf("%-20s %-30s %-4s\n", "===========", "======", "====");
+
+			ResultSet resultado = stmt.executeQuery(sql);
+
+			while (resultado.next()) {
+
+				System.out.printf("%-20s %-30s %-4d\n", resultado.getString("propietario"),
+						resultado.getString("nombre"), resultado.getInt("cantidad"));
+
+			}
+
+		} catch (SQLException e) {
+
+			System.out.println("Error en la base de datos.");
+
 		}
 
 	}
