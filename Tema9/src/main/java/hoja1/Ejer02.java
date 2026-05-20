@@ -3,7 +3,9 @@ package hoja1;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Ejer02 {
 
@@ -15,6 +17,8 @@ public class Ejer02 {
 
 		addEmpresas(url, usuario, password);
 		addAcciones(url, usuario, password);
+		
+		listarEmpresas(url, usuario, password);
 
 	}
 
@@ -72,5 +76,34 @@ public class Ejer02 {
 		} catch (SQLException e) {
 			System.out.println("Error en la base de datos.");
 		}
+	}
+
+	private static void listarEmpresas(String url, String usuario, String password) {
+
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				Statement stmt = con.createStatement()) {
+
+			String sql = "SELECT * FROM empresas";
+
+			System.out.println("\nTabla Empresas");
+			System.out.println("---------------------------------------------------------");
+			System.out.printf("%-4s %-30s %-10s\n", "ID", "NOMBRE", "FUNDACIÓN");
+			System.out.printf("%-4s %-30s %-10s\n", "==", "======", "=========");
+
+			ResultSet resultado = stmt.executeQuery(sql);
+
+			while (resultado.next()) {
+
+				// Como ejemplo, en lugar de indicar el nombre de la columna en los métodos get...,
+				// podemos indicar la posición de la misma.
+				System.out.printf("%-4d %-30s %-10s\n", resultado.getInt(1), resultado.getString(2),
+						resultado.getString(3));
+
+			}
+
+		} catch (SQLException e) {
+			System.out.println("Error en la base de datos.");
+		}
+
 	}
 }
