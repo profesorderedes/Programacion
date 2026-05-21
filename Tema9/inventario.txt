@@ -1,0 +1,8 @@
+INVENTARIO
+
+NOMBRE = HP con procesador i3
+PRECIO = 500.0
+
+NOMBRE = HP con procesador i7
+PRECIO = 700.0
+
