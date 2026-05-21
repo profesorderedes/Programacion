@@ -11,61 +11,142 @@ import java.util.List;
 
 public class AccesoDiscoBD {
 
-	// Lee el archivo inventario.txt y devuelve el ArrayList con esos datos.
-	public static List<Articulo> leerInventario(final File ARCHIVO) throws IOException {
+	private static String usuario;
+	private static String password;
+	private static String url = "jdbc:mysql://localhost/inventario";
 
-		BufferedReader buffer = new BufferedReader(new FileReader(ARCHIVO));
+	public static List<Articulo> leerInventario() {
 
-		String linea = buffer.readLine();
-		String nombre = "";
-		double precio = 0;
+		leerCredenciales();
+
 		List<Articulo> articulos = new ArrayList<>();
 
-		while (linea != null) {
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				Statement stmt = con.createStatement()) {
 
-			String[] lineaSeparada = linea.split(" = ");
+			String sql = "SELECT nombre, precio FROM productos";
 
-			if (lineaSeparada[0].equals("NOMBRE")) {
+			ResultSet resultado = stmt.executeQuery(sql);
 
-				nombre = lineaSeparada[1];
+			while (resultado.next()) {
 
-			} else if (lineaSeparada[0].equals("PRECIO")) {
+				Articulo articulo = new Articulo(resultado.getString(1), resultado.getDouble(2));
 
-				precio = Double.parseDouble(lineaSeparada[1]);
-				articulos.add(new Articulo(nombre, precio));
+				articulos.add(articulo);
 
+				System.out.println("DEBUG leerInventario(): ADDING TO LIST - " + resultado.getString(1) + "/"
+						+ resultado.getDouble(2));
 			}
 
-			linea = buffer.readLine();
-
+		} catch (SQLException e) {
+			System.out.println("Error en la conexión al BD.");
+			System.out.println(e.getMessage());
 		}
-
-		buffer.close();
 
 		return articulos;
 
 	}
 
-	// Guarda el inventario en el archivo inventario.txt
-	public static void guardarInventario(List<Articulo> articulos, File ARCHIVO) throws IOException {
+	// Este no sirve en verdad. Se haría todo mediante operaciones CRUD en cada paso
+	// en vez de al final.
+	public static void guardarInventario(List<Articulo> articulos) {
 
-		BufferedWriter bufer = new BufferedWriter(new FileWriter(ARCHIVO));
+		String sql = "INSERT INTO productos(nombre, precio) VALUES(?,?)";
 
-		bufer.write("INVENTARIO");
-		bufer.newLine();
-		bufer.newLine();
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				PreparedStatement stmt = con.prepareStatement(sql)) {
 
-		for (Articulo articulo : articulos) {
+			for (Articulo articulo : articulos) {
+				stmt.setString(1, articulo.getNombre());
+				stmt.setDouble(2, articulo.getPrecio());
 
-			bufer.write("NOMBRE = " + articulo.getNombre());
-			bufer.newLine();
+				System.out.println("DEBUG guardarInventario(): SAVING TO DATABASE - " + articulo.getNombre() + " / "
+						+ articulo.getPrecio());
 
-			bufer.write("PRECIO = " + articulo.getPrecio() + "\n\n");
+				stmt.executeUpdate();
+			}
 
+		} catch (SQLException e) {
+			System.out.println("Error en la conexión al BD.");
+			System.out.println(e.getMessage());
 		}
 
-		bufer.close();
+	}
 
+	private static void leerCredenciales() {
+
+		File credentials = new File(System.getProperty("user.home") + "/credentialsInventario_sql");
+
+		try (BufferedReader buffer = new BufferedReader(new FileReader(credentials))) {
+
+			usuario = buffer.readLine();
+			password = buffer.readLine();
+
+		} catch (FileNotFoundException e) {
+			System.out.println("Credenciales no encontrado.");
+
+		} catch (IOException e) {
+			System.out.println("Error leyendo credenciales.");
+		}
+
+	}
+
+	public static void nuevoArticulo(Articulo articulo) {
+		String sql = "INSERT INTO productos(nombre, precio) VALUES(?,?)";
+
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				PreparedStatement stmt = con.prepareStatement(sql)) {
+
+			stmt.setString(1, articulo.getNombre());
+			stmt.setDouble(2, articulo.getPrecio());
+
+			System.out.println("DEBUG nuevoArticulo(): SAVING TO DATABASE - " + articulo.getNombre() + " / "
+					+ articulo.getPrecio());
+
+			stmt.executeUpdate();
+
+		} catch (SQLException e) {
+			System.out.println("Error en la conexión al BD.");
+			System.out.println(e.getMessage());
+		}
+	}
+
+	public static void borrarArticulo(Articulo articulo) {
+		String sql = "DELETE FROM productos WHERE nombre = ? AND precio = ?";
+
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				PreparedStatement stmt = con.prepareStatement(sql)) {
+
+			stmt.setString(1, articulo.getNombre());
+			stmt.setDouble(2, articulo.getPrecio());
+
+			System.out.println("DEBUG borrarArticulo(): DELETING FROM DATABASE - " + articulo.getNombre() + " / "
+					+ articulo.getPrecio());
+
+			stmt.executeUpdate();
+
+		} catch (SQLException e) {
+			System.out.println("Error en la conexión al BD.");
+			System.out.println(e.getMessage());
+		}
+	}
+
+	public static void clearArticulos() {
+		String sql = "DELETE FROM productos";
+
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				Statement stmt = con.createStatement()) {
+
+			System.out.println("DEBUG clearArticulos(): DELETING FROM DATABASE - EVERYTHING");
+
+			int resultado = stmt.executeUpdate(sql);
+
+			System.out.println("DEBUG clearArticulos(): TOTAL DELETED - " + resultado);
+
+		} catch (SQLException e) {
+			System.out.println("Error en la conexión al BD.");
+			System.out.println(e.getMessage());
+		}
 	}
 
 }
