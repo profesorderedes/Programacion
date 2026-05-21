@@ -28,8 +28,10 @@ public class Inversiones {
 //		listarEmpresas(url, usuario, password);
 //		informe(url, usuario, password);
 //		nuevaEmpresa(url, usuario, password);
+//		nuevaAccion(url, usuario, password);
+//		regalarAccion(url, usuario, password);
 
-		nuevaAccion(url, usuario, password);
+		borrarAccion(url, usuario, password);
 
 	}
 
@@ -209,4 +211,48 @@ public class Inversiones {
 		}
 
 	}
+
+	private static void regalarAccion(String url, String usuario, String password) {
+
+		String sql = "UPDATE acciones SET cantidad = cantidad + 1";
+
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				Statement stmt = con.createStatement()) {
+
+			int resultado = stmt.executeUpdate(sql);
+
+			System.out.println("\n¡" + resultado + " propietarios han recibido 1 acción más!");
+
+		} catch (SQLException e) {
+			System.out.println("Error en la base de datos.");
+		}
+
+	}
+
+	private static void borrarAccion(String url, String usuario, String password) {
+
+		System.out.println("\n*** BORRAR ACCIÓN ***");
+		System.out.print("Id de la fila que quiere borrar: ");
+		int id = entrada.nextInt();
+
+		String sql = "DELETE FROM acciones WHERE id = ?";
+
+		try (Connection con = DriverManager.getConnection(url, usuario, password);
+				PreparedStatement stmt = con.prepareStatement(sql)) {
+
+			stmt.setInt(1, id);
+
+			int resultado = stmt.executeUpdate();
+
+			if (resultado == 1) {
+				System.out.println("Se ha eliminado la fila.");
+			} else {
+				System.out.println("No se han realizado cambios");
+			}
+
+		} catch (SQLException e) {
+			System.out.println("Error en la base de datos.");
+		}
+	}
+
 }

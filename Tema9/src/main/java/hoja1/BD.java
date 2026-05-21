@@ -1,4 +1,5 @@
 package hoja1;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,8 +11,8 @@ import java.sql.Statement;
 
 public class BD {
 
-	private static String usuario = "root";
-	private static String password = "Ageofempires2";
+	private static String usuario;
+	private static String password;
 	private static String url = "jdbc:mysql://localhost";
 
 	public static void main(String[] args) {
@@ -20,7 +21,27 @@ public class BD {
 
 	}
 
+	private static void leerCredenciales() {
+
+		try (BufferedReader buffer = new BufferedReader(
+				new FileReader(System.getProperty("user.home") + "/credenciales_sql"))) {
+
+			usuario = buffer.readLine();
+			password = buffer.readLine();
+
+			System.out.println("Credenciales leídas correctamente.");
+
+		} catch (FileNotFoundException e) {
+			System.out.println("Archivo de credenciales no encontrado.");
+		} catch (IOException e) {
+			System.out.println("Error leyendo el archivo de credenciales.");
+		}
+
+	}
+
 	public static void crear() {
+
+		leerCredenciales();
 
 		try (Connection con = DriverManager.getConnection(url, usuario, password);
 				Statement stmt = con.createStatement();
@@ -49,5 +70,3 @@ public class BD {
 	}
 
 }
-
-
