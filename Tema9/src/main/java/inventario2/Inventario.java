@@ -3,10 +3,6 @@ package inventario2;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,29 +13,8 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Result;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.TransformerFactoryConfigurationError;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-
-import org.w3c.dom.DOMImplementation;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Text;
-import org.xml.sax.SAXException;
 
 public class Inventario extends JFrame {
-
-	private final File ARCHIVO = new File("inventario.txt");
 
 	private List<Articulo> articulos = new ArrayList<>();
 	private DefaultListModel<Articulo> modelo;
@@ -105,51 +80,6 @@ public class Inventario extends JFrame {
 			}
 		});
 
-		addWindowListener(new WindowListener() {
-
-			@Override
-			public void windowOpened(WindowEvent e) {
-
-			}
-
-			@Override
-			public void windowIconified(WindowEvent e) {
-
-			}
-
-			@Override
-			public void windowDeiconified(WindowEvent e) {
-
-			}
-
-			@Override
-			public void windowDeactivated(WindowEvent e) {
-
-			}
-
-			@Override
-			public void windowClosing(WindowEvent e) {
-
-				try {
-					AccesoDiscoBD.guardarInventario(articulos, ARCHIVO);
-				} catch (IOException e1) {
-					JOptionPane.showMessageDialog(null, "Error al guardar en el archivo de inventario", "Inventario",
-							JOptionPane.ERROR_MESSAGE);
-				}
-
-			}
-
-			@Override
-			public void windowClosed(WindowEvent e) {
-
-			}
-
-			@Override
-			public void windowActivated(WindowEvent e) {
-
-			}
-		});
-
 		JToolBar barra = new JToolBar();
 
 		barra.add(btnMas);
@@ -161,16 +91,14 @@ public class Inventario extends JFrame {
 
 		modelo = new DefaultListModel<>();
 
-		try {
-			articulos = AccesoDiscoBD.leerInventario(ARCHIVO);
+		articulos = AccesoDiscoBD.leerInventario();
+		
+		if(articulos == null) {
+			return;
+		}
 
-			for (Articulo articulo : articulos) {
-				modelo.addElement(articulo);
-			}
-		} catch (IOException | NumberFormatException e) {
-			JOptionPane.showMessageDialog(null, "Error al leer el archivo de inventario", "Inventario",
-					JOptionPane.ERROR_MESSAGE);
-			System.exit(0);
+		for (Articulo articulo : articulos) {
+			modelo.addElement(articulo);
 		}
 
 		inventario = new JList<>(modelo);
@@ -203,6 +131,8 @@ public class Inventario extends JFrame {
 
 			articulos.add(new Articulo(nombre, precio));
 			modelo.addElement(new Articulo(nombre, precio));
+
+			AccesoDiscoBD.nuevoArticulo(new Articulo(nombre, precio));
 		} catch (NumberFormatException e) {
 			JOptionPane.showMessageDialog(null, "No has escrito un precio válido", "Inventario",
 					JOptionPane.ERROR_MESSAGE);
@@ -235,6 +165,8 @@ public class Inventario extends JFrame {
 		// Borramos el elemento.
 		modelo.remove(indice);
 		articulos.remove(indice);
+
+		AccesoDiscoBD.borrarArticulo(articulo);
 
 		mostrarArrayList();
 
@@ -311,6 +243,8 @@ public class Inventario extends JFrame {
 		// Borramos todo.
 		articulos.clear();
 		modelo.removeAllElements();
+
+		AccesoDiscoBD.clearArticulos();
 
 		JOptionPane.showMessageDialog(null, "Se ha borrado el inventario.", "Inventario",
 				JOptionPane.INFORMATION_MESSAGE);
