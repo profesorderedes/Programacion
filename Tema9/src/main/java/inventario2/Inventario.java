@@ -92,8 +92,8 @@ public class Inventario extends JFrame {
 		modelo = new DefaultListModel<>();
 
 		articulos = AccesoDiscoBD.leerInventario();
-		
-		if(articulos == null) {
+
+		if (articulos == null) {
 			return;
 		}
 
