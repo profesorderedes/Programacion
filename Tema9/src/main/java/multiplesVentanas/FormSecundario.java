@@ -9,6 +9,9 @@ import javax.swing.JTextField;
 
 public class FormSecundario extends JFrame {
 
+	private Identidad identidad;
+	private JTextField txtNombre, txtApellidos;
+
 	public FormSecundario() {
 
 		super("Ventana secundaria");
@@ -19,8 +22,8 @@ public class FormSecundario extends JFrame {
 
 		setLocationRelativeTo(null);
 
-		JTextField txtNombre = new JTextField(25);
-		JTextField txtApellidos = new JTextField(25);
+		txtNombre = new JTextField(25);
+		txtApellidos = new JTextField(25);
 
 		JButton btnAceptar = new JButton("Aceptar");
 
@@ -31,6 +34,14 @@ public class FormSecundario extends JFrame {
 		add(btnAceptar);
 
 		setVisible(true);
+
+	}
+
+	public void setIdentidad(Identidad identidad) {
+		this.identidad = identidad;
+
+		txtNombre.setText(identidad.getNombre());
+		txtApellidos.setText(identidad.getApellidos());
 
 	}
 

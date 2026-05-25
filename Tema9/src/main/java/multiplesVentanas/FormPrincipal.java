@@ -14,6 +14,8 @@ import javax.swing.JPanel;
 
 public class FormPrincipal extends JFrame {
 
+	private Identidad identidad;
+
 	public FormPrincipal() {
 
 		super("Ventana principal");
@@ -24,12 +26,14 @@ public class FormPrincipal extends JFrame {
 
 		setLocationRelativeTo(null);
 
+		identidad = new Identidad("-", "-");
+
 		// Panel nombre y apellidos.
 		JPanel panelNombre = new JPanel();
 		panelNombre.setLayout(new FlowLayout(FlowLayout.LEFT));
 		panelNombre.setPreferredSize(new Dimension(380, 80));
 
-		JLabel lblNombre = new JLabel("- -");
+		JLabel lblNombre = new JLabel(identidad.toString());
 		panelNombre.add(lblNombre);
 
 		lblNombre.setFont(new Font("Arial", Font.PLAIN, 48));
@@ -54,6 +58,7 @@ public class FormPrincipal extends JFrame {
 	private void abrirVentana() {
 
 		FormSecundario ventana = new FormSecundario();
+		ventana.setIdentidad(identidad);
 
 	}
 
