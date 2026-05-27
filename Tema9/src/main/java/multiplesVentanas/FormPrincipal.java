@@ -13,8 +13,10 @@ import javax.swing.JPanel;
 
 public class FormPrincipal extends JFrame {
 
+	private FormSecundario ventanaSecundaria;
 	private Identidad identidad;
 	private JLabel lblNombre;
+	private JButton btnModificar;
 
 	public FormPrincipal() {
 
@@ -38,7 +40,7 @@ public class FormPrincipal extends JFrame {
 
 		lblNombre.setFont(new Font("Arial", Font.PLAIN, 48));
 
-		JButton btnModificar = new JButton("Modificar nombre");
+		btnModificar = new JButton("Modificar nombre");
 		btnModificar.addActionListener(new ActionListener() {
 
 			@Override
@@ -57,14 +59,20 @@ public class FormPrincipal extends JFrame {
 
 	private void abrirVentana() {
 
-		FormSecundario ventana = new FormSecundario();
-		ventana.setIdentidad(identidad);
-		ventana.setCompletar(new Completar() {
+		if (ventanaSecundaria != null) {
+			return;
+		}
+
+		ventanaSecundaria = new FormSecundario();
+
+		ventanaSecundaria.setIdentidad(identidad);
+		ventanaSecundaria.setCompletar(new Completar() {
 			@Override
 			public void actualizarNombre(Identidad nuevaIdentidad) {
-				
+
 				lblNombre.setText(nuevaIdentidad.getNombre() + " " + nuevaIdentidad.getApellidos());
 				identidad = nuevaIdentidad;
+				ventanaSecundaria = null;
 
 			}
 		});

@@ -47,7 +47,7 @@ public class FormSecundario extends JFrame {
 	}
 
 	public void setIdentidad(Identidad identidad) {
-		
+
 		this.identidad = identidad;
 		System.out.println(identidad.toString());
 
@@ -55,7 +55,7 @@ public class FormSecundario extends JFrame {
 		txtApellidos.setText(identidad.getApellidos());
 
 	}
-	
+
 	public void setCompletar(Completar completar) {
 		this.completar = completar;
 	}

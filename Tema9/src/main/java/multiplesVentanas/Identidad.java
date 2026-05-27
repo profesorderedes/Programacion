@@ -9,7 +9,7 @@ public class Identidad {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 	}
-	
+
 	@Override
 	public String toString() {
 		return nombre + " " + apellidos;

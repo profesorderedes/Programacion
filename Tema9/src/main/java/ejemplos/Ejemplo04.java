@@ -44,16 +44,3 @@ public class Ejemplo04 {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
