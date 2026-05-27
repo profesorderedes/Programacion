@@ -1,6 +1,8 @@
 package multiplesVentanas;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,6 +12,7 @@ import javax.swing.JTextField;
 public class FormSecundario extends JFrame {
 
 	private Identidad identidad;
+	private Completar completar;
 	private JTextField txtNombre, txtApellidos;
 
 	public FormSecundario() {
@@ -26,6 +29,12 @@ public class FormSecundario extends JFrame {
 		txtApellidos = new JTextField(25);
 
 		JButton btnAceptar = new JButton("Aceptar");
+		btnAceptar.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				actualizarIdentidad();
+			}
+		});
 
 		add(new JLabel("Nombre:"));
 		add(txtNombre);
@@ -38,11 +47,22 @@ public class FormSecundario extends JFrame {
 	}
 
 	public void setIdentidad(Identidad identidad) {
+		
 		this.identidad = identidad;
+		System.out.println(identidad.toString());
 
 		txtNombre.setText(identidad.getNombre());
 		txtApellidos.setText(identidad.getApellidos());
 
+	}
+	
+	public void setCompletar(Completar completar) {
+		this.completar = completar;
+	}
+
+	private void actualizarIdentidad() {
+		completar.actualizarNombre(new Identidad(txtNombre.getText(), txtApellidos.getText()));
+		dispose();
 	}
 
 	public static void main(String[] args) {

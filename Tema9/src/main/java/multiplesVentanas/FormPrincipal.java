@@ -1,6 +1,5 @@
 package multiplesVentanas;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -15,6 +14,7 @@ import javax.swing.JPanel;
 public class FormPrincipal extends JFrame {
 
 	private Identidad identidad;
+	private JLabel lblNombre;
 
 	public FormPrincipal() {
 
@@ -33,7 +33,7 @@ public class FormPrincipal extends JFrame {
 		panelNombre.setLayout(new FlowLayout(FlowLayout.LEFT));
 		panelNombre.setPreferredSize(new Dimension(380, 80));
 
-		JLabel lblNombre = new JLabel(identidad.toString());
+		lblNombre = new JLabel(identidad.toString());
 		panelNombre.add(lblNombre);
 
 		lblNombre.setFont(new Font("Arial", Font.PLAIN, 48));
@@ -59,6 +59,15 @@ public class FormPrincipal extends JFrame {
 
 		FormSecundario ventana = new FormSecundario();
 		ventana.setIdentidad(identidad);
+		ventana.setCompletar(new Completar() {
+			@Override
+			public void actualizarNombre(Identidad nuevaIdentidad) {
+				
+				lblNombre.setText(nuevaIdentidad.getNombre() + " " + nuevaIdentidad.getApellidos());
+				identidad = nuevaIdentidad;
+
+			}
+		});
 
 	}
 
