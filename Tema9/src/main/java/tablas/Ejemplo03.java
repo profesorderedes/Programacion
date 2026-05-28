@@ -8,13 +8,12 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-// JTable: Crear una tabla con 4 columnas con los encabezados ID, Nombre, Apellidos, Edad.
-// Y dos filas con datos inventados.
+// Añadir otra fila de datos (después de creada la tabla).
 
-public class Ejemplo02 extends JFrame {
+public class Ejemplo03 extends JFrame {
 
-	public Ejemplo02() {
-		
+	public Ejemplo03() {
+
 		super("Ejemplo 02 Tablas");
 		setSize(600, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -30,6 +29,10 @@ public class Ejemplo02 extends JFrame {
 
 		JTable table = new JTable(dataModel);
 
+		// Añadimos una fila más de datos manualmente.
+		
+		
+
 		JScrollPane scrPane = new JScrollPane(table);
 
 		add(scrPane);
@@ -39,6 +42,9 @@ public class Ejemplo02 extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Ejemplo02();
+		new Ejemplo03();
 	}
 }
+
+
+
