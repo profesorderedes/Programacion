@@ -11,7 +11,6 @@ import javax.swing.JTextField;
 
 public class FormSecundario extends JFrame {
 
-	private Identidad identidad;
 	private Completar completar;
 	private JTextField txtNombre, txtApellidos;
 
@@ -48,7 +47,6 @@ public class FormSecundario extends JFrame {
 
 	public void setIdentidad(Identidad identidad) {
 
-		this.identidad = identidad;
 		System.out.println(identidad.toString());
 
 		txtNombre.setText(identidad.getNombre());
@@ -63,10 +61,6 @@ public class FormSecundario extends JFrame {
 	private void actualizarIdentidad() {
 		completar.actualizarNombre(new Identidad(txtNombre.getText(), txtApellidos.getText()));
 		dispose();
-	}
-
-	public static void main(String[] args) {
-		new FormSecundario();
 	}
 
 }
