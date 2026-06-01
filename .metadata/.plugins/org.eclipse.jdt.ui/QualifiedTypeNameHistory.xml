@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.xml.transform.dom.DOMSource"/>
     <fullyQualifiedTypeName name="javax.xml.transform.stream.StreamResult"/>
     <fullyQualifiedTypeName name="javax.xml.transform.TransformerFactory"/>
     <fullyQualifiedTypeName name="javax.xml.transform.OutputKeys"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="multiplesVentanasJDialog.FormPrincipal"/>
     <fullyQualifiedTypeName name="multiplesVentanasJDialog.Completar"/>
     <fullyQualifiedTypeName name="multiplesVentanasJDialog.FormSecundario"/>
+    <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
 </qualifiedTypeNameHistroy>
