@@ -14,69 +14,68 @@ import javax.swing.JRadioButton;
 
 public class FormConsulta1Shows extends JDialog {
 
-    
-    private JRadioButton radioPeliculas, radioSeries;
+	private JRadioButton radioPeliculas, radioSeries;
 
-    public FormConsulta1Shows(FormPrincipal ventanaPrincipal) {
+	public FormConsulta1Shows(FormPrincipal ventanaPrincipal) {
 
-        super(ventanaPrincipal, true);
-        setTitle("Netflix Database");
-        setSize(300, 180);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		super(ventanaPrincipal, true);
+		setTitle("Netflix Database");
+		setSize(300, 180);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        setLayout(new FlowLayout(FlowLayout.LEFT));
+		setLayout(new FlowLayout(FlowLayout.LEFT));
 
-        setResizable(false);
+		setResizable(false);
 
-        setLocationRelativeTo(null);
+		setLocationRelativeTo(null);
 
-        // Radio Buttons
+		// Radio Buttons
 
-        ButtonGroup radioButtons = new ButtonGroup();
+		ButtonGroup radioButtons = new ButtonGroup();
 
-        radioPeliculas = new JRadioButton("Peliculas", true);
+		radioPeliculas = new JRadioButton("Peliculas", true);
 
-        radioSeries = new JRadioButton("Series");
+		radioSeries = new JRadioButton("Series");
 
-        radioButtons.add(radioPeliculas);
-        radioButtons.add(radioSeries);
+		radioButtons.add(radioPeliculas);
+		radioButtons.add(radioSeries);
 
-        JPanel pnlRadioButtons = new JPanel();
-        pnlRadioButtons.setPreferredSize(new Dimension(280, 35));
-        pnlRadioButtons.setLayout(new FlowLayout(FlowLayout.LEFT));
-        
-        pnlRadioButtons.add(radioPeliculas);
-        pnlRadioButtons.add(radioSeries);
+		JPanel pnlRadioButtons = new JPanel();
+		pnlRadioButtons.setPreferredSize(new Dimension(280, 35));
+		pnlRadioButtons.setLayout(new FlowLayout(FlowLayout.LEFT));
 
-        // Aceptar Button
+		pnlRadioButtons.add(radioPeliculas);
+		pnlRadioButtons.add(radioSeries);
 
-        JButton btnAceptar = new JButton("Aceptar");
-        btnAceptar.setPreferredSize(new Dimension(75, 25));
-        btnAceptar.addActionListener(new ActionListener() {
+		// Aceptar Button
 
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                dispose();
-            }
-        });
+		JButton btnAceptar = new JButton("Aceptar");
+		btnAceptar.setPreferredSize(new Dimension(75, 25));
+		btnAceptar.addActionListener(new ActionListener() {
 
-        // Window options
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				dispose();
+			}
+		});
 
-        add(new JLabel("¿Qué quieres ver?"));
-        add(pnlRadioButtons);
-        add(btnAceptar);
+		// Window options
 
-        setVisible(true);
-    }
+		add(new JLabel("¿Qué quieres ver?"));
+		add(pnlRadioButtons);
+		add(btnAceptar);
 
-    public int getTipoShow() {
+		setVisible(true);
+	}
 
-        if (radioPeliculas.isSelected()) {
-            return 1;
-        } else {
-            return 2;
-        }
+	public int getTipoShow() {
 
-    }
+		if (radioPeliculas.isSelected()) {
+			return 1;
+		} else {
+			return 2;
+		}
+
+	}
 
 }
