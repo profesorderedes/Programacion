@@ -81,4 +81,54 @@ public class Database {
 
 	}
 
+	public List<TituloLanzamiento> consulta3Actor(String actor) throws SQLException {
+
+		String sql = "SELECT s.title, s.release_year, s.description "
+				+ "FROM netflix_final.show s JOIN show_actor sa ON sa.id_show = s.id "
+				+ "JOIN actor a ON sa.id_actor = a.id WHERE a.name = ? ORDER BY s.title";
+		stmt = con.prepareStatement(sql);
+		stmt.setString(1, actor);
+
+		List<TituloLanzamiento> listado = new ArrayList<>();
+
+		ResultSet resultado = stmt.executeQuery();
+
+		while (resultado.next()) {
+
+			String titulo = resultado.getString("title");
+			int lanzamiento = resultado.getInt("release_year");
+			String descripcion = resultado.getString("description");
+
+			listado.add(new TituloLanzamiento(titulo, lanzamiento, descripcion));
+
+		}
+
+		return listado;
+
+	}
+
+	public List<String> consulta4Reparto(String produccion) throws SQLException {
+
+		String sql = "SELECT a.name "
+				+ "FROM actor a "
+				+ "JOIN show_actor sa ON sa.id_actor = a.id "
+				+ "JOIN netflix_final.show s ON sa.id_show = s.id "
+				+ "WHERE s.title = ? "
+				+ "ORDER BY a.name";
+
+		stmt = con.prepareStatement(sql);
+		stmt.setString(1, produccion);
+
+		List<String> listado = new ArrayList<>();
+
+		ResultSet resultado = stmt.executeQuery();
+
+		while (resultado.next()) {
+			listado.add(resultado.getString("name"));
+		}
+
+		return listado;
+
+	}
+
 }

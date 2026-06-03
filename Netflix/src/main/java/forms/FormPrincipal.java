@@ -87,16 +87,16 @@ public class FormPrincipal extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		JMenu menuConsultas = new JMenu("Consultas");
 
-		JMenuItem menuConsultaPeliOSerie = new JMenuItem("Todas las películas o series");
-		menuConsultaPeliOSerie.addActionListener(new ActionListener() {
+		JMenuItem menuConsulta1PeliOSerie = new JMenuItem("Todas las películas o series");
+		menuConsulta1PeliOSerie.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				consulta1Shows();
 			}
 		});
 
-		JMenuItem menuConsultaDirector = new JMenuItem("Todas las producciones de un director");
-		menuConsultaDirector.addActionListener(new ActionListener() {
+		JMenuItem menuConsulta2Director = new JMenuItem("Todas las producciones de un director");
+		menuConsulta2Director.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				consulta2Director();
@@ -104,8 +104,26 @@ public class FormPrincipal extends JFrame {
 			}
 		});
 
-		menuConsultas.add(menuConsultaPeliOSerie);
-		menuConsultas.add(menuConsultaDirector);
+		JMenuItem menuConsulta3Actor = new JMenuItem("Producciones en las que aparece un actor");
+		menuConsulta3Actor.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				consulta3Actor();
+			}
+		});
+
+		JMenuItem menuConsulta4Reparto = new JMenuItem("Todos los actores de un show");
+		menuConsulta4Reparto.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				consulta4Reparto();
+			}
+		});
+
+		menuConsultas.add(menuConsulta1PeliOSerie);
+		menuConsultas.add(menuConsulta2Director);
+		menuConsultas.add(menuConsulta3Actor);
+		menuConsultas.add(menuConsulta4Reparto);
 
 		menuBar.add(menuConsultas);
 
@@ -214,26 +232,72 @@ public class FormPrincipal extends JFrame {
 
 	}
 
+	private void consulta3Actor() {
+
+		FormConsulta3Actor consulta = new FormConsulta3Actor(this);
+
+		String actor = consulta.getActor();
+
+		List<TituloLanzamiento> resultados;
+
+		try {
+
+			resultados = bd.consulta3Actor(actor);
+
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, "Error durante la conexión al base de datos\n" + e.getMessage(),
+					"Netflix Database", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+
+		lblDescripcion.setText("Listado con todas las producciones del actor " + actor + ".");
+
+		// Configurar la tabla
+
+		configuraTabla(new String[] { "TITULO", "LANZAMIENTO", "DESCRIPCIÓN", "" }, resultados.size());
+
+		for (int i = 0; i < resultados.size(); i++) {
+
+			table.setValueAt(resultados.get(i).getTitulo(), i, 0);
+			table.setValueAt(resultados.get(i).getLanzamiento(), i, 1);
+			table.setValueAt(resultados.get(i).getDescripcion(), i, 2);
+
+		}
+
+	}
+
+	private void consulta4Reparto() {
+
+		FormConsulta4Reparto consulta = new FormConsulta4Reparto(this);
+
+		String produccion = consulta.getProduccion();
+
+		List<String> resultados;
+
+		try {
+			resultados = bd.consulta4Reparto(produccion);
+		} catch (SQLException e) {
+
+			JOptionPane.showMessageDialog(null, "Error durante la conexión al base de datos\n" + e.getMessage(),
+					"Netflix Database", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+
+		lblDescripcion.setText("Reparto de la producción " + produccion + ".");
+
+		// Configurar la tabla
+
+		configuraTabla(new String[] { "ACTOR", "", "", "" }, resultados.size());
+
+		for (int i = 0; i < resultados.size(); i++) {
+			table.setValueAt(resultados.get(i), i, 0);
+		}
+
+	}
+
 	public static void main(String[] args) {
 
 		FormPrincipal ventana = new FormPrincipal();
-
-		boolean timer = true;
-
-		if (timer) {
-			for (int i = 10; i >= 0; i--) {
-				if (i == 1) {
-// System.out.println("Closing window...");
-				}
-				try {
-					Thread.sleep(10000);
-				} catch (Exception e) {
-				}
-			}
-			ventana.dispose();
-
-// System.out.println("Window closed.");
-		}
 
 	}
 
