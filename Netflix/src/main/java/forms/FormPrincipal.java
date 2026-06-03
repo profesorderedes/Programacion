@@ -22,6 +22,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableModel;
 
 import auxiliar.TituloEstreno;
+import auxiliar.TituloLanzamiento;
 import db.Database;
 import net.miginfocom.swing.MigLayout;
 
@@ -29,7 +30,7 @@ public class FormPrincipal extends JFrame {
 
 	private Database bd;
 	private JTable table;
-	private JLabel lblDescription;
+	private JLabel lblDescripcion;
 
 	public FormPrincipal() {
 
@@ -68,8 +69,12 @@ public class FormPrincipal extends JFrame {
 				try {
 					bd.desconectar();
 				} catch (SQLException sqle) {
-					JOptionPane.showMessageDialog(null, "No se ha podido desconectar de la base de datos: \n" + sqle.getMessage(),
+					JOptionPane.showMessageDialog(null,
+							"No se ha podido desconectar de la base de datos: \n" + sqle.getMessage(),
 							"Netflix Database", JOptionPane.ERROR_MESSAGE);
+				} catch (NullPointerException npe) {
+					JOptionPane.showMessageDialog(null, "No ha llegado a hacer ninguna consulta.", "Netflix Database",
+							JOptionPane.INFORMATION_MESSAGE);
 				}
 			}
 
@@ -81,16 +86,27 @@ public class FormPrincipal extends JFrame {
 
 		JMenuBar menuBar = new JMenuBar();
 		JMenu menuConsultas = new JMenu("Consultas");
+
 		JMenuItem menuConsultaPeliOSerie = new JMenuItem("Todas las películas o series");
 		menuConsultaPeliOSerie.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				consulta1Shows();
+			}
+		});
+
+		JMenuItem menuConsultaDirector = new JMenuItem("Todas las producciones de un director");
+		menuConsultaDirector.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				consulta2Director();
 
 			}
 		});
 
 		menuConsultas.add(menuConsultaPeliOSerie);
+		menuConsultas.add(menuConsultaDirector);
+
 		menuBar.add(menuConsultas);
 
 		setJMenuBar(menuBar);
@@ -101,9 +117,9 @@ public class FormPrincipal extends JFrame {
 		table = new JTable(dataModel);
 		JScrollPane scrPane = new JScrollPane(table);
 
-		lblDescription = new JLabel("Elija una consulta del menú superior");
+		lblDescripcion = new JLabel("Elija una consulta del menú superior");
 
-		panel.add(lblDescription, "wrap");
+		panel.add(lblDescripcion, "wrap");
 		panel.add(scrPane, "width 100%, growy, pushy");
 
 		setVisible(true);
@@ -143,7 +159,7 @@ public class FormPrincipal extends JFrame {
 		}
 
 		String peliculasOSeries = tipoShow == 1 ? "películas" : "series";
-		lblDescription.setText("Listado con todas las " + peliculasOSeries
+		lblDescripcion.setText("Listado con todas las " + peliculasOSeries
 				+ ", con sus identificadores y fecha de lanzamiento. Ordenado por título.");
 
 		configuraTabla(new String[] { "ID", "Título", "Lanzamiento", "" }, resultados.size());
@@ -157,9 +173,45 @@ public class FormPrincipal extends JFrame {
 		}
 
 	}
-	
+
 	private void consulta2Director() {
-		
+
+		FormConsulta2Director consulta = new FormConsulta2Director(this);
+
+		String director = consulta.getDirector();
+
+		List<TituloLanzamiento> resultados;
+
+		try {
+
+			resultados = bd.consulta2Director(director);
+
+		} catch (SQLException e) {
+
+			JOptionPane.showMessageDialog(null, "Error durante la conexión al base de datos\n" + e.getMessage(),
+					"Netflix Database", JOptionPane.ERROR_MESSAGE);
+			return;
+
+		}
+
+		// El texto sale cortado, pero porque es demasiado largo para la ventana y no se
+		// como aplicarle wrap a la descripción.
+
+		lblDescripcion.setText("Listado con todas las producciones del director " + director
+				+ ", con sus titulos, fecha de lanzamiento y descripción. Ordenado por título.");
+
+		// Configurar la tabla
+
+		configuraTabla(new String[] { "TITULO", "LANZAMIENTO", "DESCRIPCIÓN", "" }, resultados.size());
+
+		for (int i = 0; i < resultados.size(); i++) {
+
+			table.setValueAt(resultados.get(i).getTitulo(), i, 0);
+			table.setValueAt(resultados.get(i).getLanzamiento(), i, 1);
+			table.setValueAt(resultados.get(i).getDescripcion(), i, 2);
+
+		}
+
 	}
 
 	public static void main(String[] args) {
