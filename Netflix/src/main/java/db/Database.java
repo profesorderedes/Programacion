@@ -14,10 +14,6 @@ import auxiliar.TituloEstreno;
 import auxiliar.TituloLanzamiento;
 
 public class Database {
-	
-	private final int ACTOR = 1;
-	private final int DIRECTOR = 2;
-	private final int ACTOR_Y_DIRECTOR = 3;
 
 	private final String USER = "netflix";
 	private final String PASSWORD = "Ageofempires2";
@@ -33,8 +29,15 @@ public class Database {
 	}
 
 	public void desconectar() throws SQLException, NullPointerException {
-		con.close();
-		stmt.close();
+		
+		if (con != null) {
+			con.close();
+		}
+
+		if (stmt != null) {
+			stmt.close();
+		}
+
 	}
 
 	public List<TituloEstreno> consulta1TipoShow(int tipoShow) throws SQLException {
@@ -133,40 +136,30 @@ public class Database {
 
 	}
 
-	public void insertar1ActorDirector(String nombre, int actorODirector) throws SQLException {
+	public void insertar1Actor(String nombre) throws SQLException {
 
 		// Preparar inserts posibles (insertar en actor o director)
 
 		String sqlActor = "INSERT INTO actor(name) VALUE(?)";
+
+		// Mirar si es actor, director o los dos con atributos constantes.
+
+		ejecutarInsert(sqlActor, nombre);
+
+	}
+
+	public void insertar1Director(String nombre) throws SQLException {
+
+		// Preparar inserts posibles (insertar en actor o director)
 		String sqlDirector = "INSERT INTO director(name) VALUE(?)";
 
 		// Mirar si es actor, director o los dos con atributos constantes.
 
-		if (actorODirector == ACTOR) {
-			ejecutarInsert(sqlActor, nombre);
-		} else if (actorODirector == DIRECTOR) {
-
-			ejecutarInsert(sqlDirector, nombre);
-
-			// Posible mejora:
-			// Si logra ejecutar el primer insert, pero falla en la segunda.
-
-		} else if (actorODirector == ACTOR_Y_DIRECTOR) {
-
-			ejecutarInsert(sqlActor, nombre);
-			ejecutarInsert(sqlDirector, nombre);
-
-		} else {
-
-			JOptionPane.showMessageDialog(null, "No se ha podido verificar el rol de la persona que intentar insertar.",
-
-					"Netflix Database", JOptionPane.ERROR_MESSAGE);
-
-		}
+		ejecutarInsert(sqlDirector, nombre);
 
 	}
 
-	// Método auxiliar para mejorar insertar1ActorDirector()
+	// Método auxiliar para mejorar insertar1Actor() e insertar1Director()
 
 	private int ejecutarInsert(String sql, String nombre) throws SQLException {
 

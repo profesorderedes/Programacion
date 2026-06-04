@@ -72,10 +72,7 @@ public class FormPrincipal extends JFrame {
 					JOptionPane.showMessageDialog(null,
 							"No se ha podido desconectar de la base de datos: \n" + sqle.getMessage(),
 							"Netflix Database", JOptionPane.ERROR_MESSAGE);
-				} catch (NullPointerException npe) {
-					JOptionPane.showMessageDialog(null, "No ha llegado a hacer ninguna consulta.", "Netflix Database",
-							JOptionPane.INFORMATION_MESSAGE);
-				}
+				} 
 			}
 
 		});
@@ -125,7 +122,20 @@ public class FormPrincipal extends JFrame {
 		menuConsultas.add(menuConsulta3Actor);
 		menuConsultas.add(menuConsulta4Reparto);
 
+		JMenu menuInserciones = new JMenu("Inserciones");
+
+		JMenuItem menuInsertar1ActorDirector = new JMenuItem("Insertar actor / director");
+		menuInsertar1ActorDirector.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				insertar1ActorDirector();
+			}
+		});
+
+		menuInserciones.add(menuInsertar1ActorDirector);
+
 		menuBar.add(menuConsultas);
+		menuBar.add(menuInserciones);
 
 		setJMenuBar(menuBar);
 
@@ -297,33 +307,40 @@ public class FormPrincipal extends JFrame {
 
 	private void insertar1ActorDirector() {
 
-		FormInsertar1ActorDirector insertar = new FormInsertar1ActorDirector(this);
+		FormInsertar1ActorDirector formInsertar = new FormInsertar1ActorDirector(this);
 
-		String nombre = insertar.getNombre();
-		boolean actor = insertar.isActor();
-		boolean director = insertar.isDirector();
+		String nombre = formInsertar.getNombre();
+		boolean actor = formInsertar.isActor();
+		boolean director = formInsertar.isDirector();
 
-		try {
+		if (!actor && !director) {
 
-			if (!actor && !director) {
-
-				JOptionPane.showMessageDialog(null,
-						"No se ha seleccionado si '" + nombre
-								+ "' es actor, director o ambos.\nNo se ha insertado nada en el base de datos",
-						"Netflix Database", JOptionPane.WARNING_MESSAGE);
-
-			} else if (actor && !director) {
-				bd.insertar1ActorDirector(nombre, 1);
-			} else if (!actor && director) {
-				bd.insertar1ActorDirector(nombre, 2);
-			} else {
-				bd.insertar1ActorDirector(nombre, 3);
-			}
-
-		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "Error al intentar insertar " + nombre + "\n" + e.getMessage(),
-					"Netflix Database", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null,
+					"No se ha seleccionado si '" + nombre
+							+ "' es actor, director o ambos.\nNo se ha insertado nada en el base de datos",
+					"Netflix Database", JOptionPane.WARNING_MESSAGE);
 			return;
+
+		}
+
+		if (actor) {
+			try {
+				bd.insertar1Actor(nombre);
+			} catch (SQLException e) {
+				JOptionPane.showMessageDialog(null,
+						"El actor ya existe en la base de datos.",
+						"Netflix Database", JOptionPane.WARNING_MESSAGE);
+			}
+		}
+
+		if (director) {
+			try {
+				bd.insertar1Director(nombre);
+			} catch (SQLException e) {
+				JOptionPane.showMessageDialog(null,
+						"El director ya existe en la base de datos.",
+						"Netflix Database", JOptionPane.WARNING_MESSAGE);
+			}
 		}
 
 		lblDescripcion.setText("Se ha insertado " + nombre + " correctamente.");
