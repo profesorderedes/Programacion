@@ -295,6 +295,42 @@ public class FormPrincipal extends JFrame {
 
 	}
 
+	private void insertar1ActorDirector() {
+
+		FormInsertar1ActorDirector insertar = new FormInsertar1ActorDirector(this);
+
+		String nombre = insertar.getNombre();
+		boolean actor = insertar.isActor();
+		boolean director = insertar.isDirector();
+
+		try {
+
+			if (!actor && !director) {
+
+				JOptionPane.showMessageDialog(null,
+						"No se ha seleccionado si '" + nombre
+								+ "' es actor, director o ambos.\nNo se ha insertado nada en el base de datos",
+						"Netflix Database", JOptionPane.WARNING_MESSAGE);
+
+			} else if (actor && !director) {
+				bd.insertar1ActorDirector(nombre, 1);
+			} else if (!actor && director) {
+				bd.insertar1ActorDirector(nombre, 2);
+			} else {
+				bd.insertar1ActorDirector(nombre, 3);
+			}
+
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, "Error al intentar insertar " + nombre + "\n" + e.getMessage(),
+					"Netflix Database", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+
+		lblDescripcion.setText("Se ha insertado " + nombre + " correctamente.");
+		configuraTabla(new String[] { "", "", "", "" }, 0);
+
+	}
+
 	public static void main(String[] args) {
 
 		FormPrincipal ventana = new FormPrincipal();

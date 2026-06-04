@@ -25,7 +25,7 @@
     </libraryInfo>
     <libraryInfo home="C:\Users\csogo\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626\jre" version="22.0.2"/>
     <libraryInfo home="C:\Program Files\Java\jdk-21" version="21.0.6"/>
-    <libraryInfo home="/usr/lib/jvm/java-21-openjdk-amd64" version="21.0.10"/>
+    <libraryInfo home="/usr/lib/jvm/java-21-openjdk-amd64" version="21.0.11"/>
     <libraryInfo home="/snap/eclipse/132/usr/lib/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.10.v20260205-0638" version="21.0.10">
         <bootpath>
             <entry path="null"/>
