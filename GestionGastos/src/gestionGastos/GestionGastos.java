@@ -329,11 +329,54 @@ public class GestionGastos {
 
 	}
 
+	/**
+	 * Pregunta un asiento al usuario y lo borra.
+	 */
 	private static void borrarAsiento() {
 
 		System.out.println("\n\n*************************************************");
 		System.out.println("*                BORRAR ASIENTO                 *");
 		System.out.println("*************************************************");
+
+		System.out.print("\nFecha (en formato dd-mm-aaaa) (ENTER para la fecha de hoy): ");
+		LocalDate fecha = leerFecha();
+
+		libro.mostrarAsientosDia(fecha);
+
+		System.out.print("\nEscribe el ID del asiento que quiere borrar: ");
+		int id = Consola.leerInt("Error - esperando número entero. Pruebe otra vez.");
+
+		Asiento asiento = libro.getAsiento(libro.getPosAsientoPorId(id));
+		
+		if(asiento == null) {
+			System.out.println("\nNo se ha encontrado un asiento con ese id.");
+			return;
+		}
+
+		if (!asiento.getDia().equals(fecha)) {
+
+			System.out.println(
+					"\nEl ID que ha escrito no corresponde a un asiento en la fecha indicada. No se ha borrado ningún asiento.");
+			return;
+
+		}
+
+		System.out.println("\n¿Confirma que quiere actualizar el siguiente asiento (s/n)?");
+		System.out.println(asiento.toStringConId());
+		String respuesta = entrada.nextLine();
+
+		if (!respuesta.equals("s")) {
+
+			System.out.println("\nNo se ha borrado el asiento.");
+			return;
+
+		}
+
+		if (libro.borrarAsiento(id)) {
+			System.out.println("\nSe ha borrado el asiento.");
+		}else {
+			System.out.println("\nNo se ha borrado el asiento.");
+		}
 
 	}
 

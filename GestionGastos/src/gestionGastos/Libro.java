@@ -210,11 +210,35 @@ public class Libro {
 	 */
 	public Asiento getAsiento(int pos) {
 
-		if (pos >= finAsientos) {
+		if (pos < 0 || pos >= finAsientos) {
 			return null;
 		}
 
 		return asientos[pos];
+
+	}
+
+	/**
+	 * Borra un asiento del libro.
+	 * 
+	 * @param id Id del asiento a borrar.
+	 * @return true si se ha borrado, false si no existía.
+	 */
+	public boolean borrarAsiento(int id) {
+
+		int pos = getPosAsientoPorId(id);
+
+		if (pos == -1) {
+			return false;
+		}
+
+		for (int i = pos; i < finAsientos - 1; i++) {
+			asientos[i] = asientos[i + 1];
+		}
+
+		finAsientos--;
+
+		return true;
 
 	}
 
