@@ -271,11 +271,61 @@ public class GestionGastos {
 
 	}
 
+	/**
+	 * Permite editar uno de los asientos almacenados en el Libro.
+	 */
 	private static void editarAsiento() {
 
 		System.out.println("\n\n*************************************************");
 		System.out.println("*                EDITAR ASIENTO                 *");
 		System.out.println("*************************************************");
+
+		System.out.print("\nFecha (en formato dd-mm-aaaa) (ENTER para la fecha de hoy): ");
+		LocalDate fecha = leerFecha();
+
+		libro.mostrarAsientosDia(fecha);
+
+		// Averiguamos qué registros se quiere editar.
+
+		System.out.print("\nEscriba el ID del asiento que quiere editar: ");
+		int id = Consola.leerInt("Tiene que escribir un ID de los que se muestran. Vuelva a intentarlo.");
+
+		int pos = libro.getPosAsientoPorId(id);
+
+		if (pos == -1) {
+			System.out.println("\nEl ID que ha escrito no corresponde a ningún asiento.");
+			return;
+		}
+
+		Asiento asientoOriginal = libro.getAsiento(pos);
+
+		if (!asientoOriginal.getDia().isEqual(fecha)) {
+			System.out.println("\nEl ID que ha escrito no corresponde a un asiento en la fecha indicada.");
+			return;
+		}
+
+		// Volvemos a leer los datos del asiento seleccionado.
+
+		System.out.println("\nVuelva a escribir los datos del asiento:");
+		Asiento asientoModificado = leerAsiento();
+
+		// Pedimos confirmación al usuario.
+
+		System.out.println("\n¿Confirma que quiere actualizar el asiento (s/n)?");
+		String respuesta = entrada.nextLine();
+
+		if (!respuesta.equals("s")) {
+			System.out.println("\nSe ha cancelado la modificación.");
+			return;
+		}
+
+		// Procedemos a actualizar el asiento.
+
+		asientoOriginal.setDia(asientoModificado.getDia());
+		asientoOriginal.setConcepto(asientoModificado.getConcepto());
+		asientoOriginal.setCantidad(asientoModificado.getCantidad());
+
+		System.out.println("\nSe ha actualizado el asiento.");
 
 	}
 
